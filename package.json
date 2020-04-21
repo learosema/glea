@@ -1,0 +1,20 @@
+{
+  "name": "glea",
+  "version": "1.0.0",
+  "description": "GL experience admirers",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -r esm src/index.test.js",
+    "doc:glea": "jsdoc2md src/glea.js > docs/glea.md"
+  },
+  "author": "Lea Rosema",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "jest": "^25.4.0",
+    "jsdoc-to-markdown": "^5.0.3"
+  }
+}

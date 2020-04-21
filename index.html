@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css"
+    />
+  </head>
+  <body>
+    <main class="markdown-body"></main>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@8.4.2/dist/markdown-it.js"></script>
+    <script>
+      const md = new markdownit();
+      const main = document.querySelector('main');
+      fetch('README.md', { cache: 'no-cache' })
+        .then((res) => res.text())
+        .then((text) => {
+          main.innerHTML = md.render(text);
+        });
+    </script>
+  </body>
+</html>
