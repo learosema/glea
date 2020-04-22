@@ -20,7 +20,6 @@ function convertArray(data = [], type = WebGLRenderingContext.FLOAT) {
 
 /**
  * Create shader
- *
  * @param {string} code the shader code
  * @param {string} shaderType frag or vert
  */
