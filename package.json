@@ -10,11 +10,14 @@
   "author": "Lea Rosema",
   "license": "MIT",
   "dependencies": {
+    "@types/jest": "^25.2.1",
     "esm": "^3.2.25"
   },
   "devDependencies": {
     "express": "^4.17.1",
     "jest": "^25.4.0",
-    "jsdoc-to-markdown": "^5.0.3"
+    "jsdoc-to-markdown": "^5.0.3",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
   }
 }

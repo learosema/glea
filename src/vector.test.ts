@@ -1,5 +1,3 @@
-import { describe, test, shouldThrow } from './test-framework/test';
-import { arrayEquals } from './test-framework/array-utils';
 import { Vec2, Vec3 } from './vector';
 
 describe('2D Vector arithmetics', () => {
