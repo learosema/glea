@@ -5,6 +5,10 @@ export class Vec2 {
     return new Vec2(arr[0], arr[1]);
   }
 
+  static fromNumber(n: number) {
+    return new Vec2(n, n);
+  }
+
   clone() {
     return new Vec2(this.x, this.y);
   }
@@ -53,6 +57,10 @@ export class Vec3 {
     return new Vec3(data[0], data[1], data[2]);
   }
 
+  static fromNumber(n: number) {
+    return new Vec3(n, n, n);
+  }
+
   static fromVec2(vec2: Vec2, z: number = 0) {
     return new Vec3(vec2.x, vec2.y, z);
   }
@@ -61,19 +69,31 @@ export class Vec3 {
     return new Vec2(this.x, this.y);
   }
 
+  get xz() {
+    return new Vec2(this.x, this.z);
+  }
+
+  get yx() {
+    return new Vec2(this.y, this.x);
+  }
+
   get yz() {
     return new Vec2(this.y, this.z);
   }
 
-  get xz() {
-    return new Vec2(this.x, this.z);
+  get zx() {
+    return new Vec2(this.z, this.x);
+  }
+
+  get zy() {
+    return new Vec2(this.z, this.y);
   }
 
   clone() {
     return new Vec3(this.x, this.y, this.z);
   }
 
-  add(otherVec) {
+  add(otherVec: Vec3) {
     return new Vec3(
       this.x + otherVec.x,
       this.y + otherVec.y,
@@ -81,7 +101,7 @@ export class Vec3 {
     );
   }
 
-  sub(otherVec) {
+  sub(otherVec: Vec3) {
     return new Vec3(
       this.x - otherVec.x,
       this.y - otherVec.y,
@@ -89,15 +109,15 @@ export class Vec3 {
     );
   }
 
-  mul(value) {
+  mul(value: number) {
     return new Vec3(this.x * value, this.y * value, this.z * value);
   }
 
-  div(value) {
+  div(value: number) {
     return new Vec3(this.x / value, this.y / value, this.z / value);
   }
 
-  cross(otherVec) {
+  cross(otherVec: Vec3) {
     return new Vec3(
       this.y * otherVec.z - this.z * otherVec.y,
       this.z * otherVec.x - this.x * otherVec.z,
@@ -105,7 +125,7 @@ export class Vec3 {
     );
   }
 
-  dot(otherVec) {
+  dot(otherVec: Vec3) {
     return this.x * otherVec.x + this.y * otherVec.y + this.z * otherVec.z;
   }
 
@@ -125,7 +145,7 @@ export class Vec3 {
     return `(${this.x}, ${this.y}, ${this.z})`;
   }
 
-  equals(otherVec) {
+  equals(otherVec: Vec3) {
     return (
       otherVec instanceof Vec3 &&
       this.x === otherVec.x &&
@@ -145,6 +165,10 @@ export class Vec4 {
 
   static fromArray(data: [number, number, number, number]) {
     return new Vec4(data[0], data[1], data[2], data[3]);
+  }
+
+  static fromNumber(n: number) {
+    return new Vec4(n, n, n, n);
   }
 
   get xyz() {

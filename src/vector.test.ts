@@ -7,6 +7,20 @@ describe('2D Vector arithmetics', () => {
     expect(vector.y).toBe(2);
   });
 
+  test('Vec2 clone', () => {
+    const vector = new Vec2(1, 2);
+    const copied = vector.clone();
+    expect(copied.x).toBe(1);
+    expect(copied.y).toBe(2);
+  });
+
+
+  test('Vec2 fromNumber factory', () => {
+    const vector = Vec2.fromNumber(3);
+    expect(vector.x).toBe(3);
+    expect(vector.y).toBe(3);
+  });
+
   test('Vec2 fromArray factory', () => {
     const vector = Vec2.fromArray([3, 5]);
     expect(vector.x).toBe(3);
@@ -101,6 +115,61 @@ describe('3D Vector arithmetics', () => {
     expect(vector.z).toBe(3);
   });
 
+  test('Vec3 fromNumber factory', () => {
+    const vector = Vec3.fromNumber(3);
+    expect(vector.x).toBe(3);
+    expect(vector.y).toBe(3);
+    expect(vector.z).toBe(3);
+  });
+
+  test('Vec3.xy', () => {
+    const vector = new Vec3(1, 2, 3);
+    const xy = vector.xy;
+    expect(xy instanceof Vec2).toBe(true);
+    expect(xy.x).toBe(1);
+    expect(xy.y).toBe(2);
+  });
+
+  test('Vec3.xz', () => {
+    const vector = new Vec3(1, 2, 3);
+    const xz = vector.xz;
+    expect(xz instanceof Vec2).toBe(true);
+    expect(xz.x).toBe(1);
+    expect(xz.y).toBe(3);
+  });
+
+  test('Vec3.yx', () => {
+    const vector = new Vec3(1, 2, 3);
+    const yx = vector.yx;
+    expect(yx instanceof Vec2).toBe(true);
+    expect(yx.x).toBe(2);
+    expect(yx.y).toBe(1);
+  });
+
+  test('Vec3.yz', () => {
+    const vector = new Vec3(1, 2, 3);
+    const yz = vector.yz;
+    expect(yz instanceof Vec2).toBe(true);
+    expect(yz.x).toBe(2);
+    expect(yz.y).toBe(3);
+  });
+
+  test('Vec3.zx', () => {
+    const vector = new Vec3(1, 2, 3);
+    const zx = vector.zx;
+    expect(zx instanceof Vec2).toBe(true);
+    expect(zx.x).toBe(3);
+    expect(zx.y).toBe(1);
+  });
+
+  test('Vec3.zy', () => {
+    const vector = new Vec3(1, 2, 3);
+    const zy = vector.zy;
+    expect(zy instanceof Vec2).toBe(true);
+    expect(zy.x).toBe(3);
+    expect(zy.y).toBe(2);
+  });
+
   test('Vec3 addition', () => {
     const v1 = new Vec3(1, 2, 3);
     const v2 = new Vec3(3, 5, 7);
@@ -140,6 +209,15 @@ describe('3D Vector arithmetics', () => {
     expect(vector.length).toBeCloseTo(7.071, 3);
   });
 
+  test('Vec3 normalized', () => {
+    const vector = new Vec3(3, 4, 5)
+    const expected = new Vec3(0.42, 0.57, 0.71);
+    const actual = vector.normalized;
+    expect(actual.x).toBeCloseTo(expected.x);
+    expect(actual.y).toBeCloseTo(expected.y);
+    expect(actual.z).toBeCloseTo(expected.z);
+  });
+
   test('Vec3 equality', () => {
     const v1 = new Vec3(1, 3, 4);
     const v2 = new Vec3(1, 3, 4);
@@ -169,3 +247,5 @@ describe('3D Vector arithmetics', () => {
     expect(vector.toString()).toBe('(3, -2, 1)');
   });
 });
+
+

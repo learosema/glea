@@ -2,9 +2,8 @@
   "name": "glea",
   "version": "1.0.0",
   "description": "GL experience admirers",
-  "main": "index.js",
   "scripts": {
-    "test": "node -r esm src/index.test.js",
+    "test": "jest --coverage",
     "doc:glea": "jsdoc2md src/glea.js > docs/glea.md"
   },
   "author": "Lea Rosema",
