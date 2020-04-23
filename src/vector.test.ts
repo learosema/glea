@@ -1,111 +1,86 @@
 import { Vec2, Vec3 } from './vector';
 
 describe('2D Vector arithmetics', () => {
-  test('Vec2 constructor', (assert) => {
+  test('Vec2 constructor', () => {
     const vector = new Vec2(1, 2);
-    assert(vector.x === 1, 'vector.x equals 1');
-    assert(vector.y === 2, 'vector.y equals 2');
+    expect(vector.x).toBe(1);
+    expect(vector.y).toBe(2);
   });
 
-  test('Vec2 constructor with invalid args', (assert) => {
-    shouldThrow(assert, 'invalid vector should throw an exception.', () => {
-      const invalidVector = new Vec2(1, null);
-    });
+  test('Vec2 fromArray factory', () => {
+    const vector = Vec2.fromArray([3, 5]);
+    expect(vector.x).toBe(3);
+    expect(vector.y).toBe(5);
   });
 
-  test('Vec2 constructor with one number as argument', (assert) => {
-    const vector = new Vec2(1);
-    assert(vector.x === 1, 'vector.x equals 1');
-    assert(vector.y === 1, 'vector.y equals 1');
-  });
-
-  test('Vec2 constructor from array', (assert) => {
-    const vector = new Vec2([1, 2]);
-    assert(vector.x === 1, 'vector.x equals 1');
-    assert(vector.y === 2, 'vector.y equals 2');
-  });
-
-  test('Vec2 addition', (assert) => {
+  test('Vec2 addition', () => {
     const v1 = new Vec2(1, 2);
     const v2 = new Vec2(3, 5);
     const v3 = v1.add(v2);
-    assert(v3.x === 4, '(1 + 3, 2 + 5).x equals 4');
-    assert(v3.y === 7, '(1 + 3, 2 + 5).y equals 7');
+    expect(v3.x).toBe(4);
+    expect(v3.y).toBe(7);
   });
 
-  test('Vec2 substraction', (assert) => {
+  test('Vec2 substraction', () => {
     const v1 = new Vec2(1, 2);
     const v2 = new Vec2(3, 5);
     const v3 = v1.sub(v2);
-    assert(v3.x === -2, '(1 - 3, 2 - 5).x equals -2');
-    assert(v3.y === -3, '(1 - 3, 2 - 5).y equals -3');
+    expect(v3.x).toBe(-2);
+    expect(v3.y).toBe(-3);
   });
 
-  test('Vec2 multiplication', (assert) => {
+  test('Vec2 multiplication', () => {
     const v1 = new Vec2(1, 2);
     const v2 = v1.mul(7);
-    assert(v2.x === 7, '((1, 2) * 7).x equaks 7');
-    assert(v2.y === 14, '((1, 2) * 7).y equaks 14');
+    expect(v2.x).toBe(7);
+    expect(v2.y).toBe(14);
   });
 
-  test('Vec2 division', (assert) => {
+  test('Vec2 division', () => {
     const v1 = new Vec2(7, 14);
     const v2 = v1.div(7);
-    assert(v2.x === 1, '((7, 14) / 7).x equals 1');
-    assert(v2.y === 2, '((7, 14) / 7).y equals 2');
+    expect(v2.x).toBe(1);
+    expect(v2.y).toBe(2);
   });
 
-  test('Vec2 length', (assert) => {
+  test('Vec2 length', () => {
     const vector = new Vec2(3, 4);
-    assert(vector.length === 5, '(3, 4).length equals 5');
+    expect(vector.length).toBe(5);
   });
 
-  test('Vec2 equality', (assert) => {
+  test('Vec2 equality', () => {
     const v1 = new Vec2(1, 1);
     const v2 = new Vec2(1, 1);
-    assert(v1.equals(v2), 'v1.equals(v2) equals true');
+    expect(v1.equals(v2)).toBe(true);
   });
 
-  test('Vec2 dot product', (assert) => {
+  test('Vec2 dot product', () => {
     const v1 = new Vec2(2, 3);
     const v2 = new Vec2(5, 7);
-    assert(v1.dot(v2) === 31, '(2, 3) dot (5, 7) equals 2 * 5 + 3 * 7 = 31');
+    expect(v1.dot(v2)).toBe(31);
   });
 
-  test('Vec2 toArray conversion', (assert) => {
-    const v1 = new Vec2(3, -2);
-    assert(
-      arrayEquals(v1.toArray(), [3, -2]),
-      '(3, -2) can be converted to array [3, -2]'
-    );
+  test('Vec2 toArray conversion', () => {
+    const v = new Vec2(3, -2);
+    expect(v.toArray()).toEqual([3, -2]);
   });
 
-  test('Vec2 toString conversion', (assert) => {
+  test('Vec2 toString conversion', () => {
     const vector = new Vec2(3, -2);
-    assert(
-      vector.toString() === '(3, -2)',
-      '(3, -2) can be converted to string'
-    );
+    expect(vector.toString()).toBe('(3, -2)');
   });
 });
 
 describe('3D Vector arithmetics', () => {
-  test('Vec3 constructor', (assert) => {
+  test('Vec3 constructor', () => {
     const vector = new Vec3(1, 2, 3);
-    assert(vector.x === 1, 'vector.x equals 1');
-    assert(vector.y === 2, 'vector.y equals 2');
-    assert(vector.z === 3, 'vector.z equals 3');
-  });
-
-  test('Vec3 constructor with one number as argument', (assert) => {
-    const vector = new Vec3(1);
-    assert(vector.x === 1, 'vector.x equals 1');
-    assert(vector.y === 1, 'vector.y equals 1');
-    assert(vector.z === 1, 'vector.z equals 1');
+    expect(vector.x).toBe(1);
+    expect(vector.y).toBe(2);
+    expect(vector.z).toBe(3);
   });
 
   test('Vec3 constructor with array as argument', (assert) => {
-    const vector = new Vec3([1, 2, 3]);
+    const vector = Vec3.fromArray([1, 2, 3]);
     assert(vector.x === 1, 'vector.x equals 1');
     assert(vector.y === 2, 'vector.y equals 2');
     assert(vector.z === 3, 'vector.z equals 3');

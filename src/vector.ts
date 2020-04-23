@@ -1,54 +1,31 @@
 export class Vec2 {
-  constructor(x, y) {
-    if (arguments.length === 0) {
-      this.x = this.y = 0;
-      return;
-    }
-    if (arguments.length === 1) {
-      if (typeof x === 'number') {
-        this.x = this.y = x;
-        return;
-      }
-      if (x instanceof Vec2) {
-        this.x = x.x;
-        this.y = x.y;
-        return;
-      }
-      if (x instanceof Array) {
-        this.x = x[0] || 0;
-        this.y = x[1] || 0;
-        return;
-      }
-    }
-    if (typeof x === 'number' && typeof y === 'number') {
-      this.x = x;
-      this.y = y;
-      return;
-    }
-    throw Error('ArgumentError');
+  constructor(public x: number, public y: number) {}
+
+  static fromArray(arr: [number, number]) {
+    return new Vec2(arr[0], arr[1]);
   }
 
-  add(otherVec) {
+  add(otherVec: Vec2) {
     return new Vec2(this.x + otherVec.x, this.y + otherVec.y);
   }
 
-  sub(otherVec) {
+  sub(otherVec: Vec2) {
     return new Vec2(this.x - otherVec.x, this.y - otherVec.y);
   }
 
-  mul(value) {
+  mul(value: number) {
     return new Vec2(this.x * value, this.y * value);
   }
 
-  div(value) {
+  div(value: number) {
     return new Vec2(this.x / value, this.y / value);
   }
 
-  dot(otherVec) {
+  dot(otherVec: Vec2) {
     return this.x * otherVec.x + this.y * otherVec.y;
   }
 
-  equals(otherVec) {
+  equals(otherVec: Vec2) {
     return this.x === otherVec.x && this.y === otherVec.y;
   }
 
@@ -66,92 +43,14 @@ export class Vec2 {
 }
 
 export class Vec3 {
-  constructor(x, y, z) {
-    if (arguments.length === 1) {
-      if (typeof x === 'number') {
-        this.x = this.y = this.z = x;
-        return;
-      }
-      if (typeof x === 'object') {
-        if (x instanceof Vec3) {
-          this.x = x.x;
-          this.y = x.y;
-          this.z = x.z;
-          return;
-        }
-        if (x instanceof Vec2) {
-          this.x = x.x;
-          this.y = x.y;
-          this.z = 0;
-          return;
-        }
-        if (x instanceof Array) {
-          this.x = x[0] || 0;
-          this.y = x[1] || 0;
-          this.z = x[2] || 0;
-          return;
-        }
-      }
-      throw Error('ArgumentError');
-    }
-    if (arguments.length === 2) {
-      if (typeof x === 'number' && typeof y === 'number') {
-        this.x = x;
-        this.y = y;
-        this.z = 0;
-        return;
-      }
-      if (x instanceof Vec2 && typeof y === 'number') {
-        this.x = x.x;
-        this.y = x.y;
-        this.z = y;
-        return;
-      }
-      if (typeof x === 'number' && y instanceof Vec2) {
-        this.x = x;
-        this.y = y.x;
-        this.z = y.y;
-        return;
-      }
-      throw Error('ArgumentError');
-    }
-    if (arguments.length === 3) {
-      if (
-        typeof x === 'number' &&
-        typeof y === 'number' &&
-        typeof z === 'number'
-      ) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-        return;
-      }
-      throw Error('ArgumentError');
-    }
+  constructor(public x: number, public y: number, public z: number) {}
+
+  static fromArray(data: [number, number, number]) {
+    return new Vec3(data[0], data[1], data[2]);
   }
 
-  get r() {
-    return this.x;
-  }
-
-  set r(value) {
-    this.x = value;
-  }
-
-  get g() {
-    return this.y;
-  }
-
-  set g(value) {
-    this.y = value;
-  }
-
-  get b() {
-    return this.z;
-  }
-
-  set b(value) {
-    this.z = value;
+  static fromVec2(vec2: Vec2, z: number = 0) {
+    return new Vec3(vec2.x, vec2.y, z);
   }
 
   get xy() {
@@ -229,85 +128,15 @@ export class Vec3 {
 }
 
 export class Vec4 {
-  constructor(x, y, z, a) {
-    if (arguments.length === 1) {
-      if (typeof x === 'number') {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-        this.a = a;
-        return;
-      }
-      throw Error('ArgumentError');
-    }
-    if (arguments.length === 2) {
-      if (x instanceof Vec3 && typeof y === 'number') {
-        this.x = x.x;
-        this.y = x.y;
-        this.z = x.z;
-        this.a = y;
-        return;
-      }
-      throw Error('ArgumentError');
-    }
-    if (arguments.length === 3) {
-      if (
-        typeof x === 'number' &&
-        typeof y === 'number' &&
-        typeof z === 'number'
-      ) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-        this.a = 0;
-        return;
-      }
-      throw Error('ArgumentError');
-    }
-    if (arguments.length === 4) {
-      if (
-        typeof x === 'number' &&
-        typeof y === 'number' &&
-        typeof z === 'number' &&
-        typeof a === 'number'
-      ) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-        this.a = a;
-        return;
-      }
-      throw Error('ArgumentError');
-    }
-    throw Error('ArgumentError');
-  }
+  constructor(
+    public x: number,
+    public y: number,
+    public z: number,
+    public a: number
+  ) {}
 
-  get r() {
-    return this.x;
-  }
-
-  set r(value) {
-    this.x = value;
-  }
-
-  get g() {
-    return this.y;
-  }
-
-  set g(value) {
-    this.y = value;
-  }
-
-  get b() {
-    return this.z;
-  }
-
-  set b(value) {
-    this.z = value;
-  }
-
-  get rgb() {
-    return new Vec3(this.x, this.y, this.z);
+  static fromArray(data: [number, number, number, number]) {
+    return new Vec4(data[0], data[1], data[2], data[3]);
   }
 
   get xyz() {
@@ -316,6 +145,10 @@ export class Vec4 {
 
   get zyx() {
     return new Vec3(this.z, this.y, this.x);
+  }
+
+  get zxy() {
+    return new Vec3(this.z, this.x, this.y);
   }
 
   get xy() {
