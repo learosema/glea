@@ -5,6 +5,10 @@ export class Vec2 {
     return new Vec2(arr[0], arr[1]);
   }
 
+  clone() {
+    return new Vec2(this.x, this.y);
+  }
+
   add(otherVec: Vec2) {
     return new Vec2(this.x + otherVec.x, this.y + otherVec.y);
   }
@@ -63,6 +67,10 @@ export class Vec3 {
 
   get xz() {
     return new Vec2(this.x, this.z);
+  }
+
+  clone() {
+    return new Vec3(this.x, this.y, this.z);
   }
 
   add(otherVec) {
@@ -173,5 +181,9 @@ export class Vec4 {
 
   get zy() {
     return new Vec2(this.z, this.y);
+  }
+
+  clone() {
+    return new Vec4(this.x, this.y, this.z, this.a);
   }
 }
