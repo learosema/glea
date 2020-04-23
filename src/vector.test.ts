@@ -1,4 +1,4 @@
-import { Vec2, Vec3 } from './vector';
+import { Vec2, Vec3, Vec4 } from './vector';
 
 describe('2D Vector arithmetics', () => {
   test('Vec2 constructor', () => {
@@ -23,8 +23,11 @@ describe('2D Vector arithmetics', () => {
 
   test('Vec2 fromArray factory', () => {
     const vector = Vec2.fromArray([3, 5]);
+    const vector0 = Vec2.fromArray([]);
     expect(vector.x).toBe(3);
     expect(vector.y).toBe(5);
+    expect(vector0.x).toBe(0);
+    expect(vector0.y).toBe(0);
   });
 
   test('Vec2 addition', () => {
@@ -95,9 +98,13 @@ describe('3D Vector arithmetics', () => {
 
   test('Vec3 constructor with array as argument', () => {
     const vector = Vec3.fromArray([1, 2, 3]);
+    const vector0 = Vec3.fromArray([]);
     expect(vector.x).toBe(1);
     expect(vector.y).toBe(2);
     expect(vector.z).toBe(3);
+    expect(vector0.x).toBe(0);
+    expect(vector0.y).toBe(0);
+    expect(vector0.z).toBe(0);
   });
 
   test('Vec3 clone', () => {
@@ -110,9 +117,13 @@ describe('3D Vector arithmetics', () => {
   test('Vec3 constructor with inner Vec2 constructor', () => {
     const vec2 = new Vec2(1, 2);
     const vector = Vec3.fromVec2(vec2, 3);
+    const vector2 = Vec3.fromVec2(vec2);
     expect(vector.x).toBe(1);
     expect(vector.y).toBe(2);
     expect(vector.z).toBe(3);
+    expect(vector2.x).toBe(1);
+    expect(vector2.y).toBe(2);
+    expect(vector2.z).toBe(0);
   });
 
   test('Vec3 fromNumber factory', () => {
@@ -120,54 +131,6 @@ describe('3D Vector arithmetics', () => {
     expect(vector.x).toBe(3);
     expect(vector.y).toBe(3);
     expect(vector.z).toBe(3);
-  });
-
-  test('Vec3.xy', () => {
-    const vector = new Vec3(1, 2, 3);
-    const xy = vector.xy;
-    expect(xy instanceof Vec2).toBe(true);
-    expect(xy.x).toBe(1);
-    expect(xy.y).toBe(2);
-  });
-
-  test('Vec3.xz', () => {
-    const vector = new Vec3(1, 2, 3);
-    const xz = vector.xz;
-    expect(xz instanceof Vec2).toBe(true);
-    expect(xz.x).toBe(1);
-    expect(xz.y).toBe(3);
-  });
-
-  test('Vec3.yx', () => {
-    const vector = new Vec3(1, 2, 3);
-    const yx = vector.yx;
-    expect(yx instanceof Vec2).toBe(true);
-    expect(yx.x).toBe(2);
-    expect(yx.y).toBe(1);
-  });
-
-  test('Vec3.yz', () => {
-    const vector = new Vec3(1, 2, 3);
-    const yz = vector.yz;
-    expect(yz instanceof Vec2).toBe(true);
-    expect(yz.x).toBe(2);
-    expect(yz.y).toBe(3);
-  });
-
-  test('Vec3.zx', () => {
-    const vector = new Vec3(1, 2, 3);
-    const zx = vector.zx;
-    expect(zx instanceof Vec2).toBe(true);
-    expect(zx.x).toBe(3);
-    expect(zx.y).toBe(1);
-  });
-
-  test('Vec3.zy', () => {
-    const vector = new Vec3(1, 2, 3);
-    const zy = vector.zy;
-    expect(zy instanceof Vec2).toBe(true);
-    expect(zy.x).toBe(3);
-    expect(zy.y).toBe(2);
   });
 
   test('Vec3 addition', () => {
@@ -249,3 +212,28 @@ describe('3D Vector arithmetics', () => {
 });
 
 
+describe('Vec4 tests', () => {
+  test('Vec4 constructor', () => {
+    const vec = new Vec4(1, 2, 3, 4);
+    expect(vec.toArray()).toEqual([1, 2, 3, 4]);
+  });
+
+  test('Vec4 clone', () => {
+    const vec = new Vec4(1, 2, 3, 4);
+    const clone = vec.clone();
+    expect(clone.toArray()).toEqual([1, 2, 3, 4]);
+  });
+
+  test('Vec4 fromArray factory', () => {
+    const vec = Vec4.fromArray([1, 2, 3, 4]);
+    const vec0 = Vec4.fromArray([]);
+    expect(vec.toArray()).toEqual([1, 2, 3, 4]);
+    expect(vec0.toArray()).toEqual([0, 0, 0, 0]);
+  });
+
+  test('Vec4 fromNumber factory', () => {
+    const vec = Vec4.fromNumber(1);
+    expect(vec.toArray()).toEqual([1, 1, 1, 1]);
+  });
+
+});

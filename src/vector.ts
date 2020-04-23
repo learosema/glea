@@ -1,8 +1,8 @@
 export class Vec2 {
   constructor(public x: number, public y: number) {}
 
-  static fromArray(arr: [number, number]) {
-    return new Vec2(arr[0], arr[1]);
+  static fromArray(arr: number[]) {
+    return new Vec2(arr[0] || 0, arr[1] || 0);
   }
 
   static fromNumber(n: number) {
@@ -53,8 +53,8 @@ export class Vec2 {
 export class Vec3 {
   constructor(public x: number, public y: number, public z: number) {}
 
-  static fromArray(data: [number, number, number]) {
-    return new Vec3(data[0], data[1], data[2]);
+  static fromArray(data: number[]) {
+    return new Vec3(data[0] || 0, data[1] || 0, data[2] || 0);
   }
 
   static fromNumber(n: number) {
@@ -63,30 +63,6 @@ export class Vec3 {
 
   static fromVec2(vec2: Vec2, z: number = 0) {
     return new Vec3(vec2.x, vec2.y, z);
-  }
-
-  get xy() {
-    return new Vec2(this.x, this.y);
-  }
-
-  get xz() {
-    return new Vec2(this.x, this.z);
-  }
-
-  get yx() {
-    return new Vec2(this.y, this.x);
-  }
-
-  get yz() {
-    return new Vec2(this.y, this.z);
-  }
-
-  get zx() {
-    return new Vec2(this.z, this.x);
-  }
-
-  get zy() {
-    return new Vec2(this.z, this.y);
   }
 
   clone() {
@@ -163,48 +139,16 @@ export class Vec4 {
     public a: number
   ) {}
 
-  static fromArray(data: [number, number, number, number]) {
-    return new Vec4(data[0], data[1], data[2], data[3]);
+  static fromArray(data: number[]) {
+    return new Vec4(data[0] || 0, data[1] || 0, data[2] || 0, data[3] || 0);
   }
 
   static fromNumber(n: number) {
     return new Vec4(n, n, n, n);
   }
 
-  get xyz() {
-    return new Vec3(this.x, this.y, this.z);
-  }
-
-  get zyx() {
-    return new Vec3(this.z, this.y, this.x);
-  }
-
-  get zxy() {
-    return new Vec3(this.z, this.x, this.y);
-  }
-
-  get xy() {
-    return new Vec2(this.x, this.y);
-  }
-
-  get xz() {
-    return new Vec2(this.x, this.z);
-  }
-
-  get yz() {
-    return new Vec2(this.y, this.z);
-  }
-
-  get yx() {
-    return new Vec2(this.y, this.x);
-  }
-
-  get zx() {
-    return new Vec2(this.z, this.x);
-  }
-
-  get zy() {
-    return new Vec2(this.z, this.y);
+  toArray() {
+    return [this.x, this.y, this.z, this.a];
   }
 
   clone() {
