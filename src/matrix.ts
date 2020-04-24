@@ -136,7 +136,7 @@ export class Mat {
 }
 
 export class Mat2 extends Mat {
-  constructor(...values: any[]) {
+  constructor(...values: number[]) {
     super(...values);
     this.numRows = 2;
     this.numCols = 2;
@@ -146,7 +146,7 @@ export class Mat2 extends Mat {
     return this.values;
   }
 
-  static fromArray(values: (string|number)[]) {
+  static fromArray(values: number[]) {
     return new Mat2(...values);
   }
 
@@ -184,7 +184,7 @@ export class Mat2 extends Mat {
 }
 
 export class Mat4 extends Mat {
-  constructor(...values: (string|number)[]) {
+  constructor(...values: number[]) {
     // input is like in glsl mat4:
     // column0: row 0, row 1, row 2, row 3
     // column1: row 0, row 1, row 2, row 3
@@ -199,7 +199,7 @@ export class Mat4 extends Mat {
     return this.values;
   }
 
-  static fromArray(values: (string|number)[]) {
+  static fromArray(values: number[]) {
     return new Mat4(...values);
   }
 
