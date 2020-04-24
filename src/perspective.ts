@@ -1,19 +1,33 @@
-import { Vec3 } from './vector.mjs';
+import { Vec3 } from './vector';
 
 // glOrtho(left, right, bottom, top, zNear, zFar)
-export function ortho(l, r, b, t, zn, zf) {
-  const tx = -(r + l) / (r - l);
-  const ty = -(t + b) / (t - b);
-  const tz = -(zf + zn) / (zf - zn);
+export function ortho(
+  left: number,
+  right: number,
+  bottom: number,
+  top: number,
+  zNear: number,
+  zFar: number
+) {
+  const tx = -(right + left) / (right - left);
+  const ty = -(top + bottom) / (top - bottom);
+  const tz = -(zFar + zNear) / (zFar - zNear);
   // prettier-ignore
-  return [2 / (r - l), 0, 0,
-	        0, 0, 2 / (t - b), 0,
-	        0, 0, 0, -2 / (zf - zn),
+  return [2 / (right - left), 0, 0,
+	        0, 0, 2 / (top - bottom), 0,
+	        0, 0, 0, -2 / (zFar - zNear),
 	        0, tx, ty, tz, 1];
 }
 
 // glFrustum(left, right, bottom, top, zNear, zFar)
-export function frustum(left, right, bottom, top, zNear, zFar) {
+export function frustum(
+  left: number,
+  right: number,
+  bottom: number,
+  top: number,
+  zNear: number,
+  zFar: number
+) {
   const t1 = 2 * zNear;
   const t2 = right - left;
   const t3 = top - bottom;
@@ -26,20 +40,27 @@ export function frustum(left, right, bottom, top, zNear, zFar) {
 }
 
 // gluPerspective(fieldOfView, aspectRatio, zNear, zFar)
-export function perspective(fieldOfView, aspectRatio, zNear, zFar) {
+export function perspective(
+  fieldOfView: number,
+  aspectRatio: number,
+  zNear: number,
+  zFar: number
+) {
   const y = zNear * Math.tan((fieldOfView * Math.PI) / 360);
   const x = y * aspectRatio;
   return frustum(-x, x, -y, y, zNear, zFar);
 }
 
 // gluLookAt(eyeX, eyeY, eyeZ, centerX, centerY, centerZ, upX, upY, upZ)
-export function lookAt(eye, center, up) {
-  const c = Vec3(eye.x - center.x, eye.y - center.y, eye.z - center.z);
-  const a = up.cross(z).normalize();
-  const b = z.cross(x).normalize();
+// TODO:
+// this seems wrong, look at https://www.daniweb.com/programming/game-development/threads/308901/lookat-matrix-source-code
+export function lookAt(eye: number, center: number, up: Vec3) {
+  /*  const c = new Vec3(eye.x - center.x, eye.y - center.y, eye.z - center.z);
+  const a = up.cross(c.z).normalized;
+  const b = z.cross(eye.x).normalized;
   // prettier-ignore
   return [a.x, b.x, c.x,0,
 	        a.y, b.y, c.y,0,
 	        a.z, b.z, c.z,0,
-	        0,   0,   0,  1];
+          0,   0,   0,  1]; */
 }

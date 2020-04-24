@@ -17,7 +17,7 @@ describe('generic matrix arithmetics', () => {
     const m = new Mat('3x2', 1, 2, 3, 4, 5, 6);
     expect(m.colAt(0)).toEqual([1, 2, 3]);
     expect(m.colAt(1)).toEqual([4, 5, 6]);
-   
+
     expect(m.rowAt(0)).toEqual([1, 4]);
     expect(m.rowAt(1)).toEqual([2, 5]);
     expect(m.rowAt(2)).toEqual([3, 6]);
@@ -39,16 +39,14 @@ describe('generic matrix arithmetics', () => {
     expect(c.colAt(1)).toEqual([44, 55, 66]);
   });
 
-
   test('3x2 matrix substraction', () => {
     const a = new Mat('3x2', 10, 20, 30, 40, 50, 60);
     const b = new Mat('3x2', 1, 2, 3, 4, 5, 6);
     const c = a.sub(b);
     expect(c.colAt(0)).toEqual([9, 18, 27]);
-    expect(c.colAt(1)).toEqual([36, 45, 54]);    
+    expect(c.colAt(1)).toEqual([36, 45, 54]);
   });
 
-  
   test('2x3 * 3x2 matrix multiplication', () => {
     const a = new Mat('3x2', 1, 2, 3, 4, 5, 6);
 
@@ -62,7 +60,7 @@ describe('generic matrix arithmetics', () => {
     const c = a.mul(b);
     expect(c.numCols).toBe(3);
     expect(c.numRows).toBe(3);
-    
+
     expect(c.toArray()).toEqual([39, 54, 69, -12, -18, -24, -23, -31, -39]);
     //
     //           1   4
@@ -75,9 +73,7 @@ describe('generic matrix arithmetics', () => {
     expect(d.numRows).toBe(2);
     expect(d.toArray()).toEqual([-10, -11, -10, -8]);
   });
-
 });
-
 
 describe('2x2 matrix arithmetics', () => {
   test('Mat2 identity', () => {
@@ -99,7 +95,6 @@ describe('2x2 matrix arithmetics', () => {
 
     const col = mat.colAt(1);
     expect(col).toEqual([3, 4]);
-
   });
 
   test('Mat2 determinant', () => {
@@ -131,4 +126,3 @@ describe('2x2 matrix arithmetics', () => {
     expect(a.toString()).toBe('mat2(2, 3, 5, 7)');
   });
 });
-

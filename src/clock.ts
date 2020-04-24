@@ -4,7 +4,6 @@
  */
 
 export default class Clock {
-
   constructor(autoStart = true) {
     this.startTime = 0;
     this.oldTime = 0;
@@ -20,7 +19,10 @@ export default class Clock {
       return 0;
     }
     if (running) {
-      const newTime = (typeof performance === 'undefined' ? Date : performance).now();
+      const newTime = (typeof performance === 'undefined'
+        ? Date
+        : performance
+      ).now();
       const diff = (newTime - this.oldTime) / 1000;
       this.oldTime = newTime;
       this._elapsedTime += diff;
@@ -35,7 +37,10 @@ export default class Clock {
   }
 
   start() {
-    this.startTime = (typeof performance === 'undefined' ? Date : performance).now();
+    this.startTime = (typeof performance === 'undefined'
+      ? Date
+      : performance
+    ).now();
     this.oldTime = this.startTime;
     this.running = true;
     this._elapsedTime = 0;
@@ -46,5 +51,4 @@ export default class Clock {
     this.running = false;
     this.autoStart = false;
   }
-
 }

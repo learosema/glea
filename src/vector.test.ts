@@ -14,7 +14,6 @@ describe('2D Vector arithmetics', () => {
     expect(copied.y).toBe(2);
   });
 
-
   test('Vec2 fromNumber factory', () => {
     const vector = Vec2.fromNumber(3);
     expect(vector.x).toBe(3);
@@ -173,7 +172,7 @@ describe('3D Vector arithmetics', () => {
   });
 
   test('Vec3 normalized', () => {
-    const vector = new Vec3(3, 4, 5)
+    const vector = new Vec3(3, 4, 5);
     const expected = new Vec3(0.42, 0.57, 0.71);
     const actual = vector.normalized;
     expect(actual.x).toBeCloseTo(expected.x);
@@ -211,7 +210,6 @@ describe('3D Vector arithmetics', () => {
   });
 });
 
-
 describe('Vec4 tests', () => {
   test('Vec4 constructor', () => {
     const vec = new Vec4(1, 2, 3, 4);
@@ -235,5 +233,4 @@ describe('Vec4 tests', () => {
     const vec = Vec4.fromNumber(1);
     expect(vec.toArray()).toEqual([1, 1, 1, 1]);
   });
-
 });

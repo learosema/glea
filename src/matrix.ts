@@ -3,7 +3,7 @@ export class Mat {
   numRows: number;
   numCols: number;
 
-  constructor(...values: (string|number)[]) {
+  constructor(...values: (string | number)[]) {
     const MxN =
       typeof values[0] === 'string' && /^\d+x\d+$/.test(values[0])
         ? values[0].split('x').map((num) => parseInt(num, 10))
@@ -30,7 +30,7 @@ export class Mat {
     return this.values;
   }
 
-  static fromArray(values: (string|number)[]) {
+  static fromArray(values: (string | number)[]) {
     return new Mat(...values);
   }
 
@@ -72,7 +72,7 @@ export class Mat {
       this.numRows === otherMatrix.numRows &&
       this.values.length === otherMatrix.values.length
     ) {
-      const newValues: (string|number)[] = this.values.map(
+      const newValues: (string | number)[] = this.values.map(
         (value, i) => value + otherMatrix.values[i]
       );
       if (this.numRows !== this.numCols) {
@@ -89,7 +89,7 @@ export class Mat {
       this.numRows === otherMatrix.numRows &&
       this.values.length === otherMatrix.values.length
     ) {
-      const newValues: (string|number)[] = this.values.map(
+      const newValues: (string | number)[] = this.values.map(
         (value, i) => value - otherMatrix.values[i]
       );
       if (this.numRows !== this.numCols) {
@@ -100,9 +100,11 @@ export class Mat {
     throw Error('ArgumentError');
   }
 
-  mul(param: Mat|number) {
+  mul(param: Mat | number) {
     if (typeof param === 'number') {
-      const multipliedValues: (string|number)[] = this.values.map((value) => value * param);
+      const multipliedValues: (string | number)[] = this.values.map(
+        (value) => value * param
+      );
       if (this.numRows !== this.numCols) {
         multipliedValues.unshift(`${this.numRows}x${this.numCols}`);
       }
@@ -112,7 +114,9 @@ export class Mat {
       const mat = param;
       const { numRows } = this;
       const { numCols } = mat;
-      const multipliedValues: (string|number)[] = Array<string|number>(numRows * numCols)
+      const multipliedValues: (string | number)[] = Array<string | number>(
+        numRows * numCols
+      )
         .fill(0)
         .map((_, idx) => {
           const y = idx % numRows;
