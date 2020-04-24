@@ -1,10 +1,14 @@
 export class Mat {
-  constructor(...values) {
+  values: number[];
+  numRows: number;
+  numCols: number;
+
+  constructor(...values: (string|number)[]) {
     const MxN =
       typeof values[0] === 'string' && /^\d+x\d+$/.test(values[0])
         ? values[0].split('x').map((num) => parseInt(num, 10))
         : null;
-    this.values = MxN !== null ? values.slice(1) : values;
+    this.values = (MxN !== null ? values.slice(1) : values) as number[];
     if (MxN !== null && MxN[0] > 0 && MxN[1] > 0) {
       this.numRows = MxN[0];
       this.numCols = MxN[1];
@@ -26,27 +30,27 @@ export class Mat {
     return this.values;
   }
 
-  static fromArray(values) {
+  static fromArray(values: (string|number)[]) {
     return new Mat(...values);
   }
 
-  valueAt(row, column) {
+  valueAt(row: number, column: number) {
     return this.values[column * this.numRows + row];
   }
 
-  colAt(column) {
+  colAt(column: number) {
     const { numRows } = this;
     return this.values.slice(column * numRows, column * numRows + numRows);
   }
 
-  rowAt(row) {
+  rowAt(row: number) {
     const { numRows, numCols } = this;
     return Array(numCols)
       .fill(0)
       .map((_, column) => this.values[column * numRows + row]);
   }
 
-  equals(otherMatrix) {
+  equals(otherMatrix: Mat) {
     if (
       this.values.length !== otherMatrix.values.length ||
       this.numCols !== otherMatrix.numCols ||
@@ -62,13 +66,13 @@ export class Mat {
     return true;
   }
 
-  add(otherMatrix) {
+  add(otherMatrix: Mat) {
     if (
       this.numCols === otherMatrix.numCols &&
       this.numRows === otherMatrix.numRows &&
       this.values.length === otherMatrix.values.length
     ) {
-      const newValues = this.values.map(
+      const newValues: (string|number)[] = this.values.map(
         (value, i) => value + otherMatrix.values[i]
       );
       if (this.numRows !== this.numCols) {
@@ -79,13 +83,13 @@ export class Mat {
     throw Error('ArgumentError');
   }
 
-  sub(otherMatrix) {
+  sub(otherMatrix: Mat) {
     if (
       this.numCols === otherMatrix.numCols &&
       this.numRows === otherMatrix.numRows &&
       this.values.length === otherMatrix.values.length
     ) {
-      const newValues = this.values.map(
+      const newValues: (string|number)[] = this.values.map(
         (value, i) => value - otherMatrix.values[i]
       );
       if (this.numRows !== this.numCols) {
@@ -96,9 +100,9 @@ export class Mat {
     throw Error('ArgumentError');
   }
 
-  mul(param) {
+  mul(param: Mat|number) {
     if (typeof param === 'number') {
-      const multipliedValues = this.values.map((value) => value * param);
+      const multipliedValues: (string|number)[] = this.values.map((value) => value * param);
       if (this.numRows !== this.numCols) {
         multipliedValues.unshift(`${this.numRows}x${this.numCols}`);
       }
@@ -108,7 +112,7 @@ export class Mat {
       const mat = param;
       const { numRows } = this;
       const { numCols } = mat;
-      const multipliedValues = Array(numRows * numCols)
+      const multipliedValues: (string|number)[] = Array<string|number>(numRows * numCols)
         .fill(0)
         .map((_, idx) => {
           const y = idx % numRows;
@@ -132,7 +136,7 @@ export class Mat {
 }
 
 export class Mat2 extends Mat {
-  constructor(...values) {
+  constructor(...values: any[]) {
     super(...values);
     this.numRows = 2;
     this.numCols = 2;
@@ -142,7 +146,7 @@ export class Mat2 extends Mat {
     return this.values;
   }
 
-  static fromArray(values) {
+  static fromArray(values: (string|number)[]) {
     return new Mat2(...values);
   }
 
@@ -155,14 +159,18 @@ export class Mat2 extends Mat {
     ); // column2
   }
 
-  static rotation(angle) {
+  static rotation(angle: number) {
     const S = Math.sin(angle);
     const C = Math.cos(angle);
     return new Mat2(C, S, -S, C);
   }
 
-  static scaling(sx, sy) {
-    return new Mat2(sx, 0, 0, sy);
+  static scaling(sx: number, sy: number) {
+    // prettier-ignore
+    return new Mat2(
+      sx, 0, 
+      0, sy
+    );
   }
 
   determinant() {
@@ -176,7 +184,7 @@ export class Mat2 extends Mat {
 }
 
 export class Mat4 extends Mat {
-  constructor(...values) {
+  constructor(...values: (string|number)[]) {
     // input is like in glsl mat4:
     // column0: row 0, row 1, row 2, row 3
     // column1: row 0, row 1, row 2, row 3
@@ -191,7 +199,7 @@ export class Mat4 extends Mat {
     return this.values;
   }
 
-  static fromArray(values) {
+  static fromArray(values: (string|number)[]) {
     return new Mat4(...values);
   }
 
@@ -204,7 +212,7 @@ export class Mat4 extends Mat {
       0, 0, 0, 1);
   }
 
-  static translation(x, y, z) {
+  static translation(x: number, y: number, z: number) {
     // prettier-ignore
     return new Mat4(
       1, 0, 0, 0,
@@ -214,7 +222,7 @@ export class Mat4 extends Mat {
     );
   }
 
-  static scaling(sx, sy, sz) {
+  static scaling(sx: number, sy: number, sz: number) {
     // prettier-ignore
     return new Mat4(
       sx,  0,  0, 0,
@@ -224,7 +232,7 @@ export class Mat4 extends Mat {
     );
   }
 
-  static rotX(angle) {
+  static rotX(angle: number) {
     const { sin, cos } = Math;
     const S = sin(angle);
     const C = cos(angle);
@@ -237,7 +245,7 @@ export class Mat4 extends Mat {
     );
   }
 
-  static rotY(angle) {
+  static rotY(angle: number) {
     const { sin, cos } = Math;
     const S = sin(angle);
     const C = cos(angle);
@@ -250,7 +258,7 @@ export class Mat4 extends Mat {
     );
   }
 
-  static rotZ(angle) {
+  static rotZ(angle: number) {
     const { sin, cos } = Math;
     const S = sin(angle);
     const C = cos(angle);
