@@ -155,12 +155,11 @@ export class Mat2 extends Mat {
   }
 
   static identity() {
+    // prettier-ignore
     return new Mat2(
-      1,
-      0, // column1
-      0,
-      1
-    ); // column2
+      1, 0, // column1
+      0, 1  // column2
+    );
   }
 
   static rotation(angle: number) {
