@@ -51,16 +51,16 @@ export function perspective(
   return frustum(-x, x, -y, y, zNear, zFar);
 }
 
-// gluLookAt(eyeX, eyeY, eyeZ, centerX, centerY, centerZ, upX, upY, upZ)
-// TODO:
-// this seems wrong, look at https://www.daniweb.com/programming/game-development/threads/308901/lookat-matrix-source-code
-export function lookAt(eye: number, center: number, up: Vec3) {
-  /*  const c = new Vec3(eye.x - center.x, eye.y - center.y, eye.z - center.z);
-  const a = up.cross(c.z).normalized;
-  const b = z.cross(eye.x).normalized;
+// https://www.khronos.org/opengl/wiki/GluLookAt_code
+export function lookAt(eye: Vec3, center: Vec3, up: Vec3) {
+  const forward = eye.sub(center).normalized;
+  const side = forward.cross(up).normalized;
+  const up2 = side.cross(forward);
   // prettier-ignore
-  return [a.x, b.x, c.x,0,
-	        a.y, b.y, c.y,0,
-	        a.z, b.z, c.z,0,
-          0,   0,   0,  1]; */
+  return [
+     side.x,     side.y,     side.z,    0,
+     up2.x,      up2.y,      up2.z,     0,
+    -forward.x, -forward.y, -forward.z, 0,
+        0,          0,          0,      1
+  ];
 }
