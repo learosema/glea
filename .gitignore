@@ -3,3 +3,6 @@ Thumbs.db
 coverage
 
 node_modules
+
+# For now, ignore dist
+dist
