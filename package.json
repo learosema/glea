@@ -5,9 +5,9 @@
   "scripts": {
     "build:esm": "tsc",
     "build:umd": "tsc --outDir dist/umd -m umd",
-    "build": "npm run build:esm -s && npm run build:umd -s",
-    "test": "jest --coverage",
-    "doc:glea": "jsdoc2md src/glea.js > docs/glea.md"
+    "build:docs": "typedoc --out docs src",
+    "build": "npm run build:docs -s && npm run build:esm -s && npm run build:umd -s",
+    "test": "jest --coverage"
   },
   "author": "Lea Rosema",
   "license": "MIT",
@@ -19,10 +19,10 @@
     "express": "^4.17.1",
     "husky": "^4.2.5",
     "jest": "^25.4.0",
-    "jsdoc-to-markdown": "^5.0.3",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
     "ts-jest": "^25.4.0",
+    "typedoc": "^0.17.5",
     "typescript": "^3.8.3"
   },
   "husky": {
