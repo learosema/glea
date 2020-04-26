@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "GL experience admirers",
   "scripts": {
+    "build:esm": "tsc",
+    "build:umd": "tsc --outDir dist/umd -m umd",
     "test": "jest --coverage",
     "doc:glea": "jsdoc2md src/glea.js > docs/glea.md"
   },

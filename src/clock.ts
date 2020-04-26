@@ -4,6 +4,12 @@
  */
 
 export default class Clock {
+  startTime: number;
+  oldTime: number;
+  _elapsedTime: number;
+  autoStart: boolean;
+  running: boolean;
+
   constructor(autoStart = true) {
     this.startTime = 0;
     this.oldTime = 0;

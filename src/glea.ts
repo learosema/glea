@@ -8,14 +8,17 @@
  * @param {number[]} data
  * @param {WebGLRenderingContext.FLOAT|WebGLRenderingContext.BYTE} type
  */
-function convertArray(data = [], type = WebGLRenderingContext.FLOAT) {
+function convertArray(
+  data: number[],
+  type = WebGLRenderingContext.FLOAT
+): ArrayBuffer {
   if (type === WebGLRenderingContext.FLOAT) {
     return new Float32Array(data);
   }
   if (type === WebGLRenderingContext.BYTE) {
     return new Uint8Array(data);
   }
-  return data;
+  throw Error('type not supported');
 }
 
 /**
@@ -23,11 +26,14 @@ function convertArray(data = [], type = WebGLRenderingContext.FLOAT) {
  * @param {string} code the shader code
  * @param {string} shaderType frag or vert
  */
-function shader(code, shaderType) {
-  return (gl) => {
+function shader(code: string, shaderType: 'frag' | 'vert') {
+  return (gl: WebGLRenderingContext | WebGL2RenderingContext) => {
     const sh = gl.createShader(
       /frag/.test(shaderType) ? gl.FRAGMENT_SHADER : gl.VERTEX_SHADER
     );
+    if (!sh) {
+      throw Error('shader type not supported');
+    }
     gl.shaderSource(sh, code);
     gl.compileShader(sh);
     if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) {
@@ -37,8 +43,47 @@ function shader(code, shaderType) {
   };
 }
 
+export type GLeaContext = WebGLRenderingContext | WebGL2RenderingContext;
+export type GLeaShaderFactory = (gl: GLeaContext) => WebGLShader;
+
+export type GLeaBuffer = {
+  id: WebGLBuffer;
+  name: string;
+  data: ArrayBuffer;
+  loc: number;
+  type: number;
+  size: number;
+};
+
+export type GLeaBufferFactory = (
+  name: string,
+  gl: GLeaContext,
+  program: WebGLProgram
+) => GLeaBuffer;
+
+export type GLeaConstructorParams = {
+  canvas: HTMLCanvasElement;
+  gl: WebGLRenderingContext | WebGL2RenderingContext;
+  contextType: string;
+  shaders: GLeaShaderFactory[];
+  buffers: Record<string, GLeaBufferFactory>;
+  devicePixelRatio: number;
+  glOptions: WebGLContextAttributes;
+};
+
 /** Class GLea */
 class GLea {
+  canvas: HTMLCanvasElement = document.createElement('canvas');
+  gl: WebGLRenderingContext | WebGL2RenderingContext;
+  shaderFactory: GLeaShaderFactory[];
+  bufferFactory: Record<string, GLeaBufferFactory>;
+
+  program: WebGLProgram;
+  shaders: WebGLShader[];
+  buffers: Record<string, GLeaBuffer>;
+  textures: WebGLTexture[];
+  devicePixelRatio: number;
+
   constructor({
     canvas,
     gl,
@@ -47,23 +92,36 @@ class GLea {
     buffers,
     devicePixelRatio = 1,
     glOptions,
-  }) {
-    this.canvas = canvas || document.querySelector('canvas');
+  }: GLeaConstructorParams) {
+    this.canvas = canvas || <HTMLCanvasElement>document.querySelector('canvas');
     this.gl = gl;
     if (!this.gl && this.canvas) {
       if (contextType === 'webgl') {
-        this.gl =
-          this.canvas.getContext('webgl', glOptions) ||
-          this.canvas.getContext('experimental-webgl', glOptions);
-      } else {
-        this.gl = this.canvas.getContext(contextType, glOptions);
+        this.gl = (this.canvas.getContext('webgl', glOptions) ||
+          this.canvas.getContext(
+            'experimental-webgl',
+            glOptions
+          )) as WebGLRenderingContext;
+      }
+      if (contextType === 'webgl2') {
+        this.gl = this.canvas.getContext(
+          'webgl2',
+          glOptions
+        ) as WebGL2RenderingContext;
       }
       if (!this.gl) {
         throw Error(`no ${contextType} context available.`);
       }
     }
-    this.shaders = shaders;
-    this.buffers = buffers;
+    const program = gl.createProgram();
+    if (!program) {
+      throw Error('gl.createProgram failed');
+    }
+    this.program = program;
+    this.shaders = [];
+    this.buffers = {};
+    this.shaderFactory = shaders;
+    this.bufferFactory = buffers;
     this.textures = [];
     this.devicePixelRatio = devicePixelRatio;
   }
@@ -71,10 +129,10 @@ class GLea {
   /**
    * Create a vertex shader
    *
-   * @param {string} code shader code
+   * @param code shader code
    */
-  static vertexShader(code) {
-    return (gl) => shader(code, 'vertex')(gl);
+  static vertexShader(code: string) {
+    return (gl: GLeaContext) => shader(code, 'vert')(gl);
   }
 
   /**
@@ -82,8 +140,8 @@ class GLea {
    *
    * @param {string} code fragment shader code
    */
-  static fragmentShader(code) {
-    return (gl) => shader(code, 'fragment')(gl);
+  static fragmentShader(code: string) {
+    return (gl: GLeaContext) => shader(code, 'frag')(gl);
   }
 
   /**
@@ -98,23 +156,27 @@ class GLea {
    * @param {number}   offset offset, by default 0
    */
   static buffer(
-    size,
-    data,
+    size: number,
+    data: number[] | Uint8Array | Float32Array,
     usage = WebGLRenderingContext.STATIC_DRAW,
     type = WebGLRenderingContext.FLOAT,
     normalized = false,
     stride = 0,
     offset = 0
-  ) {
-    return (name, gl, program) => {
+  ): GLeaBufferFactory {
+    return (
+      name: string,
+      gl: GLeaContext,
+      program: WebGLProgram
+    ): GLeaBuffer => {
       const loc = gl.getAttribLocation(program, name);
       gl.enableVertexAttribArray(loc);
       // create buffer:
-      const id = gl.createBuffer();
+      const id = gl.createBuffer() as WebGLBuffer;
       const bufferData =
         data instanceof Array ? convertArray(data, type) : data;
       gl.bindBuffer(gl.ARRAY_BUFFER, id);
-      gl.bufferData(gl.ARRAY_BUFFER, bufferData, usage);
+      gl.bufferData(gl.ARRAY_BUFFER, bufferData as ArrayBuffer, usage);
       gl.vertexAttribPointer(loc, size, type, normalized, stride, offset);
       return {
         id,
@@ -132,10 +194,9 @@ class GLea {
    * @returns {GLea} glea instance
    */
   create() {
-    const { gl, shaders } = this;
-    this.program = gl.createProgram();
+    const { gl } = this;
     const { program } = this;
-    shaders
+    this.shaderFactory
       .map((shaderFunc) => shaderFunc(gl))
       .map((shader) => {
         gl.attachShader(program, shader);
@@ -147,8 +208,8 @@ class GLea {
       throw 'Could not compile WebGL program. \n\n' + info;
     }
     this.use();
-    Object.keys(this.buffers).forEach((name) => {
-      const bufferFunc = this.buffers[name];
+    Object.keys(this.bufferFactory).forEach((name) => {
+      const bufferFunc = this.bufferFactory[name];
       this.buffers[name] = bufferFunc(name, gl, program);
     });
     this.resize();
@@ -160,8 +221,9 @@ class GLea {
    * @param {number} textureIndex texture index in the range [0 .. gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1]
    * @param {WebGLTexture} texture webgl texture object
    */
-  setActiveTexture(textureIndex, texture) {
+  setActiveTexture(textureIndex: number, texture: WebGLTexture) {
     const { gl } = this;
+    // @ts-ignore how can I make this work in TS?
     gl.activeTexture(gl['TEXTURE' + textureIndex.toString()]);
     gl.bindTexture(gl.TEXTURE_2D, texture);
   }
@@ -182,7 +244,7 @@ class GLea {
    */
   createTexture(
     textureIndex = 0,
-    params = {
+    params: Record<string, string> = {
       textureWrapS: 'clampToEdge',
       textureWrapT: 'clampToEdge',
       textureMinFilter: 'nearest',
@@ -194,7 +256,8 @@ class GLea {
         ? str
         : str.replace(/([A-Z])/g, '_$1').toUpperCase();
     const { gl } = this;
-    const texture = gl.createTexture();
+    const texture = gl.createTexture() as WebGLTexture;
+    // @ts-ignore indexing gl by string
     gl.activeTexture(gl['TEXTURE' + textureIndex.toString()]);
     gl.bindTexture(gl.TEXTURE_2D, texture);
     for (let key in params) {
@@ -202,6 +265,7 @@ class GLea {
         const KEY = scream(key);
         const VAL = scream(params[key]);
         if (KEY in gl && VAL in gl) {
+          // @ts-ignore indexing gl by string
           gl.texParameteri(gl.TEXTURE_2D, gl[KEY], gl[VAL]);
         }
       }
@@ -215,7 +279,8 @@ class GLea {
    * @param {string} name name
    * @param {number} offset default: 0
    */
-  updateBuffer(name, offset = 0) {
+  updateBuffer(name: string, offset = 0) {
+    const { gl } = this;
     const buffer = this.buffers[name];
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer.id);
     gl.bufferSubData(gl.ARRAY_BUFFER, offset, buffer.data);
@@ -257,22 +322,22 @@ class GLea {
     return this;
   }
 
-  /**
-   * Set uniform matrix
-   *
-   * @param {string} name uniform variable name
-   * @param {number[]} data uniform float matrix
-   */
-  uniM(name, data) {
+  uniM(name: string, data: Float32Array | number[]) {
     const { gl, program } = this;
-    const { sqrt } = Math;
     const loc = gl.getUniformLocation(program, name);
-    gl['uniformMatrix' + sqrt(data.length) + 'fv'](
-      loc,
-      false,
-      new Float32Array(data)
-    );
-    return loc;
+    if (data.length === 4) {
+      gl.uniformMatrix2fv(loc, false, data);
+      return loc;
+    }
+    if (data.length === 9) {
+      gl.uniformMatrix3fv(loc, false, data);
+      return loc;
+    }
+    if (data.length === 16) {
+      gl.uniformMatrix4fv(loc, false, data);
+      return loc;
+    }
+    throw Error('unsupported uniform matrix type');
   }
 
   /**
@@ -281,16 +346,22 @@ class GLea {
    * @param {string} name uniform variable name
    * @param {number[]} data uniform float vector
    */
-  uniV(name, data) {
+  uniV(name: string, data: Float32Array | number[]) {
     const { gl, program } = this;
     const loc = gl.getUniformLocation(program, name);
-    gl['uniform' + data.length + 'fv'](
-      loc,
-      data instanceof Array || data instanceof Float32Array
-        ? data
-        : new Float32Array(data)
-    );
-    return loc;
+    if (data.length === 2) {
+      gl.uniform2fv(loc, data);
+      return loc;
+    }
+    if (data.length === 3) {
+      gl.uniform3fv(loc, data);
+      return loc;
+    }
+    if (data.length === 4) {
+      gl.uniform4fv(loc, data);
+      return loc;
+    }
+    throw Error('unsupported uniform vector type');
   }
 
   /**
@@ -299,10 +370,11 @@ class GLea {
    * @param {string} name uniform variable name
    * @param {number[]} data uniform int vector
    */
-  uniIV(name, data) {
+  uniIV(name: string, data: Int32Array | number[]) {
     const { gl, program } = this;
     const loc = gl.getUniformLocation(program, name);
-    gl['uniform' + data.length + 'iv'](loc, new Int32Array(data));
+    // @ts-ignore TODO: needs to be cleaned up
+    gl['uniform' + data.length + 'iv'](loc, data);
     return loc;
   }
 
@@ -312,7 +384,7 @@ class GLea {
    * @param {string} name uniform variable name
    * @param {number} data data
    */
-  uni(name, data) {
+  uni(name: string, data: number) {
     const { gl, program } = this;
     const loc = gl.getUniformLocation(program, name);
     if (typeof data === 'number') {
@@ -326,7 +398,7 @@ class GLea {
    * @param {string} name uniform variable name
    * @param {number} data data
    */
-  uniI(name, data) {
+  uniI(name: string, data: number) {
     const { gl, program } = this;
     const loc = gl.getUniformLocation(program, name);
     if (typeof data === 'number') {
@@ -339,7 +411,7 @@ class GLea {
    *
    * @param {Float32Array<GLclampf>} clearColor
    */
-  clear(clearColor = null) {
+  clear(clearColor: Float32Array | null) {
     const { gl } = this;
     if (clearColor) {
       gl.clearColor(clearColor[0], clearColor[1], clearColor[2], 1);
@@ -362,16 +434,16 @@ class GLea {
       this.textures.forEach((texture) => {
         gl.deleteTexture(texture);
       });
+      // @ts-ignore TS doesn't know about getExtension
       gl.getExtension('WEBGL_lose_context').loseContext();
-      const newCanvas = canvas.cloneNode();
+      const newCanvas = canvas.cloneNode() as HTMLCanvasElement;
       canvas.style.display = 'none';
       if (canvas.parentNode) {
         canvas.parentNode.insertBefore(newCanvas, canvas);
         canvas.parentNode.removeChild(canvas);
       }
-      this.gl = null;
+
       this.canvas = newCanvas;
-      this.program = null;
     } catch (err) {
       console.error(err);
     }

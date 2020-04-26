@@ -1,8 +1,26 @@
 /**
- * Create a square (2 triangles)
- *
+ * create rectangle geometry
+ * @param a length of side A
+ * @param b length of side B
+ * @param axes
+ */
+export function rect(sizeA: number, sizeB: number, axes: 'xy' | 'xz' | 'yz') {
+  const a = sizeA * 0.5;
+  const b = sizeB * 0.5;
+  switch (axes) {
+    case 'xy':
+      return [-a, -b, 0, a, -b, 0, -a, b, 0, -a, b, 0, a, -b, 0, a, b, 0];
+    case 'xz':
+      return [-a, 0, -b, a, 0, -b, -a, 0, b, -a, 0, b, a, 0, -b, a, 0, b];
+    case 'yz':
+      return [0, -a, -b, 0, a, -b, 0, -a, b, 0, -a, b, 0, a, -b, 0, a, b];
+  }
+}
+
+/**
+ * Create square geometry (2 triangles) *
  * @name square
- * @param {number} size
+ * @param size
  */
 export function square(size = 1) {
   const s = size * 0.5;
@@ -10,7 +28,7 @@ export function square(size = 1) {
 }
 
 /**
- * Create a box with the sizes a * b * c,
+ * Create a box geometry with the sizes a * b * c,
  * centered at (0, 0, 0), 2 triangles per side.
  *
  * @name box
