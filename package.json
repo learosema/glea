@@ -5,6 +5,7 @@
   "scripts": {
     "build:esm": "tsc",
     "build:umd": "tsc --outDir dist/umd -m umd",
+    "build": "npm run build:esm -s && npm run build:umd -s",
     "test": "jest --coverage",
     "doc:glea": "jsdoc2md src/glea.js > docs/glea.md"
   },

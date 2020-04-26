@@ -1,6 +1,7 @@
-const importStatement = /import\('(\w+)'\);/;
-export const glsl = (x) => x[0].trim() + '\n';
-const normalizeScreenCoords = glsl`
+// const importStatement = /import\('(\w+)'\);/;
+export const glsl = (x: TemplateStringsArray) => x[0].trim() + '\n';
+
+export const normalizeScreenCoords = glsl`
 // normalize coords and correct for aspect ratio
 vec2 normalizeScreenCoords()
 {
@@ -11,7 +12,7 @@ vec2 normalizeScreenCoords()
 }
 `;
 
-const coords = glsl`
+export const coords = glsl`
 vec2 coords() {
   float vmin = min(width, height);
   return vec2((gl_FragCoord.x - width * .5) / vmin,
@@ -19,7 +20,7 @@ vec2 coords() {
 }
 `;
 
-const invert = glsl`
+export const invert = glsl`
 // invert a color
 vec4 invert(vec4 color) {
   return vec4(1.0 - color.x, 1.0 - color.y, 1.0 - color.z, 1.0);
@@ -80,11 +81,3 @@ float hexagram(in vec2 p, in float r) {
   return length(p)*sign(p.y);
 }
 `;
-
-export const GLSLUtils = {
-  coords,
-  normalizeScreenCoords,
-  hexagram,
-  heart,
-  noise,
-};
