@@ -223,8 +223,7 @@ class GLea {
    */
   setActiveTexture(textureIndex: number, texture: WebGLTexture) {
     const { gl } = this;
-    // @ts-ignore how can I make this work in TS?
-    gl.activeTexture(gl['TEXTURE' + textureIndex.toString()]);
+    gl.activeTexture(gl.TEXTURE0 + textureIndex);
     gl.bindTexture(gl.TEXTURE_2D, texture);
   }
 
@@ -257,8 +256,7 @@ class GLea {
         : str.replace(/([A-Z])/g, '_$1').toUpperCase();
     const { gl } = this;
     const texture = gl.createTexture() as WebGLTexture;
-    // @ts-ignore indexing gl by string
-    gl.activeTexture(gl['TEXTURE' + textureIndex.toString()]);
+    gl.activeTexture(gl.TEXTURE0 + textureIndex);
     gl.bindTexture(gl.TEXTURE_2D, texture);
     for (let key in params) {
       if (params.hasOwnProperty(key)) {
@@ -409,9 +407,9 @@ class GLea {
   /**
    * Clear screen
    *
-   * @param {Float32Array<GLclampf>} clearColor
+   * @param {number[]} clearColor
    */
-  clear(clearColor: Float32Array | null) {
+  clear(clearColor: number[] | null = null) {
     const { gl } = this;
     if (clearColor) {
       gl.clearColor(clearColor[0], clearColor[1], clearColor[2], 1);
