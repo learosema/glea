@@ -1,50 +1,99 @@
 export class Vec2 {
   constructor(public x: number, public y: number) {}
 
-  static fromArray(arr: number[]) {
+  /**
+   * Create 2D vector from Array
+   * @param arr array of numbers
+   */
+  static fromArray(arr: number[]): Vec2 {
     return new Vec2(arr[0] || 0, arr[1] || 0);
   }
 
-  static fromNumber(n: number) {
+  /**
+   * Create a 2D vector with x = y = n
+   * @param n
+   */
+  static fromNumber(n: number): Vec2 {
     return new Vec2(n, n);
   }
 
-  clone() {
+  /**
+   * Clone 2D vector
+   */
+  clone(): Vec2 {
     return new Vec2(this.x, this.y);
   }
 
-  add(otherVec: Vec2) {
+  /**
+   * add vector
+   * @param otherVec addend
+   * @returns addition result
+   */
+  add(otherVec: Vec2): Vec2 {
     return new Vec2(this.x + otherVec.x, this.y + otherVec.y);
   }
 
-  sub(otherVec: Vec2) {
+  /**
+   * substract vector
+   * @param otherVec subtrahend
+   * @returns subtraction result
+   */
+  sub(otherVec: Vec2): Vec2 {
     return new Vec2(this.x - otherVec.x, this.y - otherVec.y);
   }
 
-  mul(value: number) {
+  /**
+   * multiply vector with scalar
+   * @param value scalar
+   * @returns multiplication result
+   */
+  mul(value: number): Vec2 {
     return new Vec2(this.x * value, this.y * value);
   }
 
-  div(value: number) {
+  /**
+   * divide vector with scalar
+   * @param value scalar
+   * @returns division result
+   */
+  div(value: number): Vec2 {
     return new Vec2(this.x / value, this.y / value);
   }
 
-  dot(otherVec: Vec2) {
+  /**
+   * dot product
+   * @param otherVec
+   */
+  dot(otherVec: Vec2): number {
     return this.x * otherVec.x + this.y * otherVec.y;
   }
 
-  equals(otherVec: Vec2) {
+  /**
+   * Check for equality
+   * @param otherVec
+   * @returns true if equal
+   */
+  equals(otherVec: Vec2): boolean {
     return this.x === otherVec.x && this.y === otherVec.y;
   }
 
+  /**
+   * Calculate length
+   */
   get length() {
     return Math.sqrt(this.x ** 2 + this.y ** 2);
   }
 
+  /**
+   * Convert to array
+   */
   toArray() {
     return [this.x, this.y];
   }
 
+  /**
+   * Convert to string, in the form of `(x, y)`
+   */
   toString() {
     return `(${this.x}, ${this.y})`;
   }
