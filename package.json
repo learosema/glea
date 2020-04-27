@@ -7,7 +7,8 @@
     "build:umd": "tsc --outDir dist/umd -m umd",
     "build:docs": "typedoc --out docs src",
     "build": "npm run build:docs -s && npm run build:esm -s && npm run build:umd -s",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "server": "node server"
   },
   "author": "Lea Rosema",
   "license": "MIT",
