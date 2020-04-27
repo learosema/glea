@@ -141,6 +141,9 @@ export class Mat {
 
 export class Mat2 extends Mat {
   constructor(...values: number[]) {
+    if (values.length !== 4) {
+      throw Error('invalid argument');
+    }
     super(...values);
     this.numRows = 2;
     this.numCols = 2;
@@ -186,6 +189,17 @@ export class Mat2 extends Mat {
   }
 }
 
+export class Mat3 extends Mat {
+  constructor(...values: number[]) {
+    if (values.length !== 9) {
+      throw Error('invalid argument');
+    }
+    super(...values);
+    this.numCols = 3;
+    this.numRows = 3;
+  }
+}
+
 export class Mat4 extends Mat {
   constructor(...values: number[]) {
     // input is like in glsl mat4:
@@ -193,6 +207,9 @@ export class Mat4 extends Mat {
     // column1: row 0, row 1, row 2, row 3
     // column2: row 0, row 1, row 2, row 3
     // column3: row 0, row 1, row 2, row 3
+    if (values.length !== 16) {
+      throw Error('invalid argument');
+    }
     super(...values);
     this.numCols = 4;
     this.numRows = 4;
