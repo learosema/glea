@@ -1,11 +1,14 @@
-# GLea.js - GL experimental assets
+# GLea - GL experience artistry
 
-Glea.js is a WebGL library with a minimal footprint in modern modular JavaScript. It provides helper functions for creating a WebGL program, compiling shaders and passing data from JavaScript to the shader language.
+GLea is a WebGL library with a minimal footprint.
+It provides helper functions for creating a WebGL program, compiling shaders and passing data from JavaScript to the shader language.
+
+There are some optional helper libraries for matrix and vector calculations.
 
 ## Usage
 
 ```
-import GLea from '../lib/glea/glea.mjs';
+import GLea from 'glea.esm.js';
 
 const glea = new GLea({
   shaders: [

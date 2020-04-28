@@ -2,19 +2,33 @@
   "name": "glea",
   "version": "1.0.0",
   "description": "GL experience admirers",
-  "main": "index.js",
   "scripts": {
-    "test": "node -r esm src/index.test.js",
-    "doc:glea": "jsdoc2md src/glea.js > docs/glea.md"
+    "build:esm": "tsc -d",
+    "build:umd": "tsc -d --outDir dist/umd -m umd",
+    "build:docs": "typedoc --out docs src",
+    "build": "npm run build:docs -s && npm run build:esm -s && npm run build:umd -s",
+    "test": "jest --coverage",
+    "server": "node server"
   },
   "author": "Lea Rosema",
   "license": "MIT",
   "dependencies": {
+    "@types/jest": "^25.2.1",
     "esm": "^3.2.25"
   },
   "devDependencies": {
     "express": "^4.17.1",
+    "husky": "^4.2.5",
     "jest": "^25.4.0",
-    "jsdoc-to-markdown": "^5.0.3"
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "ts-jest": "^25.4.0",
+    "typedoc": "^0.17.5",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
