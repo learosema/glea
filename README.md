@@ -3,7 +3,7 @@
 GLea is a WebGL library with a minimal footprint.
 It provides helper functions for creating a WebGL program, compiling shaders and passing data from JavaScript to the shader language.
 
-There are some optional helper libraries for matrix and vector calculations.
+There are some additional helper libraries for matrix and vector calculations as well as easing functions.
 
 ## Usage
 
@@ -19,24 +19,59 @@ const glea = new GLea({
     position: Glea.buffer(2, [1, 1, 1, 0, 0, 0])
   }
 }).create();
+
+function loop(time) {
+  const { gl } = glea;
+  glea.clear();
+  glea.uni('width', glea.width);
+  glea.uni('height', glea.height);
+  glea.uni('time', time * 0.005);
+  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  requestAnimationFrame(loop);
+}
+
+function setup() {
+  const { gl } = glea;
+  window.addEventListener('resize', () => {
+    glea.resize();
+  });
+  loop(0);
+}
+
+setup();
 ```
 
-### Options
+## API Documentation
 
-- `canvas`: optional, if not specified, `document.querySelector('canvas')` is used
-- `gl`: optional, if not specified, `canvas.getContext(contextType)` is used
-- `contextType`: optional, default `webgl` (or `experimental-webgl`, you don't need to prefix it yourself)
-- `glOptions`: additional options to pass to `canvas.getContext`
-- `shaders`: array that takes a fragmentShader and a vertexShader in the above form
-- `buffers`: an object with attributes and buffers. You can access the buffers via an attribute named as the Object keys.
+- [API documentation](docs/)
 
-### Properties
+### using in esm modules
 
-- `glea.gl`: the `WebGLRenderingContext`
-- `glea.width`: viewport width
-- `glea.height`: viewport height
+```js
+import GLea from 'https://terabaud.github.io/glea/dist/glea.js';
+```
 
-### Methods
+### via script tag
 
-- `glea.create()` - creates the WebGLRenderingContext, compiles and links shaders, registers attributes and buffers.
-- `glea.resize()` - resizes the WebGL viewport to the current canvas client size. Call this inside a `resize` event listener.
+```html
+<script src="https://terabaud.github.io/glea/dist/umd/glea.js"></script>
+```
+
+## Exampes
+
+- [Example 01: Triangle](https://codepen.io/terabaud/pen/OKVpYV)
+- [Example 02: Full screen plane](https://codepen.io/terabaud/pen/eqNjjY)
+- [Example 03: Cube](https://codepen.io/terabaud/pen/EqgpbQ)
+- [Example 04: Circle Heart Morph](https://codepen.io/terabaud/pen/BaNRbXL)
+- [Example 05: Rotating heart yin yang morph pattern](https://codepen.io/terabaud/pen/VwLbVjE)
+- [Example 06: Fun with circles](https://codepen.io/terabaud/pen/xxGdeEe)
+- [Example 07: Retro Style Dither Cam](https://codepen.io/terabaud/pen/WNvoOgK)
+- [Example 08: Signed Distance Field Symmetric Diff](https://codepen.io/terabaud/pen/dyoXjVv)
+- [Example 09: Hypnotizing Cyclone 2.0](https://codepen.io/terabaud/pen/PowKxNp)
+- [Example 10: Hypnotizing Cyclone 3.0](https://codepen.io/terabaud/pen/bGNMGvb)
+- [Example 11: numeric spiral](https://codepen.io/terabaud/pen/poogqxq)
+- [Example 12: Evil virus](https://codepen.io/terabaud/pen/ZgreLo)
+
+### More examples
+
+- There is more: https://terabaud.github.io/hello-webgl/
