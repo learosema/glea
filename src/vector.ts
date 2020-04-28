@@ -10,7 +10,7 @@ export class Vec2 {
   }
 
   /**
-   * Create a 2D vector with x = y = n
+   * Create vector with x = y = n
    * @param n
    */
   static fromNumber(n: number): Vec2 {
@@ -18,7 +18,7 @@ export class Vec2 {
   }
 
   /**
-   * Clone 2D vector
+   * clone vector
    */
   clone(): Vec2 {
     return new Vec2(this.x, this.y);
@@ -102,23 +102,44 @@ export class Vec2 {
 export class Vec3 {
   constructor(public x: number, public y: number, public z: number) {}
 
-  static fromArray(data: number[]) {
+  /**
+   * create vector from array
+   * @param data Array containing [x, y, z]
+   */
+  static fromArray(data: number[]): Vec3 {
     return new Vec3(data[0] || 0, data[1] || 0, data[2] || 0);
   }
 
-  static fromNumber(n: number) {
+  /**
+   * create vector from number, using x = y = z = n
+   * @param n
+   */
+  static fromNumber(n: number): Vec3 {
     return new Vec3(n, n, n);
   }
 
-  static fromVec2(vec2: Vec2, z: number = 0) {
+  /**
+   * create 3D vector from 2D vector and an optional number
+   * @param vec2
+   * @param z
+   */
+  static fromVec2(vec2: Vec2, z: number = 0): Vec3 {
     return new Vec3(vec2.x, vec2.y, z);
   }
 
-  clone() {
+  /**
+   * clone vector
+   */
+  clone(): Vec3 {
     return new Vec3(this.x, this.y, this.z);
   }
 
-  add(otherVec: Vec3) {
+  /**
+   * add vector
+   * @param otherVec addend
+   * @returns new Vec3 instance containing the addition result
+   */
+  add(otherVec: Vec3): Vec3 {
     return new Vec3(
       this.x + otherVec.x,
       this.y + otherVec.y,
@@ -126,7 +147,12 @@ export class Vec3 {
     );
   }
 
-  sub(otherVec: Vec3) {
+  /**
+   * sub vector
+   * @param otherVec subtrahend
+   * @returns new Vec3 instance containing the subtraction result
+   */
+  sub(otherVec: Vec3): Vec3 {
     return new Vec3(
       this.x - otherVec.x,
       this.y - otherVec.y,
@@ -134,43 +160,80 @@ export class Vec3 {
     );
   }
 
-  mul(value: number) {
+  /**
+   * multiply vector
+   * @param value factor
+   * @returns new Vec3 instance containing the multiplication result
+   */
+  mul(value: number): Vec3 {
     return new Vec3(this.x * value, this.y * value, this.z * value);
   }
 
-  div(value: number) {
+  /**
+   * divide vactor
+   * @param value factor
+   * @returns new Vec3 instance containing the division result
+   */
+  div(value: number): Vec3 {
     return new Vec3(this.x / value, this.y / value, this.z / value);
   }
 
-  cross(otherVec: Vec3) {
+  /**
+   * cross product
+   * @param otherVec
+   * @returns new Vec3 instance containing cross product
+   */
+  cross(otherVec: Vec3): Vec3 {
     return new Vec3(
       this.y * otherVec.z - this.z * otherVec.y,
       this.z * otherVec.x - this.x * otherVec.z,
       this.x * otherVec.y - this.y * otherVec.x
     );
   }
-
-  dot(otherVec: Vec3) {
+  /**
+   * dot product
+   * @param otherVec
+   */
+  dot(otherVec: Vec3): number {
     return this.x * otherVec.x + this.y * otherVec.y + this.z * otherVec.z;
   }
 
-  get length() {
+  /**
+   * get vector length
+   */
+  get length(): number {
     return Math.sqrt(this.x ** 2 + this.y ** 2 + this.z ** 2);
   }
 
+  /**
+   * normalized vector,
+   * @returns vector normalized to length = 1
+   */
   get normalized() {
     return this.div(this.length);
   }
 
-  toArray() {
+  /**
+   * convert to array
+   * @returns array containing [x, y, z]
+   */
+  toArray(): number[] {
     return [this.x, this.y, this.z];
   }
 
-  toString() {
+  /**
+   * convert to string
+   * @returns string containing `(x, y)`
+   */
+  toString(): string {
     return `(${this.x}, ${this.y}, ${this.z})`;
   }
 
-  equals(otherVec: Vec3) {
+  /**
+   * check for equality
+   * @param otherVec
+   */
+  equals(otherVec: Vec3): boolean {
     return (
       otherVec instanceof Vec3 &&
       this.x === otherVec.x &&

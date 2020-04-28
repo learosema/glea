@@ -667,466 +667,12 @@
     {
       "id": 82,
       "kind": 1,
-      "name": "\"matrix\"",
-      "url": "modules/_matrix_.html",
-      "classes": "tsd-kind-module"
-    },
-    {
-      "id": 83,
-      "kind": 128,
-      "name": "Mat",
-      "url": "classes/_matrix_.mat.html",
-      "classes": "tsd-kind-class tsd-parent-kind-module",
-      "parent": "\"matrix\""
-    },
-    {
-      "id": 84,
-      "kind": 1024,
-      "name": "values",
-      "url": "classes/_matrix_.mat.html#values",
-      "classes": "tsd-kind-property tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 85,
-      "kind": 1024,
-      "name": "numRows",
-      "url": "classes/_matrix_.mat.html#numrows",
-      "classes": "tsd-kind-property tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 86,
-      "kind": 1024,
-      "name": "numCols",
-      "url": "classes/_matrix_.mat.html#numcols",
-      "classes": "tsd-kind-property tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 87,
-      "kind": 512,
-      "name": "constructor",
-      "url": "classes/_matrix_.mat.html#constructor",
-      "classes": "tsd-kind-constructor tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 88,
-      "kind": 2048,
-      "name": "toArray",
-      "url": "classes/_matrix_.mat.html#toarray",
-      "classes": "tsd-kind-method tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 89,
-      "kind": 2048,
-      "name": "fromArray",
-      "url": "classes/_matrix_.mat.html#fromarray",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 90,
-      "kind": 2048,
-      "name": "valueAt",
-      "url": "classes/_matrix_.mat.html#valueat",
-      "classes": "tsd-kind-method tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 91,
-      "kind": 2048,
-      "name": "colAt",
-      "url": "classes/_matrix_.mat.html#colat",
-      "classes": "tsd-kind-method tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 92,
-      "kind": 2048,
-      "name": "rowAt",
-      "url": "classes/_matrix_.mat.html#rowat",
-      "classes": "tsd-kind-method tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 93,
-      "kind": 2048,
-      "name": "equals",
-      "url": "classes/_matrix_.mat.html#equals",
-      "classes": "tsd-kind-method tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 94,
-      "kind": 2048,
-      "name": "add",
-      "url": "classes/_matrix_.mat.html#add",
-      "classes": "tsd-kind-method tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 95,
-      "kind": 2048,
-      "name": "sub",
-      "url": "classes/_matrix_.mat.html#sub",
-      "classes": "tsd-kind-method tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 96,
-      "kind": 2048,
-      "name": "mul",
-      "url": "classes/_matrix_.mat.html#mul",
-      "classes": "tsd-kind-method tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 97,
-      "kind": 2048,
-      "name": "toString",
-      "url": "classes/_matrix_.mat.html#tostring",
-      "classes": "tsd-kind-method tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat"
-    },
-    {
-      "id": 98,
-      "kind": 128,
-      "name": "Mat2",
-      "url": "classes/_matrix_.mat2.html",
-      "classes": "tsd-kind-class tsd-parent-kind-module",
-      "parent": "\"matrix\""
-    },
-    {
-      "id": 99,
-      "kind": 512,
-      "name": "constructor",
-      "url": "classes/_matrix_.mat2.html#constructor",
-      "classes": "tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 100,
-      "kind": 2048,
-      "name": "toArray",
-      "url": "classes/_matrix_.mat2.html#toarray",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 101,
-      "kind": 2048,
-      "name": "fromArray",
-      "url": "classes/_matrix_.mat2.html#fromarray",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 102,
-      "kind": 2048,
-      "name": "identity",
-      "url": "classes/_matrix_.mat2.html#identity",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 103,
-      "kind": 2048,
-      "name": "rotation",
-      "url": "classes/_matrix_.mat2.html#rotation",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 104,
-      "kind": 2048,
-      "name": "scaling",
-      "url": "classes/_matrix_.mat2.html#scaling",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 105,
-      "kind": 2048,
-      "name": "determinant",
-      "url": "classes/_matrix_.mat2.html#determinant",
-      "classes": "tsd-kind-method tsd-parent-kind-class",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 106,
-      "kind": 2048,
-      "name": "toString",
-      "url": "classes/_matrix_.mat2.html#tostring",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 107,
-      "kind": 1024,
-      "name": "values",
-      "url": "classes/_matrix_.mat2.html#values",
-      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 108,
-      "kind": 1024,
-      "name": "numRows",
-      "url": "classes/_matrix_.mat2.html#numrows",
-      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 109,
-      "kind": 1024,
-      "name": "numCols",
-      "url": "classes/_matrix_.mat2.html#numcols",
-      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 110,
-      "kind": 2048,
-      "name": "valueAt",
-      "url": "classes/_matrix_.mat2.html#valueat",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 111,
-      "kind": 2048,
-      "name": "colAt",
-      "url": "classes/_matrix_.mat2.html#colat",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 112,
-      "kind": 2048,
-      "name": "rowAt",
-      "url": "classes/_matrix_.mat2.html#rowat",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 113,
-      "kind": 2048,
-      "name": "equals",
-      "url": "classes/_matrix_.mat2.html#equals",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 114,
-      "kind": 2048,
-      "name": "add",
-      "url": "classes/_matrix_.mat2.html#add",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 115,
-      "kind": 2048,
-      "name": "sub",
-      "url": "classes/_matrix_.mat2.html#sub",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 116,
-      "kind": 2048,
-      "name": "mul",
-      "url": "classes/_matrix_.mat2.html#mul",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat2"
-    },
-    {
-      "id": 117,
-      "kind": 128,
-      "name": "Mat4",
-      "url": "classes/_matrix_.mat4.html",
-      "classes": "tsd-kind-class tsd-parent-kind-module",
-      "parent": "\"matrix\""
-    },
-    {
-      "id": 118,
-      "kind": 512,
-      "name": "constructor",
-      "url": "classes/_matrix_.mat4.html#constructor",
-      "classes": "tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 119,
-      "kind": 2048,
-      "name": "toArray",
-      "url": "classes/_matrix_.mat4.html#toarray",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 120,
-      "kind": 2048,
-      "name": "fromArray",
-      "url": "classes/_matrix_.mat4.html#fromarray",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 121,
-      "kind": 2048,
-      "name": "identity",
-      "url": "classes/_matrix_.mat4.html#identity",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 122,
-      "kind": 2048,
-      "name": "translation",
-      "url": "classes/_matrix_.mat4.html#translation",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 123,
-      "kind": 2048,
-      "name": "scaling",
-      "url": "classes/_matrix_.mat4.html#scaling",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 124,
-      "kind": 2048,
-      "name": "rotX",
-      "url": "classes/_matrix_.mat4.html#rotx",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 125,
-      "kind": 2048,
-      "name": "rotY",
-      "url": "classes/_matrix_.mat4.html#roty",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 126,
-      "kind": 2048,
-      "name": "rotZ",
-      "url": "classes/_matrix_.mat4.html#rotz",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 127,
-      "kind": 1024,
-      "name": "values",
-      "url": "classes/_matrix_.mat4.html#values",
-      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 128,
-      "kind": 1024,
-      "name": "numRows",
-      "url": "classes/_matrix_.mat4.html#numrows",
-      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 129,
-      "kind": 1024,
-      "name": "numCols",
-      "url": "classes/_matrix_.mat4.html#numcols",
-      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 130,
-      "kind": 2048,
-      "name": "valueAt",
-      "url": "classes/_matrix_.mat4.html#valueat",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 131,
-      "kind": 2048,
-      "name": "colAt",
-      "url": "classes/_matrix_.mat4.html#colat",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 132,
-      "kind": 2048,
-      "name": "rowAt",
-      "url": "classes/_matrix_.mat4.html#rowat",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 133,
-      "kind": 2048,
-      "name": "equals",
-      "url": "classes/_matrix_.mat4.html#equals",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 134,
-      "kind": 2048,
-      "name": "add",
-      "url": "classes/_matrix_.mat4.html#add",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 135,
-      "kind": 2048,
-      "name": "sub",
-      "url": "classes/_matrix_.mat4.html#sub",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 136,
-      "kind": 2048,
-      "name": "mul",
-      "url": "classes/_matrix_.mat4.html#mul",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 137,
-      "kind": 2048,
-      "name": "toString",
-      "url": "classes/_matrix_.mat4.html#tostring",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat4"
-    },
-    {
-      "id": 138,
-      "kind": 1,
-      "name": "\"matrix.test\"",
-      "url": "modules/_matrix_test_.html",
-      "classes": "tsd-kind-module"
-    },
-    {
-      "id": 139,
-      "kind": 1,
       "name": "\"vector\"",
       "url": "modules/_vector_.html",
       "classes": "tsd-kind-module"
     },
     {
-      "id": 140,
+      "id": 83,
       "kind": 128,
       "name": "Vec2",
       "url": "classes/_vector_.vec2.html",
@@ -1134,7 +680,7 @@
       "parent": "\"vector\""
     },
     {
-      "id": 141,
+      "id": 84,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_vector_.vec2.html#constructor",
@@ -1142,7 +688,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 142,
+      "id": 85,
       "kind": 1024,
       "name": "x",
       "url": "classes/_vector_.vec2.html#x",
@@ -1150,7 +696,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 143,
+      "id": 86,
       "kind": 1024,
       "name": "y",
       "url": "classes/_vector_.vec2.html#y",
@@ -1158,7 +704,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 144,
+      "id": 87,
       "kind": 2048,
       "name": "fromArray",
       "url": "classes/_vector_.vec2.html#fromarray",
@@ -1166,7 +712,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 145,
+      "id": 88,
       "kind": 2048,
       "name": "fromNumber",
       "url": "classes/_vector_.vec2.html#fromnumber",
@@ -1174,7 +720,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 146,
+      "id": 89,
       "kind": 2048,
       "name": "clone",
       "url": "classes/_vector_.vec2.html#clone",
@@ -1182,7 +728,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 147,
+      "id": 90,
       "kind": 2048,
       "name": "add",
       "url": "classes/_vector_.vec2.html#add",
@@ -1190,7 +736,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 148,
+      "id": 91,
       "kind": 2048,
       "name": "sub",
       "url": "classes/_vector_.vec2.html#sub",
@@ -1198,7 +744,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 149,
+      "id": 92,
       "kind": 2048,
       "name": "mul",
       "url": "classes/_vector_.vec2.html#mul",
@@ -1206,7 +752,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 150,
+      "id": 93,
       "kind": 2048,
       "name": "div",
       "url": "classes/_vector_.vec2.html#div",
@@ -1214,7 +760,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 151,
+      "id": 94,
       "kind": 2048,
       "name": "dot",
       "url": "classes/_vector_.vec2.html#dot",
@@ -1222,7 +768,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 152,
+      "id": 95,
       "kind": 2048,
       "name": "equals",
       "url": "classes/_vector_.vec2.html#equals",
@@ -1230,7 +776,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 153,
+      "id": 96,
       "kind": 262144,
       "name": "length",
       "url": "classes/_vector_.vec2.html#length",
@@ -1238,7 +784,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 154,
+      "id": 97,
       "kind": 2048,
       "name": "toArray",
       "url": "classes/_vector_.vec2.html#toarray",
@@ -1246,7 +792,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 155,
+      "id": 98,
       "kind": 2048,
       "name": "toString",
       "url": "classes/_vector_.vec2.html#tostring",
@@ -1254,7 +800,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 156,
+      "id": 99,
       "kind": 128,
       "name": "Vec3",
       "url": "classes/_vector_.vec3.html",
@@ -1262,7 +808,7 @@
       "parent": "\"vector\""
     },
     {
-      "id": 157,
+      "id": 100,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_vector_.vec3.html#constructor",
@@ -1270,7 +816,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 158,
+      "id": 101,
       "kind": 1024,
       "name": "x",
       "url": "classes/_vector_.vec3.html#x",
@@ -1278,7 +824,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 159,
+      "id": 102,
       "kind": 1024,
       "name": "y",
       "url": "classes/_vector_.vec3.html#y",
@@ -1286,7 +832,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 160,
+      "id": 103,
       "kind": 1024,
       "name": "z",
       "url": "classes/_vector_.vec3.html#z",
@@ -1294,7 +840,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 161,
+      "id": 104,
       "kind": 2048,
       "name": "fromArray",
       "url": "classes/_vector_.vec3.html#fromarray",
@@ -1302,7 +848,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 162,
+      "id": 105,
       "kind": 2048,
       "name": "fromNumber",
       "url": "classes/_vector_.vec3.html#fromnumber",
@@ -1310,7 +856,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 163,
+      "id": 106,
       "kind": 2048,
       "name": "fromVec2",
       "url": "classes/_vector_.vec3.html#fromvec2",
@@ -1318,7 +864,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 164,
+      "id": 107,
       "kind": 2048,
       "name": "clone",
       "url": "classes/_vector_.vec3.html#clone",
@@ -1326,7 +872,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 165,
+      "id": 108,
       "kind": 2048,
       "name": "add",
       "url": "classes/_vector_.vec3.html#add",
@@ -1334,7 +880,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 166,
+      "id": 109,
       "kind": 2048,
       "name": "sub",
       "url": "classes/_vector_.vec3.html#sub",
@@ -1342,7 +888,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 167,
+      "id": 110,
       "kind": 2048,
       "name": "mul",
       "url": "classes/_vector_.vec3.html#mul",
@@ -1350,7 +896,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 168,
+      "id": 111,
       "kind": 2048,
       "name": "div",
       "url": "classes/_vector_.vec3.html#div",
@@ -1358,7 +904,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 169,
+      "id": 112,
       "kind": 2048,
       "name": "cross",
       "url": "classes/_vector_.vec3.html#cross",
@@ -1366,7 +912,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 170,
+      "id": 113,
       "kind": 2048,
       "name": "dot",
       "url": "classes/_vector_.vec3.html#dot",
@@ -1374,7 +920,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 171,
+      "id": 114,
       "kind": 262144,
       "name": "length",
       "url": "classes/_vector_.vec3.html#length",
@@ -1382,7 +928,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 172,
+      "id": 115,
       "kind": 262144,
       "name": "normalized",
       "url": "classes/_vector_.vec3.html#normalized",
@@ -1390,7 +936,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 173,
+      "id": 116,
       "kind": 2048,
       "name": "toArray",
       "url": "classes/_vector_.vec3.html#toarray",
@@ -1398,7 +944,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 174,
+      "id": 117,
       "kind": 2048,
       "name": "toString",
       "url": "classes/_vector_.vec3.html#tostring",
@@ -1406,7 +952,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 175,
+      "id": 118,
       "kind": 2048,
       "name": "equals",
       "url": "classes/_vector_.vec3.html#equals",
@@ -1414,7 +960,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 176,
+      "id": 119,
       "kind": 128,
       "name": "Vec4",
       "url": "classes/_vector_.vec4.html",
@@ -1422,7 +968,7 @@
       "parent": "\"vector\""
     },
     {
-      "id": 177,
+      "id": 120,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_vector_.vec4.html#constructor",
@@ -1430,7 +976,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 178,
+      "id": 121,
       "kind": 1024,
       "name": "x",
       "url": "classes/_vector_.vec4.html#x",
@@ -1438,7 +984,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 179,
+      "id": 122,
       "kind": 1024,
       "name": "y",
       "url": "classes/_vector_.vec4.html#y",
@@ -1446,7 +992,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 180,
+      "id": 123,
       "kind": 1024,
       "name": "z",
       "url": "classes/_vector_.vec4.html#z",
@@ -1454,7 +1000,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 181,
+      "id": 124,
       "kind": 1024,
       "name": "a",
       "url": "classes/_vector_.vec4.html#a",
@@ -1462,7 +1008,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 182,
+      "id": 125,
       "kind": 2048,
       "name": "fromArray",
       "url": "classes/_vector_.vec4.html#fromarray",
@@ -1470,7 +1016,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 183,
+      "id": 126,
       "kind": 2048,
       "name": "fromNumber",
       "url": "classes/_vector_.vec4.html#fromnumber",
@@ -1478,7 +1024,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 184,
+      "id": 127,
       "kind": 2048,
       "name": "toArray",
       "url": "classes/_vector_.vec4.html#toarray",
@@ -1486,7 +1032,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 185,
+      "id": 128,
       "kind": 2048,
       "name": "clone",
       "url": "classes/_vector_.vec4.html#clone",
@@ -1494,14 +1040,603 @@
       "parent": "\"vector\".Vec4"
     },
     {
+      "id": 129,
+      "kind": 1,
+      "name": "\"lookat\"",
+      "url": "modules/_lookat_.html",
+      "classes": "tsd-kind-module"
+    },
+    {
+      "id": 130,
+      "kind": 64,
+      "name": "lookAt",
+      "url": "modules/_lookat_.html#lookat",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"lookat\""
+    },
+    {
+      "id": 131,
+      "kind": 1,
+      "name": "\"matrix\"",
+      "url": "modules/_matrix_.html",
+      "classes": "tsd-kind-module"
+    },
+    {
+      "id": 132,
+      "kind": 128,
+      "name": "Mat",
+      "url": "classes/_matrix_.mat.html",
+      "classes": "tsd-kind-class tsd-parent-kind-module",
+      "parent": "\"matrix\""
+    },
+    {
+      "id": 133,
+      "kind": 1024,
+      "name": "values",
+      "url": "classes/_matrix_.mat.html#values",
+      "classes": "tsd-kind-property tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 134,
+      "kind": 1024,
+      "name": "numRows",
+      "url": "classes/_matrix_.mat.html#numrows",
+      "classes": "tsd-kind-property tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 135,
+      "kind": 1024,
+      "name": "numCols",
+      "url": "classes/_matrix_.mat.html#numcols",
+      "classes": "tsd-kind-property tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 136,
+      "kind": 512,
+      "name": "constructor",
+      "url": "classes/_matrix_.mat.html#constructor",
+      "classes": "tsd-kind-constructor tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 137,
+      "kind": 2048,
+      "name": "toArray",
+      "url": "classes/_matrix_.mat.html#toarray",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 138,
+      "kind": 2048,
+      "name": "fromArray",
+      "url": "classes/_matrix_.mat.html#fromarray",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 139,
+      "kind": 2048,
+      "name": "valueAt",
+      "url": "classes/_matrix_.mat.html#valueat",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 140,
+      "kind": 2048,
+      "name": "colAt",
+      "url": "classes/_matrix_.mat.html#colat",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 141,
+      "kind": 2048,
+      "name": "rowAt",
+      "url": "classes/_matrix_.mat.html#rowat",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 142,
+      "kind": 2048,
+      "name": "equals",
+      "url": "classes/_matrix_.mat.html#equals",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 143,
+      "kind": 2048,
+      "name": "add",
+      "url": "classes/_matrix_.mat.html#add",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 144,
+      "kind": 2048,
+      "name": "sub",
+      "url": "classes/_matrix_.mat.html#sub",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 145,
+      "kind": 2048,
+      "name": "mul",
+      "url": "classes/_matrix_.mat.html#mul",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 146,
+      "kind": 2048,
+      "name": "toString",
+      "url": "classes/_matrix_.mat.html#tostring",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat"
+    },
+    {
+      "id": 147,
+      "kind": 128,
+      "name": "Mat2",
+      "url": "classes/_matrix_.mat2.html",
+      "classes": "tsd-kind-class tsd-parent-kind-module",
+      "parent": "\"matrix\""
+    },
+    {
+      "id": 148,
+      "kind": 512,
+      "name": "constructor",
+      "url": "classes/_matrix_.mat2.html#constructor",
+      "classes": "tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 149,
+      "kind": 2048,
+      "name": "toArray",
+      "url": "classes/_matrix_.mat2.html#toarray",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 150,
+      "kind": 2048,
+      "name": "fromArray",
+      "url": "classes/_matrix_.mat2.html#fromarray",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 151,
+      "kind": 2048,
+      "name": "identity",
+      "url": "classes/_matrix_.mat2.html#identity",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 152,
+      "kind": 2048,
+      "name": "rotation",
+      "url": "classes/_matrix_.mat2.html#rotation",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 153,
+      "kind": 2048,
+      "name": "scaling",
+      "url": "classes/_matrix_.mat2.html#scaling",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 154,
+      "kind": 2048,
+      "name": "determinant",
+      "url": "classes/_matrix_.mat2.html#determinant",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 155,
+      "kind": 2048,
+      "name": "toString",
+      "url": "classes/_matrix_.mat2.html#tostring",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 156,
+      "kind": 1024,
+      "name": "values",
+      "url": "classes/_matrix_.mat2.html#values",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 157,
+      "kind": 1024,
+      "name": "numRows",
+      "url": "classes/_matrix_.mat2.html#numrows",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 158,
+      "kind": 1024,
+      "name": "numCols",
+      "url": "classes/_matrix_.mat2.html#numcols",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 159,
+      "kind": 2048,
+      "name": "valueAt",
+      "url": "classes/_matrix_.mat2.html#valueat",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 160,
+      "kind": 2048,
+      "name": "colAt",
+      "url": "classes/_matrix_.mat2.html#colat",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 161,
+      "kind": 2048,
+      "name": "rowAt",
+      "url": "classes/_matrix_.mat2.html#rowat",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 162,
+      "kind": 2048,
+      "name": "equals",
+      "url": "classes/_matrix_.mat2.html#equals",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 163,
+      "kind": 2048,
+      "name": "add",
+      "url": "classes/_matrix_.mat2.html#add",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 164,
+      "kind": 2048,
+      "name": "sub",
+      "url": "classes/_matrix_.mat2.html#sub",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 165,
+      "kind": 2048,
+      "name": "mul",
+      "url": "classes/_matrix_.mat2.html#mul",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat2"
+    },
+    {
+      "id": 166,
+      "kind": 128,
+      "name": "Mat3",
+      "url": "classes/_matrix_.mat3.html",
+      "classes": "tsd-kind-class tsd-parent-kind-module",
+      "parent": "\"matrix\""
+    },
+    {
+      "id": 167,
+      "kind": 512,
+      "name": "constructor",
+      "url": "classes/_matrix_.mat3.html#constructor",
+      "classes": "tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 168,
+      "kind": 1024,
+      "name": "values",
+      "url": "classes/_matrix_.mat3.html#values",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 169,
+      "kind": 1024,
+      "name": "numRows",
+      "url": "classes/_matrix_.mat3.html#numrows",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 170,
+      "kind": 1024,
+      "name": "numCols",
+      "url": "classes/_matrix_.mat3.html#numcols",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 171,
+      "kind": 2048,
+      "name": "toArray",
+      "url": "classes/_matrix_.mat3.html#toarray",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 172,
+      "kind": 2048,
+      "name": "fromArray",
+      "url": "classes/_matrix_.mat3.html#fromarray",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 173,
+      "kind": 2048,
+      "name": "valueAt",
+      "url": "classes/_matrix_.mat3.html#valueat",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 174,
+      "kind": 2048,
+      "name": "colAt",
+      "url": "classes/_matrix_.mat3.html#colat",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 175,
+      "kind": 2048,
+      "name": "rowAt",
+      "url": "classes/_matrix_.mat3.html#rowat",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 176,
+      "kind": 2048,
+      "name": "equals",
+      "url": "classes/_matrix_.mat3.html#equals",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 177,
+      "kind": 2048,
+      "name": "add",
+      "url": "classes/_matrix_.mat3.html#add",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 178,
+      "kind": 2048,
+      "name": "sub",
+      "url": "classes/_matrix_.mat3.html#sub",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 179,
+      "kind": 2048,
+      "name": "mul",
+      "url": "classes/_matrix_.mat3.html#mul",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 180,
+      "kind": 2048,
+      "name": "toString",
+      "url": "classes/_matrix_.mat3.html#tostring",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 181,
+      "kind": 128,
+      "name": "Mat4",
+      "url": "classes/_matrix_.mat4.html",
+      "classes": "tsd-kind-class tsd-parent-kind-module",
+      "parent": "\"matrix\""
+    },
+    {
+      "id": 182,
+      "kind": 512,
+      "name": "constructor",
+      "url": "classes/_matrix_.mat4.html#constructor",
+      "classes": "tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 183,
+      "kind": 2048,
+      "name": "toArray",
+      "url": "classes/_matrix_.mat4.html#toarray",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 184,
+      "kind": 2048,
+      "name": "fromArray",
+      "url": "classes/_matrix_.mat4.html#fromarray",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 185,
+      "kind": 2048,
+      "name": "identity",
+      "url": "classes/_matrix_.mat4.html#identity",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
       "id": 186,
+      "kind": 2048,
+      "name": "translation",
+      "url": "classes/_matrix_.mat4.html#translation",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 187,
+      "kind": 2048,
+      "name": "scaling",
+      "url": "classes/_matrix_.mat4.html#scaling",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 188,
+      "kind": 2048,
+      "name": "rotX",
+      "url": "classes/_matrix_.mat4.html#rotx",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 189,
+      "kind": 2048,
+      "name": "rotY",
+      "url": "classes/_matrix_.mat4.html#roty",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 190,
+      "kind": 2048,
+      "name": "rotZ",
+      "url": "classes/_matrix_.mat4.html#rotz",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 191,
+      "kind": 1024,
+      "name": "values",
+      "url": "classes/_matrix_.mat4.html#values",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 192,
+      "kind": 1024,
+      "name": "numRows",
+      "url": "classes/_matrix_.mat4.html#numrows",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 193,
+      "kind": 1024,
+      "name": "numCols",
+      "url": "classes/_matrix_.mat4.html#numcols",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 194,
+      "kind": 2048,
+      "name": "valueAt",
+      "url": "classes/_matrix_.mat4.html#valueat",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 195,
+      "kind": 2048,
+      "name": "colAt",
+      "url": "classes/_matrix_.mat4.html#colat",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 196,
+      "kind": 2048,
+      "name": "rowAt",
+      "url": "classes/_matrix_.mat4.html#rowat",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 197,
+      "kind": 2048,
+      "name": "equals",
+      "url": "classes/_matrix_.mat4.html#equals",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 198,
+      "kind": 2048,
+      "name": "add",
+      "url": "classes/_matrix_.mat4.html#add",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 199,
+      "kind": 2048,
+      "name": "sub",
+      "url": "classes/_matrix_.mat4.html#sub",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 200,
+      "kind": 2048,
+      "name": "mul",
+      "url": "classes/_matrix_.mat4.html#mul",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 201,
+      "kind": 2048,
+      "name": "toString",
+      "url": "classes/_matrix_.mat4.html#tostring",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat4"
+    },
+    {
+      "id": 202,
+      "kind": 1,
+      "name": "\"matrix.test\"",
+      "url": "modules/_matrix_test_.html",
+      "classes": "tsd-kind-module"
+    },
+    {
+      "id": 203,
       "kind": 1,
       "name": "\"perspective\"",
       "url": "modules/_perspective_.html",
       "classes": "tsd-kind-module"
     },
     {
-      "id": 187,
+      "id": 204,
       "kind": 64,
       "name": "ortho",
       "url": "modules/_perspective_.html#ortho",
@@ -1509,7 +1644,7 @@
       "parent": "\"perspective\""
     },
     {
-      "id": 188,
+      "id": 205,
       "kind": 64,
       "name": "frustum",
       "url": "modules/_perspective_.html#frustum",
@@ -1517,7 +1652,7 @@
       "parent": "\"perspective\""
     },
     {
-      "id": 189,
+      "id": 206,
       "kind": 64,
       "name": "perspective",
       "url": "modules/_perspective_.html#perspective",
@@ -1525,15 +1660,7 @@
       "parent": "\"perspective\""
     },
     {
-      "id": 190,
-      "kind": 64,
-      "name": "lookAt",
-      "url": "modules/_perspective_.html#lookat",
-      "classes": "tsd-kind-function tsd-parent-kind-module",
-      "parent": "\"perspective\""
-    },
-    {
-      "id": 191,
+      "id": 207,
       "kind": 1,
       "name": "\"vector.test\"",
       "url": "modules/_vector_test_.html",
@@ -1544,390 +1671,422 @@
     "version": "2.3.8",
     "fields": ["name", "parent"],
     "fieldVectors": [
-      ["name/0", [0, 40.184]],
+      ["name/0", [0, 40.976]],
       ["parent/0", []],
-      ["name/1", [0, 40.184]],
-      ["parent/1", [0, 4.018]],
-      ["name/2", [1, 48.675]],
-      ["parent/2", [2, 2.917]],
-      ["name/3", [3, 48.675]],
-      ["parent/3", [2, 2.917]],
-      ["name/4", [4, 48.675]],
-      ["parent/4", [2, 2.917]],
-      ["name/5", [5, 48.675]],
-      ["parent/5", [2, 2.917]],
-      ["name/6", [6, 48.675]],
-      ["parent/6", [2, 2.917]],
-      ["name/7", [7, 31.293]],
-      ["parent/7", [2, 2.917]],
-      ["name/8", [8, 48.675]],
-      ["parent/8", [2, 2.917]],
-      ["name/9", [9, 48.675]],
-      ["parent/9", [2, 2.917]],
-      ["name/10", [10, 48.675]],
-      ["parent/10", [2, 2.917]],
-      ["name/11", [11, 48.675]],
-      ["parent/11", [2, 2.917]],
-      ["name/12", [12, 35.655]],
+      ["name/1", [0, 40.976]],
+      ["parent/1", [0, 4.09]],
+      ["name/2", [1, 49.466]],
+      ["parent/2", [2, 2.991]],
+      ["name/3", [3, 49.466]],
+      ["parent/3", [2, 2.991]],
+      ["name/4", [4, 49.466]],
+      ["parent/4", [2, 2.991]],
+      ["name/5", [5, 49.466]],
+      ["parent/5", [2, 2.991]],
+      ["name/6", [6, 49.466]],
+      ["parent/6", [2, 2.991]],
+      ["name/7", [7, 30.971]],
+      ["parent/7", [2, 2.991]],
+      ["name/8", [8, 49.466]],
+      ["parent/8", [2, 2.991]],
+      ["name/9", [9, 49.466]],
+      ["parent/9", [2, 2.991]],
+      ["name/10", [10, 49.466]],
+      ["parent/10", [2, 2.991]],
+      ["name/11", [11, 49.466]],
+      ["parent/11", [2, 2.991]],
+      ["name/12", [12, 36.447]],
       ["parent/12", []],
-      ["name/13", [13, 48.675]],
-      ["parent/13", [12, 3.565]],
-      ["name/14", [14, 48.675]],
-      ["parent/14", [12, 3.565]],
-      ["name/15", [15, 48.675]],
-      ["parent/15", [12, 3.565]],
-      ["name/16", [16, 48.675]],
-      ["parent/16", [12, 3.565]],
-      ["name/17", [17, 29.175]],
+      ["name/13", [13, 49.466]],
+      ["parent/13", [12, 3.638]],
+      ["name/14", [14, 49.466]],
+      ["parent/14", [12, 3.638]],
+      ["name/15", [15, 49.466]],
+      ["parent/15", [12, 3.638]],
+      ["name/16", [16, 49.466]],
+      ["parent/16", [12, 3.638]],
+      ["name/17", [17, 29.968]],
       ["parent/17", []],
-      ["name/18", [17, 29.175]],
-      ["parent/18", [17, 2.917]],
-      ["name/19", [18, 43.556]],
-      ["parent/19", [19, 1.917]],
-      ["name/20", [20, 43.556]],
-      ["parent/20", [19, 1.917]],
-      ["name/21", [21, 48.675]],
-      ["parent/21", [19, 1.917]],
-      ["name/22", [22, 48.675]],
-      ["parent/22", [19, 1.917]],
-      ["name/23", [23, 48.675]],
-      ["parent/23", [19, 1.917]],
-      ["name/24", [24, 43.556]],
-      ["parent/24", [19, 1.917]],
-      ["name/25", [25, 43.556]],
-      ["parent/25", [19, 1.917]],
-      ["name/26", [26, 48.675]],
-      ["parent/26", [19, 1.917]],
-      ["name/27", [27, 43.556]],
-      ["parent/27", [19, 1.917]],
-      ["name/28", [7, 31.293]],
-      ["parent/28", [19, 1.917]],
-      ["name/29", [28, 48.675]],
-      ["parent/29", [19, 1.917]],
-      ["name/30", [29, 48.675]],
-      ["parent/30", [19, 1.917]],
-      ["name/31", [30, 48.675]],
-      ["parent/31", [19, 1.917]],
-      ["name/32", [31, 48.675]],
-      ["parent/32", [19, 1.917]],
-      ["name/33", [32, 48.675]],
-      ["parent/33", [19, 1.917]],
-      ["name/34", [33, 48.675]],
-      ["parent/34", [19, 1.917]],
-      ["name/35", [34, 48.675]],
-      ["parent/35", [19, 1.917]],
-      ["name/36", [35, 48.675]],
-      ["parent/36", [19, 1.917]],
-      ["name/37", [36, 48.675]],
-      ["parent/37", [19, 1.917]],
-      ["name/38", [37, 48.675]],
-      ["parent/38", [19, 1.917]],
-      ["name/39", [38, 48.675]],
-      ["parent/39", [19, 1.917]],
-      ["name/40", [39, 48.675]],
-      ["parent/40", [19, 1.917]],
-      ["name/41", [40, 48.675]],
-      ["parent/41", [19, 1.917]],
-      ["name/42", [41, 48.675]],
-      ["parent/42", [19, 1.917]],
-      ["name/43", [42, 48.675]],
-      ["parent/43", [19, 1.917]],
-      ["name/44", [43, 48.675]],
-      ["parent/44", [19, 1.917]],
-      ["name/45", [44, 48.675]],
-      ["parent/45", [19, 1.917]],
-      ["name/46", [45, 48.675]],
-      ["parent/46", [19, 1.917]],
-      ["name/47", [46, 48.675]],
-      ["parent/47", [17, 2.917]],
-      ["name/48", [47, 48.675]],
-      ["parent/48", [17, 2.917]],
-      ["name/49", [48, 48.675]],
-      ["parent/49", [17, 2.917]],
-      ["name/50", [49, 48.675]],
-      ["parent/50", [17, 2.917]],
-      ["name/51", [50, 37.666]],
-      ["parent/51", [51, 4.868]],
-      ["name/52", [52, 48.675]],
-      ["parent/52", [17, 2.917]],
-      ["name/53", [50, 37.666]],
-      ["parent/53", [53, 4.868]],
-      ["name/54", [54, 48.675]],
-      ["parent/54", [55, 3.398]],
-      ["name/55", [56, 48.675]],
-      ["parent/55", [55, 3.398]],
-      ["name/56", [57, 48.675]],
-      ["parent/56", [55, 3.398]],
-      ["name/57", [58, 48.675]],
-      ["parent/57", [55, 3.398]],
-      ["name/58", [59, 48.675]],
-      ["parent/58", [55, 3.398]],
-      ["name/59", [60, 48.675]],
-      ["parent/59", [55, 3.398]],
-      ["name/60", [61, 48.675]],
-      ["parent/60", [17, 2.917]],
-      ["name/61", [50, 37.666]],
-      ["parent/61", [62, 4.868]],
-      ["name/62", [63, 48.675]],
-      ["parent/62", [17, 2.917]],
-      ["name/63", [50, 37.666]],
-      ["parent/63", [64, 4.868]],
-      ["name/64", [18, 43.556]],
-      ["parent/64", [65, 3.255]],
-      ["name/65", [20, 43.556]],
-      ["parent/65", [65, 3.255]],
-      ["name/66", [66, 48.675]],
-      ["parent/66", [65, 3.255]],
-      ["name/67", [24, 43.556]],
-      ["parent/67", [65, 3.255]],
-      ["name/68", [25, 43.556]],
-      ["parent/68", [65, 3.255]],
-      ["name/69", [27, 43.556]],
-      ["parent/69", [65, 3.255]],
-      ["name/70", [67, 48.675]],
-      ["parent/70", [65, 3.255]],
-      ["name/71", [68, 19.482, 69, 20.076]],
+      ["name/18", [17, 29.968]],
+      ["parent/18", [17, 2.991]],
+      ["name/19", [18, 44.347]],
+      ["parent/19", [19, 1.992]],
+      ["name/20", [20, 44.347]],
+      ["parent/20", [19, 1.992]],
+      ["name/21", [21, 49.466]],
+      ["parent/21", [19, 1.992]],
+      ["name/22", [22, 49.466]],
+      ["parent/22", [19, 1.992]],
+      ["name/23", [23, 49.466]],
+      ["parent/23", [19, 1.992]],
+      ["name/24", [24, 44.347]],
+      ["parent/24", [19, 1.992]],
+      ["name/25", [25, 44.347]],
+      ["parent/25", [19, 1.992]],
+      ["name/26", [26, 49.466]],
+      ["parent/26", [19, 1.992]],
+      ["name/27", [27, 44.347]],
+      ["parent/27", [19, 1.992]],
+      ["name/28", [7, 30.971]],
+      ["parent/28", [19, 1.992]],
+      ["name/29", [28, 49.466]],
+      ["parent/29", [19, 1.992]],
+      ["name/30", [29, 49.466]],
+      ["parent/30", [19, 1.992]],
+      ["name/31", [30, 49.466]],
+      ["parent/31", [19, 1.992]],
+      ["name/32", [31, 49.466]],
+      ["parent/32", [19, 1.992]],
+      ["name/33", [32, 49.466]],
+      ["parent/33", [19, 1.992]],
+      ["name/34", [33, 49.466]],
+      ["parent/34", [19, 1.992]],
+      ["name/35", [34, 49.466]],
+      ["parent/35", [19, 1.992]],
+      ["name/36", [35, 49.466]],
+      ["parent/36", [19, 1.992]],
+      ["name/37", [36, 49.466]],
+      ["parent/37", [19, 1.992]],
+      ["name/38", [37, 49.466]],
+      ["parent/38", [19, 1.992]],
+      ["name/39", [38, 49.466]],
+      ["parent/39", [19, 1.992]],
+      ["name/40", [39, 49.466]],
+      ["parent/40", [19, 1.992]],
+      ["name/41", [40, 49.466]],
+      ["parent/41", [19, 1.992]],
+      ["name/42", [41, 49.466]],
+      ["parent/42", [19, 1.992]],
+      ["name/43", [42, 49.466]],
+      ["parent/43", [19, 1.992]],
+      ["name/44", [43, 49.466]],
+      ["parent/44", [19, 1.992]],
+      ["name/45", [44, 49.466]],
+      ["parent/45", [19, 1.992]],
+      ["name/46", [45, 49.466]],
+      ["parent/46", [19, 1.992]],
+      ["name/47", [46, 49.466]],
+      ["parent/47", [17, 2.991]],
+      ["name/48", [47, 49.466]],
+      ["parent/48", [17, 2.991]],
+      ["name/49", [48, 49.466]],
+      ["parent/49", [17, 2.991]],
+      ["name/50", [49, 49.466]],
+      ["parent/50", [17, 2.991]],
+      ["name/51", [50, 38.458]],
+      ["parent/51", [51, 4.937]],
+      ["name/52", [52, 49.466]],
+      ["parent/52", [17, 2.991]],
+      ["name/53", [50, 38.458]],
+      ["parent/53", [53, 4.937]],
+      ["name/54", [54, 49.466]],
+      ["parent/54", [55, 3.471]],
+      ["name/55", [56, 49.466]],
+      ["parent/55", [55, 3.471]],
+      ["name/56", [57, 49.466]],
+      ["parent/56", [55, 3.471]],
+      ["name/57", [58, 49.466]],
+      ["parent/57", [55, 3.471]],
+      ["name/58", [59, 49.466]],
+      ["parent/58", [55, 3.471]],
+      ["name/59", [60, 49.466]],
+      ["parent/59", [55, 3.471]],
+      ["name/60", [61, 49.466]],
+      ["parent/60", [17, 2.991]],
+      ["name/61", [50, 38.458]],
+      ["parent/61", [62, 4.937]],
+      ["name/62", [63, 49.466]],
+      ["parent/62", [17, 2.991]],
+      ["name/63", [50, 38.458]],
+      ["parent/63", [64, 4.937]],
+      ["name/64", [18, 44.347]],
+      ["parent/64", [65, 3.327]],
+      ["name/65", [20, 44.347]],
+      ["parent/65", [65, 3.327]],
+      ["name/66", [66, 49.466]],
+      ["parent/66", [65, 3.327]],
+      ["name/67", [24, 44.347]],
+      ["parent/67", [65, 3.327]],
+      ["name/68", [25, 44.347]],
+      ["parent/68", [65, 3.327]],
+      ["name/69", [27, 44.347]],
+      ["parent/69", [65, 3.327]],
+      ["name/70", [67, 49.466]],
+      ["parent/70", [65, 3.327]],
+      ["name/71", [68, 20.045, 69, 20.638]],
       ["parent/71", []],
-      ["name/72", [68, 27.428]],
-      ["parent/72", [68, 1.948, 69, 2.008]],
-      ["name/73", [70, 48.675]],
-      ["parent/73", [68, 1.948, 69, 2.008]],
-      ["name/74", [71, 48.675]],
-      ["parent/74", [68, 1.948, 69, 2.008]],
-      ["name/75", [72, 48.675]],
-      ["parent/75", [68, 1.948, 69, 2.008]],
-      ["name/76", [73, 48.675]],
-      ["parent/76", [68, 1.948, 69, 2.008]],
-      ["name/77", [74, 48.675]],
-      ["parent/77", [68, 1.948, 69, 2.008]],
-      ["name/78", [75, 48.675]],
-      ["parent/78", [68, 1.948, 69, 2.008]],
-      ["name/79", [76, 48.675]],
-      ["parent/79", [68, 1.948, 69, 2.008]],
-      ["name/80", [77, 48.675]],
-      ["parent/80", [68, 1.948, 69, 2.008]],
-      ["name/81", [78, 48.675]],
-      ["parent/81", [68, 1.948, 69, 2.008]],
-      ["name/82", [79, 37.666]],
+      ["name/72", [68, 28.221]],
+      ["parent/72", [68, 1.999, 69, 2.058]],
+      ["name/73", [70, 49.466]],
+      ["parent/73", [68, 1.999, 69, 2.058]],
+      ["name/74", [71, 49.466]],
+      ["parent/74", [68, 1.999, 69, 2.058]],
+      ["name/75", [72, 49.466]],
+      ["parent/75", [68, 1.999, 69, 2.058]],
+      ["name/76", [73, 49.466]],
+      ["parent/76", [68, 1.999, 69, 2.058]],
+      ["name/77", [74, 49.466]],
+      ["parent/77", [68, 1.999, 69, 2.058]],
+      ["name/78", [75, 49.466]],
+      ["parent/78", [68, 1.999, 69, 2.058]],
+      ["name/79", [76, 49.466]],
+      ["parent/79", [68, 1.999, 69, 2.058]],
+      ["name/80", [77, 49.466]],
+      ["parent/80", [68, 1.999, 69, 2.058]],
+      ["name/81", [78, 49.466]],
+      ["parent/81", [68, 1.999, 69, 2.058]],
+      ["name/82", [79, 38.458]],
       ["parent/82", []],
-      ["name/83", [80, 48.675]],
-      ["parent/83", [79, 3.767]],
-      ["name/84", [81, 40.184]],
-      ["parent/84", [82, 2.594]],
-      ["name/85", [83, 40.184]],
-      ["parent/85", [82, 2.594]],
-      ["name/86", [84, 40.184]],
-      ["parent/86", [82, 2.594]],
-      ["name/87", [7, 31.293]],
-      ["parent/87", [82, 2.594]],
-      ["name/88", [85, 33.981]],
-      ["parent/88", [82, 2.594]],
-      ["name/89", [86, 33.981]],
-      ["parent/89", [82, 2.594]],
-      ["name/90", [87, 40.184]],
-      ["parent/90", [82, 2.594]],
-      ["name/91", [88, 40.184]],
-      ["parent/91", [82, 2.594]],
-      ["name/92", [89, 40.184]],
-      ["parent/92", [82, 2.594]],
-      ["name/93", [90, 35.655]],
-      ["parent/93", [82, 2.594]],
-      ["name/94", [91, 35.655]],
-      ["parent/94", [82, 2.594]],
-      ["name/95", [92, 35.655]],
-      ["parent/95", [82, 2.594]],
-      ["name/96", [93, 35.655]],
-      ["parent/96", [82, 2.594]],
-      ["name/97", [94, 35.655]],
-      ["parent/97", [82, 2.594]],
-      ["name/98", [95, 48.675]],
-      ["parent/98", [79, 3.767]],
-      ["name/99", [7, 31.293]],
-      ["parent/99", [96, 2.35]],
-      ["name/100", [85, 33.981]],
-      ["parent/100", [96, 2.35]],
-      ["name/101", [86, 33.981]],
-      ["parent/101", [96, 2.35]],
-      ["name/102", [97, 43.556]],
-      ["parent/102", [96, 2.35]],
-      ["name/103", [98, 48.675]],
-      ["parent/103", [96, 2.35]],
-      ["name/104", [99, 43.556]],
-      ["parent/104", [96, 2.35]],
-      ["name/105", [100, 48.675]],
-      ["parent/105", [96, 2.35]],
-      ["name/106", [94, 35.655]],
-      ["parent/106", [96, 2.35]],
-      ["name/107", [81, 40.184]],
-      ["parent/107", [96, 2.35]],
-      ["name/108", [83, 40.184]],
-      ["parent/108", [96, 2.35]],
-      ["name/109", [84, 40.184]],
-      ["parent/109", [96, 2.35]],
-      ["name/110", [87, 40.184]],
-      ["parent/110", [96, 2.35]],
-      ["name/111", [88, 40.184]],
-      ["parent/111", [96, 2.35]],
-      ["name/112", [89, 40.184]],
-      ["parent/112", [96, 2.35]],
-      ["name/113", [90, 35.655]],
-      ["parent/113", [96, 2.35]],
-      ["name/114", [91, 35.655]],
-      ["parent/114", [96, 2.35]],
-      ["name/115", [92, 35.655]],
-      ["parent/115", [96, 2.35]],
-      ["name/116", [93, 35.655]],
-      ["parent/116", [96, 2.35]],
-      ["name/117", [101, 48.675]],
-      ["parent/117", [79, 3.767]],
-      ["name/118", [7, 31.293]],
-      ["parent/118", [102, 2.247]],
-      ["name/119", [85, 33.981]],
-      ["parent/119", [102, 2.247]],
-      ["name/120", [86, 33.981]],
-      ["parent/120", [102, 2.247]],
-      ["name/121", [97, 43.556]],
-      ["parent/121", [102, 2.247]],
-      ["name/122", [103, 48.675]],
-      ["parent/122", [102, 2.247]],
-      ["name/123", [99, 43.556]],
-      ["parent/123", [102, 2.247]],
-      ["name/124", [104, 48.675]],
-      ["parent/124", [102, 2.247]],
-      ["name/125", [105, 48.675]],
-      ["parent/125", [102, 2.247]],
-      ["name/126", [106, 48.675]],
-      ["parent/126", [102, 2.247]],
-      ["name/127", [81, 40.184]],
-      ["parent/127", [102, 2.247]],
-      ["name/128", [83, 40.184]],
-      ["parent/128", [102, 2.247]],
-      ["name/129", [84, 40.184]],
-      ["parent/129", [102, 2.247]],
-      ["name/130", [87, 40.184]],
-      ["parent/130", [102, 2.247]],
-      ["name/131", [88, 40.184]],
-      ["parent/131", [102, 2.247]],
-      ["name/132", [89, 40.184]],
-      ["parent/132", [102, 2.247]],
-      ["name/133", [90, 35.655]],
-      ["parent/133", [102, 2.247]],
-      ["name/134", [91, 35.655]],
-      ["parent/134", [102, 2.247]],
-      ["name/135", [92, 35.655]],
-      ["parent/135", [102, 2.247]],
-      ["name/136", [93, 35.655]],
-      ["parent/136", [102, 2.247]],
-      ["name/137", [94, 35.655]],
-      ["parent/137", [102, 2.247]],
-      ["name/138", [107, 48.675]],
-      ["parent/138", []],
-      ["name/139", [108, 37.666]],
-      ["parent/139", []],
-      ["name/140", [109, 48.675]],
-      ["parent/140", [108, 3.767]],
-      ["name/141", [7, 31.293]],
-      ["parent/141", [110, 2.527]],
-      ["name/142", [111, 40.184]],
-      ["parent/142", [110, 2.527]],
-      ["name/143", [112, 40.184]],
-      ["parent/143", [110, 2.527]],
-      ["name/144", [86, 33.981]],
-      ["parent/144", [110, 2.527]],
-      ["name/145", [113, 40.184]],
-      ["parent/145", [110, 2.527]],
-      ["name/146", [114, 40.184]],
-      ["parent/146", [110, 2.527]],
-      ["name/147", [91, 35.655]],
-      ["parent/147", [110, 2.527]],
-      ["name/148", [92, 35.655]],
-      ["parent/148", [110, 2.527]],
-      ["name/149", [93, 35.655]],
-      ["parent/149", [110, 2.527]],
-      ["name/150", [115, 43.556]],
-      ["parent/150", [110, 2.527]],
-      ["name/151", [116, 43.556]],
-      ["parent/151", [110, 2.527]],
-      ["name/152", [90, 35.655]],
-      ["parent/152", [110, 2.527]],
-      ["name/153", [117, 43.556]],
-      ["parent/153", [110, 2.527]],
-      ["name/154", [85, 33.981]],
-      ["parent/154", [110, 2.527]],
-      ["name/155", [94, 35.655]],
-      ["parent/155", [110, 2.527]],
-      ["name/156", [118, 48.675]],
-      ["parent/156", [108, 3.767]],
-      ["name/157", [7, 31.293]],
-      ["parent/157", [119, 2.297]],
-      ["name/158", [111, 40.184]],
-      ["parent/158", [119, 2.297]],
-      ["name/159", [112, 40.184]],
-      ["parent/159", [119, 2.297]],
-      ["name/160", [120, 43.556]],
-      ["parent/160", [119, 2.297]],
-      ["name/161", [86, 33.981]],
-      ["parent/161", [119, 2.297]],
-      ["name/162", [113, 40.184]],
-      ["parent/162", [119, 2.297]],
-      ["name/163", [121, 48.675]],
-      ["parent/163", [119, 2.297]],
-      ["name/164", [114, 40.184]],
-      ["parent/164", [119, 2.297]],
-      ["name/165", [91, 35.655]],
-      ["parent/165", [119, 2.297]],
-      ["name/166", [92, 35.655]],
-      ["parent/166", [119, 2.297]],
-      ["name/167", [93, 35.655]],
-      ["parent/167", [119, 2.297]],
-      ["name/168", [115, 43.556]],
-      ["parent/168", [119, 2.297]],
-      ["name/169", [122, 48.675]],
-      ["parent/169", [119, 2.297]],
-      ["name/170", [116, 43.556]],
-      ["parent/170", [119, 2.297]],
-      ["name/171", [117, 43.556]],
-      ["parent/171", [119, 2.297]],
-      ["name/172", [123, 48.675]],
-      ["parent/172", [119, 2.297]],
-      ["name/173", [85, 33.981]],
-      ["parent/173", [119, 2.297]],
-      ["name/174", [94, 35.655]],
-      ["parent/174", [119, 2.297]],
-      ["name/175", [90, 35.655]],
-      ["parent/175", [119, 2.297]],
-      ["name/176", [124, 48.675]],
-      ["parent/176", [108, 3.767]],
-      ["name/177", [7, 31.293]],
-      ["parent/177", [125, 3.018]],
-      ["name/178", [111, 40.184]],
-      ["parent/178", [125, 3.018]],
-      ["name/179", [112, 40.184]],
-      ["parent/179", [125, 3.018]],
-      ["name/180", [120, 43.556]],
-      ["parent/180", [125, 3.018]],
-      ["name/181", [126, 48.675]],
-      ["parent/181", [125, 3.018]],
-      ["name/182", [86, 33.981]],
-      ["parent/182", [125, 3.018]],
-      ["name/183", [113, 40.184]],
-      ["parent/183", [125, 3.018]],
-      ["name/184", [85, 33.981]],
-      ["parent/184", [125, 3.018]],
-      ["name/185", [114, 40.184]],
-      ["parent/185", [125, 3.018]],
-      ["name/186", [127, 33.981]],
-      ["parent/186", []],
-      ["name/187", [128, 48.675]],
-      ["parent/187", [127, 3.398]],
-      ["name/188", [129, 48.675]],
-      ["parent/188", [127, 3.398]],
-      ["name/189", [127, 33.981]],
-      ["parent/189", [127, 3.398]],
-      ["name/190", [130, 48.675]],
-      ["parent/190", [127, 3.398]],
-      ["name/191", [131, 48.675]],
-      ["parent/191", []]
+      ["name/83", [80, 49.466]],
+      ["parent/83", [79, 3.838]],
+      ["name/84", [7, 30.971]],
+      ["parent/84", [81, 2.601]],
+      ["name/85", [82, 40.976]],
+      ["parent/85", [81, 2.601]],
+      ["name/86", [83, 40.976]],
+      ["parent/86", [81, 2.601]],
+      ["name/87", [84, 33.34]],
+      ["parent/87", [81, 2.601]],
+      ["name/88", [85, 40.976]],
+      ["parent/88", [81, 2.601]],
+      ["name/89", [86, 40.976]],
+      ["parent/89", [81, 2.601]],
+      ["name/90", [87, 34.773]],
+      ["parent/90", [81, 2.601]],
+      ["name/91", [88, 34.773]],
+      ["parent/91", [81, 2.601]],
+      ["name/92", [89, 34.773]],
+      ["parent/92", [81, 2.601]],
+      ["name/93", [90, 44.347]],
+      ["parent/93", [81, 2.601]],
+      ["name/94", [91, 44.347]],
+      ["parent/94", [81, 2.601]],
+      ["name/95", [92, 34.773]],
+      ["parent/95", [81, 2.601]],
+      ["name/96", [93, 44.347]],
+      ["parent/96", [81, 2.601]],
+      ["name/97", [94, 33.34]],
+      ["parent/97", [81, 2.601]],
+      ["name/98", [95, 34.773]],
+      ["parent/98", [81, 2.601]],
+      ["name/99", [96, 49.466]],
+      ["parent/99", [79, 3.838]],
+      ["name/100", [7, 30.971]],
+      ["parent/100", [97, 2.372]],
+      ["name/101", [82, 40.976]],
+      ["parent/101", [97, 2.372]],
+      ["name/102", [83, 40.976]],
+      ["parent/102", [97, 2.372]],
+      ["name/103", [98, 44.347]],
+      ["parent/103", [97, 2.372]],
+      ["name/104", [84, 33.34]],
+      ["parent/104", [97, 2.372]],
+      ["name/105", [85, 40.976]],
+      ["parent/105", [97, 2.372]],
+      ["name/106", [99, 49.466]],
+      ["parent/106", [97, 2.372]],
+      ["name/107", [86, 40.976]],
+      ["parent/107", [97, 2.372]],
+      ["name/108", [87, 34.773]],
+      ["parent/108", [97, 2.372]],
+      ["name/109", [88, 34.773]],
+      ["parent/109", [97, 2.372]],
+      ["name/110", [89, 34.773]],
+      ["parent/110", [97, 2.372]],
+      ["name/111", [90, 44.347]],
+      ["parent/111", [97, 2.372]],
+      ["name/112", [100, 49.466]],
+      ["parent/112", [97, 2.372]],
+      ["name/113", [91, 44.347]],
+      ["parent/113", [97, 2.372]],
+      ["name/114", [93, 44.347]],
+      ["parent/114", [97, 2.372]],
+      ["name/115", [101, 49.466]],
+      ["parent/115", [97, 2.372]],
+      ["name/116", [94, 33.34]],
+      ["parent/116", [97, 2.372]],
+      ["name/117", [95, 34.773]],
+      ["parent/117", [97, 2.372]],
+      ["name/118", [92, 34.773]],
+      ["parent/118", [97, 2.372]],
+      ["name/119", [102, 49.466]],
+      ["parent/119", [79, 3.838]],
+      ["name/120", [7, 30.971]],
+      ["parent/120", [103, 3.091]],
+      ["name/121", [82, 40.976]],
+      ["parent/121", [103, 3.091]],
+      ["name/122", [83, 40.976]],
+      ["parent/122", [103, 3.091]],
+      ["name/123", [98, 44.347]],
+      ["parent/123", [103, 3.091]],
+      ["name/124", [104, 49.466]],
+      ["parent/124", [103, 3.091]],
+      ["name/125", [84, 33.34]],
+      ["parent/125", [103, 3.091]],
+      ["name/126", [85, 40.976]],
+      ["parent/126", [103, 3.091]],
+      ["name/127", [94, 33.34]],
+      ["parent/127", [103, 3.091]],
+      ["name/128", [86, 40.976]],
+      ["parent/128", [103, 3.091]],
+      ["name/129", [105, 40.976]],
+      ["parent/129", []],
+      ["name/130", [105, 40.976]],
+      ["parent/130", [105, 4.09]],
+      ["name/131", [106, 36.447]],
+      ["parent/131", []],
+      ["name/132", [107, 49.466]],
+      ["parent/132", [106, 3.638]],
+      ["name/133", [108, 38.458]],
+      ["parent/133", [109, 2.668]],
+      ["name/134", [110, 38.458]],
+      ["parent/134", [109, 2.668]],
+      ["name/135", [111, 38.458]],
+      ["parent/135", [109, 2.668]],
+      ["name/136", [7, 30.971]],
+      ["parent/136", [109, 2.668]],
+      ["name/137", [94, 33.34]],
+      ["parent/137", [109, 2.668]],
+      ["name/138", [84, 33.34]],
+      ["parent/138", [109, 2.668]],
+      ["name/139", [112, 38.458]],
+      ["parent/139", [109, 2.668]],
+      ["name/140", [113, 38.458]],
+      ["parent/140", [109, 2.668]],
+      ["name/141", [114, 38.458]],
+      ["parent/141", [109, 2.668]],
+      ["name/142", [92, 34.773]],
+      ["parent/142", [109, 2.668]],
+      ["name/143", [87, 34.773]],
+      ["parent/143", [109, 2.668]],
+      ["name/144", [88, 34.773]],
+      ["parent/144", [109, 2.668]],
+      ["name/145", [89, 34.773]],
+      ["parent/145", [109, 2.668]],
+      ["name/146", [95, 34.773]],
+      ["parent/146", [109, 2.668]],
+      ["name/147", [115, 49.466]],
+      ["parent/147", [106, 3.638]],
+      ["name/148", [7, 30.971]],
+      ["parent/148", [116, 2.425]],
+      ["name/149", [94, 33.34]],
+      ["parent/149", [116, 2.425]],
+      ["name/150", [84, 33.34]],
+      ["parent/150", [116, 2.425]],
+      ["name/151", [117, 44.347]],
+      ["parent/151", [116, 2.425]],
+      ["name/152", [118, 49.466]],
+      ["parent/152", [116, 2.425]],
+      ["name/153", [119, 44.347]],
+      ["parent/153", [116, 2.425]],
+      ["name/154", [120, 49.466]],
+      ["parent/154", [116, 2.425]],
+      ["name/155", [95, 34.773]],
+      ["parent/155", [116, 2.425]],
+      ["name/156", [108, 38.458]],
+      ["parent/156", [116, 2.425]],
+      ["name/157", [110, 38.458]],
+      ["parent/157", [116, 2.425]],
+      ["name/158", [111, 38.458]],
+      ["parent/158", [116, 2.425]],
+      ["name/159", [112, 38.458]],
+      ["parent/159", [116, 2.425]],
+      ["name/160", [113, 38.458]],
+      ["parent/160", [116, 2.425]],
+      ["name/161", [114, 38.458]],
+      ["parent/161", [116, 2.425]],
+      ["name/162", [92, 34.773]],
+      ["parent/162", [116, 2.425]],
+      ["name/163", [87, 34.773]],
+      ["parent/163", [116, 2.425]],
+      ["name/164", [88, 34.773]],
+      ["parent/164", [116, 2.425]],
+      ["name/165", [89, 34.773]],
+      ["parent/165", [116, 2.425]],
+      ["name/166", [121, 49.466]],
+      ["parent/166", [106, 3.638]],
+      ["name/167", [7, 30.971]],
+      ["parent/167", [122, 2.668]],
+      ["name/168", [108, 38.458]],
+      ["parent/168", [122, 2.668]],
+      ["name/169", [110, 38.458]],
+      ["parent/169", [122, 2.668]],
+      ["name/170", [111, 38.458]],
+      ["parent/170", [122, 2.668]],
+      ["name/171", [94, 33.34]],
+      ["parent/171", [122, 2.668]],
+      ["name/172", [84, 33.34]],
+      ["parent/172", [122, 2.668]],
+      ["name/173", [112, 38.458]],
+      ["parent/173", [122, 2.668]],
+      ["name/174", [113, 38.458]],
+      ["parent/174", [122, 2.668]],
+      ["name/175", [114, 38.458]],
+      ["parent/175", [122, 2.668]],
+      ["name/176", [92, 34.773]],
+      ["parent/176", [122, 2.668]],
+      ["name/177", [87, 34.773]],
+      ["parent/177", [122, 2.668]],
+      ["name/178", [88, 34.773]],
+      ["parent/178", [122, 2.668]],
+      ["name/179", [89, 34.773]],
+      ["parent/179", [122, 2.668]],
+      ["name/180", [95, 34.773]],
+      ["parent/180", [122, 2.668]],
+      ["name/181", [123, 49.466]],
+      ["parent/181", [106, 3.638]],
+      ["name/182", [7, 30.971]],
+      ["parent/182", [124, 2.322]],
+      ["name/183", [94, 33.34]],
+      ["parent/183", [124, 2.322]],
+      ["name/184", [84, 33.34]],
+      ["parent/184", [124, 2.322]],
+      ["name/185", [117, 44.347]],
+      ["parent/185", [124, 2.322]],
+      ["name/186", [125, 49.466]],
+      ["parent/186", [124, 2.322]],
+      ["name/187", [119, 44.347]],
+      ["parent/187", [124, 2.322]],
+      ["name/188", [126, 49.466]],
+      ["parent/188", [124, 2.322]],
+      ["name/189", [127, 49.466]],
+      ["parent/189", [124, 2.322]],
+      ["name/190", [128, 49.466]],
+      ["parent/190", [124, 2.322]],
+      ["name/191", [108, 38.458]],
+      ["parent/191", [124, 2.322]],
+      ["name/192", [110, 38.458]],
+      ["parent/192", [124, 2.322]],
+      ["name/193", [111, 38.458]],
+      ["parent/193", [124, 2.322]],
+      ["name/194", [112, 38.458]],
+      ["parent/194", [124, 2.322]],
+      ["name/195", [113, 38.458]],
+      ["parent/195", [124, 2.322]],
+      ["name/196", [114, 38.458]],
+      ["parent/196", [124, 2.322]],
+      ["name/197", [92, 34.773]],
+      ["parent/197", [124, 2.322]],
+      ["name/198", [87, 34.773]],
+      ["parent/198", [124, 2.322]],
+      ["name/199", [88, 34.773]],
+      ["parent/199", [124, 2.322]],
+      ["name/200", [89, 34.773]],
+      ["parent/200", [124, 2.322]],
+      ["name/201", [95, 34.773]],
+      ["parent/201", [124, 2.322]],
+      ["name/202", [129, 49.466]],
+      ["parent/202", []],
+      ["name/203", [130, 36.447]],
+      ["parent/203", []],
+      ["name/204", [131, 49.466]],
+      ["parent/204", [130, 3.638]],
+      ["name/205", [132, 49.466]],
+      ["parent/205", [130, 3.638]],
+      ["name/206", [130, 36.447]],
+      ["parent/206", [130, 3.638]],
+      ["name/207", [133, 49.466]],
+      ["parent/207", []]
     ],
     "invertedIndex": [
       [
@@ -1939,12 +2098,19 @@
         }
       ],
       ["_elapsedtime", { "_index": 4, "name": { "4": {} }, "parent": {} }],
-      ["a", { "_index": 126, "name": { "181": {} }, "parent": {} }],
+      ["a", { "_index": 104, "name": { "124": {} }, "parent": {} }],
       [
         "add",
         {
-          "_index": 91,
-          "name": { "94": {}, "114": {}, "134": {}, "147": {}, "165": {} },
+          "_index": 87,
+          "name": {
+            "90": {},
+            "108": {},
+            "143": {},
+            "163": {},
+            "177": {},
+            "198": {}
+          },
           "parent": {}
         }
       ],
@@ -1987,16 +2153,16 @@
       [
         "clone",
         {
-          "_index": 114,
-          "name": { "146": {}, "164": {}, "185": {} },
+          "_index": 86,
+          "name": { "89": {}, "107": {}, "128": {} },
           "parent": {}
         }
       ],
       [
         "colat",
         {
-          "_index": 88,
-          "name": { "91": {}, "111": {}, "131": {} },
+          "_index": 113,
+          "name": { "140": {}, "160": {}, "174": {}, "195": {} },
           "parent": {}
         }
       ],
@@ -2007,12 +2173,13 @@
           "name": {
             "7": {},
             "28": {},
-            "87": {},
-            "99": {},
-            "118": {},
-            "141": {},
-            "157": {},
-            "177": {}
+            "84": {},
+            "100": {},
+            "120": {},
+            "136": {},
+            "148": {},
+            "167": {},
+            "182": {}
           },
           "parent": {}
         }
@@ -2022,29 +2189,30 @@
       ["coords", { "_index": 71, "name": { "74": {} }, "parent": {} }],
       ["create", { "_index": 31, "name": { "32": {} }, "parent": {} }],
       ["createtexture", { "_index": 33, "name": { "34": {} }, "parent": {} }],
-      ["cross", { "_index": 122, "name": { "169": {} }, "parent": {} }],
+      ["cross", { "_index": 100, "name": { "112": {} }, "parent": {} }],
       ["cube", { "_index": 16, "name": { "16": {} }, "parent": {} }],
       ["data", { "_index": 57, "name": { "56": {} }, "parent": {} }],
       ["destroy", { "_index": 45, "name": { "46": {} }, "parent": {} }],
-      ["determinant", { "_index": 100, "name": { "105": {} }, "parent": {} }],
+      ["determinant", { "_index": 120, "name": { "154": {} }, "parent": {} }],
       [
         "devicepixelratio",
         { "_index": 27, "name": { "27": {}, "69": {} }, "parent": {} }
       ],
-      [
-        "div",
-        { "_index": 115, "name": { "150": {}, "168": {} }, "parent": {} }
-      ],
-      [
-        "dot",
-        { "_index": 116, "name": { "151": {}, "170": {} }, "parent": {} }
-      ],
+      ["div", { "_index": 90, "name": { "93": {}, "111": {} }, "parent": {} }],
+      ["dot", { "_index": 91, "name": { "94": {}, "113": {} }, "parent": {} }],
       ["elapsedtime", { "_index": 9, "name": { "9": {} }, "parent": {} }],
       [
         "equals",
         {
-          "_index": 90,
-          "name": { "93": {}, "113": {}, "133": {}, "152": {}, "175": {} },
+          "_index": 92,
+          "name": {
+            "95": {},
+            "118": {},
+            "142": {},
+            "162": {},
+            "176": {},
+            "197": {}
+          },
           "parent": {}
         }
       ],
@@ -2052,14 +2220,15 @@
       [
         "fromarray",
         {
-          "_index": 86,
+          "_index": 84,
           "name": {
-            "89": {},
-            "101": {},
-            "120": {},
-            "144": {},
-            "161": {},
-            "182": {}
+            "87": {},
+            "104": {},
+            "125": {},
+            "138": {},
+            "150": {},
+            "172": {},
+            "184": {}
           },
           "parent": {}
         }
@@ -2067,13 +2236,13 @@
       [
         "fromnumber",
         {
-          "_index": 113,
-          "name": { "145": {}, "162": {}, "183": {} },
+          "_index": 85,
+          "name": { "88": {}, "105": {}, "126": {} },
           "parent": {}
         }
       ],
-      ["fromvec2", { "_index": 121, "name": { "163": {} }, "parent": {} }],
-      ["frustum", { "_index": 129, "name": { "188": {} }, "parent": {} }],
+      ["fromvec2", { "_index": 99, "name": { "106": {} }, "parent": {} }],
+      ["frustum", { "_index": 132, "name": { "205": {} }, "parent": {} }],
       [
         "geometry",
         {
@@ -2226,117 +2395,155 @@
       ["id", { "_index": 54, "name": { "54": {} }, "parent": {} }],
       [
         "identity",
-        { "_index": 97, "name": { "102": {}, "121": {} }, "parent": {} }
+        { "_index": 117, "name": { "151": {}, "185": {} }, "parent": {} }
       ],
       ["invert", { "_index": 72, "name": { "75": {} }, "parent": {} }],
       [
         "length",
-        { "_index": 117, "name": { "153": {}, "171": {} }, "parent": {} }
+        { "_index": 93, "name": { "96": {}, "114": {} }, "parent": {} }
       ],
       ["loc", { "_index": 58, "name": { "57": {} }, "parent": {} }],
-      ["lookat", { "_index": 130, "name": { "190": {} }, "parent": {} }],
-      ["mat", { "_index": 80, "name": { "83": {} }, "parent": {} }],
-      ["mat2", { "_index": 95, "name": { "98": {} }, "parent": {} }],
-      ["mat4", { "_index": 101, "name": { "117": {} }, "parent": {} }],
+      [
+        "lookat",
+        {
+          "_index": 105,
+          "name": { "129": {}, "130": {} },
+          "parent": { "130": {} }
+        }
+      ],
+      ["mat", { "_index": 107, "name": { "132": {} }, "parent": {} }],
+      ["mat2", { "_index": 115, "name": { "147": {} }, "parent": {} }],
+      ["mat3", { "_index": 121, "name": { "166": {} }, "parent": {} }],
+      ["mat4", { "_index": 123, "name": { "181": {} }, "parent": {} }],
       [
         "matrix",
         {
-          "_index": 79,
-          "name": { "82": {} },
-          "parent": { "83": {}, "98": {}, "117": {} }
+          "_index": 106,
+          "name": { "131": {} },
+          "parent": { "132": {}, "147": {}, "166": {}, "181": {} }
         }
       ],
       [
         "matrix\".mat",
         {
-          "_index": 82,
+          "_index": 109,
           "name": {},
           "parent": {
-            "84": {},
-            "85": {},
-            "86": {},
-            "87": {},
-            "88": {},
-            "89": {},
-            "90": {},
-            "91": {},
-            "92": {},
-            "93": {},
-            "94": {},
-            "95": {},
-            "96": {},
-            "97": {}
+            "133": {},
+            "134": {},
+            "135": {},
+            "136": {},
+            "137": {},
+            "138": {},
+            "139": {},
+            "140": {},
+            "141": {},
+            "142": {},
+            "143": {},
+            "144": {},
+            "145": {},
+            "146": {}
           }
         }
       ],
       [
         "matrix\".mat2",
         {
-          "_index": 96,
+          "_index": 116,
           "name": {},
           "parent": {
-            "99": {},
-            "100": {},
-            "101": {},
-            "102": {},
-            "103": {},
-            "104": {},
-            "105": {},
-            "106": {},
-            "107": {},
-            "108": {},
-            "109": {},
-            "110": {},
-            "111": {},
-            "112": {},
-            "113": {},
-            "114": {},
-            "115": {},
-            "116": {}
+            "148": {},
+            "149": {},
+            "150": {},
+            "151": {},
+            "152": {},
+            "153": {},
+            "154": {},
+            "155": {},
+            "156": {},
+            "157": {},
+            "158": {},
+            "159": {},
+            "160": {},
+            "161": {},
+            "162": {},
+            "163": {},
+            "164": {},
+            "165": {}
+          }
+        }
+      ],
+      [
+        "matrix\".mat3",
+        {
+          "_index": 122,
+          "name": {},
+          "parent": {
+            "167": {},
+            "168": {},
+            "169": {},
+            "170": {},
+            "171": {},
+            "172": {},
+            "173": {},
+            "174": {},
+            "175": {},
+            "176": {},
+            "177": {},
+            "178": {},
+            "179": {},
+            "180": {}
           }
         }
       ],
       [
         "matrix\".mat4",
         {
-          "_index": 102,
+          "_index": 124,
           "name": {},
           "parent": {
-            "118": {},
-            "119": {},
-            "120": {},
-            "121": {},
-            "122": {},
-            "123": {},
-            "124": {},
-            "125": {},
-            "126": {},
-            "127": {},
-            "128": {},
-            "129": {},
-            "130": {},
-            "131": {},
-            "132": {},
-            "133": {},
-            "134": {},
-            "135": {},
-            "136": {},
-            "137": {}
+            "182": {},
+            "183": {},
+            "184": {},
+            "185": {},
+            "186": {},
+            "187": {},
+            "188": {},
+            "189": {},
+            "190": {},
+            "191": {},
+            "192": {},
+            "193": {},
+            "194": {},
+            "195": {},
+            "196": {},
+            "197": {},
+            "198": {},
+            "199": {},
+            "200": {},
+            "201": {}
           }
         }
       ],
-      ["matrix.test", { "_index": 107, "name": { "138": {} }, "parent": {} }],
+      ["matrix.test", { "_index": 129, "name": { "202": {} }, "parent": {} }],
       [
         "mul",
         {
-          "_index": 93,
-          "name": { "96": {}, "116": {}, "136": {}, "149": {}, "167": {} },
+          "_index": 89,
+          "name": {
+            "92": {},
+            "110": {},
+            "145": {},
+            "165": {},
+            "179": {},
+            "200": {}
+          },
           "parent": {}
         }
       ],
       ["name", { "_index": 56, "name": { "55": {} }, "parent": {} }],
       ["noise", { "_index": 76, "name": { "79": {} }, "parent": {} }],
-      ["normalized", { "_index": 123, "name": { "172": {} }, "parent": {} }],
+      ["normalized", { "_index": 101, "name": { "115": {} }, "parent": {} }],
       [
         "normalizescreencoords",
         { "_index": 70, "name": { "73": {} }, "parent": {} }
@@ -2344,27 +2551,27 @@
       [
         "numcols",
         {
-          "_index": 84,
-          "name": { "86": {}, "109": {}, "129": {} },
+          "_index": 111,
+          "name": { "135": {}, "158": {}, "170": {}, "193": {} },
           "parent": {}
         }
       ],
       [
         "numrows",
         {
-          "_index": 83,
-          "name": { "85": {}, "108": {}, "128": {} },
+          "_index": 110,
+          "name": { "134": {}, "157": {}, "169": {}, "192": {} },
           "parent": {}
         }
       ],
       ["oldtime", { "_index": 3, "name": { "3": {} }, "parent": {} }],
-      ["ortho", { "_index": 128, "name": { "187": {} }, "parent": {} }],
+      ["ortho", { "_index": 131, "name": { "204": {} }, "parent": {} }],
       [
         "perspective",
         {
-          "_index": 127,
-          "name": { "186": {}, "189": {} },
-          "parent": { "187": {}, "188": {}, "189": {}, "190": {} }
+          "_index": 130,
+          "name": { "203": {}, "206": {} },
+          "parent": { "204": {}, "205": {}, "206": {} }
         }
       ],
       ["program", { "_index": 23, "name": { "23": {} }, "parent": {} }],
@@ -2372,22 +2579,22 @@
       ["repeat", { "_index": 73, "name": { "76": {} }, "parent": {} }],
       ["resize", { "_index": 35, "name": { "36": {} }, "parent": {} }],
       ["rotate", { "_index": 74, "name": { "77": {} }, "parent": {} }],
-      ["rotation", { "_index": 98, "name": { "103": {} }, "parent": {} }],
-      ["rotx", { "_index": 104, "name": { "124": {} }, "parent": {} }],
-      ["roty", { "_index": 105, "name": { "125": {} }, "parent": {} }],
-      ["rotz", { "_index": 106, "name": { "126": {} }, "parent": {} }],
+      ["rotation", { "_index": 118, "name": { "152": {} }, "parent": {} }],
+      ["rotx", { "_index": 126, "name": { "188": {} }, "parent": {} }],
+      ["roty", { "_index": 127, "name": { "189": {} }, "parent": {} }],
+      ["rotz", { "_index": 128, "name": { "190": {} }, "parent": {} }],
       [
         "rowat",
         {
-          "_index": 89,
-          "name": { "92": {}, "112": {}, "132": {} },
+          "_index": 114,
+          "name": { "141": {}, "161": {}, "175": {}, "196": {} },
           "parent": {}
         }
       ],
       ["running", { "_index": 6, "name": { "6": {} }, "parent": {} }],
       [
         "scaling",
-        { "_index": 99, "name": { "104": {}, "123": {} }, "parent": {} }
+        { "_index": 119, "name": { "153": {}, "187": {} }, "parent": {} }
       ],
       [
         "setactivetexture",
@@ -2407,8 +2614,15 @@
       [
         "sub",
         {
-          "_index": 92,
-          "name": { "95": {}, "115": {}, "135": {}, "148": {}, "166": {} },
+          "_index": 88,
+          "name": {
+            "91": {},
+            "109": {},
+            "144": {},
+            "164": {},
+            "178": {},
+            "199": {}
+          },
           "parent": {}
         }
       ],
@@ -2416,14 +2630,15 @@
       [
         "toarray",
         {
-          "_index": 85,
+          "_index": 94,
           "name": {
-            "88": {},
-            "100": {},
-            "119": {},
-            "154": {},
-            "173": {},
-            "184": {}
+            "97": {},
+            "116": {},
+            "127": {},
+            "137": {},
+            "149": {},
+            "171": {},
+            "183": {}
           },
           "parent": {}
         }
@@ -2431,12 +2646,19 @@
       [
         "tostring",
         {
-          "_index": 94,
-          "name": { "97": {}, "106": {}, "137": {}, "155": {}, "174": {} },
+          "_index": 95,
+          "name": {
+            "98": {},
+            "117": {},
+            "146": {},
+            "155": {},
+            "180": {},
+            "201": {}
+          },
           "parent": {}
         }
       ],
-      ["translation", { "_index": 103, "name": { "122": {} }, "parent": {} }],
+      ["translation", { "_index": 125, "name": { "186": {} }, "parent": {} }],
       ["type", { "_index": 59, "name": { "58": {} }, "parent": {} }],
       ["uni", { "_index": 42, "name": { "43": {} }, "parent": {} }],
       ["unii", { "_index": 43, "name": { "44": {} }, "parent": {} }],
@@ -2467,120 +2689,120 @@
       [
         "valueat",
         {
-          "_index": 87,
-          "name": { "90": {}, "110": {}, "130": {} },
+          "_index": 112,
+          "name": { "139": {}, "159": {}, "173": {}, "194": {} },
           "parent": {}
         }
       ],
       [
         "values",
         {
-          "_index": 81,
-          "name": { "84": {}, "107": {}, "127": {} },
+          "_index": 108,
+          "name": { "133": {}, "156": {}, "168": {}, "191": {} },
           "parent": {}
         }
       ],
-      ["vec2", { "_index": 109, "name": { "140": {} }, "parent": {} }],
-      ["vec3", { "_index": 118, "name": { "156": {} }, "parent": {} }],
-      ["vec4", { "_index": 124, "name": { "176": {} }, "parent": {} }],
+      ["vec2", { "_index": 80, "name": { "83": {} }, "parent": {} }],
+      ["vec3", { "_index": 96, "name": { "99": {} }, "parent": {} }],
+      ["vec4", { "_index": 102, "name": { "119": {} }, "parent": {} }],
       [
         "vector",
         {
-          "_index": 108,
-          "name": { "139": {} },
-          "parent": { "140": {}, "156": {}, "176": {} }
+          "_index": 79,
+          "name": { "82": {} },
+          "parent": { "83": {}, "99": {}, "119": {} }
         }
       ],
       [
         "vector\".vec2",
         {
-          "_index": 110,
+          "_index": 81,
           "name": {},
           "parent": {
-            "141": {},
-            "142": {},
-            "143": {},
-            "144": {},
-            "145": {},
-            "146": {},
-            "147": {},
-            "148": {},
-            "149": {},
-            "150": {},
-            "151": {},
-            "152": {},
-            "153": {},
-            "154": {},
-            "155": {}
+            "84": {},
+            "85": {},
+            "86": {},
+            "87": {},
+            "88": {},
+            "89": {},
+            "90": {},
+            "91": {},
+            "92": {},
+            "93": {},
+            "94": {},
+            "95": {},
+            "96": {},
+            "97": {},
+            "98": {}
           }
         }
       ],
       [
         "vector\".vec3",
         {
-          "_index": 119,
+          "_index": 97,
           "name": {},
           "parent": {
-            "157": {},
-            "158": {},
-            "159": {},
-            "160": {},
-            "161": {},
-            "162": {},
-            "163": {},
-            "164": {},
-            "165": {},
-            "166": {},
-            "167": {},
-            "168": {},
-            "169": {},
-            "170": {},
-            "171": {},
-            "172": {},
-            "173": {},
-            "174": {},
-            "175": {}
+            "100": {},
+            "101": {},
+            "102": {},
+            "103": {},
+            "104": {},
+            "105": {},
+            "106": {},
+            "107": {},
+            "108": {},
+            "109": {},
+            "110": {},
+            "111": {},
+            "112": {},
+            "113": {},
+            "114": {},
+            "115": {},
+            "116": {},
+            "117": {},
+            "118": {}
           }
         }
       ],
       [
         "vector\".vec4",
         {
-          "_index": 125,
+          "_index": 103,
           "name": {},
           "parent": {
-            "177": {},
-            "178": {},
-            "179": {},
-            "180": {},
-            "181": {},
-            "182": {},
-            "183": {},
-            "184": {},
-            "185": {}
+            "120": {},
+            "121": {},
+            "122": {},
+            "123": {},
+            "124": {},
+            "125": {},
+            "126": {},
+            "127": {},
+            "128": {}
           }
         }
       ],
-      ["vector.test", { "_index": 131, "name": { "191": {} }, "parent": {} }],
+      ["vector.test", { "_index": 133, "name": { "207": {} }, "parent": {} }],
       ["vertexshader", { "_index": 28, "name": { "29": {} }, "parent": {} }],
       ["width", { "_index": 36, "name": { "37": {} }, "parent": {} }],
       [
         "x",
         {
-          "_index": 111,
-          "name": { "142": {}, "158": {}, "178": {} },
+          "_index": 82,
+          "name": { "85": {}, "101": {}, "121": {} },
           "parent": {}
         }
       ],
       [
         "y",
         {
-          "_index": 112,
-          "name": { "143": {}, "159": {}, "179": {} },
+          "_index": 83,
+          "name": { "86": {}, "102": {}, "122": {} },
           "parent": {}
         }
       ],
-      ["z", { "_index": 120, "name": { "160": {}, "180": {} }, "parent": {} }]
+      ["z", { "_index": 98, "name": { "103": {}, "123": {} }, "parent": {} }]
     ],
     "pipeline": []
   }

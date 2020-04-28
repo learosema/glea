@@ -101,11 +101,6 @@
                       >
                     </li>
                     <li class="tsd-kind-function tsd-parent-kind-module">
-                      <a href="_perspective_.html#lookat" class="tsd-kind-icon"
-                        >look<wbr />At</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function tsd-parent-kind-module">
                       <a href="_perspective_.html#ortho" class="tsd-kind-icon"
                         >ortho</a
                       >
@@ -165,8 +160,8 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/terabaud/glea/blob/e7ed606/src/perspective.ts#L23"
-                          >perspective.ts:23</a
+                          href="https://github.com/terabaud/glea/blob/bc51127/src/perspective.ts#L30"
+                          >perspective.ts:30</a
                         >
                       </li>
                     </ul>
@@ -201,90 +196,6 @@
                     <li>
                       <h5>
                         zFar: <span class="tsd-signature-type">number</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">number</span
-                    ><span class="tsd-signature-symbol">[]</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module"
-            >
-              <a name="lookat" class="tsd-anchor"></a>
-              <h3>look<wbr />At</h3>
-              <ul
-                class="tsd-signatures tsd-kind-function tsd-parent-kind-module"
-              >
-                <li class="tsd-signature tsd-kind-icon">
-                  look<wbr />At<span class="tsd-signature-symbol">(</span
-                  >eye<span class="tsd-signature-symbol">: </span
-                  ><a
-                    href="../classes/_vector_.vec3.html"
-                    class="tsd-signature-type"
-                    >Vec3</a
-                  >, center<span class="tsd-signature-symbol">: </span
-                  ><a
-                    href="../classes/_vector_.vec3.html"
-                    class="tsd-signature-type"
-                    >Vec3</a
-                  >, up<span class="tsd-signature-symbol">: </span
-                  ><a
-                    href="../classes/_vector_.vec3.html"
-                    class="tsd-signature-type"
-                    >Vec3</a
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">number</span
-                  ><span class="tsd-signature-symbol">[]</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/terabaud/glea/blob/e7ed606/src/perspective.ts#L55"
-                          >perspective.ts:55</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        eye:
-                        <a
-                          href="../classes/_vector_.vec3.html"
-                          class="tsd-signature-type"
-                          >Vec3</a
-                        >
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        center:
-                        <a
-                          href="../classes/_vector_.vec3.html"
-                          class="tsd-signature-type"
-                          >Vec3</a
-                        >
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        up:
-                        <a
-                          href="../classes/_vector_.vec3.html"
-                          class="tsd-signature-type"
-                          >Vec3</a
-                        >
                       </h5>
                     </li>
                   </ul>
@@ -336,43 +247,92 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/terabaud/glea/blob/e7ed606/src/perspective.ts#L4"
-                          >perspective.ts:4</a
+                          href="https://github.com/terabaud/glea/blob/bc51127/src/perspective.ts#L11"
+                          >perspective.ts:11</a
                         >
                       </li>
                     </ul>
                   </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>
+                        describes a transformation that produces a parallel
+                        projection
+                      </p>
+                    </div>
+                    <dl class="tsd-comment-tags">
+                      <dt>see</dt>
+                      <dd>
+                        <p>
+                          <a
+                            href="https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glOrtho.xml"
+                            >https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glOrtho.xml</a
+                          >
+                        </p>
+                      </dd>
+                    </dl>
+                  </div>
                   <h4 class="tsd-parameters-title">Parameters</h4>
                   <ul class="tsd-parameters">
                     <li>
                       <h5>
                         left: <span class="tsd-signature-type">number</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>coordinate for the left vertical clipping planes.</p>
+                      </div>
                     </li>
                     <li>
                       <h5>
                         right: <span class="tsd-signature-type">number</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>
+                          coordinate for the right vertical clipping planes.
+                        </p>
+                      </div>
                     </li>
                     <li>
                       <h5>
                         bottom: <span class="tsd-signature-type">number</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>
+                          coordinate for the bottom horizontal clippling pane.
+                        </p>
+                      </div>
                     </li>
                     <li>
                       <h5>
                         top: <span class="tsd-signature-type">number</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>coordinate for the top horizontal clipping pane</p>
+                      </div>
                     </li>
                     <li>
                       <h5>
                         zNear: <span class="tsd-signature-type">number</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>
+                          Specify the distances to the nearer and farther depth
+                          clipping planes. These values are negative if the
+                          plane is to be behind the viewer.
+                        </p>
+                      </div>
                     </li>
                     <li>
                       <h5>
                         zFar: <span class="tsd-signature-type">number</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>
+                          Specify the distances to the nearer and farther depth
+                          clipping planes. These values are negative if the
+                          plane is to be behind the viewer.
+                        </p>
+                      </div>
                     </li>
                   </ul>
                   <h4 class="tsd-returns-title">
@@ -415,12 +375,17 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/terabaud/glea/blob/e7ed606/src/perspective.ts#L43"
-                          >perspective.ts:43</a
+                          href="https://github.com/terabaud/glea/blob/bc51127/src/perspective.ts#L56"
+                          >perspective.ts:56</a
                         >
                       </li>
                     </ul>
                   </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>set up a perspective projection matrix</p>
+                    </div>
+                  </div>
                   <h4 class="tsd-parameters-title">Parameters</h4>
                   <ul class="tsd-parameters">
                     <li>
@@ -428,22 +393,47 @@
                         fieldOfView:
                         <span class="tsd-signature-type">number</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>
+                          Specifies the field of view angle, in degrees, in the
+                          y direction.
+                        </p>
+                      </div>
                     </li>
                     <li>
                       <h5>
                         aspectRatio:
                         <span class="tsd-signature-type">number</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>
+                          Specifies the aspect ratio that determines the field
+                          of view in the x direction. The aspect ratio is the
+                          ratio of x (width) to y (height).
+                        </p>
+                      </div>
                     </li>
                     <li>
                       <h5>
                         zNear: <span class="tsd-signature-type">number</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>
+                          Specifies the distance from the viewer to the near
+                          clipping plane (always positive).
+                        </p>
+                      </div>
                     </li>
                     <li>
                       <h5>
                         zFar: <span class="tsd-signature-type">number</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>
+                          Specifies the distance from the viewer to the far
+                          clipping plane (always positive).
+                        </p>
+                      </div>
                     </li>
                   </ul>
                   <h4 class="tsd-returns-title">
@@ -474,6 +464,9 @@
                 <a href="_glsl_utils_.html">&quot;glsl-<wbr />utils&quot;</a>
               </li>
               <li class="tsd-kind-module">
+                <a href="_lookat_.html">&quot;lookat&quot;</a>
+              </li>
+              <li class="tsd-kind-module">
                 <a href="_matrix_.html">&quot;matrix&quot;</a>
               </li>
               <li class="current tsd-kind-module">
@@ -489,11 +482,6 @@
               <li class="tsd-kind-function tsd-parent-kind-module">
                 <a href="_perspective_.html#frustum" class="tsd-kind-icon"
                   >frustum</a
-                >
-              </li>
-              <li class="tsd-kind-function tsd-parent-kind-module">
-                <a href="_perspective_.html#lookat" class="tsd-kind-icon"
-                  >look<wbr />At</a
                 >
               </li>
               <li class="tsd-kind-function tsd-parent-kind-module">

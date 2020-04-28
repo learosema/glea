@@ -3,11 +3,6 @@
  * @module glea
  */
 
-/**
- * Converts an array of number to a Float32Array or Uint8Array
- * @param {number[]} data
- * @param {WebGLRenderingContext.FLOAT|WebGLRenderingContext.BYTE} type
- */
 function convertArray(
   data: number[],
   type = WebGLRenderingContext.FLOAT
@@ -21,11 +16,6 @@ function convertArray(
   throw Error('type not supported');
 }
 
-/**
- * Create shader
- * @param {string} code the shader code
- * @param {string} shaderType frag or vert
- */
 function shader(code: string, shaderType: 'frag' | 'vert') {
   return (gl: WebGLRenderingContext | WebGL2RenderingContext) => {
     const sh = gl.createShader(
@@ -240,6 +230,7 @@ class GLea {
    *
    * @param {number} textureIndex
    * @param {GLeaTextureOptions} params configuration options
+   * @returns texture WebGLTexture object
    */
   createTexture(
     textureIndex = 0,
@@ -249,7 +240,7 @@ class GLea {
       textureMinFilter: 'nearest',
       textureMagFilter: 'nearest',
     }
-  ) {
+  ): WebGLTexture {
     const scream = (str = '') =>
       /^[A-Z0-9_]+$/.test(str)
         ? str
@@ -277,7 +268,7 @@ class GLea {
    * @param {string} name name
    * @param {number} offset default: 0
    */
-  updateBuffer(name: string, offset = 0) {
+  updateBuffer(name: string, offset = 0): void {
     const { gl } = this;
     const buffer = this.buffers[name];
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer.id);
@@ -287,7 +278,7 @@ class GLea {
   /**
    * Resize canvas and webgl viewport
    */
-  resize() {
+  resize(): void {
     const { canvas, gl, devicePixelRatio } = this;
     if (canvas) {
       canvas.width = canvas.clientWidth * devicePixelRatio;
@@ -300,16 +291,16 @@ class GLea {
    * Get canvas width
    * @returns {number} canvas width
    */
-  get width() {
-    return this.canvas ? this.canvas.width : null;
+  get width(): number {
+    return this.canvas ? this.canvas.width : NaN;
   }
 
   /**
    * Get canvas height
    * @returns {number} canvas height
    */
-  get height() {
-    return this.canvas ? this.canvas.height : null;
+  get height(): number {
+    return this.canvas ? this.canvas.height : NaN;
   }
 
   /**
