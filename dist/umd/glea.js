@@ -64,7 +64,7 @@
           throw Error(`no ${contextType} context available.`);
         }
       }
-      const program = gl.createProgram();
+      const program = this.gl.createProgram();
       if (!program) {
         throw Error('gl.createProgram failed');
       }
