@@ -99,8 +99,8 @@
               and passing data from JavaScript to the shader language.
             </p>
             <p>
-              There are some optional helper libraries for matrix and vector
-              calculations.
+              There are some additional helper libraries for matrix and vector
+              calculations as well as easing functions.
             </p>
             <a
               href="#usage"
@@ -111,80 +111,143 @@
             </a>
             <pre><code><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'glea.esm.js'</span>;
 
-<span class="hljs-keyword">const</span> glea = new GLea({
-  shaders: [
+<span class="hljs-keyword">const</span> glea = <span class="hljs-keyword">new</span> GLea({
+  <span class="hljs-attr">shaders</span>: [
     GLea.fragmentShader(frag),
     GLea.vertexShader(vert)
   ],
-  buffers: {
-    position: Glea.buffer(<span class="hljs-number">2</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>])
+  <span class="hljs-attr">buffers</span>: {
+    <span class="hljs-attr">position</span>: Glea.buffer(<span class="hljs-number">2</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>])
   }
-}).create();</code></pre>
+}).create();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loop</span>(<span class="hljs-params">time</span>) </span>{
+  <span class="hljs-keyword">const</span> { gl } = glea;
+  glea.clear();
+  glea.uni(<span class="hljs-string">'width'</span>, glea.width);
+  glea.uni(<span class="hljs-string">'height'</span>, glea.height);
+  glea.uni(<span class="hljs-string">'time'</span>, time * <span class="hljs-number">0.005</span>);
+  gl.drawArrays(gl.TRIANGLE_STRIP, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>);
+  requestAnimationFrame(loop);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> { gl } = glea;
+  <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'resize'</span>, () =&gt; {
+    glea.resize();
+  });
+  loop(<span class="hljs-number">0</span>);
+}
+
+<span class="hljs-keyword">set</span><span class="hljs-title">up</span>();</code></pre>
             <a
-              href="#options"
-              id="options"
+              href="#api-documentation"
+              id="api-documentation"
               style="color: inherit; text-decoration: none;"
             >
-              <h3>Options</h3>
+              <h2>API Documentation</h2>
+            </a>
+            <ul>
+              <li><a href="docs/">API documentation</a></li>
+            </ul>
+            <a
+              href="#using-in-esm-modules"
+              id="using-in-esm-modules"
+              style="color: inherit; text-decoration: none;"
+            >
+              <h3>using in esm modules</h3>
+            </a>
+            <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://terabaud.github.io/glea/dist/glea.js'</span>;</code></pre>
+            <a
+              href="#via-script-tag"
+              id="via-script-tag"
+              style="color: inherit; text-decoration: none;"
+            >
+              <h3>via script tag</h3>
+            </a>
+            <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://terabaud.github.io/glea/dist/umd/glea.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+            <a
+              href="#exampes"
+              id="exampes"
+              style="color: inherit; text-decoration: none;"
+            >
+              <h2>Exampes</h2>
             </a>
             <ul>
               <li>
-                <code>canvas</code>: optional, if not specified,
-                <code>document.querySelector(&#39;canvas&#39;)</code> is used
+                <a href="https://codepen.io/terabaud/pen/OKVpYV"
+                  >Example 01: Triangle</a
+                >
               </li>
               <li>
-                <code>gl</code>: optional, if not specified,
-                <code>canvas.getContext(contextType)</code> is used
+                <a href="https://codepen.io/terabaud/pen/eqNjjY"
+                  >Example 02: Full screen plane</a
+                >
               </li>
               <li>
-                <code>contextType</code>: optional, default
-                <code>webgl</code> (or <code>experimental-webgl</code>, you
-                don&#39;t need to prefix it yourself)
+                <a href="https://codepen.io/terabaud/pen/EqgpbQ"
+                  >Example 03: Cube</a
+                >
               </li>
               <li>
-                <code>glOptions</code>: additional options to pass to
-                <code>canvas.getContext</code>
+                <a href="https://codepen.io/terabaud/pen/BaNRbXL"
+                  >Example 04: Circle Heart Morph</a
+                >
               </li>
               <li>
-                <code>shaders</code>: array that takes a fragmentShader and a
-                vertexShader in the above form
+                <a href="https://codepen.io/terabaud/pen/VwLbVjE"
+                  >Example 05: Rotating heart yin yang morph pattern</a
+                >
               </li>
               <li>
-                <code>buffers</code>: an object with attributes and buffers. You
-                can access the buffers via an attribute named as the Object
-                keys.
+                <a href="https://codepen.io/terabaud/pen/xxGdeEe"
+                  >Example 06: Fun with circles</a
+                >
+              </li>
+              <li>
+                <a href="https://codepen.io/terabaud/pen/WNvoOgK"
+                  >Example 07: Retro Style Dither Cam</a
+                >
+              </li>
+              <li>
+                <a href="https://codepen.io/terabaud/pen/dyoXjVv"
+                  >Example 08: Signed Distance Field Symmetric Diff</a
+                >
+              </li>
+              <li>
+                <a href="https://codepen.io/terabaud/pen/PowKxNp"
+                  >Example 09: Hypnotizing Cyclone 2.0</a
+                >
+              </li>
+              <li>
+                <a href="https://codepen.io/terabaud/pen/bGNMGvb"
+                  >Example 10: Hypnotizing Cyclone 3.0</a
+                >
+              </li>
+              <li>
+                <a href="https://codepen.io/terabaud/pen/poogqxq"
+                  >Example 11: numeric spiral</a
+                >
+              </li>
+              <li>
+                <a href="https://codepen.io/terabaud/pen/ZgreLo"
+                  >Example 12: Evil virus</a
+                >
               </li>
             </ul>
             <a
-              href="#properties"
-              id="properties"
+              href="#more-examples"
+              id="more-examples"
               style="color: inherit; text-decoration: none;"
             >
-              <h3>Properties</h3>
+              <h3>More examples</h3>
             </a>
             <ul>
               <li>
-                <code>glea.gl</code>: the <code>WebGLRenderingContext</code>
-              </li>
-              <li><code>glea.width</code>: viewport width</li>
-              <li><code>glea.height</code>: viewport height</li>
-            </ul>
-            <a
-              href="#methods"
-              id="methods"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h3>Methods</h3>
-            </a>
-            <ul>
-              <li>
-                <code>glea.create()</code> - creates the WebGLRenderingContext,
-                compiles and links shaders, registers attributes and buffers.
-              </li>
-              <li>
-                <code>glea.resize()</code> - resizes the WebGL viewport to the
-                current canvas client size. Call this inside a
-                <code>resize</code> event listener.
+                There is more:
+                <a href="https://terabaud.github.io/hello-webgl/"
+                  >https://terabaud.github.io/hello-webgl/</a
+                >
               </li>
             </ul>
           </div>
