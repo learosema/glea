@@ -43,7 +43,7 @@ setup();
 
 ## API Documentation
 
-- [API documentation](docs/)
+- [API documentation](https://terabaud.github.io/glea/docs/)
 
 ### using in esm modules
 
