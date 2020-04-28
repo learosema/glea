@@ -110,12 +110,123 @@
     {
       "id": 12,
       "kind": 1,
+      "name": "\"easings\"",
+      "url": "modules/_easings_.html",
+      "classes": "tsd-kind-module"
+    },
+    {
+      "id": 13,
+      "kind": 64,
+      "name": "linear",
+      "url": "modules/_easings_.html#linear",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 14,
+      "kind": 64,
+      "name": "easeInQuad",
+      "url": "modules/_easings_.html#easeinquad",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 15,
+      "kind": 64,
+      "name": "easeOutQuad",
+      "url": "modules/_easings_.html#easeoutquad",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 16,
+      "kind": 64,
+      "name": "easeInOutQuad",
+      "url": "modules/_easings_.html#easeinoutquad",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 17,
+      "kind": 64,
+      "name": "easeInCubic",
+      "url": "modules/_easings_.html#easeincubic",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 18,
+      "kind": 64,
+      "name": "easeOutCubic",
+      "url": "modules/_easings_.html#easeoutcubic",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 19,
+      "kind": 64,
+      "name": "easeInOutCubic",
+      "url": "modules/_easings_.html#easeinoutcubic",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 20,
+      "kind": 64,
+      "name": "easeInQuart",
+      "url": "modules/_easings_.html#easeinquart",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 21,
+      "kind": 64,
+      "name": "easeOutQuart",
+      "url": "modules/_easings_.html#easeoutquart",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 22,
+      "kind": 64,
+      "name": "easeInOutQuart",
+      "url": "modules/_easings_.html#easeinoutquart",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 23,
+      "kind": 64,
+      "name": "easeInQuint",
+      "url": "modules/_easings_.html#easeinquint",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 24,
+      "kind": 64,
+      "name": "easeOutQuint",
+      "url": "modules/_easings_.html#easeoutquint",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 25,
+      "kind": 64,
+      "name": "easeInOutQuint",
+      "url": "modules/_easings_.html#easeinoutquint",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"easings\""
+    },
+    {
+      "id": 26,
+      "kind": 1,
       "name": "\"geometry\"",
       "url": "modules/_geometry_.html",
       "classes": "tsd-kind-module"
     },
     {
-      "id": 13,
+      "id": 27,
       "kind": 64,
       "name": "rect",
       "url": "modules/_geometry_.html#rect",
@@ -123,7 +234,7 @@
       "parent": "\"geometry\""
     },
     {
-      "id": 14,
+      "id": 28,
       "kind": 64,
       "name": "square",
       "url": "modules/_geometry_.html#square",
@@ -131,7 +242,7 @@
       "parent": "\"geometry\""
     },
     {
-      "id": 15,
+      "id": 29,
       "kind": 64,
       "name": "box",
       "url": "modules/_geometry_.html#box",
@@ -139,7 +250,7 @@
       "parent": "\"geometry\""
     },
     {
-      "id": 16,
+      "id": 30,
       "kind": 64,
       "name": "cube",
       "url": "modules/_geometry_.html#cube",
@@ -147,14 +258,22 @@
       "parent": "\"geometry\""
     },
     {
-      "id": 17,
+      "id": 31,
+      "kind": 64,
+      "name": "grid",
+      "url": "modules/_geometry_.html#grid",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"geometry\""
+    },
+    {
+      "id": 32,
       "kind": 1,
       "name": "\"glea\"",
       "url": "modules/_glea_.html",
       "classes": "tsd-kind-module"
     },
     {
-      "id": 18,
+      "id": 33,
       "kind": 128,
       "name": "GLea",
       "url": "classes/_glea_.glea.html",
@@ -162,7 +281,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 19,
+      "id": 34,
       "kind": 1024,
       "name": "canvas",
       "url": "classes/_glea_.glea.html#canvas",
@@ -170,7 +289,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 20,
+      "id": 35,
       "kind": 1024,
       "name": "gl",
       "url": "classes/_glea_.glea.html#gl",
@@ -178,7 +297,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 21,
+      "id": 36,
       "kind": 1024,
       "name": "shaderFactory",
       "url": "classes/_glea_.glea.html#shaderfactory",
@@ -186,7 +305,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 22,
+      "id": 37,
       "kind": 1024,
       "name": "bufferFactory",
       "url": "classes/_glea_.glea.html#bufferfactory",
@@ -194,7 +313,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 23,
+      "id": 38,
       "kind": 1024,
       "name": "program",
       "url": "classes/_glea_.glea.html#program",
@@ -202,15 +321,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 24,
-      "kind": 1024,
-      "name": "shaders",
-      "url": "classes/_glea_.glea.html#shaders",
-      "classes": "tsd-kind-property tsd-parent-kind-class",
-      "parent": "\"glea\".GLea"
-    },
-    {
-      "id": 25,
+      "id": 39,
       "kind": 1024,
       "name": "buffers",
       "url": "classes/_glea_.glea.html#buffers",
@@ -218,7 +329,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 26,
+      "id": 40,
       "kind": 1024,
       "name": "textures",
       "url": "classes/_glea_.glea.html#textures",
@@ -226,7 +337,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 27,
+      "id": 41,
       "kind": 1024,
       "name": "devicePixelRatio",
       "url": "classes/_glea_.glea.html#devicepixelratio",
@@ -234,7 +345,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 28,
+      "id": 42,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_glea_.glea.html#constructor",
@@ -242,7 +353,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 29,
+      "id": 43,
       "kind": 2048,
       "name": "vertexShader",
       "url": "classes/_glea_.glea.html#vertexshader",
@@ -250,7 +361,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 30,
+      "id": 44,
       "kind": 2048,
       "name": "fragmentShader",
       "url": "classes/_glea_.glea.html#fragmentshader",
@@ -258,7 +369,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 31,
+      "id": 45,
       "kind": 2048,
       "name": "buffer",
       "url": "classes/_glea_.glea.html#buffer",
@@ -266,7 +377,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 32,
+      "id": 46,
       "kind": 2048,
       "name": "create",
       "url": "classes/_glea_.glea.html#create",
@@ -274,7 +385,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 33,
+      "id": 47,
       "kind": 2048,
       "name": "setActiveTexture",
       "url": "classes/_glea_.glea.html#setactivetexture",
@@ -282,7 +393,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 34,
+      "id": 48,
       "kind": 2048,
       "name": "createTexture",
       "url": "classes/_glea_.glea.html#createtexture",
@@ -290,7 +401,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 35,
+      "id": 49,
       "kind": 2048,
       "name": "updateBuffer",
       "url": "classes/_glea_.glea.html#updatebuffer",
@@ -298,7 +409,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 36,
+      "id": 50,
       "kind": 2048,
       "name": "resize",
       "url": "classes/_glea_.glea.html#resize",
@@ -306,7 +417,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 37,
+      "id": 51,
       "kind": 262144,
       "name": "width",
       "url": "classes/_glea_.glea.html#width",
@@ -314,7 +425,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 38,
+      "id": 52,
       "kind": 262144,
       "name": "height",
       "url": "classes/_glea_.glea.html#height",
@@ -322,7 +433,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 39,
+      "id": 53,
       "kind": 2048,
       "name": "use",
       "url": "classes/_glea_.glea.html#use",
@@ -330,7 +441,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 40,
+      "id": 54,
       "kind": 2048,
       "name": "uniM",
       "url": "classes/_glea_.glea.html#unim",
@@ -338,7 +449,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 41,
+      "id": 55,
       "kind": 2048,
       "name": "uniV",
       "url": "classes/_glea_.glea.html#univ",
@@ -346,7 +457,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 42,
+      "id": 56,
       "kind": 2048,
       "name": "uniIV",
       "url": "classes/_glea_.glea.html#uniiv",
@@ -354,7 +465,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 43,
+      "id": 57,
       "kind": 2048,
       "name": "uni",
       "url": "classes/_glea_.glea.html#uni",
@@ -362,7 +473,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 44,
+      "id": 58,
       "kind": 2048,
       "name": "uniI",
       "url": "classes/_glea_.glea.html#unii",
@@ -370,7 +481,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 45,
+      "id": 59,
       "kind": 2048,
       "name": "clear",
       "url": "classes/_glea_.glea.html#clear",
@@ -378,7 +489,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 46,
+      "id": 60,
       "kind": 2048,
       "name": "destroy",
       "url": "classes/_glea_.glea.html#destroy",
@@ -386,23 +497,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 47,
-      "kind": 64,
-      "name": "convertArray",
-      "url": "modules/_glea_.html#convertarray",
-      "classes": "tsd-kind-function tsd-parent-kind-module tsd-is-not-exported",
-      "parent": "\"glea\""
-    },
-    {
-      "id": 48,
-      "kind": 64,
-      "name": "shader",
-      "url": "modules/_glea_.html#shader",
-      "classes": "tsd-kind-function tsd-parent-kind-module tsd-is-not-exported",
-      "parent": "\"glea\""
-    },
-    {
-      "id": 49,
+      "id": 61,
       "kind": 4194304,
       "name": "GLeaContext",
       "url": "modules/_glea_.html#gleacontext",
@@ -410,23 +505,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 50,
-      "kind": 4194304,
-      "name": "GLeaShaderFactory",
-      "url": "modules/_glea_.html#gleashaderfactory",
-      "classes": "tsd-kind-type-alias tsd-parent-kind-module",
-      "parent": "\"glea\""
-    },
-    {
-      "id": 51,
-      "kind": 65536,
-      "name": "__type",
-      "url": "modules/_glea_.html#gleashaderfactory.__type-3",
-      "classes": "tsd-kind-type-literal tsd-parent-kind-type-alias",
-      "parent": "\"glea\".GLeaShaderFactory"
-    },
-    {
-      "id": 52,
+      "id": 62,
       "kind": 4194304,
       "name": "GLeaBuffer",
       "url": "modules/_glea_.html#gleabuffer",
@@ -434,7 +513,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 53,
+      "id": 63,
       "kind": 65536,
       "name": "__type",
       "url": "modules/_glea_.html#gleabuffer.__type",
@@ -442,7 +521,7 @@
       "parent": "\"glea\".GLeaBuffer"
     },
     {
-      "id": 54,
+      "id": 64,
       "kind": 32,
       "name": "id",
       "url": "modules/_glea_.html#gleabuffer.__type.id",
@@ -450,7 +529,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 55,
+      "id": 65,
       "kind": 32,
       "name": "name",
       "url": "modules/_glea_.html#gleabuffer.__type.name",
@@ -458,7 +537,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 56,
+      "id": 66,
       "kind": 32,
       "name": "data",
       "url": "modules/_glea_.html#gleabuffer.__type.data",
@@ -466,7 +545,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 57,
+      "id": 67,
       "kind": 32,
       "name": "loc",
       "url": "modules/_glea_.html#gleabuffer.__type.loc",
@@ -474,7 +553,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 58,
+      "id": 68,
       "kind": 32,
       "name": "type",
       "url": "modules/_glea_.html#gleabuffer.__type.type",
@@ -482,7 +561,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 59,
+      "id": 69,
       "kind": 32,
       "name": "size",
       "url": "modules/_glea_.html#gleabuffer.__type.size",
@@ -490,7 +569,23 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 60,
+      "id": 70,
+      "kind": 4194304,
+      "name": "GLeaShaderFactory",
+      "url": "modules/_glea_.html#gleashaderfactory",
+      "classes": "tsd-kind-type-alias tsd-parent-kind-module",
+      "parent": "\"glea\""
+    },
+    {
+      "id": 71,
+      "kind": 65536,
+      "name": "__type",
+      "url": "modules/_glea_.html#gleashaderfactory.__type-3",
+      "classes": "tsd-kind-type-literal tsd-parent-kind-type-alias",
+      "parent": "\"glea\".GLeaShaderFactory"
+    },
+    {
+      "id": 72,
       "kind": 4194304,
       "name": "GLeaBufferFactory",
       "url": "modules/_glea_.html#gleabufferfactory",
@@ -498,7 +593,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 61,
+      "id": 73,
       "kind": 65536,
       "name": "__type",
       "url": "modules/_glea_.html#gleabufferfactory.__type-1",
@@ -506,7 +601,7 @@
       "parent": "\"glea\".GLeaBufferFactory"
     },
     {
-      "id": 62,
+      "id": 74,
       "kind": 4194304,
       "name": "GLeaConstructorParams",
       "url": "modules/_glea_.html#gleaconstructorparams",
@@ -514,7 +609,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 63,
+      "id": 75,
       "kind": 65536,
       "name": "__type",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2",
@@ -522,7 +617,7 @@
       "parent": "\"glea\".GLeaConstructorParams"
     },
     {
-      "id": 64,
+      "id": 76,
       "kind": 32,
       "name": "canvas",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.canvas",
@@ -530,7 +625,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 65,
+      "id": 77,
       "kind": 32,
       "name": "gl",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.gl",
@@ -538,7 +633,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 66,
+      "id": 78,
       "kind": 32,
       "name": "contextType",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.contexttype",
@@ -546,7 +641,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 67,
+      "id": 79,
       "kind": 32,
       "name": "shaders",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.shaders",
@@ -554,7 +649,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 68,
+      "id": 80,
       "kind": 32,
       "name": "buffers",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.buffers",
@@ -562,7 +657,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 69,
+      "id": 81,
       "kind": 32,
       "name": "devicePixelRatio",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.devicepixelratio",
@@ -570,7 +665,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 70,
+      "id": 82,
       "kind": 32,
       "name": "glOptions",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.gloptions",
@@ -578,14 +673,30 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 71,
+      "id": 83,
+      "kind": 64,
+      "name": "convertArray",
+      "url": "modules/_glea_.html#convertarray",
+      "classes": "tsd-kind-function tsd-parent-kind-module tsd-is-not-exported",
+      "parent": "\"glea\""
+    },
+    {
+      "id": 84,
+      "kind": 64,
+      "name": "shader",
+      "url": "modules/_glea_.html#shader",
+      "classes": "tsd-kind-function tsd-parent-kind-module tsd-is-not-exported",
+      "parent": "\"glea\""
+    },
+    {
+      "id": 85,
       "kind": 1,
       "name": "\"glsl-utils\"",
       "url": "modules/_glsl_utils_.html",
       "classes": "tsd-kind-module"
     },
     {
-      "id": 72,
+      "id": 86,
       "kind": 64,
       "name": "glsl",
       "url": "modules/_glsl_utils_.html#glsl",
@@ -593,86 +704,14 @@
       "parent": "\"glsl-utils\""
     },
     {
-      "id": 73,
-      "kind": 32,
-      "name": "normalizeScreenCoords",
-      "url": "modules/_glsl_utils_.html#normalizescreencoords",
-      "classes": "tsd-kind-variable tsd-parent-kind-module",
-      "parent": "\"glsl-utils\""
-    },
-    {
-      "id": 74,
-      "kind": 32,
-      "name": "coords",
-      "url": "modules/_glsl_utils_.html#coords",
-      "classes": "tsd-kind-variable tsd-parent-kind-module",
-      "parent": "\"glsl-utils\""
-    },
-    {
-      "id": 75,
-      "kind": 32,
-      "name": "invert",
-      "url": "modules/_glsl_utils_.html#invert",
-      "classes": "tsd-kind-variable tsd-parent-kind-module",
-      "parent": "\"glsl-utils\""
-    },
-    {
-      "id": 76,
-      "kind": 32,
-      "name": "repeat",
-      "url": "modules/_glsl_utils_.html#repeat",
-      "classes": "tsd-kind-variable tsd-parent-kind-module",
-      "parent": "\"glsl-utils\""
-    },
-    {
-      "id": 77,
-      "kind": 32,
-      "name": "rotate",
-      "url": "modules/_glsl_utils_.html#rotate",
-      "classes": "tsd-kind-variable tsd-parent-kind-module",
-      "parent": "\"glsl-utils\""
-    },
-    {
-      "id": 78,
-      "kind": 32,
-      "name": "hsb2rgb",
-      "url": "modules/_glsl_utils_.html#hsb2rgb",
-      "classes": "tsd-kind-variable tsd-parent-kind-module",
-      "parent": "\"glsl-utils\""
-    },
-    {
-      "id": 79,
-      "kind": 32,
-      "name": "noise",
-      "url": "modules/_glsl_utils_.html#noise",
-      "classes": "tsd-kind-variable tsd-parent-kind-module",
-      "parent": "\"glsl-utils\""
-    },
-    {
-      "id": 80,
-      "kind": 32,
-      "name": "heart",
-      "url": "modules/_glsl_utils_.html#heart",
-      "classes": "tsd-kind-variable tsd-parent-kind-module",
-      "parent": "\"glsl-utils\""
-    },
-    {
-      "id": 81,
-      "kind": 32,
-      "name": "hexagram",
-      "url": "modules/_glsl_utils_.html#hexagram",
-      "classes": "tsd-kind-variable tsd-parent-kind-module",
-      "parent": "\"glsl-utils\""
-    },
-    {
-      "id": 82,
+      "id": 87,
       "kind": 1,
       "name": "\"vector\"",
       "url": "modules/_vector_.html",
       "classes": "tsd-kind-module"
     },
     {
-      "id": 83,
+      "id": 88,
       "kind": 128,
       "name": "Vec2",
       "url": "classes/_vector_.vec2.html",
@@ -680,7 +719,7 @@
       "parent": "\"vector\""
     },
     {
-      "id": 84,
+      "id": 89,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_vector_.vec2.html#constructor",
@@ -688,7 +727,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 85,
+      "id": 90,
       "kind": 1024,
       "name": "x",
       "url": "classes/_vector_.vec2.html#x",
@@ -696,7 +735,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 86,
+      "id": 91,
       "kind": 1024,
       "name": "y",
       "url": "classes/_vector_.vec2.html#y",
@@ -704,7 +743,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 87,
+      "id": 92,
       "kind": 2048,
       "name": "fromArray",
       "url": "classes/_vector_.vec2.html#fromarray",
@@ -712,7 +751,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 88,
+      "id": 93,
       "kind": 2048,
       "name": "fromNumber",
       "url": "classes/_vector_.vec2.html#fromnumber",
@@ -720,7 +759,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 89,
+      "id": 94,
       "kind": 2048,
       "name": "clone",
       "url": "classes/_vector_.vec2.html#clone",
@@ -728,7 +767,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 90,
+      "id": 95,
       "kind": 2048,
       "name": "add",
       "url": "classes/_vector_.vec2.html#add",
@@ -736,7 +775,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 91,
+      "id": 96,
       "kind": 2048,
       "name": "sub",
       "url": "classes/_vector_.vec2.html#sub",
@@ -744,7 +783,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 92,
+      "id": 97,
       "kind": 2048,
       "name": "mul",
       "url": "classes/_vector_.vec2.html#mul",
@@ -752,7 +791,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 93,
+      "id": 98,
       "kind": 2048,
       "name": "div",
       "url": "classes/_vector_.vec2.html#div",
@@ -760,7 +799,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 94,
+      "id": 99,
       "kind": 2048,
       "name": "dot",
       "url": "classes/_vector_.vec2.html#dot",
@@ -768,7 +807,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 95,
+      "id": 100,
       "kind": 2048,
       "name": "equals",
       "url": "classes/_vector_.vec2.html#equals",
@@ -776,7 +815,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 96,
+      "id": 101,
       "kind": 262144,
       "name": "length",
       "url": "classes/_vector_.vec2.html#length",
@@ -784,7 +823,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 97,
+      "id": 102,
       "kind": 2048,
       "name": "toArray",
       "url": "classes/_vector_.vec2.html#toarray",
@@ -792,7 +831,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 98,
+      "id": 103,
       "kind": 2048,
       "name": "toString",
       "url": "classes/_vector_.vec2.html#tostring",
@@ -800,7 +839,7 @@
       "parent": "\"vector\".Vec2"
     },
     {
-      "id": 99,
+      "id": 104,
       "kind": 128,
       "name": "Vec3",
       "url": "classes/_vector_.vec3.html",
@@ -808,7 +847,7 @@
       "parent": "\"vector\""
     },
     {
-      "id": 100,
+      "id": 105,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_vector_.vec3.html#constructor",
@@ -816,7 +855,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 101,
+      "id": 106,
       "kind": 1024,
       "name": "x",
       "url": "classes/_vector_.vec3.html#x",
@@ -824,7 +863,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 102,
+      "id": 107,
       "kind": 1024,
       "name": "y",
       "url": "classes/_vector_.vec3.html#y",
@@ -832,7 +871,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 103,
+      "id": 108,
       "kind": 1024,
       "name": "z",
       "url": "classes/_vector_.vec3.html#z",
@@ -840,7 +879,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 104,
+      "id": 109,
       "kind": 2048,
       "name": "fromArray",
       "url": "classes/_vector_.vec3.html#fromarray",
@@ -848,7 +887,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 105,
+      "id": 110,
       "kind": 2048,
       "name": "fromNumber",
       "url": "classes/_vector_.vec3.html#fromnumber",
@@ -856,7 +895,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 106,
+      "id": 111,
       "kind": 2048,
       "name": "fromVec2",
       "url": "classes/_vector_.vec3.html#fromvec2",
@@ -864,7 +903,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 107,
+      "id": 112,
       "kind": 2048,
       "name": "clone",
       "url": "classes/_vector_.vec3.html#clone",
@@ -872,7 +911,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 108,
+      "id": 113,
       "kind": 2048,
       "name": "add",
       "url": "classes/_vector_.vec3.html#add",
@@ -880,7 +919,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 109,
+      "id": 114,
       "kind": 2048,
       "name": "sub",
       "url": "classes/_vector_.vec3.html#sub",
@@ -888,7 +927,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 110,
+      "id": 115,
       "kind": 2048,
       "name": "mul",
       "url": "classes/_vector_.vec3.html#mul",
@@ -896,7 +935,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 111,
+      "id": 116,
       "kind": 2048,
       "name": "div",
       "url": "classes/_vector_.vec3.html#div",
@@ -904,7 +943,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 112,
+      "id": 117,
       "kind": 2048,
       "name": "cross",
       "url": "classes/_vector_.vec3.html#cross",
@@ -912,7 +951,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 113,
+      "id": 118,
       "kind": 2048,
       "name": "dot",
       "url": "classes/_vector_.vec3.html#dot",
@@ -920,7 +959,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 114,
+      "id": 119,
       "kind": 262144,
       "name": "length",
       "url": "classes/_vector_.vec3.html#length",
@@ -928,7 +967,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 115,
+      "id": 120,
       "kind": 262144,
       "name": "normalized",
       "url": "classes/_vector_.vec3.html#normalized",
@@ -936,7 +975,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 116,
+      "id": 121,
       "kind": 2048,
       "name": "toArray",
       "url": "classes/_vector_.vec3.html#toarray",
@@ -944,7 +983,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 117,
+      "id": 122,
       "kind": 2048,
       "name": "toString",
       "url": "classes/_vector_.vec3.html#tostring",
@@ -952,7 +991,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 118,
+      "id": 123,
       "kind": 2048,
       "name": "equals",
       "url": "classes/_vector_.vec3.html#equals",
@@ -960,7 +999,7 @@
       "parent": "\"vector\".Vec3"
     },
     {
-      "id": 119,
+      "id": 124,
       "kind": 128,
       "name": "Vec4",
       "url": "classes/_vector_.vec4.html",
@@ -968,7 +1007,7 @@
       "parent": "\"vector\""
     },
     {
-      "id": 120,
+      "id": 125,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_vector_.vec4.html#constructor",
@@ -976,7 +1015,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 121,
+      "id": 126,
       "kind": 1024,
       "name": "x",
       "url": "classes/_vector_.vec4.html#x",
@@ -984,7 +1023,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 122,
+      "id": 127,
       "kind": 1024,
       "name": "y",
       "url": "classes/_vector_.vec4.html#y",
@@ -992,7 +1031,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 123,
+      "id": 128,
       "kind": 1024,
       "name": "z",
       "url": "classes/_vector_.vec4.html#z",
@@ -1000,7 +1039,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 124,
+      "id": 129,
       "kind": 1024,
       "name": "a",
       "url": "classes/_vector_.vec4.html#a",
@@ -1008,7 +1047,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 125,
+      "id": 130,
       "kind": 2048,
       "name": "fromArray",
       "url": "classes/_vector_.vec4.html#fromarray",
@@ -1016,7 +1055,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 126,
+      "id": 131,
       "kind": 2048,
       "name": "fromNumber",
       "url": "classes/_vector_.vec4.html#fromnumber",
@@ -1024,7 +1063,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 127,
+      "id": 132,
       "kind": 2048,
       "name": "toArray",
       "url": "classes/_vector_.vec4.html#toarray",
@@ -1032,7 +1071,7 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 128,
+      "id": 133,
       "kind": 2048,
       "name": "clone",
       "url": "classes/_vector_.vec4.html#clone",
@@ -1040,29 +1079,14 @@
       "parent": "\"vector\".Vec4"
     },
     {
-      "id": 129,
-      "kind": 1,
-      "name": "\"lookat\"",
-      "url": "modules/_lookat_.html",
-      "classes": "tsd-kind-module"
-    },
-    {
-      "id": 130,
-      "kind": 64,
-      "name": "lookAt",
-      "url": "modules/_lookat_.html#lookat",
-      "classes": "tsd-kind-function tsd-parent-kind-module",
-      "parent": "\"lookat\""
-    },
-    {
-      "id": 131,
+      "id": 134,
       "kind": 1,
       "name": "\"matrix\"",
       "url": "modules/_matrix_.html",
       "classes": "tsd-kind-module"
     },
     {
-      "id": 132,
+      "id": 135,
       "kind": 128,
       "name": "Mat",
       "url": "classes/_matrix_.mat.html",
@@ -1070,7 +1094,7 @@
       "parent": "\"matrix\""
     },
     {
-      "id": 133,
+      "id": 136,
       "kind": 1024,
       "name": "values",
       "url": "classes/_matrix_.mat.html#values",
@@ -1078,7 +1102,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 134,
+      "id": 137,
       "kind": 1024,
       "name": "numRows",
       "url": "classes/_matrix_.mat.html#numrows",
@@ -1086,7 +1110,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 135,
+      "id": 138,
       "kind": 1024,
       "name": "numCols",
       "url": "classes/_matrix_.mat.html#numcols",
@@ -1094,7 +1118,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 136,
+      "id": 139,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_matrix_.mat.html#constructor",
@@ -1102,7 +1126,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 137,
+      "id": 140,
       "kind": 2048,
       "name": "toArray",
       "url": "classes/_matrix_.mat.html#toarray",
@@ -1110,7 +1134,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 138,
+      "id": 141,
       "kind": 2048,
       "name": "fromArray",
       "url": "classes/_matrix_.mat.html#fromarray",
@@ -1118,7 +1142,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 139,
+      "id": 142,
       "kind": 2048,
       "name": "valueAt",
       "url": "classes/_matrix_.mat.html#valueat",
@@ -1126,7 +1150,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 140,
+      "id": 143,
       "kind": 2048,
       "name": "colAt",
       "url": "classes/_matrix_.mat.html#colat",
@@ -1134,7 +1158,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 141,
+      "id": 144,
       "kind": 2048,
       "name": "rowAt",
       "url": "classes/_matrix_.mat.html#rowat",
@@ -1142,7 +1166,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 142,
+      "id": 145,
       "kind": 2048,
       "name": "equals",
       "url": "classes/_matrix_.mat.html#equals",
@@ -1150,7 +1174,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 143,
+      "id": 146,
       "kind": 2048,
       "name": "add",
       "url": "classes/_matrix_.mat.html#add",
@@ -1158,7 +1182,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 144,
+      "id": 147,
       "kind": 2048,
       "name": "sub",
       "url": "classes/_matrix_.mat.html#sub",
@@ -1166,7 +1190,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 145,
+      "id": 148,
       "kind": 2048,
       "name": "mul",
       "url": "classes/_matrix_.mat.html#mul",
@@ -1174,7 +1198,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 146,
+      "id": 149,
       "kind": 2048,
       "name": "toString",
       "url": "classes/_matrix_.mat.html#tostring",
@@ -1182,7 +1206,7 @@
       "parent": "\"matrix\".Mat"
     },
     {
-      "id": 147,
+      "id": 150,
       "kind": 128,
       "name": "Mat2",
       "url": "classes/_matrix_.mat2.html",
@@ -1190,7 +1214,7 @@
       "parent": "\"matrix\""
     },
     {
-      "id": 148,
+      "id": 151,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_matrix_.mat2.html#constructor",
@@ -1198,7 +1222,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 149,
+      "id": 152,
       "kind": 2048,
       "name": "toArray",
       "url": "classes/_matrix_.mat2.html#toarray",
@@ -1206,7 +1230,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 150,
+      "id": 153,
       "kind": 2048,
       "name": "fromArray",
       "url": "classes/_matrix_.mat2.html#fromarray",
@@ -1214,7 +1238,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 151,
+      "id": 154,
       "kind": 2048,
       "name": "identity",
       "url": "classes/_matrix_.mat2.html#identity",
@@ -1222,7 +1246,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 152,
+      "id": 155,
       "kind": 2048,
       "name": "rotation",
       "url": "classes/_matrix_.mat2.html#rotation",
@@ -1230,7 +1254,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 153,
+      "id": 156,
       "kind": 2048,
       "name": "scaling",
       "url": "classes/_matrix_.mat2.html#scaling",
@@ -1238,7 +1262,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 154,
+      "id": 157,
       "kind": 2048,
       "name": "determinant",
       "url": "classes/_matrix_.mat2.html#determinant",
@@ -1246,7 +1270,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 155,
+      "id": 158,
       "kind": 2048,
       "name": "toString",
       "url": "classes/_matrix_.mat2.html#tostring",
@@ -1254,7 +1278,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 156,
+      "id": 159,
       "kind": 1024,
       "name": "values",
       "url": "classes/_matrix_.mat2.html#values",
@@ -1262,7 +1286,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 157,
+      "id": 160,
       "kind": 1024,
       "name": "numRows",
       "url": "classes/_matrix_.mat2.html#numrows",
@@ -1270,7 +1294,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 158,
+      "id": 161,
       "kind": 1024,
       "name": "numCols",
       "url": "classes/_matrix_.mat2.html#numcols",
@@ -1278,7 +1302,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 159,
+      "id": 162,
       "kind": 2048,
       "name": "valueAt",
       "url": "classes/_matrix_.mat2.html#valueat",
@@ -1286,7 +1310,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 160,
+      "id": 163,
       "kind": 2048,
       "name": "colAt",
       "url": "classes/_matrix_.mat2.html#colat",
@@ -1294,7 +1318,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 161,
+      "id": 164,
       "kind": 2048,
       "name": "rowAt",
       "url": "classes/_matrix_.mat2.html#rowat",
@@ -1302,7 +1326,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 162,
+      "id": 165,
       "kind": 2048,
       "name": "equals",
       "url": "classes/_matrix_.mat2.html#equals",
@@ -1310,7 +1334,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 163,
+      "id": 166,
       "kind": 2048,
       "name": "add",
       "url": "classes/_matrix_.mat2.html#add",
@@ -1318,7 +1342,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 164,
+      "id": 167,
       "kind": 2048,
       "name": "sub",
       "url": "classes/_matrix_.mat2.html#sub",
@@ -1326,7 +1350,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 165,
+      "id": 168,
       "kind": 2048,
       "name": "mul",
       "url": "classes/_matrix_.mat2.html#mul",
@@ -1334,7 +1358,7 @@
       "parent": "\"matrix\".Mat2"
     },
     {
-      "id": 166,
+      "id": 169,
       "kind": 128,
       "name": "Mat3",
       "url": "classes/_matrix_.mat3.html",
@@ -1342,7 +1366,7 @@
       "parent": "\"matrix\""
     },
     {
-      "id": 167,
+      "id": 170,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_matrix_.mat3.html#constructor",
@@ -1350,35 +1374,11 @@
       "parent": "\"matrix\".Mat3"
     },
     {
-      "id": 168,
-      "kind": 1024,
-      "name": "values",
-      "url": "classes/_matrix_.mat3.html#values",
-      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat3"
-    },
-    {
-      "id": 169,
-      "kind": 1024,
-      "name": "numRows",
-      "url": "classes/_matrix_.mat3.html#numrows",
-      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat3"
-    },
-    {
-      "id": 170,
-      "kind": 1024,
-      "name": "numCols",
-      "url": "classes/_matrix_.mat3.html#numcols",
-      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
-      "parent": "\"matrix\".Mat3"
-    },
-    {
       "id": 171,
       "kind": 2048,
       "name": "toArray",
       "url": "classes/_matrix_.mat3.html#toarray",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite",
       "parent": "\"matrix\".Mat3"
     },
     {
@@ -1386,11 +1386,83 @@
       "kind": 2048,
       "name": "fromArray",
       "url": "classes/_matrix_.mat3.html#fromarray",
-      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-static",
       "parent": "\"matrix\".Mat3"
     },
     {
       "id": 173,
+      "kind": 2048,
+      "name": "identity",
+      "url": "classes/_matrix_.mat3.html#identity",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 174,
+      "kind": 2048,
+      "name": "translation",
+      "url": "classes/_matrix_.mat3.html#translation",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 175,
+      "kind": 2048,
+      "name": "scaling",
+      "url": "classes/_matrix_.mat3.html#scaling",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 176,
+      "kind": 2048,
+      "name": "rotX",
+      "url": "classes/_matrix_.mat3.html#rotx",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 177,
+      "kind": 2048,
+      "name": "rotY",
+      "url": "classes/_matrix_.mat3.html#roty",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 178,
+      "kind": 2048,
+      "name": "rotZ",
+      "url": "classes/_matrix_.mat3.html#rotz",
+      "classes": "tsd-kind-method tsd-parent-kind-class tsd-is-static",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 179,
+      "kind": 1024,
+      "name": "values",
+      "url": "classes/_matrix_.mat3.html#values",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 180,
+      "kind": 1024,
+      "name": "numRows",
+      "url": "classes/_matrix_.mat3.html#numrows",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 181,
+      "kind": 1024,
+      "name": "numCols",
+      "url": "classes/_matrix_.mat3.html#numcols",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-inherited",
+      "parent": "\"matrix\".Mat3"
+    },
+    {
+      "id": 182,
       "kind": 2048,
       "name": "valueAt",
       "url": "classes/_matrix_.mat3.html#valueat",
@@ -1398,7 +1470,7 @@
       "parent": "\"matrix\".Mat3"
     },
     {
-      "id": 174,
+      "id": 183,
       "kind": 2048,
       "name": "colAt",
       "url": "classes/_matrix_.mat3.html#colat",
@@ -1406,7 +1478,7 @@
       "parent": "\"matrix\".Mat3"
     },
     {
-      "id": 175,
+      "id": 184,
       "kind": 2048,
       "name": "rowAt",
       "url": "classes/_matrix_.mat3.html#rowat",
@@ -1414,7 +1486,7 @@
       "parent": "\"matrix\".Mat3"
     },
     {
-      "id": 176,
+      "id": 185,
       "kind": 2048,
       "name": "equals",
       "url": "classes/_matrix_.mat3.html#equals",
@@ -1422,7 +1494,7 @@
       "parent": "\"matrix\".Mat3"
     },
     {
-      "id": 177,
+      "id": 186,
       "kind": 2048,
       "name": "add",
       "url": "classes/_matrix_.mat3.html#add",
@@ -1430,7 +1502,7 @@
       "parent": "\"matrix\".Mat3"
     },
     {
-      "id": 178,
+      "id": 187,
       "kind": 2048,
       "name": "sub",
       "url": "classes/_matrix_.mat3.html#sub",
@@ -1438,7 +1510,7 @@
       "parent": "\"matrix\".Mat3"
     },
     {
-      "id": 179,
+      "id": 188,
       "kind": 2048,
       "name": "mul",
       "url": "classes/_matrix_.mat3.html#mul",
@@ -1446,7 +1518,7 @@
       "parent": "\"matrix\".Mat3"
     },
     {
-      "id": 180,
+      "id": 189,
       "kind": 2048,
       "name": "toString",
       "url": "classes/_matrix_.mat3.html#tostring",
@@ -1454,7 +1526,7 @@
       "parent": "\"matrix\".Mat3"
     },
     {
-      "id": 181,
+      "id": 190,
       "kind": 128,
       "name": "Mat4",
       "url": "classes/_matrix_.mat4.html",
@@ -1462,7 +1534,7 @@
       "parent": "\"matrix\""
     },
     {
-      "id": 182,
+      "id": 191,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_matrix_.mat4.html#constructor",
@@ -1470,7 +1542,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 183,
+      "id": 192,
       "kind": 2048,
       "name": "toArray",
       "url": "classes/_matrix_.mat4.html#toarray",
@@ -1478,7 +1550,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 184,
+      "id": 193,
       "kind": 2048,
       "name": "fromArray",
       "url": "classes/_matrix_.mat4.html#fromarray",
@@ -1486,7 +1558,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 185,
+      "id": 194,
       "kind": 2048,
       "name": "identity",
       "url": "classes/_matrix_.mat4.html#identity",
@@ -1494,7 +1566,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 186,
+      "id": 195,
       "kind": 2048,
       "name": "translation",
       "url": "classes/_matrix_.mat4.html#translation",
@@ -1502,7 +1574,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 187,
+      "id": 196,
       "kind": 2048,
       "name": "scaling",
       "url": "classes/_matrix_.mat4.html#scaling",
@@ -1510,7 +1582,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 188,
+      "id": 197,
       "kind": 2048,
       "name": "rotX",
       "url": "classes/_matrix_.mat4.html#rotx",
@@ -1518,7 +1590,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 189,
+      "id": 198,
       "kind": 2048,
       "name": "rotY",
       "url": "classes/_matrix_.mat4.html#roty",
@@ -1526,7 +1598,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 190,
+      "id": 199,
       "kind": 2048,
       "name": "rotZ",
       "url": "classes/_matrix_.mat4.html#rotz",
@@ -1534,7 +1606,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 191,
+      "id": 200,
       "kind": 1024,
       "name": "values",
       "url": "classes/_matrix_.mat4.html#values",
@@ -1542,7 +1614,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 192,
+      "id": 201,
       "kind": 1024,
       "name": "numRows",
       "url": "classes/_matrix_.mat4.html#numrows",
@@ -1550,7 +1622,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 193,
+      "id": 202,
       "kind": 1024,
       "name": "numCols",
       "url": "classes/_matrix_.mat4.html#numcols",
@@ -1558,7 +1630,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 194,
+      "id": 203,
       "kind": 2048,
       "name": "valueAt",
       "url": "classes/_matrix_.mat4.html#valueat",
@@ -1566,7 +1638,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 195,
+      "id": 204,
       "kind": 2048,
       "name": "colAt",
       "url": "classes/_matrix_.mat4.html#colat",
@@ -1574,7 +1646,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 196,
+      "id": 205,
       "kind": 2048,
       "name": "rowAt",
       "url": "classes/_matrix_.mat4.html#rowat",
@@ -1582,7 +1654,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 197,
+      "id": 206,
       "kind": 2048,
       "name": "equals",
       "url": "classes/_matrix_.mat4.html#equals",
@@ -1590,7 +1662,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 198,
+      "id": 207,
       "kind": 2048,
       "name": "add",
       "url": "classes/_matrix_.mat4.html#add",
@@ -1598,7 +1670,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 199,
+      "id": 208,
       "kind": 2048,
       "name": "sub",
       "url": "classes/_matrix_.mat4.html#sub",
@@ -1606,7 +1678,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 200,
+      "id": 209,
       "kind": 2048,
       "name": "mul",
       "url": "classes/_matrix_.mat4.html#mul",
@@ -1614,7 +1686,7 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 201,
+      "id": 210,
       "kind": 2048,
       "name": "toString",
       "url": "classes/_matrix_.mat4.html#tostring",
@@ -1622,21 +1694,36 @@
       "parent": "\"matrix\".Mat4"
     },
     {
-      "id": 202,
+      "id": 211,
+      "kind": 1,
+      "name": "\"lookat\"",
+      "url": "modules/_lookat_.html",
+      "classes": "tsd-kind-module"
+    },
+    {
+      "id": 212,
+      "kind": 64,
+      "name": "lookAt",
+      "url": "modules/_lookat_.html#lookat",
+      "classes": "tsd-kind-function tsd-parent-kind-module",
+      "parent": "\"lookat\""
+    },
+    {
+      "id": 213,
       "kind": 1,
       "name": "\"matrix.test\"",
       "url": "modules/_matrix_test_.html",
       "classes": "tsd-kind-module"
     },
     {
-      "id": 203,
+      "id": 214,
       "kind": 1,
       "name": "\"perspective\"",
       "url": "modules/_perspective_.html",
       "classes": "tsd-kind-module"
     },
     {
-      "id": 204,
+      "id": 215,
       "kind": 64,
       "name": "ortho",
       "url": "modules/_perspective_.html#ortho",
@@ -1644,7 +1731,7 @@
       "parent": "\"perspective\""
     },
     {
-      "id": 205,
+      "id": 216,
       "kind": 64,
       "name": "frustum",
       "url": "modules/_perspective_.html#frustum",
@@ -1652,7 +1739,7 @@
       "parent": "\"perspective\""
     },
     {
-      "id": 206,
+      "id": 217,
       "kind": 64,
       "name": "perspective",
       "url": "modules/_perspective_.html#perspective",
@@ -1660,7 +1747,7 @@
       "parent": "\"perspective\""
     },
     {
-      "id": 207,
+      "id": 218,
       "kind": 1,
       "name": "\"vector.test\"",
       "url": "modules/_vector_test_.html",
@@ -1671,462 +1758,484 @@
     "version": "2.3.8",
     "fields": ["name", "parent"],
     "fieldVectors": [
-      ["name/0", [0, 40.976]],
+      ["name/0", [0, 41.486]],
       ["parent/0", []],
-      ["name/1", [0, 40.976]],
-      ["parent/1", [0, 4.09]],
-      ["name/2", [1, 49.466]],
-      ["parent/2", [2, 2.991]],
-      ["name/3", [3, 49.466]],
-      ["parent/3", [2, 2.991]],
-      ["name/4", [4, 49.466]],
-      ["parent/4", [2, 2.991]],
-      ["name/5", [5, 49.466]],
-      ["parent/5", [2, 2.991]],
-      ["name/6", [6, 49.466]],
-      ["parent/6", [2, 2.991]],
-      ["name/7", [7, 30.971]],
-      ["parent/7", [2, 2.991]],
-      ["name/8", [8, 49.466]],
-      ["parent/8", [2, 2.991]],
-      ["name/9", [9, 49.466]],
-      ["parent/9", [2, 2.991]],
-      ["name/10", [10, 49.466]],
-      ["parent/10", [2, 2.991]],
-      ["name/11", [11, 49.466]],
-      ["parent/11", [2, 2.991]],
-      ["name/12", [12, 36.447]],
+      ["name/1", [0, 41.486]],
+      ["parent/1", [0, 4.061]],
+      ["name/2", [1, 49.975]],
+      ["parent/2", [2, 2.984]],
+      ["name/3", [3, 49.975]],
+      ["parent/3", [2, 2.984]],
+      ["name/4", [4, 49.975]],
+      ["parent/4", [2, 2.984]],
+      ["name/5", [5, 49.975]],
+      ["parent/5", [2, 2.984]],
+      ["name/6", [6, 49.975]],
+      ["parent/6", [2, 2.984]],
+      ["name/7", [7, 31.482]],
+      ["parent/7", [2, 2.984]],
+      ["name/8", [8, 49.975]],
+      ["parent/8", [2, 2.984]],
+      ["name/9", [9, 49.975]],
+      ["parent/9", [2, 2.984]],
+      ["name/10", [10, 49.975]],
+      ["parent/10", [2, 2.984]],
+      ["name/11", [11, 49.975]],
+      ["parent/11", [2, 2.984]],
+      ["name/12", [12, 27.245]],
       ["parent/12", []],
-      ["name/13", [13, 49.466]],
-      ["parent/13", [12, 3.638]],
-      ["name/14", [14, 49.466]],
-      ["parent/14", [12, 3.638]],
-      ["name/15", [15, 49.466]],
-      ["parent/15", [12, 3.638]],
-      ["name/16", [16, 49.466]],
-      ["parent/16", [12, 3.638]],
-      ["name/17", [17, 29.968]],
-      ["parent/17", []],
-      ["name/18", [17, 29.968]],
-      ["parent/18", [17, 2.991]],
-      ["name/19", [18, 44.347]],
-      ["parent/19", [19, 1.992]],
-      ["name/20", [20, 44.347]],
-      ["parent/20", [19, 1.992]],
-      ["name/21", [21, 49.466]],
-      ["parent/21", [19, 1.992]],
-      ["name/22", [22, 49.466]],
-      ["parent/22", [19, 1.992]],
-      ["name/23", [23, 49.466]],
-      ["parent/23", [19, 1.992]],
-      ["name/24", [24, 44.347]],
-      ["parent/24", [19, 1.992]],
-      ["name/25", [25, 44.347]],
-      ["parent/25", [19, 1.992]],
-      ["name/26", [26, 49.466]],
-      ["parent/26", [19, 1.992]],
-      ["name/27", [27, 44.347]],
-      ["parent/27", [19, 1.992]],
-      ["name/28", [7, 30.971]],
-      ["parent/28", [19, 1.992]],
-      ["name/29", [28, 49.466]],
-      ["parent/29", [19, 1.992]],
-      ["name/30", [29, 49.466]],
-      ["parent/30", [19, 1.992]],
-      ["name/31", [30, 49.466]],
-      ["parent/31", [19, 1.992]],
-      ["name/32", [31, 49.466]],
-      ["parent/32", [19, 1.992]],
-      ["name/33", [32, 49.466]],
-      ["parent/33", [19, 1.992]],
-      ["name/34", [33, 49.466]],
-      ["parent/34", [19, 1.992]],
-      ["name/35", [34, 49.466]],
-      ["parent/35", [19, 1.992]],
-      ["name/36", [35, 49.466]],
-      ["parent/36", [19, 1.992]],
-      ["name/37", [36, 49.466]],
-      ["parent/37", [19, 1.992]],
-      ["name/38", [37, 49.466]],
-      ["parent/38", [19, 1.992]],
-      ["name/39", [38, 49.466]],
-      ["parent/39", [19, 1.992]],
-      ["name/40", [39, 49.466]],
-      ["parent/40", [19, 1.992]],
-      ["name/41", [40, 49.466]],
-      ["parent/41", [19, 1.992]],
-      ["name/42", [41, 49.466]],
-      ["parent/42", [19, 1.992]],
-      ["name/43", [42, 49.466]],
-      ["parent/43", [19, 1.992]],
-      ["name/44", [43, 49.466]],
-      ["parent/44", [19, 1.992]],
-      ["name/45", [44, 49.466]],
-      ["parent/45", [19, 1.992]],
-      ["name/46", [45, 49.466]],
-      ["parent/46", [19, 1.992]],
-      ["name/47", [46, 49.466]],
-      ["parent/47", [17, 2.991]],
-      ["name/48", [47, 49.466]],
-      ["parent/48", [17, 2.991]],
-      ["name/49", [48, 49.466]],
-      ["parent/49", [17, 2.991]],
-      ["name/50", [49, 49.466]],
-      ["parent/50", [17, 2.991]],
-      ["name/51", [50, 38.458]],
-      ["parent/51", [51, 4.937]],
-      ["name/52", [52, 49.466]],
-      ["parent/52", [17, 2.991]],
-      ["name/53", [50, 38.458]],
-      ["parent/53", [53, 4.937]],
-      ["name/54", [54, 49.466]],
-      ["parent/54", [55, 3.471]],
-      ["name/55", [56, 49.466]],
-      ["parent/55", [55, 3.471]],
-      ["name/56", [57, 49.466]],
-      ["parent/56", [55, 3.471]],
-      ["name/57", [58, 49.466]],
-      ["parent/57", [55, 3.471]],
-      ["name/58", [59, 49.466]],
-      ["parent/58", [55, 3.471]],
-      ["name/59", [60, 49.466]],
-      ["parent/59", [55, 3.471]],
-      ["name/60", [61, 49.466]],
-      ["parent/60", [17, 2.991]],
-      ["name/61", [50, 38.458]],
-      ["parent/61", [62, 4.937]],
-      ["name/62", [63, 49.466]],
-      ["parent/62", [17, 2.991]],
-      ["name/63", [50, 38.458]],
-      ["parent/63", [64, 4.937]],
-      ["name/64", [18, 44.347]],
-      ["parent/64", [65, 3.327]],
-      ["name/65", [20, 44.347]],
-      ["parent/65", [65, 3.327]],
-      ["name/66", [66, 49.466]],
-      ["parent/66", [65, 3.327]],
-      ["name/67", [24, 44.347]],
-      ["parent/67", [65, 3.327]],
-      ["name/68", [25, 44.347]],
-      ["parent/68", [65, 3.327]],
-      ["name/69", [27, 44.347]],
-      ["parent/69", [65, 3.327]],
-      ["name/70", [67, 49.466]],
-      ["parent/70", [65, 3.327]],
-      ["name/71", [68, 20.045, 69, 20.638]],
-      ["parent/71", []],
-      ["name/72", [68, 28.221]],
-      ["parent/72", [68, 1.999, 69, 2.058]],
-      ["name/73", [70, 49.466]],
-      ["parent/73", [68, 1.999, 69, 2.058]],
-      ["name/74", [71, 49.466]],
-      ["parent/74", [68, 1.999, 69, 2.058]],
-      ["name/75", [72, 49.466]],
-      ["parent/75", [68, 1.999, 69, 2.058]],
-      ["name/76", [73, 49.466]],
-      ["parent/76", [68, 1.999, 69, 2.058]],
-      ["name/77", [74, 49.466]],
-      ["parent/77", [68, 1.999, 69, 2.058]],
-      ["name/78", [75, 49.466]],
-      ["parent/78", [68, 1.999, 69, 2.058]],
-      ["name/79", [76, 49.466]],
-      ["parent/79", [68, 1.999, 69, 2.058]],
-      ["name/80", [77, 49.466]],
-      ["parent/80", [68, 1.999, 69, 2.058]],
-      ["name/81", [78, 49.466]],
-      ["parent/81", [68, 1.999, 69, 2.058]],
-      ["name/82", [79, 38.458]],
-      ["parent/82", []],
-      ["name/83", [80, 49.466]],
-      ["parent/83", [79, 3.838]],
-      ["name/84", [7, 30.971]],
-      ["parent/84", [81, 2.601]],
-      ["name/85", [82, 40.976]],
-      ["parent/85", [81, 2.601]],
-      ["name/86", [83, 40.976]],
-      ["parent/86", [81, 2.601]],
-      ["name/87", [84, 33.34]],
-      ["parent/87", [81, 2.601]],
-      ["name/88", [85, 40.976]],
-      ["parent/88", [81, 2.601]],
-      ["name/89", [86, 40.976]],
-      ["parent/89", [81, 2.601]],
-      ["name/90", [87, 34.773]],
-      ["parent/90", [81, 2.601]],
-      ["name/91", [88, 34.773]],
-      ["parent/91", [81, 2.601]],
-      ["name/92", [89, 34.773]],
-      ["parent/92", [81, 2.601]],
-      ["name/93", [90, 44.347]],
-      ["parent/93", [81, 2.601]],
-      ["name/94", [91, 44.347]],
-      ["parent/94", [81, 2.601]],
-      ["name/95", [92, 34.773]],
-      ["parent/95", [81, 2.601]],
-      ["name/96", [93, 44.347]],
-      ["parent/96", [81, 2.601]],
-      ["name/97", [94, 33.34]],
-      ["parent/97", [81, 2.601]],
-      ["name/98", [95, 34.773]],
-      ["parent/98", [81, 2.601]],
-      ["name/99", [96, 49.466]],
-      ["parent/99", [79, 3.838]],
-      ["name/100", [7, 30.971]],
-      ["parent/100", [97, 2.372]],
-      ["name/101", [82, 40.976]],
-      ["parent/101", [97, 2.372]],
-      ["name/102", [83, 40.976]],
-      ["parent/102", [97, 2.372]],
-      ["name/103", [98, 44.347]],
-      ["parent/103", [97, 2.372]],
-      ["name/104", [84, 33.34]],
-      ["parent/104", [97, 2.372]],
-      ["name/105", [85, 40.976]],
-      ["parent/105", [97, 2.372]],
-      ["name/106", [99, 49.466]],
-      ["parent/106", [97, 2.372]],
-      ["name/107", [86, 40.976]],
-      ["parent/107", [97, 2.372]],
-      ["name/108", [87, 34.773]],
-      ["parent/108", [97, 2.372]],
-      ["name/109", [88, 34.773]],
-      ["parent/109", [97, 2.372]],
-      ["name/110", [89, 34.773]],
-      ["parent/110", [97, 2.372]],
-      ["name/111", [90, 44.347]],
-      ["parent/111", [97, 2.372]],
-      ["name/112", [100, 49.466]],
-      ["parent/112", [97, 2.372]],
-      ["name/113", [91, 44.347]],
-      ["parent/113", [97, 2.372]],
-      ["name/114", [93, 44.347]],
-      ["parent/114", [97, 2.372]],
-      ["name/115", [101, 49.466]],
-      ["parent/115", [97, 2.372]],
-      ["name/116", [94, 33.34]],
-      ["parent/116", [97, 2.372]],
-      ["name/117", [95, 34.773]],
-      ["parent/117", [97, 2.372]],
-      ["name/118", [92, 34.773]],
-      ["parent/118", [97, 2.372]],
-      ["name/119", [102, 49.466]],
-      ["parent/119", [79, 3.838]],
-      ["name/120", [7, 30.971]],
-      ["parent/120", [103, 3.091]],
-      ["name/121", [82, 40.976]],
-      ["parent/121", [103, 3.091]],
-      ["name/122", [83, 40.976]],
-      ["parent/122", [103, 3.091]],
-      ["name/123", [98, 44.347]],
-      ["parent/123", [103, 3.091]],
-      ["name/124", [104, 49.466]],
-      ["parent/124", [103, 3.091]],
-      ["name/125", [84, 33.34]],
-      ["parent/125", [103, 3.091]],
-      ["name/126", [85, 40.976]],
-      ["parent/126", [103, 3.091]],
-      ["name/127", [94, 33.34]],
-      ["parent/127", [103, 3.091]],
-      ["name/128", [86, 40.976]],
-      ["parent/128", [103, 3.091]],
-      ["name/129", [105, 40.976]],
-      ["parent/129", []],
-      ["name/130", [105, 40.976]],
-      ["parent/130", [105, 4.09]],
-      ["name/131", [106, 36.447]],
-      ["parent/131", []],
-      ["name/132", [107, 49.466]],
-      ["parent/132", [106, 3.638]],
-      ["name/133", [108, 38.458]],
-      ["parent/133", [109, 2.668]],
-      ["name/134", [110, 38.458]],
-      ["parent/134", [109, 2.668]],
-      ["name/135", [111, 38.458]],
-      ["parent/135", [109, 2.668]],
-      ["name/136", [7, 30.971]],
-      ["parent/136", [109, 2.668]],
-      ["name/137", [94, 33.34]],
-      ["parent/137", [109, 2.668]],
-      ["name/138", [84, 33.34]],
-      ["parent/138", [109, 2.668]],
-      ["name/139", [112, 38.458]],
-      ["parent/139", [109, 2.668]],
-      ["name/140", [113, 38.458]],
-      ["parent/140", [109, 2.668]],
-      ["name/141", [114, 38.458]],
-      ["parent/141", [109, 2.668]],
-      ["name/142", [92, 34.773]],
-      ["parent/142", [109, 2.668]],
-      ["name/143", [87, 34.773]],
-      ["parent/143", [109, 2.668]],
-      ["name/144", [88, 34.773]],
-      ["parent/144", [109, 2.668]],
-      ["name/145", [89, 34.773]],
-      ["parent/145", [109, 2.668]],
-      ["name/146", [95, 34.773]],
-      ["parent/146", [109, 2.668]],
-      ["name/147", [115, 49.466]],
-      ["parent/147", [106, 3.638]],
-      ["name/148", [7, 30.971]],
-      ["parent/148", [116, 2.425]],
-      ["name/149", [94, 33.34]],
-      ["parent/149", [116, 2.425]],
-      ["name/150", [84, 33.34]],
-      ["parent/150", [116, 2.425]],
-      ["name/151", [117, 44.347]],
-      ["parent/151", [116, 2.425]],
-      ["name/152", [118, 49.466]],
-      ["parent/152", [116, 2.425]],
-      ["name/153", [119, 44.347]],
-      ["parent/153", [116, 2.425]],
-      ["name/154", [120, 49.466]],
-      ["parent/154", [116, 2.425]],
-      ["name/155", [95, 34.773]],
-      ["parent/155", [116, 2.425]],
-      ["name/156", [108, 38.458]],
-      ["parent/156", [116, 2.425]],
-      ["name/157", [110, 38.458]],
-      ["parent/157", [116, 2.425]],
-      ["name/158", [111, 38.458]],
-      ["parent/158", [116, 2.425]],
-      ["name/159", [112, 38.458]],
-      ["parent/159", [116, 2.425]],
-      ["name/160", [113, 38.458]],
-      ["parent/160", [116, 2.425]],
-      ["name/161", [114, 38.458]],
-      ["parent/161", [116, 2.425]],
-      ["name/162", [92, 34.773]],
-      ["parent/162", [116, 2.425]],
-      ["name/163", [87, 34.773]],
-      ["parent/163", [116, 2.425]],
-      ["name/164", [88, 34.773]],
-      ["parent/164", [116, 2.425]],
-      ["name/165", [89, 34.773]],
-      ["parent/165", [116, 2.425]],
-      ["name/166", [121, 49.466]],
-      ["parent/166", [106, 3.638]],
-      ["name/167", [7, 30.971]],
-      ["parent/167", [122, 2.668]],
-      ["name/168", [108, 38.458]],
-      ["parent/168", [122, 2.668]],
-      ["name/169", [110, 38.458]],
-      ["parent/169", [122, 2.668]],
-      ["name/170", [111, 38.458]],
-      ["parent/170", [122, 2.668]],
-      ["name/171", [94, 33.34]],
-      ["parent/171", [122, 2.668]],
-      ["name/172", [84, 33.34]],
-      ["parent/172", [122, 2.668]],
-      ["name/173", [112, 38.458]],
-      ["parent/173", [122, 2.668]],
-      ["name/174", [113, 38.458]],
-      ["parent/174", [122, 2.668]],
-      ["name/175", [114, 38.458]],
-      ["parent/175", [122, 2.668]],
-      ["name/176", [92, 34.773]],
-      ["parent/176", [122, 2.668]],
-      ["name/177", [87, 34.773]],
-      ["parent/177", [122, 2.668]],
-      ["name/178", [88, 34.773]],
-      ["parent/178", [122, 2.668]],
-      ["name/179", [89, 34.773]],
-      ["parent/179", [122, 2.668]],
-      ["name/180", [95, 34.773]],
-      ["parent/180", [122, 2.668]],
-      ["name/181", [123, 49.466]],
-      ["parent/181", [106, 3.638]],
-      ["name/182", [7, 30.971]],
-      ["parent/182", [124, 2.322]],
-      ["name/183", [94, 33.34]],
-      ["parent/183", [124, 2.322]],
-      ["name/184", [84, 33.34]],
-      ["parent/184", [124, 2.322]],
-      ["name/185", [117, 44.347]],
-      ["parent/185", [124, 2.322]],
-      ["name/186", [125, 49.466]],
-      ["parent/186", [124, 2.322]],
-      ["name/187", [119, 44.347]],
-      ["parent/187", [124, 2.322]],
-      ["name/188", [126, 49.466]],
-      ["parent/188", [124, 2.322]],
-      ["name/189", [127, 49.466]],
-      ["parent/189", [124, 2.322]],
-      ["name/190", [128, 49.466]],
-      ["parent/190", [124, 2.322]],
-      ["name/191", [108, 38.458]],
-      ["parent/191", [124, 2.322]],
-      ["name/192", [110, 38.458]],
-      ["parent/192", [124, 2.322]],
-      ["name/193", [111, 38.458]],
-      ["parent/193", [124, 2.322]],
-      ["name/194", [112, 38.458]],
-      ["parent/194", [124, 2.322]],
-      ["name/195", [113, 38.458]],
-      ["parent/195", [124, 2.322]],
-      ["name/196", [114, 38.458]],
-      ["parent/196", [124, 2.322]],
-      ["name/197", [92, 34.773]],
-      ["parent/197", [124, 2.322]],
-      ["name/198", [87, 34.773]],
-      ["parent/198", [124, 2.322]],
-      ["name/199", [88, 34.773]],
-      ["parent/199", [124, 2.322]],
-      ["name/200", [89, 34.773]],
-      ["parent/200", [124, 2.322]],
-      ["name/201", [95, 34.773]],
-      ["parent/201", [124, 2.322]],
-      ["name/202", [129, 49.466]],
-      ["parent/202", []],
-      ["name/203", [130, 36.447]],
-      ["parent/203", []],
-      ["name/204", [131, 49.466]],
-      ["parent/204", [130, 3.638]],
-      ["name/205", [132, 49.466]],
-      ["parent/205", [130, 3.638]],
-      ["name/206", [130, 36.447]],
-      ["parent/206", [130, 3.638]],
-      ["name/207", [133, 49.466]],
-      ["parent/207", []]
+      ["name/13", [13, 49.975]],
+      ["parent/13", [12, 2.667]],
+      ["name/14", [14, 49.975]],
+      ["parent/14", [12, 2.667]],
+      ["name/15", [15, 49.975]],
+      ["parent/15", [12, 2.667]],
+      ["name/16", [16, 49.975]],
+      ["parent/16", [12, 2.667]],
+      ["name/17", [17, 49.975]],
+      ["parent/17", [12, 2.667]],
+      ["name/18", [18, 49.975]],
+      ["parent/18", [12, 2.667]],
+      ["name/19", [19, 49.975]],
+      ["parent/19", [12, 2.667]],
+      ["name/20", [20, 49.975]],
+      ["parent/20", [12, 2.667]],
+      ["name/21", [21, 49.975]],
+      ["parent/21", [12, 2.667]],
+      ["name/22", [22, 49.975]],
+      ["parent/22", [12, 2.667]],
+      ["name/23", [23, 49.975]],
+      ["parent/23", [12, 2.667]],
+      ["name/24", [24, 49.975]],
+      ["parent/24", [12, 2.667]],
+      ["name/25", [25, 49.975]],
+      ["parent/25", [12, 2.667]],
+      ["name/26", [26, 35.284]],
+      ["parent/26", []],
+      ["name/27", [27, 49.975]],
+      ["parent/27", [26, 3.454]],
+      ["name/28", [28, 49.975]],
+      ["parent/28", [26, 3.454]],
+      ["name/29", [29, 49.975]],
+      ["parent/29", [26, 3.454]],
+      ["name/30", [30, 49.975]],
+      ["parent/30", [26, 3.454]],
+      ["name/31", [31, 49.975]],
+      ["parent/31", [26, 3.454]],
+      ["name/32", [32, 30.479]],
+      ["parent/32", []],
+      ["name/33", [32, 30.479]],
+      ["parent/33", [32, 2.984]],
+      ["name/34", [33, 44.857]],
+      ["parent/34", [34, 2.04]],
+      ["name/35", [35, 44.857]],
+      ["parent/35", [34, 2.04]],
+      ["name/36", [36, 49.975]],
+      ["parent/36", [34, 2.04]],
+      ["name/37", [37, 49.975]],
+      ["parent/37", [34, 2.04]],
+      ["name/38", [38, 49.975]],
+      ["parent/38", [34, 2.04]],
+      ["name/39", [39, 44.857]],
+      ["parent/39", [34, 2.04]],
+      ["name/40", [40, 49.975]],
+      ["parent/40", [34, 2.04]],
+      ["name/41", [41, 44.857]],
+      ["parent/41", [34, 2.04]],
+      ["name/42", [7, 31.482]],
+      ["parent/42", [34, 2.04]],
+      ["name/43", [42, 49.975]],
+      ["parent/43", [34, 2.04]],
+      ["name/44", [43, 49.975]],
+      ["parent/44", [34, 2.04]],
+      ["name/45", [44, 49.975]],
+      ["parent/45", [34, 2.04]],
+      ["name/46", [45, 49.975]],
+      ["parent/46", [34, 2.04]],
+      ["name/47", [46, 49.975]],
+      ["parent/47", [34, 2.04]],
+      ["name/48", [47, 49.975]],
+      ["parent/48", [34, 2.04]],
+      ["name/49", [48, 49.975]],
+      ["parent/49", [34, 2.04]],
+      ["name/50", [49, 49.975]],
+      ["parent/50", [34, 2.04]],
+      ["name/51", [50, 49.975]],
+      ["parent/51", [34, 2.04]],
+      ["name/52", [51, 49.975]],
+      ["parent/52", [34, 2.04]],
+      ["name/53", [52, 49.975]],
+      ["parent/53", [34, 2.04]],
+      ["name/54", [53, 49.975]],
+      ["parent/54", [34, 2.04]],
+      ["name/55", [54, 49.975]],
+      ["parent/55", [34, 2.04]],
+      ["name/56", [55, 49.975]],
+      ["parent/56", [34, 2.04]],
+      ["name/57", [56, 49.975]],
+      ["parent/57", [34, 2.04]],
+      ["name/58", [57, 49.975]],
+      ["parent/58", [34, 2.04]],
+      ["name/59", [58, 49.975]],
+      ["parent/59", [34, 2.04]],
+      ["name/60", [59, 49.975]],
+      ["parent/60", [34, 2.04]],
+      ["name/61", [60, 49.975]],
+      ["parent/61", [32, 2.984]],
+      ["name/62", [61, 49.975]],
+      ["parent/62", [32, 2.984]],
+      ["name/63", [62, 38.968]],
+      ["parent/63", [63, 4.892]],
+      ["name/64", [64, 49.975]],
+      ["parent/64", [65, 3.454]],
+      ["name/65", [66, 49.975]],
+      ["parent/65", [65, 3.454]],
+      ["name/66", [67, 49.975]],
+      ["parent/66", [65, 3.454]],
+      ["name/67", [68, 49.975]],
+      ["parent/67", [65, 3.454]],
+      ["name/68", [69, 49.975]],
+      ["parent/68", [65, 3.454]],
+      ["name/69", [70, 49.975]],
+      ["parent/69", [65, 3.454]],
+      ["name/70", [71, 49.975]],
+      ["parent/70", [32, 2.984]],
+      ["name/71", [62, 38.968]],
+      ["parent/71", [72, 4.892]],
+      ["name/72", [73, 49.975]],
+      ["parent/72", [32, 2.984]],
+      ["name/73", [62, 38.968]],
+      ["parent/73", [74, 4.892]],
+      ["name/74", [75, 49.975]],
+      ["parent/74", [32, 2.984]],
+      ["name/75", [62, 38.968]],
+      ["parent/75", [76, 4.892]],
+      ["name/76", [33, 44.857]],
+      ["parent/76", [77, 3.314]],
+      ["name/77", [35, 44.857]],
+      ["parent/77", [77, 3.314]],
+      ["name/78", [78, 49.975]],
+      ["parent/78", [77, 3.314]],
+      ["name/79", [79, 49.975]],
+      ["parent/79", [77, 3.314]],
+      ["name/80", [39, 44.857]],
+      ["parent/80", [77, 3.314]],
+      ["name/81", [41, 44.857]],
+      ["parent/81", [77, 3.314]],
+      ["name/82", [80, 49.975]],
+      ["parent/82", [77, 3.314]],
+      ["name/83", [81, 49.975]],
+      ["parent/83", [32, 2.984]],
+      ["name/84", [82, 49.975]],
+      ["parent/84", [32, 2.984]],
+      ["name/85", [83, 29.465, 84, 31.859]],
+      ["parent/85", []],
+      ["name/86", [83, 41.486]],
+      ["parent/86", [83, 2.859, 84, 3.092]],
+      ["name/87", [85, 38.968]],
+      ["parent/87", []],
+      ["name/88", [86, 49.975]],
+      ["parent/88", [85, 3.815]],
+      ["name/89", [7, 31.482]],
+      ["parent/89", [87, 2.602]],
+      ["name/90", [88, 41.486]],
+      ["parent/90", [87, 2.602]],
+      ["name/91", [89, 41.486]],
+      ["parent/91", [87, 2.602]],
+      ["name/92", [90, 33.85]],
+      ["parent/92", [87, 2.602]],
+      ["name/93", [91, 41.486]],
+      ["parent/93", [87, 2.602]],
+      ["name/94", [92, 41.486]],
+      ["parent/94", [87, 2.602]],
+      ["name/95", [93, 35.284]],
+      ["parent/95", [87, 2.602]],
+      ["name/96", [94, 35.284]],
+      ["parent/96", [87, 2.602]],
+      ["name/97", [95, 35.284]],
+      ["parent/97", [87, 2.602]],
+      ["name/98", [96, 44.857]],
+      ["parent/98", [87, 2.602]],
+      ["name/99", [97, 44.857]],
+      ["parent/99", [87, 2.602]],
+      ["name/100", [98, 35.284]],
+      ["parent/100", [87, 2.602]],
+      ["name/101", [99, 44.857]],
+      ["parent/101", [87, 2.602]],
+      ["name/102", [100, 33.85]],
+      ["parent/102", [87, 2.602]],
+      ["name/103", [101, 35.284]],
+      ["parent/103", [87, 2.602]],
+      ["name/104", [102, 49.975]],
+      ["parent/104", [85, 3.815]],
+      ["name/105", [7, 31.482]],
+      ["parent/105", [103, 2.377]],
+      ["name/106", [88, 41.486]],
+      ["parent/106", [103, 2.377]],
+      ["name/107", [89, 41.486]],
+      ["parent/107", [103, 2.377]],
+      ["name/108", [104, 44.857]],
+      ["parent/108", [103, 2.377]],
+      ["name/109", [90, 33.85]],
+      ["parent/109", [103, 2.377]],
+      ["name/110", [91, 41.486]],
+      ["parent/110", [103, 2.377]],
+      ["name/111", [105, 49.975]],
+      ["parent/111", [103, 2.377]],
+      ["name/112", [92, 41.486]],
+      ["parent/112", [103, 2.377]],
+      ["name/113", [93, 35.284]],
+      ["parent/113", [103, 2.377]],
+      ["name/114", [94, 35.284]],
+      ["parent/114", [103, 2.377]],
+      ["name/115", [95, 35.284]],
+      ["parent/115", [103, 2.377]],
+      ["name/116", [96, 44.857]],
+      ["parent/116", [103, 2.377]],
+      ["name/117", [106, 49.975]],
+      ["parent/117", [103, 2.377]],
+      ["name/118", [97, 44.857]],
+      ["parent/118", [103, 2.377]],
+      ["name/119", [99, 44.857]],
+      ["parent/119", [103, 2.377]],
+      ["name/120", [107, 49.975]],
+      ["parent/120", [103, 2.377]],
+      ["name/121", [100, 33.85]],
+      ["parent/121", [103, 2.377]],
+      ["name/122", [101, 35.284]],
+      ["parent/122", [103, 2.377]],
+      ["name/123", [98, 35.284]],
+      ["parent/123", [103, 2.377]],
+      ["name/124", [108, 49.975]],
+      ["parent/124", [85, 3.815]],
+      ["name/125", [7, 31.482]],
+      ["parent/125", [109, 3.082]],
+      ["name/126", [88, 41.486]],
+      ["parent/126", [109, 3.082]],
+      ["name/127", [89, 41.486]],
+      ["parent/127", [109, 3.082]],
+      ["name/128", [104, 44.857]],
+      ["parent/128", [109, 3.082]],
+      ["name/129", [110, 49.975]],
+      ["parent/129", [109, 3.082]],
+      ["name/130", [90, 33.85]],
+      ["parent/130", [109, 3.082]],
+      ["name/131", [91, 41.486]],
+      ["parent/131", [109, 3.082]],
+      ["name/132", [100, 33.85]],
+      ["parent/132", [109, 3.082]],
+      ["name/133", [92, 41.486]],
+      ["parent/133", [109, 3.082]],
+      ["name/134", [111, 36.958]],
+      ["parent/134", []],
+      ["name/135", [112, 49.975]],
+      ["parent/135", [111, 3.618]],
+      ["name/136", [113, 38.968]],
+      ["parent/136", [114, 2.667]],
+      ["name/137", [115, 38.968]],
+      ["parent/137", [114, 2.667]],
+      ["name/138", [116, 38.968]],
+      ["parent/138", [114, 2.667]],
+      ["name/139", [7, 31.482]],
+      ["parent/139", [114, 2.667]],
+      ["name/140", [100, 33.85]],
+      ["parent/140", [114, 2.667]],
+      ["name/141", [90, 33.85]],
+      ["parent/141", [114, 2.667]],
+      ["name/142", [117, 38.968]],
+      ["parent/142", [114, 2.667]],
+      ["name/143", [118, 38.968]],
+      ["parent/143", [114, 2.667]],
+      ["name/144", [119, 38.968]],
+      ["parent/144", [114, 2.667]],
+      ["name/145", [98, 35.284]],
+      ["parent/145", [114, 2.667]],
+      ["name/146", [93, 35.284]],
+      ["parent/146", [114, 2.667]],
+      ["name/147", [94, 35.284]],
+      ["parent/147", [114, 2.667]],
+      ["name/148", [95, 35.284]],
+      ["parent/148", [114, 2.667]],
+      ["name/149", [101, 35.284]],
+      ["parent/149", [114, 2.667]],
+      ["name/150", [120, 49.975]],
+      ["parent/150", [111, 3.618]],
+      ["name/151", [7, 31.482]],
+      ["parent/151", [121, 2.428]],
+      ["name/152", [100, 33.85]],
+      ["parent/152", [121, 2.428]],
+      ["name/153", [90, 33.85]],
+      ["parent/153", [121, 2.428]],
+      ["name/154", [122, 41.486]],
+      ["parent/154", [121, 2.428]],
+      ["name/155", [123, 49.975]],
+      ["parent/155", [121, 2.428]],
+      ["name/156", [124, 41.486]],
+      ["parent/156", [121, 2.428]],
+      ["name/157", [125, 49.975]],
+      ["parent/157", [121, 2.428]],
+      ["name/158", [101, 35.284]],
+      ["parent/158", [121, 2.428]],
+      ["name/159", [113, 38.968]],
+      ["parent/159", [121, 2.428]],
+      ["name/160", [115, 38.968]],
+      ["parent/160", [121, 2.428]],
+      ["name/161", [116, 38.968]],
+      ["parent/161", [121, 2.428]],
+      ["name/162", [117, 38.968]],
+      ["parent/162", [121, 2.428]],
+      ["name/163", [118, 38.968]],
+      ["parent/163", [121, 2.428]],
+      ["name/164", [119, 38.968]],
+      ["parent/164", [121, 2.428]],
+      ["name/165", [98, 35.284]],
+      ["parent/165", [121, 2.428]],
+      ["name/166", [93, 35.284]],
+      ["parent/166", [121, 2.428]],
+      ["name/167", [94, 35.284]],
+      ["parent/167", [121, 2.428]],
+      ["name/168", [95, 35.284]],
+      ["parent/168", [121, 2.428]],
+      ["name/169", [126, 49.975]],
+      ["parent/169", [111, 3.618]],
+      ["name/170", [7, 31.482]],
+      ["parent/170", [127, 2.328]],
+      ["name/171", [100, 33.85]],
+      ["parent/171", [127, 2.328]],
+      ["name/172", [90, 33.85]],
+      ["parent/172", [127, 2.328]],
+      ["name/173", [122, 41.486]],
+      ["parent/173", [127, 2.328]],
+      ["name/174", [128, 44.857]],
+      ["parent/174", [127, 2.328]],
+      ["name/175", [124, 41.486]],
+      ["parent/175", [127, 2.328]],
+      ["name/176", [129, 44.857]],
+      ["parent/176", [127, 2.328]],
+      ["name/177", [130, 44.857]],
+      ["parent/177", [127, 2.328]],
+      ["name/178", [131, 44.857]],
+      ["parent/178", [127, 2.328]],
+      ["name/179", [113, 38.968]],
+      ["parent/179", [127, 2.328]],
+      ["name/180", [115, 38.968]],
+      ["parent/180", [127, 2.328]],
+      ["name/181", [116, 38.968]],
+      ["parent/181", [127, 2.328]],
+      ["name/182", [117, 38.968]],
+      ["parent/182", [127, 2.328]],
+      ["name/183", [118, 38.968]],
+      ["parent/183", [127, 2.328]],
+      ["name/184", [119, 38.968]],
+      ["parent/184", [127, 2.328]],
+      ["name/185", [98, 35.284]],
+      ["parent/185", [127, 2.328]],
+      ["name/186", [93, 35.284]],
+      ["parent/186", [127, 2.328]],
+      ["name/187", [94, 35.284]],
+      ["parent/187", [127, 2.328]],
+      ["name/188", [95, 35.284]],
+      ["parent/188", [127, 2.328]],
+      ["name/189", [101, 35.284]],
+      ["parent/189", [127, 2.328]],
+      ["name/190", [132, 49.975]],
+      ["parent/190", [111, 3.618]],
+      ["name/191", [7, 31.482]],
+      ["parent/191", [133, 2.328]],
+      ["name/192", [100, 33.85]],
+      ["parent/192", [133, 2.328]],
+      ["name/193", [90, 33.85]],
+      ["parent/193", [133, 2.328]],
+      ["name/194", [122, 41.486]],
+      ["parent/194", [133, 2.328]],
+      ["name/195", [128, 44.857]],
+      ["parent/195", [133, 2.328]],
+      ["name/196", [124, 41.486]],
+      ["parent/196", [133, 2.328]],
+      ["name/197", [129, 44.857]],
+      ["parent/197", [133, 2.328]],
+      ["name/198", [130, 44.857]],
+      ["parent/198", [133, 2.328]],
+      ["name/199", [131, 44.857]],
+      ["parent/199", [133, 2.328]],
+      ["name/200", [113, 38.968]],
+      ["parent/200", [133, 2.328]],
+      ["name/201", [115, 38.968]],
+      ["parent/201", [133, 2.328]],
+      ["name/202", [116, 38.968]],
+      ["parent/202", [133, 2.328]],
+      ["name/203", [117, 38.968]],
+      ["parent/203", [133, 2.328]],
+      ["name/204", [118, 38.968]],
+      ["parent/204", [133, 2.328]],
+      ["name/205", [119, 38.968]],
+      ["parent/205", [133, 2.328]],
+      ["name/206", [98, 35.284]],
+      ["parent/206", [133, 2.328]],
+      ["name/207", [93, 35.284]],
+      ["parent/207", [133, 2.328]],
+      ["name/208", [94, 35.284]],
+      ["parent/208", [133, 2.328]],
+      ["name/209", [95, 35.284]],
+      ["parent/209", [133, 2.328]],
+      ["name/210", [101, 35.284]],
+      ["parent/210", [133, 2.328]],
+      ["name/211", [134, 41.486]],
+      ["parent/211", []],
+      ["name/212", [134, 41.486]],
+      ["parent/212", [134, 4.061]],
+      ["name/213", [135, 49.975]],
+      ["parent/213", []],
+      ["name/214", [136, 36.958]],
+      ["parent/214", []],
+      ["name/215", [137, 49.975]],
+      ["parent/215", [136, 3.618]],
+      ["name/216", [138, 49.975]],
+      ["parent/216", [136, 3.618]],
+      ["name/217", [136, 36.958]],
+      ["parent/217", [136, 3.618]],
+      ["name/218", [139, 49.975]],
+      ["parent/218", []]
     ],
     "invertedIndex": [
       [
         "__type",
         {
-          "_index": 50,
-          "name": { "51": {}, "53": {}, "61": {}, "63": {} },
+          "_index": 62,
+          "name": { "63": {}, "71": {}, "73": {}, "75": {} },
           "parent": {}
         }
       ],
       ["_elapsedtime", { "_index": 4, "name": { "4": {} }, "parent": {} }],
-      ["a", { "_index": 104, "name": { "124": {} }, "parent": {} }],
+      ["a", { "_index": 110, "name": { "129": {} }, "parent": {} }],
       [
         "add",
         {
-          "_index": 87,
+          "_index": 93,
           "name": {
-            "90": {},
-            "108": {},
-            "143": {},
-            "163": {},
-            "177": {},
-            "198": {}
+            "95": {},
+            "113": {},
+            "146": {},
+            "166": {},
+            "186": {},
+            "207": {}
           },
           "parent": {}
         }
       ],
       ["autostart", { "_index": 5, "name": { "5": {} }, "parent": {} }],
-      ["box", { "_index": 15, "name": { "15": {} }, "parent": {} }],
-      ["buffer", { "_index": 30, "name": { "31": {} }, "parent": {} }],
-      ["bufferfactory", { "_index": 22, "name": { "22": {} }, "parent": {} }],
+      ["box", { "_index": 29, "name": { "29": {} }, "parent": {} }],
+      ["buffer", { "_index": 44, "name": { "45": {} }, "parent": {} }],
+      ["bufferfactory", { "_index": 37, "name": { "37": {} }, "parent": {} }],
       [
         "buffers",
-        { "_index": 25, "name": { "25": {}, "68": {} }, "parent": {} }
+        { "_index": 39, "name": { "39": {}, "80": {} }, "parent": {} }
       ],
       [
         "canvas",
-        { "_index": 18, "name": { "19": {}, "64": {} }, "parent": {} }
+        { "_index": 33, "name": { "34": {}, "76": {} }, "parent": {} }
       ],
-      ["clear", { "_index": 44, "name": { "45": {} }, "parent": {} }],
+      ["clear", { "_index": 58, "name": { "59": {} }, "parent": {} }],
       [
         "clock",
         { "_index": 0, "name": { "0": {}, "1": {} }, "parent": { "1": {} } }
@@ -2153,16 +2262,16 @@
       [
         "clone",
         {
-          "_index": 86,
-          "name": { "89": {}, "107": {}, "128": {} },
+          "_index": 92,
+          "name": { "94": {}, "112": {}, "133": {} },
           "parent": {}
         }
       ],
       [
         "colat",
         {
-          "_index": 113,
-          "name": { "140": {}, "160": {}, "174": {}, "195": {} },
+          "_index": 118,
+          "name": { "143": {}, "163": {}, "183": {}, "204": {} },
           "parent": {}
         }
       ],
@@ -2172,63 +2281,96 @@
           "_index": 7,
           "name": {
             "7": {},
-            "28": {},
-            "84": {},
-            "100": {},
-            "120": {},
-            "136": {},
-            "148": {},
-            "167": {},
-            "182": {}
+            "42": {},
+            "89": {},
+            "105": {},
+            "125": {},
+            "139": {},
+            "151": {},
+            "170": {},
+            "191": {}
           },
           "parent": {}
         }
       ],
-      ["contexttype", { "_index": 66, "name": { "66": {} }, "parent": {} }],
-      ["convertarray", { "_index": 46, "name": { "47": {} }, "parent": {} }],
-      ["coords", { "_index": 71, "name": { "74": {} }, "parent": {} }],
-      ["create", { "_index": 31, "name": { "32": {} }, "parent": {} }],
-      ["createtexture", { "_index": 33, "name": { "34": {} }, "parent": {} }],
-      ["cross", { "_index": 100, "name": { "112": {} }, "parent": {} }],
-      ["cube", { "_index": 16, "name": { "16": {} }, "parent": {} }],
-      ["data", { "_index": 57, "name": { "56": {} }, "parent": {} }],
-      ["destroy", { "_index": 45, "name": { "46": {} }, "parent": {} }],
-      ["determinant", { "_index": 120, "name": { "154": {} }, "parent": {} }],
+      ["contexttype", { "_index": 78, "name": { "78": {} }, "parent": {} }],
+      ["convertarray", { "_index": 81, "name": { "83": {} }, "parent": {} }],
+      ["create", { "_index": 45, "name": { "46": {} }, "parent": {} }],
+      ["createtexture", { "_index": 47, "name": { "48": {} }, "parent": {} }],
+      ["cross", { "_index": 106, "name": { "117": {} }, "parent": {} }],
+      ["cube", { "_index": 30, "name": { "30": {} }, "parent": {} }],
+      ["data", { "_index": 67, "name": { "66": {} }, "parent": {} }],
+      ["destroy", { "_index": 59, "name": { "60": {} }, "parent": {} }],
+      ["determinant", { "_index": 125, "name": { "157": {} }, "parent": {} }],
       [
         "devicepixelratio",
-        { "_index": 27, "name": { "27": {}, "69": {} }, "parent": {} }
+        { "_index": 41, "name": { "41": {}, "81": {} }, "parent": {} }
       ],
-      ["div", { "_index": 90, "name": { "93": {}, "111": {} }, "parent": {} }],
-      ["dot", { "_index": 91, "name": { "94": {}, "113": {} }, "parent": {} }],
+      ["div", { "_index": 96, "name": { "98": {}, "116": {} }, "parent": {} }],
+      ["dot", { "_index": 97, "name": { "99": {}, "118": {} }, "parent": {} }],
+      ["easeincubic", { "_index": 17, "name": { "17": {} }, "parent": {} }],
+      ["easeinoutcubic", { "_index": 19, "name": { "19": {} }, "parent": {} }],
+      ["easeinoutquad", { "_index": 16, "name": { "16": {} }, "parent": {} }],
+      ["easeinoutquart", { "_index": 22, "name": { "22": {} }, "parent": {} }],
+      ["easeinoutquint", { "_index": 25, "name": { "25": {} }, "parent": {} }],
+      ["easeinquad", { "_index": 14, "name": { "14": {} }, "parent": {} }],
+      ["easeinquart", { "_index": 20, "name": { "20": {} }, "parent": {} }],
+      ["easeinquint", { "_index": 23, "name": { "23": {} }, "parent": {} }],
+      ["easeoutcubic", { "_index": 18, "name": { "18": {} }, "parent": {} }],
+      ["easeoutquad", { "_index": 15, "name": { "15": {} }, "parent": {} }],
+      ["easeoutquart", { "_index": 21, "name": { "21": {} }, "parent": {} }],
+      ["easeoutquint", { "_index": 24, "name": { "24": {} }, "parent": {} }],
+      [
+        "easings",
+        {
+          "_index": 12,
+          "name": { "12": {} },
+          "parent": {
+            "13": {},
+            "14": {},
+            "15": {},
+            "16": {},
+            "17": {},
+            "18": {},
+            "19": {},
+            "20": {},
+            "21": {},
+            "22": {},
+            "23": {},
+            "24": {},
+            "25": {}
+          }
+        }
+      ],
       ["elapsedtime", { "_index": 9, "name": { "9": {} }, "parent": {} }],
       [
         "equals",
         {
-          "_index": 92,
+          "_index": 98,
           "name": {
-            "95": {},
-            "118": {},
-            "142": {},
-            "162": {},
-            "176": {},
-            "197": {}
+            "100": {},
+            "123": {},
+            "145": {},
+            "165": {},
+            "185": {},
+            "206": {}
           },
           "parent": {}
         }
       ],
-      ["fragmentshader", { "_index": 29, "name": { "30": {} }, "parent": {} }],
+      ["fragmentshader", { "_index": 43, "name": { "44": {} }, "parent": {} }],
       [
         "fromarray",
         {
-          "_index": 84,
+          "_index": 90,
           "name": {
-            "87": {},
-            "104": {},
-            "125": {},
-            "138": {},
-            "150": {},
+            "92": {},
+            "109": {},
+            "130": {},
+            "141": {},
+            "153": {},
             "172": {},
-            "184": {}
+            "193": {}
           },
           "parent": {}
         }
@@ -2236,61 +2378,46 @@
       [
         "fromnumber",
         {
-          "_index": 85,
-          "name": { "88": {}, "105": {}, "126": {} },
+          "_index": 91,
+          "name": { "93": {}, "110": {}, "131": {} },
           "parent": {}
         }
       ],
-      ["fromvec2", { "_index": 99, "name": { "106": {} }, "parent": {} }],
-      ["frustum", { "_index": 132, "name": { "205": {} }, "parent": {} }],
+      ["fromvec2", { "_index": 105, "name": { "111": {} }, "parent": {} }],
+      ["frustum", { "_index": 138, "name": { "216": {} }, "parent": {} }],
       [
         "geometry",
         {
-          "_index": 12,
-          "name": { "12": {} },
-          "parent": { "13": {}, "14": {}, "15": {}, "16": {} }
+          "_index": 26,
+          "name": { "26": {} },
+          "parent": { "27": {}, "28": {}, "29": {}, "30": {}, "31": {} }
         }
       ],
       ["getdelta", { "_index": 8, "name": { "8": {} }, "parent": {} }],
-      ["gl", { "_index": 20, "name": { "20": {}, "65": {} }, "parent": {} }],
+      ["gl", { "_index": 35, "name": { "35": {}, "77": {} }, "parent": {} }],
       [
         "glea",
         {
-          "_index": 17,
-          "name": { "17": {}, "18": {} },
+          "_index": 32,
+          "name": { "32": {}, "33": {} },
           "parent": {
-            "18": {},
-            "47": {},
-            "48": {},
-            "49": {},
-            "50": {},
-            "52": {},
-            "60": {},
-            "62": {}
+            "33": {},
+            "61": {},
+            "62": {},
+            "70": {},
+            "72": {},
+            "74": {},
+            "83": {},
+            "84": {}
           }
         }
       ],
       [
         "glea\".glea",
         {
-          "_index": 19,
+          "_index": 34,
           "name": {},
           "parent": {
-            "19": {},
-            "20": {},
-            "21": {},
-            "22": {},
-            "23": {},
-            "24": {},
-            "25": {},
-            "26": {},
-            "27": {},
-            "28": {},
-            "29": {},
-            "30": {},
-            "31": {},
-            "32": {},
-            "33": {},
             "34": {},
             "35": {},
             "36": {},
@@ -2303,39 +2430,30 @@
             "43": {},
             "44": {},
             "45": {},
-            "46": {}
-          }
-        }
-      ],
-      [
-        "glea\".gleabuffer",
-        { "_index": 53, "name": {}, "parent": { "53": {} } }
-      ],
-      [
-        "glea\".gleabuffer.__type",
-        {
-          "_index": 55,
-          "name": {},
-          "parent": {
+            "46": {},
+            "47": {},
+            "48": {},
+            "49": {},
+            "50": {},
+            "51": {},
+            "52": {},
+            "53": {},
             "54": {},
             "55": {},
             "56": {},
             "57": {},
             "58": {},
-            "59": {}
+            "59": {},
+            "60": {}
           }
         }
       ],
       [
-        "glea\".gleabufferfactory",
-        { "_index": 62, "name": {}, "parent": { "61": {} } }
+        "glea\".gleabuffer",
+        { "_index": 63, "name": {}, "parent": { "63": {} } }
       ],
       [
-        "glea\".gleaconstructorparams",
-        { "_index": 64, "name": {}, "parent": { "63": {} } }
-      ],
-      [
-        "glea\".gleaconstructorparams.__type",
+        "glea\".gleabuffer.__type",
         {
           "_index": 65,
           "name": {},
@@ -2345,93 +2463,100 @@
             "66": {},
             "67": {},
             "68": {},
-            "69": {},
-            "70": {}
+            "69": {}
           }
         }
       ],
       [
-        "glea\".gleashaderfactory",
-        { "_index": 51, "name": {}, "parent": { "51": {} } }
-      ],
-      ["gleabuffer", { "_index": 52, "name": { "52": {} }, "parent": {} }],
-      [
-        "gleabufferfactory",
-        { "_index": 61, "name": { "60": {} }, "parent": {} }
+        "glea\".gleabufferfactory",
+        { "_index": 74, "name": {}, "parent": { "73": {} } }
       ],
       [
-        "gleaconstructorparams",
-        { "_index": 63, "name": { "62": {} }, "parent": {} }
+        "glea\".gleaconstructorparams",
+        { "_index": 76, "name": {}, "parent": { "75": {} } }
       ],
-      ["gleacontext", { "_index": 48, "name": { "49": {} }, "parent": {} }],
       [
-        "gleashaderfactory",
-        { "_index": 49, "name": { "50": {} }, "parent": {} }
-      ],
-      ["gloptions", { "_index": 67, "name": { "70": {} }, "parent": {} }],
-      [
-        "glsl",
+        "glea\".gleaconstructorparams.__type",
         {
-          "_index": 68,
-          "name": { "71": {}, "72": {} },
+          "_index": 77,
+          "name": {},
           "parent": {
-            "72": {},
-            "73": {},
-            "74": {},
-            "75": {},
             "76": {},
             "77": {},
             "78": {},
             "79": {},
             "80": {},
-            "81": {}
+            "81": {},
+            "82": {}
           }
         }
       ],
-      ["heart", { "_index": 77, "name": { "80": {} }, "parent": {} }],
-      ["height", { "_index": 37, "name": { "38": {} }, "parent": {} }],
-      ["hexagram", { "_index": 78, "name": { "81": {} }, "parent": {} }],
-      ["hsb2rgb", { "_index": 75, "name": { "78": {} }, "parent": {} }],
-      ["id", { "_index": 54, "name": { "54": {} }, "parent": {} }],
+      [
+        "glea\".gleashaderfactory",
+        { "_index": 72, "name": {}, "parent": { "71": {} } }
+      ],
+      ["gleabuffer", { "_index": 61, "name": { "62": {} }, "parent": {} }],
+      [
+        "gleabufferfactory",
+        { "_index": 73, "name": { "72": {} }, "parent": {} }
+      ],
+      [
+        "gleaconstructorparams",
+        { "_index": 75, "name": { "74": {} }, "parent": {} }
+      ],
+      ["gleacontext", { "_index": 60, "name": { "61": {} }, "parent": {} }],
+      [
+        "gleashaderfactory",
+        { "_index": 71, "name": { "70": {} }, "parent": {} }
+      ],
+      ["gloptions", { "_index": 80, "name": { "82": {} }, "parent": {} }],
+      [
+        "glsl",
+        { "_index": 83, "name": { "85": {}, "86": {} }, "parent": { "86": {} } }
+      ],
+      ["grid", { "_index": 31, "name": { "31": {} }, "parent": {} }],
+      ["height", { "_index": 51, "name": { "52": {} }, "parent": {} }],
+      ["id", { "_index": 64, "name": { "64": {} }, "parent": {} }],
       [
         "identity",
-        { "_index": 117, "name": { "151": {}, "185": {} }, "parent": {} }
+        {
+          "_index": 122,
+          "name": { "154": {}, "173": {}, "194": {} },
+          "parent": {}
+        }
       ],
-      ["invert", { "_index": 72, "name": { "75": {} }, "parent": {} }],
       [
         "length",
-        { "_index": 93, "name": { "96": {}, "114": {} }, "parent": {} }
+        { "_index": 99, "name": { "101": {}, "119": {} }, "parent": {} }
       ],
-      ["loc", { "_index": 58, "name": { "57": {} }, "parent": {} }],
+      ["linear", { "_index": 13, "name": { "13": {} }, "parent": {} }],
+      ["loc", { "_index": 68, "name": { "67": {} }, "parent": {} }],
       [
         "lookat",
         {
-          "_index": 105,
-          "name": { "129": {}, "130": {} },
-          "parent": { "130": {} }
+          "_index": 134,
+          "name": { "211": {}, "212": {} },
+          "parent": { "212": {} }
         }
       ],
-      ["mat", { "_index": 107, "name": { "132": {} }, "parent": {} }],
-      ["mat2", { "_index": 115, "name": { "147": {} }, "parent": {} }],
-      ["mat3", { "_index": 121, "name": { "166": {} }, "parent": {} }],
-      ["mat4", { "_index": 123, "name": { "181": {} }, "parent": {} }],
+      ["mat", { "_index": 112, "name": { "135": {} }, "parent": {} }],
+      ["mat2", { "_index": 120, "name": { "150": {} }, "parent": {} }],
+      ["mat3", { "_index": 126, "name": { "169": {} }, "parent": {} }],
+      ["mat4", { "_index": 132, "name": { "190": {} }, "parent": {} }],
       [
         "matrix",
         {
-          "_index": 106,
-          "name": { "131": {} },
-          "parent": { "132": {}, "147": {}, "166": {}, "181": {} }
+          "_index": 111,
+          "name": { "134": {} },
+          "parent": { "135": {}, "150": {}, "169": {}, "190": {} }
         }
       ],
       [
         "matrix\".mat",
         {
-          "_index": 109,
+          "_index": 114,
           "name": {},
           "parent": {
-            "133": {},
-            "134": {},
-            "135": {},
             "136": {},
             "137": {},
             "138": {},
@@ -2442,19 +2567,19 @@
             "143": {},
             "144": {},
             "145": {},
-            "146": {}
+            "146": {},
+            "147": {},
+            "148": {},
+            "149": {}
           }
         }
       ],
       [
         "matrix\".mat2",
         {
-          "_index": 116,
+          "_index": 121,
           "name": {},
           "parent": {
-            "148": {},
-            "149": {},
-            "150": {},
             "151": {},
             "152": {},
             "153": {},
@@ -2469,19 +2594,19 @@
             "162": {},
             "163": {},
             "164": {},
-            "165": {}
+            "165": {},
+            "166": {},
+            "167": {},
+            "168": {}
           }
         }
       ],
       [
         "matrix\".mat3",
         {
-          "_index": 122,
+          "_index": 127,
           "name": {},
           "parent": {
-            "167": {},
-            "168": {},
-            "169": {},
             "170": {},
             "171": {},
             "172": {},
@@ -2492,16 +2617,8 @@
             "177": {},
             "178": {},
             "179": {},
-            "180": {}
-          }
-        }
-      ],
-      [
-        "matrix\".mat4",
-        {
-          "_index": 124,
-          "name": {},
-          "parent": {
+            "180": {},
+            "181": {},
             "182": {},
             "183": {},
             "184": {},
@@ -2509,8 +2626,16 @@
             "186": {},
             "187": {},
             "188": {},
-            "189": {},
-            "190": {},
+            "189": {}
+          }
+        }
+      ],
+      [
+        "matrix\".mat4",
+        {
+          "_index": 133,
+          "name": {},
+          "parent": {
             "191": {},
             "192": {},
             "193": {},
@@ -2521,124 +2646,136 @@
             "198": {},
             "199": {},
             "200": {},
-            "201": {}
+            "201": {},
+            "202": {},
+            "203": {},
+            "204": {},
+            "205": {},
+            "206": {},
+            "207": {},
+            "208": {},
+            "209": {},
+            "210": {}
           }
         }
       ],
-      ["matrix.test", { "_index": 129, "name": { "202": {} }, "parent": {} }],
+      ["matrix.test", { "_index": 135, "name": { "213": {} }, "parent": {} }],
       [
         "mul",
         {
-          "_index": 89,
+          "_index": 95,
           "name": {
-            "92": {},
-            "110": {},
-            "145": {},
-            "165": {},
-            "179": {},
-            "200": {}
+            "97": {},
+            "115": {},
+            "148": {},
+            "168": {},
+            "188": {},
+            "209": {}
           },
           "parent": {}
         }
       ],
-      ["name", { "_index": 56, "name": { "55": {} }, "parent": {} }],
-      ["noise", { "_index": 76, "name": { "79": {} }, "parent": {} }],
-      ["normalized", { "_index": 101, "name": { "115": {} }, "parent": {} }],
-      [
-        "normalizescreencoords",
-        { "_index": 70, "name": { "73": {} }, "parent": {} }
-      ],
+      ["name", { "_index": 66, "name": { "65": {} }, "parent": {} }],
+      ["normalized", { "_index": 107, "name": { "120": {} }, "parent": {} }],
       [
         "numcols",
         {
-          "_index": 111,
-          "name": { "135": {}, "158": {}, "170": {}, "193": {} },
+          "_index": 116,
+          "name": { "138": {}, "161": {}, "181": {}, "202": {} },
           "parent": {}
         }
       ],
       [
         "numrows",
         {
-          "_index": 110,
-          "name": { "134": {}, "157": {}, "169": {}, "192": {} },
+          "_index": 115,
+          "name": { "137": {}, "160": {}, "180": {}, "201": {} },
           "parent": {}
         }
       ],
       ["oldtime", { "_index": 3, "name": { "3": {} }, "parent": {} }],
-      ["ortho", { "_index": 131, "name": { "204": {} }, "parent": {} }],
+      ["ortho", { "_index": 137, "name": { "215": {} }, "parent": {} }],
       [
         "perspective",
         {
-          "_index": 130,
-          "name": { "203": {}, "206": {} },
-          "parent": { "204": {}, "205": {}, "206": {} }
+          "_index": 136,
+          "name": { "214": {}, "217": {} },
+          "parent": { "215": {}, "216": {}, "217": {} }
         }
       ],
-      ["program", { "_index": 23, "name": { "23": {} }, "parent": {} }],
-      ["rect", { "_index": 13, "name": { "13": {} }, "parent": {} }],
-      ["repeat", { "_index": 73, "name": { "76": {} }, "parent": {} }],
-      ["resize", { "_index": 35, "name": { "36": {} }, "parent": {} }],
-      ["rotate", { "_index": 74, "name": { "77": {} }, "parent": {} }],
-      ["rotation", { "_index": 118, "name": { "152": {} }, "parent": {} }],
-      ["rotx", { "_index": 126, "name": { "188": {} }, "parent": {} }],
-      ["roty", { "_index": 127, "name": { "189": {} }, "parent": {} }],
-      ["rotz", { "_index": 128, "name": { "190": {} }, "parent": {} }],
+      ["program", { "_index": 38, "name": { "38": {} }, "parent": {} }],
+      ["rect", { "_index": 27, "name": { "27": {} }, "parent": {} }],
+      ["resize", { "_index": 49, "name": { "50": {} }, "parent": {} }],
+      ["rotation", { "_index": 123, "name": { "155": {} }, "parent": {} }],
+      [
+        "rotx",
+        { "_index": 129, "name": { "176": {}, "197": {} }, "parent": {} }
+      ],
+      [
+        "roty",
+        { "_index": 130, "name": { "177": {}, "198": {} }, "parent": {} }
+      ],
+      [
+        "rotz",
+        { "_index": 131, "name": { "178": {}, "199": {} }, "parent": {} }
+      ],
       [
         "rowat",
         {
-          "_index": 114,
-          "name": { "141": {}, "161": {}, "175": {}, "196": {} },
+          "_index": 119,
+          "name": { "144": {}, "164": {}, "184": {}, "205": {} },
           "parent": {}
         }
       ],
       ["running", { "_index": 6, "name": { "6": {} }, "parent": {} }],
       [
         "scaling",
-        { "_index": 119, "name": { "153": {}, "187": {} }, "parent": {} }
+        {
+          "_index": 124,
+          "name": { "156": {}, "175": {}, "196": {} },
+          "parent": {}
+        }
       ],
       [
         "setactivetexture",
-        { "_index": 32, "name": { "33": {} }, "parent": {} }
+        { "_index": 46, "name": { "47": {} }, "parent": {} }
       ],
-      ["shader", { "_index": 47, "name": { "48": {} }, "parent": {} }],
-      ["shaderfactory", { "_index": 21, "name": { "21": {} }, "parent": {} }],
-      [
-        "shaders",
-        { "_index": 24, "name": { "24": {}, "67": {} }, "parent": {} }
-      ],
-      ["size", { "_index": 60, "name": { "59": {} }, "parent": {} }],
-      ["square", { "_index": 14, "name": { "14": {} }, "parent": {} }],
+      ["shader", { "_index": 82, "name": { "84": {} }, "parent": {} }],
+      ["shaderfactory", { "_index": 36, "name": { "36": {} }, "parent": {} }],
+      ["shaders", { "_index": 79, "name": { "79": {} }, "parent": {} }],
+      ["size", { "_index": 70, "name": { "69": {} }, "parent": {} }],
+      ["square", { "_index": 28, "name": { "28": {} }, "parent": {} }],
       ["start", { "_index": 10, "name": { "10": {} }, "parent": {} }],
       ["starttime", { "_index": 1, "name": { "2": {} }, "parent": {} }],
       ["stop", { "_index": 11, "name": { "11": {} }, "parent": {} }],
       [
         "sub",
         {
-          "_index": 88,
+          "_index": 94,
           "name": {
-            "91": {},
-            "109": {},
-            "144": {},
-            "164": {},
-            "178": {},
-            "199": {}
+            "96": {},
+            "114": {},
+            "147": {},
+            "167": {},
+            "187": {},
+            "208": {}
           },
           "parent": {}
         }
       ],
-      ["textures", { "_index": 26, "name": { "26": {} }, "parent": {} }],
+      ["textures", { "_index": 40, "name": { "40": {} }, "parent": {} }],
       [
         "toarray",
         {
-          "_index": 94,
+          "_index": 100,
           "name": {
-            "97": {},
-            "116": {},
-            "127": {},
-            "137": {},
-            "149": {},
+            "102": {},
+            "121": {},
+            "132": {},
+            "140": {},
+            "152": {},
             "171": {},
-            "183": {}
+            "192": {}
           },
           "parent": {}
         }
@@ -2646,84 +2783,64 @@
       [
         "tostring",
         {
-          "_index": 95,
+          "_index": 101,
           "name": {
-            "98": {},
-            "117": {},
-            "146": {},
-            "155": {},
-            "180": {},
-            "201": {}
+            "103": {},
+            "122": {},
+            "149": {},
+            "158": {},
+            "189": {},
+            "210": {}
           },
           "parent": {}
         }
       ],
-      ["translation", { "_index": 125, "name": { "186": {} }, "parent": {} }],
-      ["type", { "_index": 59, "name": { "58": {} }, "parent": {} }],
-      ["uni", { "_index": 42, "name": { "43": {} }, "parent": {} }],
-      ["unii", { "_index": 43, "name": { "44": {} }, "parent": {} }],
-      ["uniiv", { "_index": 41, "name": { "42": {} }, "parent": {} }],
-      ["unim", { "_index": 39, "name": { "40": {} }, "parent": {} }],
-      ["univ", { "_index": 40, "name": { "41": {} }, "parent": {} }],
-      ["updatebuffer", { "_index": 34, "name": { "35": {} }, "parent": {} }],
-      ["use", { "_index": 38, "name": { "39": {} }, "parent": {} }],
       [
-        "utils",
-        {
-          "_index": 69,
-          "name": { "71": {} },
-          "parent": {
-            "72": {},
-            "73": {},
-            "74": {},
-            "75": {},
-            "76": {},
-            "77": {},
-            "78": {},
-            "79": {},
-            "80": {},
-            "81": {}
-          }
-        }
+        "translation",
+        { "_index": 128, "name": { "174": {}, "195": {} }, "parent": {} }
       ],
+      ["type", { "_index": 69, "name": { "68": {} }, "parent": {} }],
+      ["uni", { "_index": 56, "name": { "57": {} }, "parent": {} }],
+      ["unii", { "_index": 57, "name": { "58": {} }, "parent": {} }],
+      ["uniiv", { "_index": 55, "name": { "56": {} }, "parent": {} }],
+      ["unim", { "_index": 53, "name": { "54": {} }, "parent": {} }],
+      ["univ", { "_index": 54, "name": { "55": {} }, "parent": {} }],
+      ["updatebuffer", { "_index": 48, "name": { "49": {} }, "parent": {} }],
+      ["use", { "_index": 52, "name": { "53": {} }, "parent": {} }],
+      ["utils", { "_index": 84, "name": { "85": {} }, "parent": { "86": {} } }],
       [
         "valueat",
         {
-          "_index": 112,
-          "name": { "139": {}, "159": {}, "173": {}, "194": {} },
+          "_index": 117,
+          "name": { "142": {}, "162": {}, "182": {}, "203": {} },
           "parent": {}
         }
       ],
       [
         "values",
         {
-          "_index": 108,
-          "name": { "133": {}, "156": {}, "168": {}, "191": {} },
+          "_index": 113,
+          "name": { "136": {}, "159": {}, "179": {}, "200": {} },
           "parent": {}
         }
       ],
-      ["vec2", { "_index": 80, "name": { "83": {} }, "parent": {} }],
-      ["vec3", { "_index": 96, "name": { "99": {} }, "parent": {} }],
-      ["vec4", { "_index": 102, "name": { "119": {} }, "parent": {} }],
+      ["vec2", { "_index": 86, "name": { "88": {} }, "parent": {} }],
+      ["vec3", { "_index": 102, "name": { "104": {} }, "parent": {} }],
+      ["vec4", { "_index": 108, "name": { "124": {} }, "parent": {} }],
       [
         "vector",
         {
-          "_index": 79,
-          "name": { "82": {} },
-          "parent": { "83": {}, "99": {}, "119": {} }
+          "_index": 85,
+          "name": { "87": {} },
+          "parent": { "88": {}, "104": {}, "124": {} }
         }
       ],
       [
         "vector\".vec2",
         {
-          "_index": 81,
+          "_index": 87,
           "name": {},
           "parent": {
-            "84": {},
-            "85": {},
-            "86": {},
-            "87": {},
-            "88": {},
             "89": {},
             "90": {},
             "91": {},
@@ -2733,21 +2850,21 @@
             "95": {},
             "96": {},
             "97": {},
-            "98": {}
+            "98": {},
+            "99": {},
+            "100": {},
+            "101": {},
+            "102": {},
+            "103": {}
           }
         }
       ],
       [
         "vector\".vec3",
         {
-          "_index": 97,
+          "_index": 103,
           "name": {},
           "parent": {
-            "100": {},
-            "101": {},
-            "102": {},
-            "103": {},
-            "104": {},
             "105": {},
             "106": {},
             "107": {},
@@ -2761,48 +2878,53 @@
             "115": {},
             "116": {},
             "117": {},
-            "118": {}
+            "118": {},
+            "119": {},
+            "120": {},
+            "121": {},
+            "122": {},
+            "123": {}
           }
         }
       ],
       [
         "vector\".vec4",
         {
-          "_index": 103,
+          "_index": 109,
           "name": {},
           "parent": {
-            "120": {},
-            "121": {},
-            "122": {},
-            "123": {},
-            "124": {},
             "125": {},
             "126": {},
             "127": {},
-            "128": {}
+            "128": {},
+            "129": {},
+            "130": {},
+            "131": {},
+            "132": {},
+            "133": {}
           }
         }
       ],
-      ["vector.test", { "_index": 133, "name": { "207": {} }, "parent": {} }],
-      ["vertexshader", { "_index": 28, "name": { "29": {} }, "parent": {} }],
-      ["width", { "_index": 36, "name": { "37": {} }, "parent": {} }],
+      ["vector.test", { "_index": 139, "name": { "218": {} }, "parent": {} }],
+      ["vertexshader", { "_index": 42, "name": { "43": {} }, "parent": {} }],
+      ["width", { "_index": 50, "name": { "51": {} }, "parent": {} }],
       [
         "x",
         {
-          "_index": 82,
-          "name": { "85": {}, "101": {}, "121": {} },
+          "_index": 88,
+          "name": { "90": {}, "106": {}, "126": {} },
           "parent": {}
         }
       ],
       [
         "y",
         {
-          "_index": 83,
-          "name": { "86": {}, "102": {}, "122": {} },
+          "_index": 89,
+          "name": { "91": {}, "107": {}, "127": {} },
           "parent": {}
         }
       ],
-      ["z", { "_index": 98, "name": { "103": {}, "123": {} }, "parent": {} }]
+      ["z", { "_index": 104, "name": { "108": {}, "128": {} }, "parent": {} }]
     ],
     "pipeline": []
   }

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "GL experience admirers",
   "scripts": {
-    "build:esm": "tsc",
-    "build:umd": "tsc --outDir dist/umd -m umd",
+    "build:esm": "tsc -d",
+    "build:umd": "tsc -d --outDir dist/umd -m umd",
     "build:docs": "typedoc --out docs src",
     "build": "npm run build:docs -s && npm run build:esm -s && npm run build:umd -s",
     "test": "jest --coverage",

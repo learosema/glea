@@ -106,6 +106,11 @@
                       >
                     </li>
                     <li class="tsd-kind-function tsd-parent-kind-module">
+                      <a href="_geometry_.html#grid" class="tsd-kind-icon"
+                        >grid</a
+                      >
+                    </li>
+                    <li class="tsd-kind-function tsd-parent-kind-module">
                       <a href="_geometry_.html#rect" class="tsd-kind-icon"
                         >rect</a
                       >
@@ -154,7 +159,7 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/terabaud/glea/blob/bc51127/src/geometry.ts#L39"
+                          href="https://github.com/terabaud/glea/blob/90e5f9e/src/geometry.ts#L39"
                           >geometry.ts:39</a
                         >
                       </li>
@@ -236,12 +241,17 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/terabaud/glea/blob/bc51127/src/geometry.ts#L86"
-                          >geometry.ts:86</a
+                          href="https://github.com/terabaud/glea/blob/90e5f9e/src/geometry.ts#L90"
+                          >geometry.ts:90</a
                         >
                       </li>
                     </ul>
                   </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>create a cube</p>
+                    </div>
+                  </div>
                   <h4 class="tsd-parameters-title">Parameters</h4>
                   <ul class="tsd-parameters">
                     <li>
@@ -252,12 +262,151 @@
                         size: <span class="tsd-signature-type">number</span
                         ><span class="tsd-signature-symbol"> = 1</span>
                       </h5>
+                      <div class="tsd-comment tsd-typography"></div>
                     </li>
                   </ul>
                   <h4 class="tsd-returns-title">
                     Returns <span class="tsd-signature-type">number</span
                     ><span class="tsd-signature-symbol">[]</span>
                   </h4>
+                </li>
+              </ul>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module"
+            >
+              <a name="grid" class="tsd-anchor"></a>
+              <h3>grid</h3>
+              <ul
+                class="tsd-signatures tsd-kind-function tsd-parent-kind-module"
+              >
+                <li class="tsd-signature tsd-kind-icon">
+                  grid<span class="tsd-signature-symbol">(</span>deltaX<span
+                    class="tsd-signature-symbol"
+                    >?: </span
+                  ><span class="tsd-signature-type">number</span>, deltaY<span
+                    class="tsd-signature-symbol"
+                    >?: </span
+                  ><span class="tsd-signature-type">number</span>, xMin<span
+                    class="tsd-signature-symbol"
+                    >?: </span
+                  ><span class="tsd-signature-type">number</span>, yMin<span
+                    class="tsd-signature-symbol"
+                    >?: </span
+                  ><span class="tsd-signature-type">number</span>, xMax<span
+                    class="tsd-signature-symbol"
+                    >?: </span
+                  ><span class="tsd-signature-type">number</span>, yMax<span
+                    class="tsd-signature-symbol"
+                    >?: </span
+                  ><span class="tsd-signature-type">number</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">number</span
+                  ><span class="tsd-signature-symbol">[]</span>
+                </li>
+              </ul>
+              <ul class="tsd-descriptions">
+                <li class="tsd-description">
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        <a
+                          href="https://github.com/terabaud/glea/blob/90e5f9e/src/geometry.ts#L104"
+                          >geometry.ts:104</a
+                        >
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="tsd-comment tsd-typography">
+                    <div class="lead">
+                      <p>create 2D grid geometry</p>
+                    </div>
+                  </div>
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameters">
+                    <li>
+                      <h5>
+                        <span class="tsd-flag ts-flagDefault value"
+                          >Default value</span
+                        >
+                        deltaX: <span class="tsd-signature-type">number</span
+                        ><span class="tsd-signature-symbol"> = 0.1</span>
+                      </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>distance between x coordinates</p>
+                      </div>
+                    </li>
+                    <li>
+                      <h5>
+                        <span class="tsd-flag ts-flagDefault value"
+                          >Default value</span
+                        >
+                        deltaY: <span class="tsd-signature-type">number</span
+                        ><span class="tsd-signature-symbol"> = 0.1</span>
+                      </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>distance between y coordinates</p>
+                      </div>
+                    </li>
+                    <li>
+                      <h5>
+                        <span class="tsd-flag ts-flagDefault value"
+                          >Default value</span
+                        >
+                        xMin: <span class="tsd-signature-type">number</span
+                        ><span class="tsd-signature-symbol"> = -1</span>
+                      </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>minimum x coordinate</p>
+                      </div>
+                    </li>
+                    <li>
+                      <h5>
+                        <span class="tsd-flag ts-flagDefault value"
+                          >Default value</span
+                        >
+                        yMin: <span class="tsd-signature-type">number</span
+                        ><span class="tsd-signature-symbol"> = -1</span>
+                      </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>minimum y coordinate</p>
+                      </div>
+                    </li>
+                    <li>
+                      <h5>
+                        <span class="tsd-flag ts-flagDefault value"
+                          >Default value</span
+                        >
+                        xMax: <span class="tsd-signature-type">number</span
+                        ><span class="tsd-signature-symbol"> = 1</span>
+                      </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>maximum x coordinate</p>
+                      </div>
+                    </li>
+                    <li>
+                      <h5>
+                        <span class="tsd-flag ts-flagDefault value"
+                          >Default value</span
+                        >
+                        yMax: <span class="tsd-signature-type">number</span
+                        ><span class="tsd-signature-symbol"> = 1</span>
+                      </h5>
+                      <div class="tsd-comment tsd-typography">
+                        <p>maximum y coordinate</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <h4 class="tsd-returns-title">
+                    Returns <span class="tsd-signature-type">number</span
+                    ><span class="tsd-signature-symbol">[]</span>
+                  </h4>
+                  <p>
+                    an array of 2D coordinates [x0, y0, x1, y1, ...] for use
+                    with GL_TRIANGLES
+                  </p>
                 </li>
               </ul>
             </section>
@@ -297,7 +446,7 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/terabaud/glea/blob/bc51127/src/geometry.ts#L7"
+                          href="https://github.com/terabaud/glea/blob/90e5f9e/src/geometry.ts#L7"
                           >geometry.ts:7</a
                         >
                       </li>
@@ -364,7 +513,7 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/terabaud/glea/blob/bc51127/src/geometry.ts#L25"
+                          href="https://github.com/terabaud/glea/blob/90e5f9e/src/geometry.ts#L25"
                           >geometry.ts:25</a
                         >
                       </li>
@@ -410,6 +559,9 @@
               <li class="tsd-kind-module">
                 <a href="_clock_.html">&quot;clock&quot;</a>
               </li>
+              <li class="tsd-kind-module">
+                <a href="_easings_.html">&quot;easings&quot;</a>
+              </li>
               <li class="current tsd-kind-module">
                 <a href="_geometry_.html">&quot;geometry&quot;</a>
               </li>
@@ -442,6 +594,9 @@
                 <a href="_geometry_.html#cube" class="tsd-kind-icon">cube</a>
               </li>
               <li class="tsd-kind-function tsd-parent-kind-module">
+                <a href="_geometry_.html#grid" class="tsd-kind-icon">grid</a>
+              </li>
+              <li class="tsd-kind-function tsd-parent-kind-module">
                 <a href="_geometry_.html#rect" class="tsd-kind-icon">rect</a>
               </li>
               <li class="tsd-kind-function tsd-parent-kind-module">
@@ -459,9 +614,6 @@
         <h2>Legend</h2>
         <div class="tsd-legend-group">
           <ul class="tsd-legend">
-            <li class="tsd-kind-variable">
-              <span class="tsd-kind-icon">Variable</span>
-            </li>
             <li class="tsd-kind-function">
               <span class="tsd-kind-icon">Function</span>
             </li>

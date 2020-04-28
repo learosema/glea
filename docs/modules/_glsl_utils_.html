@@ -93,58 +93,6 @@
             <section class="tsd-panel tsd-index-panel">
               <div class="tsd-index-content">
                 <section class="tsd-index-section">
-                  <h3>Variables</h3>
-                  <ul class="tsd-index-list">
-                    <li class="tsd-kind-variable tsd-parent-kind-module">
-                      <a href="_glsl_utils_.html#coords" class="tsd-kind-icon"
-                        >coords</a
-                      >
-                    </li>
-                    <li class="tsd-kind-variable tsd-parent-kind-module">
-                      <a href="_glsl_utils_.html#heart" class="tsd-kind-icon"
-                        >heart</a
-                      >
-                    </li>
-                    <li class="tsd-kind-variable tsd-parent-kind-module">
-                      <a href="_glsl_utils_.html#hexagram" class="tsd-kind-icon"
-                        >hexagram</a
-                      >
-                    </li>
-                    <li class="tsd-kind-variable tsd-parent-kind-module">
-                      <a href="_glsl_utils_.html#hsb2rgb" class="tsd-kind-icon"
-                        >hsb2rgb</a
-                      >
-                    </li>
-                    <li class="tsd-kind-variable tsd-parent-kind-module">
-                      <a href="_glsl_utils_.html#invert" class="tsd-kind-icon"
-                        >invert</a
-                      >
-                    </li>
-                    <li class="tsd-kind-variable tsd-parent-kind-module">
-                      <a href="_glsl_utils_.html#noise" class="tsd-kind-icon"
-                        >noise</a
-                      >
-                    </li>
-                    <li class="tsd-kind-variable tsd-parent-kind-module">
-                      <a
-                        href="_glsl_utils_.html#normalizescreencoords"
-                        class="tsd-kind-icon"
-                        >normalize<wbr />Screen<wbr />Coords</a
-                      >
-                    </li>
-                    <li class="tsd-kind-variable tsd-parent-kind-module">
-                      <a href="_glsl_utils_.html#repeat" class="tsd-kind-icon"
-                        >repeat</a
-                      >
-                    </li>
-                    <li class="tsd-kind-variable tsd-parent-kind-module">
-                      <a href="_glsl_utils_.html#rotate" class="tsd-kind-icon"
-                        >rotate</a
-                      >
-                    </li>
-                  </ul>
-                </section>
-                <section class="tsd-index-section">
                   <h3>Functions</h3>
                   <ul class="tsd-index-list">
                     <li class="tsd-kind-function tsd-parent-kind-module">
@@ -155,259 +103,6 @@
                   </ul>
                 </section>
               </div>
-            </section>
-          </section>
-          <section class="tsd-panel-group tsd-member-group">
-            <h2>Variables</h2>
-            <section
-              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module"
-            >
-              <a name="coords" class="tsd-anchor"></a>
-              <h3><span class="tsd-flag ts-flagConst">Const</span> coords</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                coords<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">
-                  = glsl&#x60;vec2 coords() {float vmin &#x3D; min(width,
-                  height);return vec2((gl_FragCoord.x - width * .5) /
-                  vmin,(gl_FragCoord.y - height * .5) / vmin);}&#x60;</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/terabaud/glea/blob/bc51127/src/glsl-utils.ts#L15"
-                      >glsl-utils.ts:15</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module"
-            >
-              <a name="heart" class="tsd-anchor"></a>
-              <h3><span class="tsd-flag ts-flagConst">Const</span> heart</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                heart<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">
-                  = glsl&#x60;// distance function from
-                  https://www.shadertoy.com/view/3ll3zrfloat heart(vec2 p, float
-                  s) {p /&#x3D; s;vec2 q &#x3D; p;q.x *&#x3D; 0.5 + .5 * q.y;q.y
-                  -&#x3D; abs(p.x) * .63;return (length(q) - .7) *
-                  s;}&#x60;</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/terabaud/glea/blob/bc51127/src/glsl-utils.ts#L62"
-                      >glsl-utils.ts:62</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module"
-            >
-              <a name="hexagram" class="tsd-anchor"></a>
-              <h3><span class="tsd-flag ts-flagConst">Const</span> hexagram</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                hexagram<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">
-                  = glsl&#x60;// distance function from Iñigo Quiles
-                  https://iquilezles.org/www/articles/distfunctions2d/distfunctions2d.htmfloat
-                  hexagram(in vec2 p, in float r) {const vec4 k &#x3D;
-                  vec4(-0.5,0.8660254038,0.5773502692,1.7320508076);p &#x3D;
-                  abs(p);p -&#x3D; 2.0*min(dot(k.xy,p),0.0)*k.xy;p -&#x3D;
-                  2.0*min(dot(k.yx,p),0.0)*k.yx;p -&#x3D;
-                  vec2(clamp(p.x,r*k.z,r*k.w),r);return
-                  length(p)*sign(p.y);}&#x60;</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/terabaud/glea/blob/bc51127/src/glsl-utils.ts#L73"
-                      >glsl-utils.ts:73</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module"
-            >
-              <a name="hsb2rgb" class="tsd-anchor"></a>
-              <h3><span class="tsd-flag ts-flagConst">Const</span> hsb2rgb</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                hsb2rgb<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">
-                  = glsl&#x60;// Function from Iñigo Quiles//
-                  https://www.shadertoy.com/view/MsS3Wcvec3 hsb2rgb( in vec3 c
-                  ){vec3 rgb &#x3D;
-                  clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),6.0)-3.0)-1.0,0.0,1.0
-                  );rgb &#x3D; rgb*rgb*(3.0-2.0*rgb);return c.z * mix(
-                  vec3(1.0), rgb, c.y);}&#x60;</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/terabaud/glea/blob/bc51127/src/glsl-utils.ts#L43"
-                      >glsl-utils.ts:43</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module"
-            >
-              <a name="invert" class="tsd-anchor"></a>
-              <h3><span class="tsd-flag ts-flagConst">Const</span> invert</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                invert<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">
-                  = glsl&#x60;// invert a colorvec4 invert(vec4 color) {return
-                  vec4(1.0 - color.x, 1.0 - color.y, 1.0 - color.z,
-                  1.0);}&#x60;</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/terabaud/glea/blob/bc51127/src/glsl-utils.ts#L23"
-                      >glsl-utils.ts:23</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module"
-            >
-              <a name="noise" class="tsd-anchor"></a>
-              <h3><span class="tsd-flag ts-flagConst">Const</span> noise</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                noise<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">
-                  = glsl&#x60;vec2 noise(vec2 p) {return fract(1234.1234 *
-                  sin(1234.1234 * (fract(1234.1234 * p) + p.yx)));}&#x60;</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/terabaud/glea/blob/bc51127/src/glsl-utils.ts#L56"
-                      >glsl-utils.ts:56</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module"
-            >
-              <a name="normalizescreencoords" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span>
-                normalize<wbr />Screen<wbr />Coords
-              </h3>
-              <div class="tsd-signature tsd-kind-icon">
-                normalize<wbr />Screen<wbr />Coords<span
-                  class="tsd-signature-symbol"
-                  >:</span
-                >
-                <span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">
-                  = glsl&#x60;// normalize coords and correct for aspect
-                  ratiovec2 normalizeScreenCoords(){float aspectRatio &#x3D;
-                  width / height;vec2 result &#x3D; 2.0 * (gl_FragCoord.xy /
-                  vec2(width, height) - 0.5);result.x *&#x3D; aspectRatio;return
-                  result;}&#x60;</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/terabaud/glea/blob/bc51127/src/glsl-utils.ts#L4"
-                      >glsl-utils.ts:4</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module"
-            >
-              <a name="repeat" class="tsd-anchor"></a>
-              <h3><span class="tsd-flag ts-flagConst">Const</span> repeat</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                repeat<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">
-                  = glsl&#x60;vec2 repeat(in vec2 p, in vec2 c) {return mod(p,
-                  c) - 0.5 * c;}&#x60;</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/terabaud/glea/blob/bc51127/src/glsl-utils.ts#L30"
-                      >glsl-utils.ts:30</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module"
-            >
-              <a name="rotate" class="tsd-anchor"></a>
-              <h3><span class="tsd-flag ts-flagConst">Const</span> rotate</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                rotate<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">
-                  = glsl&#x60;vec2 rotate(vec2 p, float a) {return vec2(p.x *
-                  cos(a) - p.y * sin(a),p.x * sin(a) + p.y *
-                  cos(a));}&#x60;</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/terabaud/glea/blob/bc51127/src/glsl-utils.ts#L36"
-                      >glsl-utils.ts:36</a
-                    >
-                  </li>
-                </ul>
-              </aside>
             </section>
           </section>
           <section class="tsd-panel-group tsd-member-group">
@@ -437,8 +132,8 @@
                       <li>
                         Defined in
                         <a
-                          href="https://github.com/terabaud/glea/blob/bc51127/src/glsl-utils.ts#L2"
-                          >glsl-utils.ts:2</a
+                          href="https://github.com/terabaud/glea/blob/90e5f9e/src/glsl-utils.ts#L1"
+                          >glsl-utils.ts:1</a
                         >
                       </li>
                     </ul>
@@ -472,6 +167,9 @@
                 <a href="_clock_.html">&quot;clock&quot;</a>
               </li>
               <li class="tsd-kind-module">
+                <a href="_easings_.html">&quot;easings&quot;</a>
+              </li>
+              <li class="tsd-kind-module">
                 <a href="_geometry_.html">&quot;geometry&quot;</a>
               </li>
               <li class="tsd-kind-module">
@@ -496,53 +194,6 @@
           </nav>
           <nav class="tsd-navigation secondary menu-sticky">
             <ul class="before-current">
-              <li class="tsd-kind-variable tsd-parent-kind-module">
-                <a href="_glsl_utils_.html#coords" class="tsd-kind-icon"
-                  >coords</a
-                >
-              </li>
-              <li class="tsd-kind-variable tsd-parent-kind-module">
-                <a href="_glsl_utils_.html#heart" class="tsd-kind-icon"
-                  >heart</a
-                >
-              </li>
-              <li class="tsd-kind-variable tsd-parent-kind-module">
-                <a href="_glsl_utils_.html#hexagram" class="tsd-kind-icon"
-                  >hexagram</a
-                >
-              </li>
-              <li class="tsd-kind-variable tsd-parent-kind-module">
-                <a href="_glsl_utils_.html#hsb2rgb" class="tsd-kind-icon"
-                  >hsb2rgb</a
-                >
-              </li>
-              <li class="tsd-kind-variable tsd-parent-kind-module">
-                <a href="_glsl_utils_.html#invert" class="tsd-kind-icon"
-                  >invert</a
-                >
-              </li>
-              <li class="tsd-kind-variable tsd-parent-kind-module">
-                <a href="_glsl_utils_.html#noise" class="tsd-kind-icon"
-                  >noise</a
-                >
-              </li>
-              <li class="tsd-kind-variable tsd-parent-kind-module">
-                <a
-                  href="_glsl_utils_.html#normalizescreencoords"
-                  class="tsd-kind-icon"
-                  >normalize<wbr />Screen<wbr />Coords</a
-                >
-              </li>
-              <li class="tsd-kind-variable tsd-parent-kind-module">
-                <a href="_glsl_utils_.html#repeat" class="tsd-kind-icon"
-                  >repeat</a
-                >
-              </li>
-              <li class="tsd-kind-variable tsd-parent-kind-module">
-                <a href="_glsl_utils_.html#rotate" class="tsd-kind-icon"
-                  >rotate</a
-                >
-              </li>
               <li class="tsd-kind-function tsd-parent-kind-module">
                 <a href="_glsl_utils_.html#glsl" class="tsd-kind-icon">glsl</a>
               </li>
@@ -556,9 +207,6 @@
         <h2>Legend</h2>
         <div class="tsd-legend-group">
           <ul class="tsd-legend">
-            <li class="tsd-kind-variable">
-              <span class="tsd-kind-icon">Variable</span>
-            </li>
             <li class="tsd-kind-function">
               <span class="tsd-kind-icon">Function</span>
             </li>

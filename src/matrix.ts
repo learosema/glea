@@ -157,6 +157,9 @@ export class Mat2 extends Mat {
     return new Mat2(...values);
   }
 
+  /**
+   * create identity matrix
+   */
   static identity() {
     // prettier-ignore
     return new Mat2(
@@ -165,10 +168,18 @@ export class Mat2 extends Mat {
     );
   }
 
+  /**
+   * create rotation matrix
+   * @param angle angle in radians
+   */
   static rotation(angle: number) {
     const S = Math.sin(angle);
     const C = Math.cos(angle);
-    return new Mat2(C, S, -S, C);
+    // prettier-ignore
+    return new Mat2(
+       C, S, 
+      -S, C
+    );
   }
 
   static scaling(sx: number, sy: number) {
@@ -197,6 +208,100 @@ export class Mat3 extends Mat {
     super(...values);
     this.numCols = 3;
     this.numRows = 3;
+  }
+
+  /**
+   * convert to array
+   */
+  toArray() {
+    return this.values;
+  }
+
+  /**
+   * create from array
+   * @param values array of values
+   */
+  static fromArray(values: number[]) {
+    return new Mat4(...values);
+  }
+
+  /**
+   * create identity matrix
+   */
+  static identity() {
+    // prettier-ignore
+    return new Mat3(
+      1, 0, 0, 
+      0, 1, 0,
+      0, 0, 1
+    );
+  }
+
+  /**
+   * create translation matrix
+   * @param x translation in x-direction
+   * @param y translation in y-direction
+   * @returns 3x3 translation matrix
+   */
+  static translation(x: number, y: number) {
+    // prettier-ignore
+    return new Mat3(
+      1, 0, 0,
+      0, 1, 0,
+      x, y, 1
+    );
+  }
+
+  /**
+   * create scaling matrix
+   * @param sx
+   * @param sy
+   * @param sz
+   * @returns 3x3 scale matrix
+   */
+  static scaling(sx: number, sy: number, sz: number): Mat3 {
+    // prettier-ignore
+    return new Mat3(
+      sx,  0,  0, 
+       0, sy,  0, 
+       0,  0, sz
+    );
+  }
+
+  static rotX(angle: number) {
+    const { sin, cos } = Math;
+    const S = sin(angle);
+    const C = cos(angle);
+    // prettier-ignore
+    return new Mat3(
+      1, 0, 0,
+      0, C, S,
+      0,-S, C
+    );
+  }
+
+  static rotY(angle: number) {
+    const { sin, cos } = Math;
+    const S = sin(angle);
+    const C = cos(angle);
+    // prettier-ignore
+    return new Mat3(
+      C, 0,-S,
+      0, 1, 0,
+      S, 0, C
+    );
+  }
+
+  static rotZ(angle: number) {
+    const { sin, cos } = Math;
+    const S = sin(angle);
+    const C = cos(angle);
+    // prettier-ignore
+    return new Mat4(
+      C, S, 0,
+	   -S, C, 0,
+	    0, 0, 1
+    );
   }
 }
 

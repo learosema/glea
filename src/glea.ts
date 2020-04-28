@@ -3,39 +3,11 @@
  * @module glea
  */
 
-function convertArray(
-  data: number[],
-  type = WebGLRenderingContext.FLOAT
-): ArrayBuffer {
-  if (type === WebGLRenderingContext.FLOAT) {
-    return new Float32Array(data);
-  }
-  if (type === WebGLRenderingContext.BYTE) {
-    return new Uint8Array(data);
-  }
-  throw Error('type not supported');
-}
-
-function shader(code: string, shaderType: 'frag' | 'vert') {
-  return (gl: WebGLRenderingContext | WebGL2RenderingContext) => {
-    const sh = gl.createShader(
-      /frag/.test(shaderType) ? gl.FRAGMENT_SHADER : gl.VERTEX_SHADER
-    );
-    if (!sh) {
-      throw Error('shader type not supported');
-    }
-    gl.shaderSource(sh, code);
-    gl.compileShader(sh);
-    if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) {
-      throw 'Could not compile Shader.\n\n' + gl.getShaderInfoLog(sh);
-    }
-    return sh;
-  };
-}
-
 export type GLeaContext = WebGLRenderingContext | WebGL2RenderingContext;
-export type GLeaShaderFactory = (gl: GLeaContext) => WebGLShader;
 
+/**
+ * store for an attribute and a buffer
+ */
 export type GLeaBuffer = {
   id: WebGLBuffer;
   name: string;
@@ -45,6 +17,14 @@ export type GLeaBuffer = {
   size: number;
 };
 
+/**
+ * function that compiles a shader
+ */
+export type GLeaShaderFactory = (gl: GLeaContext) => WebGLShader;
+
+/**
+ * function that registers an attribute and binds a buffer to it
+ */
 export type GLeaBufferFactory = (
   name: string,
   gl: GLeaContext,
@@ -61,6 +41,36 @@ export type GLeaConstructorParams = {
   glOptions: WebGLContextAttributes;
 };
 
+function convertArray(
+  data: number[],
+  type = WebGLRenderingContext.FLOAT
+): ArrayBuffer {
+  if (type === WebGLRenderingContext.FLOAT) {
+    return new Float32Array(data);
+  }
+  if (type === WebGLRenderingContext.BYTE) {
+    return new Uint8Array(data);
+  }
+  throw Error('type not supported');
+}
+
+function shader(code: string, shaderType: 'frag' | 'vert'): GLeaShaderFactory {
+  return (gl: WebGLRenderingContext | WebGL2RenderingContext) => {
+    const sh = gl.createShader(
+      /frag/.test(shaderType) ? gl.FRAGMENT_SHADER : gl.VERTEX_SHADER
+    );
+    if (!sh) {
+      throw Error('shader type not supported');
+    }
+    gl.shaderSource(sh, code);
+    gl.compileShader(sh);
+    if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) {
+      throw 'Could not compile Shader.\n\n' + gl.getShaderInfoLog(sh);
+    }
+    return sh;
+  };
+}
+
 /** Class GLea */
 class GLea {
   canvas: HTMLCanvasElement = document.createElement('canvas');
@@ -69,7 +79,6 @@ class GLea {
   bufferFactory: Record<string, GLeaBufferFactory>;
 
   program: WebGLProgram;
-  shaders: WebGLShader[];
   buffers: Record<string, GLeaBuffer>;
   textures: WebGLTexture[];
   devicePixelRatio: number;
@@ -108,7 +117,6 @@ class GLea {
       throw Error('gl.createProgram failed');
     }
     this.program = program;
-    this.shaders = [];
     this.buffers = {};
     this.shaderFactory = shaders;
     this.bufferFactory = buffers;
@@ -311,9 +319,15 @@ class GLea {
     return this;
   }
 
-  uniM(name: string, data: Float32Array | number[]) {
+  /**
+   * set uniform matrix (mat2, mat3, mat4)
+   * @param name uniform name
+   * @param data array of numbers (4 for mat2, 9 for mat3, 16 for mat4)
+   * @returns location id of the uniform
+   */
+  uniM(name: string, data: Float32Array | number[]): WebGLUniformLocation {
     const { gl, program } = this;
-    const loc = gl.getUniformLocation(program, name);
+    const loc = gl.getUniformLocation(program, name) as WebGLUniformLocation;
     if (data.length === 4) {
       gl.uniformMatrix2fv(loc, false, data);
       return loc;
@@ -335,9 +349,9 @@ class GLea {
    * @param {string} name uniform variable name
    * @param {number[]} data uniform float vector
    */
-  uniV(name: string, data: Float32Array | number[]) {
+  uniV(name: string, data: Float32Array | number[]): WebGLUniformLocation {
     const { gl, program } = this;
-    const loc = gl.getUniformLocation(program, name);
+    const loc = gl.getUniformLocation(program, name) as WebGLUniformLocation;
     if (data.length === 2) {
       gl.uniform2fv(loc, data);
       return loc;
@@ -362,9 +376,19 @@ class GLea {
   uniIV(name: string, data: Int32Array | number[]) {
     const { gl, program } = this;
     const loc = gl.getUniformLocation(program, name);
-    // @ts-ignore TODO: needs to be cleaned up
-    gl['uniform' + data.length + 'iv'](loc, data);
-    return loc;
+    if (data.length === 2) {
+      gl.uniform2iv(loc, data);
+      return loc;
+    }
+    if (data.length === 3) {
+      gl.uniform3iv(loc, data);
+      return loc;
+    }
+    if (data.length === 4) {
+      gl.uniform4iv(loc, data);
+      return loc;
+    }
+    throw Error('unsupported uniform vector type');
   }
 
   /**
@@ -420,13 +444,14 @@ class GLea {
       Object.values(this.buffers).forEach((buffer) => {
         gl.deleteBuffer(buffer.id);
       });
+      this.buffers = {};
       this.textures.forEach((texture) => {
         gl.deleteTexture(texture);
       });
+      this.textures = [];
       // @ts-ignore TS doesn't know about getExtension
       gl.getExtension('WEBGL_lose_context').loseContext();
       const newCanvas = canvas.cloneNode() as HTMLCanvasElement;
-      canvas.style.display = 'none';
       if (canvas.parentNode) {
         canvas.parentNode.insertBefore(newCanvas, canvas);
         canvas.parentNode.removeChild(canvas);
