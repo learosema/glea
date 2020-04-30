@@ -94,9 +94,9 @@
               <h1>GLea - GL experience artistry</h1>
             </a>
             <p>
-              GLea is a WebGL library with a minimal footprint. It provides
-              helper functions for creating a WebGL program, compiling shaders
-              and passing data from JavaScript to the shader language.
+              GLea is a low-level WebGL library with a minimal footprint. It
+              provides helper functions for creating a WebGL program, compiling
+              shaders and passing data from JavaScript to the shader language.
             </p>
             <p>
               There are some additional helper libraries for matrix and vector
@@ -109,24 +109,46 @@
             >
               <h2>Usage</h2>
             </a>
-            <pre><code><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'glea.esm.js'</span>;
+            <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://terabaud.github.io/glea/dist/glea.js'</span>;
+
+<span class="hljs-keyword">const</span> vert = <span class="hljs-string">`
+precision highp float;
+attribute vec2 position;
+
+void main() {
+  gl_Position = vec4(position, 0, 1.0);
+}
+`</span>;
+
+<span class="hljs-keyword">const</span> frag = <span class="hljs-string">`
+precision highp float;
+uniform float time;
+uniform vec2 resolution;
+
+void main() {
+  float vmin = min(resolution.y, resolution.x);
+  vec2 p = (gl_FragCoord.xy - .5 * resolution) / vmin;
+  float r = .5 + .5 * sin(5. * log(length(p)) - time * 1.2);
+  float g = .5 + .5 * sin(5. * log(length(p)) + sin(time + 2. * p.x));  
+  float b = .5 + .5 * sin(.2 + 5. * log(length(p)) + sin(time * .4 + 4. * p.y));
+  gl_FragColor = vec4(r, g, b, 1.);
+}
+`</span>;
 
 <span class="hljs-keyword">const</span> glea = <span class="hljs-keyword">new</span> GLea({
-  <span class="hljs-attr">shaders</span>: [
-    GLea.fragmentShader(frag),
-    GLea.vertexShader(vert)
-  ],
+  <span class="hljs-attr">shaders</span>: [GLea.fragmentShader(frag), GLea.vertexShader(vert)],
   <span class="hljs-attr">buffers</span>: {
-    <span class="hljs-attr">position</span>: Glea.buffer(<span class="hljs-number">2</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>])
-  }
+    <span class="hljs-comment">// create a position attribute bound</span>
+    <span class="hljs-comment">// to a buffer with 4 2D coordinates</span>
+    <span class="hljs-attr">position</span>: GLea.buffer(<span class="hljs-number">2</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>]),
+  },
 }).create();
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loop</span>(<span class="hljs-params">time</span>) </span>{
-  <span class="hljs-keyword">const</span> { gl } = glea;
+  <span class="hljs-keyword">const</span> { gl, width, height } = glea;
   glea.clear();
-  glea.uni(<span class="hljs-string">'width'</span>, glea.width);
-  glea.uni(<span class="hljs-string">'height'</span>, glea.height);
-  glea.uni(<span class="hljs-string">'time'</span>, time * <span class="hljs-number">0.005</span>);
+  glea.uniV(<span class="hljs-string">'resolution'</span>, [width, height]);
+  glea.uni(<span class="hljs-string">'time'</span>, time * <span class="hljs-number">1e-3</span>);
   gl.drawArrays(gl.TRIANGLE_STRIP, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>);
   requestAnimationFrame(loop);
 }
@@ -140,6 +162,13 @@
 }
 
 <span class="hljs-keyword">set</span><span class="hljs-title">up</span>();</code></pre>
+            <ul>
+              <li>
+                <a href="https://codepen.io/terabaud/pen/PoPJqvM"
+                  >Try this on Codepen</a
+                >
+              </li>
+            </ul>
             <a
               href="#api-documentation"
               id="api-documentation"
