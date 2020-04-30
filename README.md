@@ -1,31 +1,53 @@
 # GLea - GL experience artistry
 
-GLea is a WebGL library with a minimal footprint.
+GLea is a low-level WebGL library with a minimal footprint.
 It provides helper functions for creating a WebGL program, compiling shaders and passing data from JavaScript to the shader language.
 
 There are some additional helper libraries for matrix and vector calculations as well as easing functions.
 
 ## Usage
 
-```
-import GLea from 'glea.esm.js';
+```js
+import GLea from 'https://terabaud.github.io/glea/dist/glea.js';
+
+const vert = `
+precision highp float;
+attribute vec2 position;
+
+void main() {
+  gl_Position = vec4(position, 0, 1.0);
+}
+`;
+
+const frag = `
+precision highp float;
+uniform float time;
+uniform vec2 resolution;
+
+void main() {
+  float vmin = min(resolution.y, resolution.x);
+  vec2 p = (gl_FragCoord.xy - .5 * resolution) / vmin;
+  float r = .5 + .5 * sin(5. * log(length(p)) - time * 1.2);
+  float g = .5 + .5 * sin(5. * log(length(p)) + sin(time + 2. * p.x));  
+  float b = .5 + .5 * sin(.2 + 5. * log(length(p)) + sin(time * .4 + 4. * p.y));
+  gl_FragColor = vec4(r, g, b, 1.);
+}
+`;
 
 const glea = new GLea({
-  shaders: [
-    GLea.fragmentShader(frag),
-    GLea.vertexShader(vert)
-  ],
+  shaders: [GLea.fragmentShader(frag), GLea.vertexShader(vert)],
   buffers: {
-    position: Glea.buffer(2, [1, 1, 1, 0, 0, 0])
-  }
+    // create a position attribute bound
+    // to a buffer with 4 2D coordinates
+    position: GLea.buffer(2, [1, 1, -1, 1, 1, -1, -1, -1]),
+  },
 }).create();
 
 function loop(time) {
-  const { gl } = glea;
+  const { gl, width, height } = glea;
   glea.clear();
-  glea.uni('width', glea.width);
-  glea.uni('height', glea.height);
-  glea.uni('time', time * 0.005);
+  glea.uniV('resolution', [width, height]);
+  glea.uni('time', time * 1e-3);
   gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
   requestAnimationFrame(loop);
 }
@@ -40,6 +62,8 @@ function setup() {
 
 setup();
 ```
+
+- [Try this on Codepen](https://codepen.io/terabaud/pen/PoPJqvM)
 
 ## API Documentation
 
