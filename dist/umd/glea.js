@@ -50,6 +50,18 @@
     }) {
       this.canvas = document.createElement('canvas');
       this.canvas = canvas || document.querySelector('canvas');
+      if (!this.canvas) {
+        this.canvas = document.createElement('canvas');
+        document.body.appendChild(this.canvas);
+      }
+      if (!document.querySelector('link[rel=stylesheet], style')) {
+        // if there's no css, provide some minimal defaults
+        // TODO: test if that conflicts with common fancy popular CSS-in-JS magic
+        const style = document.createElement('style');
+        style.innerHTML =
+          'body{margin:0}canvas{display:block;width:100vw;height:100vh}';
+        document.head.appendChild(style);
+      }
       this.gl = gl;
       if (!this.gl && this.canvas) {
         if (contextType === 'webgl') {
@@ -94,7 +106,7 @@
     /**
      * Create Buffer
      *
-     * @param {number}   size buffer size
+     * @param {number}   size record size (2 for vec2, 3 for vec3, 4 for vec4)
      * @param {number[]} data buffer data
      * @param {number}   usage usage, by default gl.STATIC_DRAW
      * @param {number}   type data type, by default gl.FLOAT
