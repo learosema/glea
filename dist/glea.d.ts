@@ -71,7 +71,7 @@ declare class GLea {
   /**
    * Create Buffer
    *
-   * @param {number}   size buffer size
+   * @param {number}   size record size (2 for vec2, 3 for vec3, 4 for vec4)
    * @param {number[]} data buffer data
    * @param {number}   usage usage, by default gl.STATIC_DRAW
    * @param {number}   type data type, by default gl.FLOAT

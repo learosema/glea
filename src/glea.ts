@@ -93,6 +93,18 @@ class GLea {
     glOptions,
   }: GLeaConstructorParams) {
     this.canvas = canvas || <HTMLCanvasElement>document.querySelector('canvas');
+    if (!this.canvas) {
+      this.canvas = document.createElement('canvas') as HTMLCanvasElement;
+      document.body.appendChild(this.canvas);
+    }
+    if (!document.querySelector('link[rel=stylesheet], style')) {
+      // if there's no css, provide some minimal defaults
+      // TODO: test if that conflicts with common fancy popular CSS-in-JS magic
+      const style = document.createElement('style') as HTMLStyleElement;
+      style.innerHTML =
+        'body{margin:0}canvas{display:block;width:100vw;height:100vh}';
+      document.head.appendChild(style);
+    }
     this.gl = gl;
     if (!this.gl && this.canvas) {
       if (contextType === 'webgl') {
