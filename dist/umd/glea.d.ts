@@ -2,9 +2,12 @@
  * GLea - GL experience audience Library
  * @module glea
  */
+import * as Geometry from './geometry';
+import { ortho, perspective, frustum } from './perspective';
 export declare type GLeaContext =
   | WebGLRenderingContext
   | WebGL2RenderingContext;
+export { Geometry, ortho, perspective, frustum };
 /**
  * store for an attribute and a buffer
  */
