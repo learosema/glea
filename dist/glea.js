@@ -1,10 +1,3 @@
-/**
- * GLea - GL experience audience Library
- * @module glea
- */
-import * as Geometry from './geometry';
-import { ortho, perspective, frustum } from './perspective';
-export { Geometry, ortho, perspective, frustum };
 function convertArray(data, type = WebGLRenderingContext.FLOAT) {
   if (type === WebGLRenderingContext.FLOAT) {
     return new Float32Array(data);

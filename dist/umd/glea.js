@@ -1,34 +1,13 @@
-/**
- * GLea - GL experience audience Library
- * @module glea
- */
-var __importStar =
-  (this && this.__importStar) ||
-  function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null)
-      for (var k in mod)
-        if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result['default'] = mod;
-    return result;
-  };
 (function (factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
     var v = factory(require, exports);
     if (v !== undefined) module.exports = v;
   } else if (typeof define === 'function' && define.amd) {
-    define(['require', 'exports', './geometry', './perspective'], factory);
+    define(['require', 'exports'], factory);
   }
 })(function (require, exports) {
   'use strict';
   Object.defineProperty(exports, '__esModule', { value: true });
-  const Geometry = __importStar(require('./geometry'));
-  exports.Geometry = Geometry;
-  const perspective_1 = require('./perspective');
-  exports.ortho = perspective_1.ortho;
-  exports.perspective = perspective_1.perspective;
-  exports.frustum = perspective_1.frustum;
   function convertArray(data, type = WebGLRenderingContext.FLOAT) {
     if (type === WebGLRenderingContext.FLOAT) {
       return new Float32Array(data);

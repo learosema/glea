@@ -15,90 +15,12 @@
     {
       "id": 0,
       "kind": 1,
-      "name": "\"geometry\"",
-      "url": "modules/_geometry_.html",
-      "classes": "tsd-kind-module"
-    },
-    {
-      "id": 1,
-      "kind": 64,
-      "name": "rect",
-      "url": "modules/_geometry_.html#rect",
-      "classes": "tsd-kind-function tsd-parent-kind-module",
-      "parent": "\"geometry\""
-    },
-    {
-      "id": 2,
-      "kind": 64,
-      "name": "square",
-      "url": "modules/_geometry_.html#square",
-      "classes": "tsd-kind-function tsd-parent-kind-module",
-      "parent": "\"geometry\""
-    },
-    {
-      "id": 3,
-      "kind": 64,
-      "name": "box",
-      "url": "modules/_geometry_.html#box",
-      "classes": "tsd-kind-function tsd-parent-kind-module",
-      "parent": "\"geometry\""
-    },
-    {
-      "id": 4,
-      "kind": 64,
-      "name": "cube",
-      "url": "modules/_geometry_.html#cube",
-      "classes": "tsd-kind-function tsd-parent-kind-module",
-      "parent": "\"geometry\""
-    },
-    {
-      "id": 5,
-      "kind": 64,
-      "name": "grid",
-      "url": "modules/_geometry_.html#grid",
-      "classes": "tsd-kind-function tsd-parent-kind-module",
-      "parent": "\"geometry\""
-    },
-    {
-      "id": 6,
-      "kind": 1,
-      "name": "\"perspective\"",
-      "url": "modules/_perspective_.html",
-      "classes": "tsd-kind-module"
-    },
-    {
-      "id": 7,
-      "kind": 64,
-      "name": "ortho",
-      "url": "modules/_perspective_.html#ortho",
-      "classes": "tsd-kind-function tsd-parent-kind-module",
-      "parent": "\"perspective\""
-    },
-    {
-      "id": 8,
-      "kind": 64,
-      "name": "frustum",
-      "url": "modules/_perspective_.html#frustum",
-      "classes": "tsd-kind-function tsd-parent-kind-module",
-      "parent": "\"perspective\""
-    },
-    {
-      "id": 9,
-      "kind": 64,
-      "name": "perspective",
-      "url": "modules/_perspective_.html#perspective",
-      "classes": "tsd-kind-function tsd-parent-kind-module",
-      "parent": "\"perspective\""
-    },
-    {
-      "id": 10,
-      "kind": 1,
       "name": "\"glea\"",
       "url": "modules/_glea_.html",
       "classes": "tsd-kind-module"
     },
     {
-      "id": 11,
+      "id": 1,
       "kind": 128,
       "name": "GLea",
       "url": "classes/_glea_.glea.html",
@@ -106,7 +28,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 12,
+      "id": 2,
       "kind": 1024,
       "name": "canvas",
       "url": "classes/_glea_.glea.html#canvas",
@@ -114,7 +36,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 13,
+      "id": 3,
       "kind": 1024,
       "name": "gl",
       "url": "classes/_glea_.glea.html#gl",
@@ -122,7 +44,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 14,
+      "id": 4,
       "kind": 1024,
       "name": "shaderFactory",
       "url": "classes/_glea_.glea.html#shaderfactory",
@@ -130,7 +52,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 15,
+      "id": 5,
       "kind": 1024,
       "name": "bufferFactory",
       "url": "classes/_glea_.glea.html#bufferfactory",
@@ -138,7 +60,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 16,
+      "id": 6,
       "kind": 1024,
       "name": "program",
       "url": "classes/_glea_.glea.html#program",
@@ -146,7 +68,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 17,
+      "id": 7,
       "kind": 1024,
       "name": "buffers",
       "url": "classes/_glea_.glea.html#buffers",
@@ -154,7 +76,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 18,
+      "id": 8,
       "kind": 1024,
       "name": "textures",
       "url": "classes/_glea_.glea.html#textures",
@@ -162,7 +84,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 19,
+      "id": 9,
       "kind": 1024,
       "name": "devicePixelRatio",
       "url": "classes/_glea_.glea.html#devicepixelratio",
@@ -170,7 +92,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 20,
+      "id": 10,
       "kind": 512,
       "name": "constructor",
       "url": "classes/_glea_.glea.html#constructor",
@@ -178,7 +100,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 21,
+      "id": 11,
       "kind": 2048,
       "name": "vertexShader",
       "url": "classes/_glea_.glea.html#vertexshader",
@@ -186,7 +108,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 22,
+      "id": 12,
       "kind": 2048,
       "name": "fragmentShader",
       "url": "classes/_glea_.glea.html#fragmentshader",
@@ -194,7 +116,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 23,
+      "id": 13,
       "kind": 2048,
       "name": "buffer",
       "url": "classes/_glea_.glea.html#buffer",
@@ -202,7 +124,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 24,
+      "id": 14,
       "kind": 2048,
       "name": "create",
       "url": "classes/_glea_.glea.html#create",
@@ -210,7 +132,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 25,
+      "id": 15,
       "kind": 2048,
       "name": "setActiveTexture",
       "url": "classes/_glea_.glea.html#setactivetexture",
@@ -218,7 +140,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 26,
+      "id": 16,
       "kind": 2048,
       "name": "createTexture",
       "url": "classes/_glea_.glea.html#createtexture",
@@ -226,7 +148,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 27,
+      "id": 17,
       "kind": 2048,
       "name": "updateBuffer",
       "url": "classes/_glea_.glea.html#updatebuffer",
@@ -234,7 +156,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 28,
+      "id": 18,
       "kind": 2048,
       "name": "resize",
       "url": "classes/_glea_.glea.html#resize",
@@ -242,7 +164,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 29,
+      "id": 19,
       "kind": 262144,
       "name": "width",
       "url": "classes/_glea_.glea.html#width",
@@ -250,7 +172,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 30,
+      "id": 20,
       "kind": 262144,
       "name": "height",
       "url": "classes/_glea_.glea.html#height",
@@ -258,7 +180,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 31,
+      "id": 21,
       "kind": 2048,
       "name": "use",
       "url": "classes/_glea_.glea.html#use",
@@ -266,7 +188,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 32,
+      "id": 22,
       "kind": 2048,
       "name": "uniM",
       "url": "classes/_glea_.glea.html#unim",
@@ -274,7 +196,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 33,
+      "id": 23,
       "kind": 2048,
       "name": "uniV",
       "url": "classes/_glea_.glea.html#univ",
@@ -282,7 +204,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 34,
+      "id": 24,
       "kind": 2048,
       "name": "uniIV",
       "url": "classes/_glea_.glea.html#uniiv",
@@ -290,7 +212,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 35,
+      "id": 25,
       "kind": 2048,
       "name": "uni",
       "url": "classes/_glea_.glea.html#uni",
@@ -298,7 +220,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 36,
+      "id": 26,
       "kind": 2048,
       "name": "uniI",
       "url": "classes/_glea_.glea.html#unii",
@@ -306,7 +228,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 37,
+      "id": 27,
       "kind": 2048,
       "name": "clear",
       "url": "classes/_glea_.glea.html#clear",
@@ -314,7 +236,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 38,
+      "id": 28,
       "kind": 2048,
       "name": "destroy",
       "url": "classes/_glea_.glea.html#destroy",
@@ -322,7 +244,7 @@
       "parent": "\"glea\".GLea"
     },
     {
-      "id": 39,
+      "id": 29,
       "kind": 4194304,
       "name": "GLeaContext",
       "url": "modules/_glea_.html#gleacontext",
@@ -330,7 +252,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 40,
+      "id": 30,
       "kind": 4194304,
       "name": "GLeaBuffer",
       "url": "modules/_glea_.html#gleabuffer",
@@ -338,7 +260,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 41,
+      "id": 31,
       "kind": 65536,
       "name": "__type",
       "url": "modules/_glea_.html#gleabuffer.__type",
@@ -346,7 +268,7 @@
       "parent": "\"glea\".GLeaBuffer"
     },
     {
-      "id": 42,
+      "id": 32,
       "kind": 32,
       "name": "id",
       "url": "modules/_glea_.html#gleabuffer.__type.id",
@@ -354,7 +276,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 43,
+      "id": 33,
       "kind": 32,
       "name": "name",
       "url": "modules/_glea_.html#gleabuffer.__type.name",
@@ -362,7 +284,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 44,
+      "id": 34,
       "kind": 32,
       "name": "data",
       "url": "modules/_glea_.html#gleabuffer.__type.data",
@@ -370,7 +292,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 45,
+      "id": 35,
       "kind": 32,
       "name": "loc",
       "url": "modules/_glea_.html#gleabuffer.__type.loc",
@@ -378,7 +300,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 46,
+      "id": 36,
       "kind": 32,
       "name": "type",
       "url": "modules/_glea_.html#gleabuffer.__type.type",
@@ -386,7 +308,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 47,
+      "id": 37,
       "kind": 32,
       "name": "size",
       "url": "modules/_glea_.html#gleabuffer.__type.size",
@@ -394,7 +316,7 @@
       "parent": "\"glea\".GLeaBuffer.__type"
     },
     {
-      "id": 48,
+      "id": 38,
       "kind": 4194304,
       "name": "GLeaShaderFactory",
       "url": "modules/_glea_.html#gleashaderfactory",
@@ -402,7 +324,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 49,
+      "id": 39,
       "kind": 65536,
       "name": "__type",
       "url": "modules/_glea_.html#gleashaderfactory.__type-3",
@@ -410,7 +332,7 @@
       "parent": "\"glea\".GLeaShaderFactory"
     },
     {
-      "id": 50,
+      "id": 40,
       "kind": 4194304,
       "name": "GLeaBufferFactory",
       "url": "modules/_glea_.html#gleabufferfactory",
@@ -418,7 +340,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 51,
+      "id": 41,
       "kind": 65536,
       "name": "__type",
       "url": "modules/_glea_.html#gleabufferfactory.__type-1",
@@ -426,7 +348,7 @@
       "parent": "\"glea\".GLeaBufferFactory"
     },
     {
-      "id": 52,
+      "id": 42,
       "kind": 4194304,
       "name": "GLeaConstructorParams",
       "url": "modules/_glea_.html#gleaconstructorparams",
@@ -434,7 +356,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 53,
+      "id": 43,
       "kind": 65536,
       "name": "__type",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2",
@@ -442,7 +364,7 @@
       "parent": "\"glea\".GLeaConstructorParams"
     },
     {
-      "id": 54,
+      "id": 44,
       "kind": 32,
       "name": "canvas",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.canvas",
@@ -450,7 +372,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 55,
+      "id": 45,
       "kind": 32,
       "name": "gl",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.gl",
@@ -458,7 +380,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 56,
+      "id": 46,
       "kind": 32,
       "name": "contextType",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.contexttype",
@@ -466,7 +388,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 57,
+      "id": 47,
       "kind": 32,
       "name": "shaders",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.shaders",
@@ -474,7 +396,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 58,
+      "id": 48,
       "kind": 32,
       "name": "buffers",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.buffers",
@@ -482,7 +404,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 59,
+      "id": 49,
       "kind": 32,
       "name": "devicePixelRatio",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.devicepixelratio",
@@ -490,7 +412,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 60,
+      "id": 50,
       "kind": 32,
       "name": "glOptions",
       "url": "modules/_glea_.html#gleaconstructorparams.__type-2.gloptions",
@@ -498,7 +420,7 @@
       "parent": "\"glea\".GLeaConstructorParams.__type"
     },
     {
-      "id": 61,
+      "id": 51,
       "kind": 64,
       "name": "convertArray",
       "url": "modules/_glea_.html#convertarray",
@@ -506,7 +428,7 @@
       "parent": "\"glea\""
     },
     {
-      "id": 62,
+      "id": 52,
       "kind": 64,
       "name": "shader",
       "url": "modules/_glea_.html#shader",
@@ -518,200 +440,173 @@
     "version": "2.3.8",
     "fields": ["name", "parent"],
     "fieldVectors": [
-      ["name/0", [0, 22.871]],
+      ["name/0", [0, 16.376]],
       ["parent/0", []],
-      ["name/1", [1, 37.534]],
-      ["parent/1", [0, 2.241]],
-      ["name/2", [2, 37.534]],
-      ["parent/2", [0, 2.241]],
-      ["name/3", [3, 37.534]],
-      ["parent/3", [0, 2.241]],
-      ["name/4", [4, 37.534]],
-      ["parent/4", [0, 2.241]],
-      ["name/5", [5, 37.534]],
-      ["parent/5", [0, 2.241]],
-      ["name/6", [6, 24.541]],
-      ["parent/6", []],
-      ["name/7", [7, 37.534]],
-      ["parent/7", [6, 2.405]],
-      ["name/8", [8, 37.534]],
-      ["parent/8", [6, 2.405]],
-      ["name/9", [6, 24.541]],
-      ["parent/9", [6, 2.405]],
-      ["name/10", [9, 18.075]],
-      ["parent/10", []],
-      ["name/11", [9, 18.075]],
-      ["parent/11", [9, 1.771]],
-      ["name/12", [10, 32.426]],
-      ["parent/12", [11, 0.828]],
-      ["name/13", [12, 32.426]],
-      ["parent/13", [11, 0.828]],
-      ["name/14", [13, 37.534]],
-      ["parent/14", [11, 0.828]],
-      ["name/15", [14, 37.534]],
-      ["parent/15", [11, 0.828]],
-      ["name/16", [15, 37.534]],
-      ["parent/16", [11, 0.828]],
-      ["name/17", [16, 32.426]],
-      ["parent/17", [11, 0.828]],
-      ["name/18", [17, 37.534]],
-      ["parent/18", [11, 0.828]],
-      ["name/19", [18, 32.426]],
-      ["parent/19", [11, 0.828]],
-      ["name/20", [19, 37.534]],
-      ["parent/20", [11, 0.828]],
-      ["name/21", [20, 37.534]],
-      ["parent/21", [11, 0.828]],
-      ["name/22", [21, 37.534]],
-      ["parent/22", [11, 0.828]],
-      ["name/23", [22, 37.534]],
-      ["parent/23", [11, 0.828]],
-      ["name/24", [23, 37.534]],
-      ["parent/24", [11, 0.828]],
-      ["name/25", [24, 37.534]],
-      ["parent/25", [11, 0.828]],
-      ["name/26", [25, 37.534]],
-      ["parent/26", [11, 0.828]],
-      ["name/27", [26, 37.534]],
-      ["parent/27", [11, 0.828]],
-      ["name/28", [27, 37.534]],
-      ["parent/28", [11, 0.828]],
-      ["name/29", [28, 37.534]],
-      ["parent/29", [11, 0.828]],
-      ["name/30", [29, 37.534]],
-      ["parent/30", [11, 0.828]],
-      ["name/31", [30, 37.534]],
-      ["parent/31", [11, 0.828]],
-      ["name/32", [31, 37.534]],
-      ["parent/32", [11, 0.828]],
-      ["name/33", [32, 37.534]],
-      ["parent/33", [11, 0.828]],
-      ["name/34", [33, 37.534]],
-      ["parent/34", [11, 0.828]],
-      ["name/35", [34, 37.534]],
-      ["parent/35", [11, 0.828]],
-      ["name/36", [35, 37.534]],
-      ["parent/36", [11, 0.828]],
-      ["name/37", [36, 37.534]],
-      ["parent/37", [11, 0.828]],
-      ["name/38", [37, 37.534]],
-      ["parent/38", [11, 0.828]],
-      ["name/39", [38, 37.534]],
-      ["parent/39", [9, 1.771]],
-      ["name/40", [39, 37.534]],
-      ["parent/40", [9, 1.771]],
-      ["name/41", [40, 26.548]],
-      ["parent/41", [41, 3.678]],
-      ["name/42", [42, 37.534]],
-      ["parent/42", [43, 2.241]],
-      ["name/43", [44, 37.534]],
-      ["parent/43", [43, 2.241]],
-      ["name/44", [45, 37.534]],
-      ["parent/44", [43, 2.241]],
-      ["name/45", [46, 37.534]],
-      ["parent/45", [43, 2.241]],
-      ["name/46", [47, 37.534]],
-      ["parent/46", [43, 2.241]],
-      ["name/47", [48, 37.534]],
-      ["parent/47", [43, 2.241]],
-      ["name/48", [49, 37.534]],
-      ["parent/48", [9, 1.771]],
-      ["name/49", [40, 26.548]],
-      ["parent/49", [50, 3.678]],
-      ["name/50", [51, 37.534]],
-      ["parent/50", [9, 1.771]],
-      ["name/51", [40, 26.548]],
-      ["parent/51", [52, 3.678]],
-      ["name/52", [53, 37.534]],
-      ["parent/52", [9, 1.771]],
-      ["name/53", [40, 26.548]],
-      ["parent/53", [54, 3.678]],
-      ["name/54", [10, 32.426]],
-      ["parent/54", [55, 2.101]],
-      ["name/55", [12, 32.426]],
-      ["parent/55", [55, 2.101]],
-      ["name/56", [56, 37.534]],
-      ["parent/56", [55, 2.101]],
-      ["name/57", [57, 37.534]],
-      ["parent/57", [55, 2.101]],
-      ["name/58", [16, 32.426]],
-      ["parent/58", [55, 2.101]],
-      ["name/59", [18, 32.426]],
-      ["parent/59", [55, 2.101]],
-      ["name/60", [58, 37.534]],
-      ["parent/60", [55, 2.101]],
-      ["name/61", [59, 37.534]],
-      ["parent/61", [9, 1.771]],
-      ["name/62", [60, 37.534]],
-      ["parent/62", [9, 1.771]]
+      ["name/1", [0, 16.376]],
+      ["parent/1", [0, 1.625]],
+      ["name/2", [1, 30.727]],
+      ["parent/2", [2, 0.67]],
+      ["name/3", [3, 30.727]],
+      ["parent/3", [2, 0.67]],
+      ["name/4", [4, 35.835]],
+      ["parent/4", [2, 0.67]],
+      ["name/5", [5, 35.835]],
+      ["parent/5", [2, 0.67]],
+      ["name/6", [6, 35.835]],
+      ["parent/6", [2, 0.67]],
+      ["name/7", [7, 30.727]],
+      ["parent/7", [2, 0.67]],
+      ["name/8", [8, 35.835]],
+      ["parent/8", [2, 0.67]],
+      ["name/9", [9, 30.727]],
+      ["parent/9", [2, 0.67]],
+      ["name/10", [10, 35.835]],
+      ["parent/10", [2, 0.67]],
+      ["name/11", [11, 35.835]],
+      ["parent/11", [2, 0.67]],
+      ["name/12", [12, 35.835]],
+      ["parent/12", [2, 0.67]],
+      ["name/13", [13, 35.835]],
+      ["parent/13", [2, 0.67]],
+      ["name/14", [14, 35.835]],
+      ["parent/14", [2, 0.67]],
+      ["name/15", [15, 35.835]],
+      ["parent/15", [2, 0.67]],
+      ["name/16", [16, 35.835]],
+      ["parent/16", [2, 0.67]],
+      ["name/17", [17, 35.835]],
+      ["parent/17", [2, 0.67]],
+      ["name/18", [18, 35.835]],
+      ["parent/18", [2, 0.67]],
+      ["name/19", [19, 35.835]],
+      ["parent/19", [2, 0.67]],
+      ["name/20", [20, 35.835]],
+      ["parent/20", [2, 0.67]],
+      ["name/21", [21, 35.835]],
+      ["parent/21", [2, 0.67]],
+      ["name/22", [22, 35.835]],
+      ["parent/22", [2, 0.67]],
+      ["name/23", [23, 35.835]],
+      ["parent/23", [2, 0.67]],
+      ["name/24", [24, 35.835]],
+      ["parent/24", [2, 0.67]],
+      ["name/25", [25, 35.835]],
+      ["parent/25", [2, 0.67]],
+      ["name/26", [26, 35.835]],
+      ["parent/26", [2, 0.67]],
+      ["name/27", [27, 35.835]],
+      ["parent/27", [2, 0.67]],
+      ["name/28", [28, 35.835]],
+      ["parent/28", [2, 0.67]],
+      ["name/29", [29, 35.835]],
+      ["parent/29", [0, 1.625]],
+      ["name/30", [30, 35.835]],
+      ["parent/30", [0, 1.625]],
+      ["name/31", [31, 24.849]],
+      ["parent/31", [32, 3.556]],
+      ["name/32", [33, 35.835]],
+      ["parent/32", [34, 2.101]],
+      ["name/33", [35, 35.835]],
+      ["parent/33", [34, 2.101]],
+      ["name/34", [36, 35.835]],
+      ["parent/34", [34, 2.101]],
+      ["name/35", [37, 35.835]],
+      ["parent/35", [34, 2.101]],
+      ["name/36", [38, 35.835]],
+      ["parent/36", [34, 2.101]],
+      ["name/37", [39, 35.835]],
+      ["parent/37", [34, 2.101]],
+      ["name/38", [40, 35.835]],
+      ["parent/38", [0, 1.625]],
+      ["name/39", [31, 24.849]],
+      ["parent/39", [41, 3.556]],
+      ["name/40", [42, 35.835]],
+      ["parent/40", [0, 1.625]],
+      ["name/41", [31, 24.849]],
+      ["parent/41", [43, 3.556]],
+      ["name/42", [44, 35.835]],
+      ["parent/42", [0, 1.625]],
+      ["name/43", [31, 24.849]],
+      ["parent/43", [45, 3.556]],
+      ["name/44", [1, 30.727]],
+      ["parent/44", [46, 1.959]],
+      ["name/45", [3, 30.727]],
+      ["parent/45", [46, 1.959]],
+      ["name/46", [47, 35.835]],
+      ["parent/46", [46, 1.959]],
+      ["name/47", [48, 35.835]],
+      ["parent/47", [46, 1.959]],
+      ["name/48", [7, 30.727]],
+      ["parent/48", [46, 1.959]],
+      ["name/49", [9, 30.727]],
+      ["parent/49", [46, 1.959]],
+      ["name/50", [49, 35.835]],
+      ["parent/50", [46, 1.959]],
+      ["name/51", [50, 35.835]],
+      ["parent/51", [0, 1.625]],
+      ["name/52", [51, 35.835]],
+      ["parent/52", [0, 1.625]]
     ],
     "invertedIndex": [
       [
         "__type",
         {
-          "_index": 40,
-          "name": { "41": {}, "49": {}, "51": {}, "53": {} },
+          "_index": 31,
+          "name": { "31": {}, "39": {}, "41": {}, "43": {} },
           "parent": {}
         }
       ],
-      ["box", { "_index": 3, "name": { "3": {} }, "parent": {} }],
-      ["buffer", { "_index": 22, "name": { "23": {} }, "parent": {} }],
-      ["bufferfactory", { "_index": 14, "name": { "15": {} }, "parent": {} }],
-      [
-        "buffers",
-        { "_index": 16, "name": { "17": {}, "58": {} }, "parent": {} }
-      ],
-      [
-        "canvas",
-        { "_index": 10, "name": { "12": {}, "54": {} }, "parent": {} }
-      ],
-      ["clear", { "_index": 36, "name": { "37": {} }, "parent": {} }],
-      ["constructor", { "_index": 19, "name": { "20": {} }, "parent": {} }],
-      ["contexttype", { "_index": 56, "name": { "56": {} }, "parent": {} }],
-      ["convertarray", { "_index": 59, "name": { "61": {} }, "parent": {} }],
-      ["create", { "_index": 23, "name": { "24": {} }, "parent": {} }],
-      ["createtexture", { "_index": 25, "name": { "26": {} }, "parent": {} }],
-      ["cube", { "_index": 4, "name": { "4": {} }, "parent": {} }],
-      ["data", { "_index": 45, "name": { "44": {} }, "parent": {} }],
-      ["destroy", { "_index": 37, "name": { "38": {} }, "parent": {} }],
+      ["buffer", { "_index": 13, "name": { "13": {} }, "parent": {} }],
+      ["bufferfactory", { "_index": 5, "name": { "5": {} }, "parent": {} }],
+      ["buffers", { "_index": 7, "name": { "7": {}, "48": {} }, "parent": {} }],
+      ["canvas", { "_index": 1, "name": { "2": {}, "44": {} }, "parent": {} }],
+      ["clear", { "_index": 27, "name": { "27": {} }, "parent": {} }],
+      ["constructor", { "_index": 10, "name": { "10": {} }, "parent": {} }],
+      ["contexttype", { "_index": 47, "name": { "46": {} }, "parent": {} }],
+      ["convertarray", { "_index": 50, "name": { "51": {} }, "parent": {} }],
+      ["create", { "_index": 14, "name": { "14": {} }, "parent": {} }],
+      ["createtexture", { "_index": 16, "name": { "16": {} }, "parent": {} }],
+      ["data", { "_index": 36, "name": { "34": {} }, "parent": {} }],
+      ["destroy", { "_index": 28, "name": { "28": {} }, "parent": {} }],
       [
         "devicepixelratio",
-        { "_index": 18, "name": { "19": {}, "59": {} }, "parent": {} }
+        { "_index": 9, "name": { "9": {}, "49": {} }, "parent": {} }
       ],
-      ["fragmentshader", { "_index": 21, "name": { "22": {} }, "parent": {} }],
-      ["frustum", { "_index": 8, "name": { "8": {} }, "parent": {} }],
-      [
-        "geometry",
-        {
-          "_index": 0,
-          "name": { "0": {} },
-          "parent": { "1": {}, "2": {}, "3": {}, "4": {}, "5": {} }
-        }
-      ],
-      ["gl", { "_index": 12, "name": { "13": {}, "55": {} }, "parent": {} }],
+      ["fragmentshader", { "_index": 12, "name": { "12": {} }, "parent": {} }],
+      ["gl", { "_index": 3, "name": { "3": {}, "45": {} }, "parent": {} }],
       [
         "glea",
         {
-          "_index": 9,
-          "name": { "10": {}, "11": {} },
+          "_index": 0,
+          "name": { "0": {}, "1": {} },
           "parent": {
-            "11": {},
-            "39": {},
+            "1": {},
+            "29": {},
+            "30": {},
+            "38": {},
             "40": {},
-            "48": {},
-            "50": {},
-            "52": {},
-            "61": {},
-            "62": {}
+            "42": {},
+            "51": {},
+            "52": {}
           }
         }
       ],
       [
         "glea\".glea",
         {
-          "_index": 11,
+          "_index": 2,
           "name": {},
           "parent": {
+            "2": {},
+            "3": {},
+            "4": {},
+            "5": {},
+            "6": {},
+            "7": {},
+            "8": {},
+            "9": {},
+            "10": {},
+            "11": {},
             "12": {},
             "13": {},
             "14": {},
@@ -728,119 +623,97 @@
             "25": {},
             "26": {},
             "27": {},
-            "28": {},
-            "29": {},
-            "30": {},
-            "31": {},
-            "32": {},
-            "33": {},
-            "34": {},
-            "35": {},
-            "36": {},
-            "37": {},
-            "38": {}
+            "28": {}
           }
         }
       ],
       [
         "glea\".gleabuffer",
-        { "_index": 41, "name": {}, "parent": { "41": {} } }
+        { "_index": 32, "name": {}, "parent": { "31": {} } }
       ],
       [
         "glea\".gleabuffer.__type",
         {
-          "_index": 43,
+          "_index": 34,
           "name": {},
           "parent": {
-            "42": {},
-            "43": {},
-            "44": {},
-            "45": {},
-            "46": {},
-            "47": {}
+            "32": {},
+            "33": {},
+            "34": {},
+            "35": {},
+            "36": {},
+            "37": {}
           }
         }
       ],
       [
         "glea\".gleabufferfactory",
-        { "_index": 52, "name": {}, "parent": { "51": {} } }
+        { "_index": 43, "name": {}, "parent": { "41": {} } }
       ],
       [
         "glea\".gleaconstructorparams",
-        { "_index": 54, "name": {}, "parent": { "53": {} } }
+        { "_index": 45, "name": {}, "parent": { "43": {} } }
       ],
       [
         "glea\".gleaconstructorparams.__type",
         {
-          "_index": 55,
+          "_index": 46,
           "name": {},
           "parent": {
-            "54": {},
-            "55": {},
-            "56": {},
-            "57": {},
-            "58": {},
-            "59": {},
-            "60": {}
+            "44": {},
+            "45": {},
+            "46": {},
+            "47": {},
+            "48": {},
+            "49": {},
+            "50": {}
           }
         }
       ],
       [
         "glea\".gleashaderfactory",
-        { "_index": 50, "name": {}, "parent": { "49": {} } }
+        { "_index": 41, "name": {}, "parent": { "39": {} } }
       ],
-      ["gleabuffer", { "_index": 39, "name": { "40": {} }, "parent": {} }],
+      ["gleabuffer", { "_index": 30, "name": { "30": {} }, "parent": {} }],
       [
         "gleabufferfactory",
-        { "_index": 51, "name": { "50": {} }, "parent": {} }
+        { "_index": 42, "name": { "40": {} }, "parent": {} }
       ],
       [
         "gleaconstructorparams",
-        { "_index": 53, "name": { "52": {} }, "parent": {} }
+        { "_index": 44, "name": { "42": {} }, "parent": {} }
       ],
-      ["gleacontext", { "_index": 38, "name": { "39": {} }, "parent": {} }],
+      ["gleacontext", { "_index": 29, "name": { "29": {} }, "parent": {} }],
       [
         "gleashaderfactory",
-        { "_index": 49, "name": { "48": {} }, "parent": {} }
+        { "_index": 40, "name": { "38": {} }, "parent": {} }
       ],
-      ["gloptions", { "_index": 58, "name": { "60": {} }, "parent": {} }],
-      ["grid", { "_index": 5, "name": { "5": {} }, "parent": {} }],
-      ["height", { "_index": 29, "name": { "30": {} }, "parent": {} }],
-      ["id", { "_index": 42, "name": { "42": {} }, "parent": {} }],
-      ["loc", { "_index": 46, "name": { "45": {} }, "parent": {} }],
-      ["name", { "_index": 44, "name": { "43": {} }, "parent": {} }],
-      ["ortho", { "_index": 7, "name": { "7": {} }, "parent": {} }],
-      [
-        "perspective",
-        {
-          "_index": 6,
-          "name": { "6": {}, "9": {} },
-          "parent": { "7": {}, "8": {}, "9": {} }
-        }
-      ],
-      ["program", { "_index": 15, "name": { "16": {} }, "parent": {} }],
-      ["rect", { "_index": 1, "name": { "1": {} }, "parent": {} }],
-      ["resize", { "_index": 27, "name": { "28": {} }, "parent": {} }],
+      ["gloptions", { "_index": 49, "name": { "50": {} }, "parent": {} }],
+      ["height", { "_index": 20, "name": { "20": {} }, "parent": {} }],
+      ["id", { "_index": 33, "name": { "32": {} }, "parent": {} }],
+      ["loc", { "_index": 37, "name": { "35": {} }, "parent": {} }],
+      ["name", { "_index": 35, "name": { "33": {} }, "parent": {} }],
+      ["program", { "_index": 6, "name": { "6": {} }, "parent": {} }],
+      ["resize", { "_index": 18, "name": { "18": {} }, "parent": {} }],
       [
         "setactivetexture",
-        { "_index": 24, "name": { "25": {} }, "parent": {} }
+        { "_index": 15, "name": { "15": {} }, "parent": {} }
       ],
-      ["shader", { "_index": 60, "name": { "62": {} }, "parent": {} }],
-      ["shaderfactory", { "_index": 13, "name": { "14": {} }, "parent": {} }],
-      ["shaders", { "_index": 57, "name": { "57": {} }, "parent": {} }],
-      ["size", { "_index": 48, "name": { "47": {} }, "parent": {} }],
-      ["square", { "_index": 2, "name": { "2": {} }, "parent": {} }],
-      ["textures", { "_index": 17, "name": { "18": {} }, "parent": {} }],
-      ["type", { "_index": 47, "name": { "46": {} }, "parent": {} }],
-      ["uni", { "_index": 34, "name": { "35": {} }, "parent": {} }],
-      ["unii", { "_index": 35, "name": { "36": {} }, "parent": {} }],
-      ["uniiv", { "_index": 33, "name": { "34": {} }, "parent": {} }],
-      ["unim", { "_index": 31, "name": { "32": {} }, "parent": {} }],
-      ["univ", { "_index": 32, "name": { "33": {} }, "parent": {} }],
-      ["updatebuffer", { "_index": 26, "name": { "27": {} }, "parent": {} }],
-      ["use", { "_index": 30, "name": { "31": {} }, "parent": {} }],
-      ["vertexshader", { "_index": 20, "name": { "21": {} }, "parent": {} }],
-      ["width", { "_index": 28, "name": { "29": {} }, "parent": {} }]
+      ["shader", { "_index": 51, "name": { "52": {} }, "parent": {} }],
+      ["shaderfactory", { "_index": 4, "name": { "4": {} }, "parent": {} }],
+      ["shaders", { "_index": 48, "name": { "47": {} }, "parent": {} }],
+      ["size", { "_index": 39, "name": { "37": {} }, "parent": {} }],
+      ["textures", { "_index": 8, "name": { "8": {} }, "parent": {} }],
+      ["type", { "_index": 38, "name": { "36": {} }, "parent": {} }],
+      ["uni", { "_index": 25, "name": { "25": {} }, "parent": {} }],
+      ["unii", { "_index": 26, "name": { "26": {} }, "parent": {} }],
+      ["uniiv", { "_index": 24, "name": { "24": {} }, "parent": {} }],
+      ["unim", { "_index": 22, "name": { "22": {} }, "parent": {} }],
+      ["univ", { "_index": 23, "name": { "23": {} }, "parent": {} }],
+      ["updatebuffer", { "_index": 17, "name": { "17": {} }, "parent": {} }],
+      ["use", { "_index": 21, "name": { "21": {} }, "parent": {} }],
+      ["vertexshader", { "_index": 11, "name": { "11": {} }, "parent": {} }],
+      ["width", { "_index": 19, "name": { "19": {} }, "parent": {} }]
     ],
     "pipeline": []
   }
