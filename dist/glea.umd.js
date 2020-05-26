@@ -1,13 +1,12 @@
-(function (factory) {
-  if (typeof module === 'object' && typeof module.exports === 'object') {
-    var v = factory(require, exports);
-    if (v !== undefined) module.exports = v;
-  } else if (typeof define === 'function' && define.amd) {
-    define(['require', 'exports'], factory);
-  }
-})(function (require, exports) {
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined'
+    ? (module.exports = factory())
+    : typeof define === 'function' && define.amd
+    ? define(factory)
+    : ((global = global || self), (global.GLea = factory()));
+})(this, function () {
   'use strict';
-  Object.defineProperty(exports, '__esModule', { value: true });
+
   function convertArray(data, type = WebGLRenderingContext.FLOAT) {
     if (type === WebGLRenderingContext.FLOAT) {
       return new Float32Array(data);
@@ -399,6 +398,6 @@
       }
     }
   }
-  exports.default = GLea;
+
+  return GLea;
 });
-//# sourceMappingURL=glea.js.map

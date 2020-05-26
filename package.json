@@ -1,12 +1,18 @@
 {
   "name": "glea",
   "version": "1.0.0",
-  "description": "GL experience admirers",
+  "description": "GL experience artistry",
+  "repository": "github:terabaud/glea/",
+  "homepage": "https://terabaud.github.io/glea/docs/",
+  "main": "dist/glea.umd.min.js",
+  "types": "dist/glea.d.ts",
   "scripts": {
-    "build:esm": "tsc -d",
-    "build:umd": "tsc -d --outDir dist/umd -m umd",
-    "build:docs": "typedoc --out docs src",
-    "build": "npm run build:docs -s && npm run build:esm -s && npm run build:umd -s",
+    "docs": "typedoc && touch docs/.nojekyll",
+    "build:types": "tsc -t esnext --moduleResolution node -d --emitDeclarationOnly --outFile dist/glea.d.ts src/glea.ts",
+    "build:js": "rollup -c rollup.config.js",
+    "build:min": "terser dist/glea.js --compress --mangle > dist/glea.min.js",
+    "build:min-umd": "terser dist/glea.umd.js --compress --mangle > dist/glea.umd.min.js",
+    "build": "npm run build:js -s && npm run build:min -s && npm run build:min-umd -s && npm run build:types -s",
     "test": "jest --coverage",
     "server": "node server"
   },
@@ -21,12 +27,16 @@
     "esm": "^3.2.25"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^4.1.2",
     "express": "^4.17.1",
     "husky": "^4.2.5",
     "jest": "^25.4.0",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
+    "rollup": "^2.10.9",
+    "terser": "^4.7.0",
     "ts-jest": "^25.4.0",
+    "tslib": "^2.0.0",
     "typedoc": "^0.17.5",
     "typescript": "^3.8.3"
   },
