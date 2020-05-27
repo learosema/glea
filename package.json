@@ -24,14 +24,14 @@
   "license": "MIT",
   "dependencies": {
     "@types/jest": "^25.2.1",
-    "esm": "^3.2.25",
-    "jest-webgl-canvas-mock": "^0.2.3"
+    "esm": "^3.2.25"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^4.1.2",
     "express": "^4.17.1",
     "husky": "^4.2.5",
     "jest": "^25.4.0",
+    "jest-webgl-canvas-mock": "^0.2.3",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
     "rollup": "^2.10.9",
