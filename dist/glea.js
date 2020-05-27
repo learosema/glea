@@ -32,25 +32,12 @@ class GLea {
         }
         if (!document.querySelector('link[rel=stylesheet], style')) {
             // if there's no css, provide some minimal defaults
-            // TODO: test if that conflicts with common fancy popular CSS-in-JS magic
             const style = document.createElement('style');
             style.innerHTML =
                 'body{margin:0}canvas{display:block;width:100vw;height:100vh}';
             document.head.appendChild(style);
         }
-        this.gl = gl;
-        if (!this.gl && this.canvas) {
-            if (contextType === 'webgl') {
-                this.gl = (this.canvas.getContext('webgl', glOptions) ||
-                    this.canvas.getContext('experimental-webgl', glOptions));
-            }
-            if (contextType === 'webgl2') {
-                this.gl = this.canvas.getContext('webgl2', glOptions);
-            }
-            if (!this.gl) {
-                throw Error(`no ${contextType} context available.`);
-            }
-        }
+        this.gl = gl || this.getContext(contextType, glOptions);
         const program = this.gl.createProgram();
         if (!program) {
             throw Error('gl.createProgram failed');
@@ -58,9 +45,30 @@ class GLea {
         this.program = program;
         this.buffers = {};
         this.shaderFactory = shaders;
-        this.bufferFactory = buffers;
+        this.bufferFactory = buffers || this.getDefaultBuffers();
         this.textures = [];
         this.devicePixelRatio = devicePixelRatio;
+    }
+    /**
+     * Be default, GLea provides a position buffer containing 4 2D coordinates
+     * A triangle strip plane that consists of 2 triangles
+     */
+    getDefaultBuffers() {
+        return {
+            // create a position attribute bound
+            // to a buffer with 4 2D coordinates
+            position: GLea.buffer(2, [1, 1, -1, 1, 1, -1, -1, -1]),
+        };
+    }
+    getContext(contextType, glOptions) {
+        if (contextType === 'webgl') {
+            return (this.canvas.getContext('webgl', glOptions) ||
+                this.canvas.getContext('experimental-webgl', glOptions));
+        }
+        if (contextType === 'webgl2') {
+            return this.canvas.getContext('webgl2', glOptions);
+        }
+        throw Error(`no ${contextType} context available.`);
     }
     /**
      * Create a vertex shader
@@ -279,6 +287,7 @@ class GLea {
      *
      * @param {string} name uniform variable name
      * @param {number[]} data uniform int vector
+     * @returns uniform location
      */
     uniIV(name, data) {
         const { gl, program } = this;

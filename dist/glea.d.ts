@@ -24,13 +24,13 @@ declare module "glea" {
      */
     export type GLeaBufferFactory = (name: string, gl: GLeaContext, program: WebGLProgram) => GLeaBuffer;
     export type GLeaConstructorParams = {
-        canvas: HTMLCanvasElement;
-        gl: WebGLRenderingContext | WebGL2RenderingContext;
-        contextType: string;
+        canvas?: HTMLCanvasElement;
+        gl?: WebGLRenderingContext | WebGL2RenderingContext;
+        contextType?: string;
         shaders: GLeaShaderFactory[];
-        buffers: Record<string, GLeaBufferFactory>;
-        devicePixelRatio: number;
-        glOptions: WebGLContextAttributes;
+        buffers?: Record<string, GLeaBufferFactory>;
+        devicePixelRatio?: number;
+        glOptions?: WebGLContextAttributes;
     };
     /** Class GLea */
     class GLea {
@@ -43,6 +43,12 @@ declare module "glea" {
         textures: WebGLTexture[];
         devicePixelRatio: number;
         constructor({ canvas, gl, contextType, shaders, buffers, devicePixelRatio, glOptions, }: GLeaConstructorParams);
+        /**
+         * Be default, GLea provides a position buffer containing 4 2D coordinates
+         * A triangle strip plane that consists of 2 triangles
+         */
+        private getDefaultBuffers;
+        private getContext;
         /**
          * Create a vertex shader
          *
@@ -116,7 +122,7 @@ declare module "glea" {
         /**
          * Use program
          */
-        use(): this;
+        use(): GLea;
         /**
          * set uniform matrix (mat2, mat3, mat4)
          * @param name uniform name
@@ -136,6 +142,7 @@ declare module "glea" {
          *
          * @param {string} name uniform variable name
          * @param {number[]} data uniform int vector
+         * @returns uniform location
          */
         uniIV(name: string, data: Int32Array | number[]): WebGLUniformLocation;
         /**
