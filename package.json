@@ -1,6 +1,6 @@
 {
   "name": "glea",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GL experience artistry",
   "repository": "github:terabaud/glea/",
   "homepage": "https://terabaud.github.io/glea/docs/",
@@ -22,11 +22,10 @@
   ],
   "author": "Lea Rosema",
   "license": "MIT",
-  "dependencies": {
-    "@types/jest": "^25.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-typescript": "^4.1.2",
+    "@types/jest": "^25.2.1",
     "express": "^4.17.1",
     "husky": "^4.2.5",
     "jest": "^25.4.0",
