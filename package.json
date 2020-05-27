@@ -23,8 +23,7 @@
   "author": "Lea Rosema",
   "license": "MIT",
   "dependencies": {
-    "@types/jest": "^25.2.1",
-    "esm": "^3.2.25"
+    "@types/jest": "^25.2.1"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^4.1.2",
