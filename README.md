@@ -3,12 +3,35 @@
 GLea is a low-level WebGL library with a minimal footprint.
 It provides helper functions for creating a WebGL program, compiling shaders and passing data from JavaScript to the shader language.
 
-There are some additional helper libraries for matrix and vector calculations as well as easing functions.
-
 ## Usage
 
+GLea is provided as an UMD build as well as an ESM module, minified and unminified.
+You can load GLea directly via script tag:
+
+```html
+<script src="https://unpkg.com/glea@1.0.1/dist/glea.umd.min.js"></script>
+```
+
+Inside a JavaScript ES module:
+
 ```js
-import GLea from 'https://terabaud.github.io/glea/dist/glea.js';
+import GLea from 'https://unpkg.com/glea@1.0.1/dist/glea.min.js';
+```
+
+Via NPM, you can install GLea via `npm i glea` and import it like this:
+
+```js
+import GLea from 'glea';
+```
+
+## Getting started
+
+- [WebGL Fundamentals](https://webglfundamentals.org/)
+
+## Example
+
+```js
+import GLea from 'https://unpkg.com/glea@1.0.1/dist/glea.min.js';
 
 const vert = `
 precision highp float;

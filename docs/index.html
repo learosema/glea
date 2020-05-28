@@ -98,10 +98,6 @@
               provides helper functions for creating a WebGL program, compiling
               shaders and passing data from JavaScript to the shader language.
             </p>
-            <p>
-              There are some additional helper libraries for matrix and vector
-              calculations as well as easing functions.
-            </p>
             <a
               href="#usage"
               id="usage"
@@ -109,7 +105,39 @@
             >
               <h2>Usage</h2>
             </a>
-            <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://terabaud.github.io/glea/dist/glea.js'</span>;
+            <p>
+              GLea is provided as an UMD build as well as an ESM module,
+              minified and unminified. You can load GLea directly via script
+              tag:
+            </p>
+            <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/glea@1.0.1/dist/glea.umd.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+            <p>Inside a JavaScript ES module:</p>
+            <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://unpkg.com/glea@1.0.1/dist/glea.min.js'</span>;</code></pre>
+            <p>
+              Via NPM, you can install GLea via <code>npm i glea</code> and
+              import it like this:
+            </p>
+            <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'glea'</span>;</code></pre>
+            <a
+              href="#getting-started"
+              id="getting-started"
+              style="color: inherit; text-decoration: none;"
+            >
+              <h2>Getting started</h2>
+            </a>
+            <ul>
+              <li>
+                <a href="https://webglfundamentals.org/">WebGL Fundamentals</a>
+              </li>
+            </ul>
+            <a
+              href="#example"
+              id="example"
+              style="color: inherit; text-decoration: none;"
+            >
+              <h2>Example</h2>
+            </a>
+            <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://unpkg.com/glea@1.0.1/dist/glea.min.js'</span>;
 
 <span class="hljs-keyword">const</span> vert = <span class="hljs-string">`
 precision highp float;
