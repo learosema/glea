@@ -72,7 +72,7 @@ const numVertices = 4;
 glea.gl.drawArrays(gl.TRIANGLE_STRIP, 0, numVertices);
 ```
 
-## A HelloWorld example
+## Example
 
 ```js
 import GLea from 'https://unpkg.com/glea@1.0.1/dist/glea.min.js';
