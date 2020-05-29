@@ -3,10 +3,9 @@
 GLea is a low-level WebGL library with a minimal footprint.
 It provides helper functions for creating a WebGL program, compiling shaders and passing data from JavaScript to the shader language.
 
-## Usage
+## Introduction
 
-GLea is provided as an UMD build as well as an ESM module, minified and unminified.
-You can load GLea directly via script tag:
+There are several options to embed GLea into your project. You can load GLea directly via script tag:
 
 ```html
 <script src="https://unpkg.com/glea@1.0.1/dist/glea.umd.min.js"></script>
@@ -18,17 +17,57 @@ Inside a JavaScript ES module:
 import GLea from 'https://unpkg.com/glea@1.0.1/dist/glea.min.js';
 ```
 
-Via NPM, you can install GLea via `npm i glea` and import it like this:
+Or via NPM, you can install GLea via `npm i glea` and import it like this:
 
 ```js
 import GLea from 'glea';
 ```
 
-## Getting started
+### Initialization
 
-- [WebGL Fundamentals](https://webglfundamentals.org/)
+By default, GLea looks for a canvas element in your HTML and uses that. If there is no canvas element existing, GLea creates one for you.
 
-## Example
+If your HTML document doesn't include any CSS (neither a `style` nor a `link` tag, a minimal stylesheet is provided that sizes the canvas to the browser's viewport size.
+
+The GLea instance expects a shaders property, containing your fragment and vertex shader.
+Also, a buffers property, which contains the data that is passed as attributes to the vertex shader.
+
+If no buffers are provided, GLea provides a default position attribute with a buffer containing 4 vec2 values for a triangle strip, defining a plane filling the screen.
+
+### Setting uniforms
+
+GLea provides several helper functions to set uniforms to pass data from JavaScript to GLSL. These are:
+
+```js
+// set uniform float
+glea.uni('pi', Math.PI);
+
+// set uniform int
+glea.uniI('width', innerWidth);
+
+// set uniform float vector (supported types are vec2, vec3, vec4)
+glea.uniV('vector', [Math.sqrt(2), Math.sqrt(3)]);
+
+// set uniform int vector
+glea.uniV('resolution', [innerWidth, innerHeight]);
+
+// set uniform matrix
+// HEADS UP: it is the other way round as you would write it down on paper
+// prettier-ignore
+glea.uniM('translateMatrix', [
+  1, 0, 0, 0, // column 1
+  0, 1, 0, 0, // column 2
+  0, 0, 1, 0, // column 3
+  x, y, z, 1, // column 4
+]);
+```
+
+### Draw
+
+Currently, GLea doesn't provide any wrapper for actually drawing your stuff.
+Instead, call `glea.gl.drawArrays(gl.TRIANGLE_STRIP, 0, numberOfVertices);` from the underlying WebGLRenderingContext.
+
+## Let's get started
 
 ```js
 import GLea from 'https://unpkg.com/glea@1.0.1/dist/glea.min.js';
@@ -62,6 +101,7 @@ const glea = new GLea({
   buffers: {
     // create a position attribute bound
     // to a buffer with 4 2D coordinates
+    // this is what GLea provides by default if you omit buffers in the constructor
     position: GLea.buffer(2, [1, 1, -1, 1, 1, -1, -1, -1]),
   },
 }).create();
@@ -88,22 +128,6 @@ setup();
 
 - [Try this on Codepen](https://codepen.io/terabaud/pen/PoPJqvM)
 
-## API Documentation
-
-- [API documentation](https://terabaud.github.io/glea/docs/)
-
-### using in esm modules
-
-```js
-import GLea from 'https://terabaud.github.io/glea/dist/glea.js';
-```
-
-### via script tag
-
-```html
-<script src="https://terabaud.github.io/glea/dist/umd/glea.js"></script>
-```
-
 ## Exampes
 
 - [Example 01: Triangle](https://codepen.io/terabaud/pen/OKVpYV)
@@ -122,3 +146,8 @@ import GLea from 'https://terabaud.github.io/glea/dist/glea.js';
 ### More examples
 
 - There is more: https://terabaud.github.io/hello-webgl/
+
+## Additional WebGL resources
+
+- [WebGL Fundamentals](https://webglfundamentals.org/)
+- [WebGL 2 Fundamentals](https://webgl2fundamentals.org/)

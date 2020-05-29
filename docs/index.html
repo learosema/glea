@@ -99,43 +99,107 @@
               shaders and passing data from JavaScript to the shader language.
             </p>
             <a
-              href="#usage"
-              id="usage"
+              href="#introduction"
+              id="introduction"
               style="color: inherit; text-decoration: none;"
             >
-              <h2>Usage</h2>
+              <h2>Introduction</h2>
             </a>
             <p>
-              GLea is provided as an UMD build as well as an ESM module,
-              minified and unminified. You can load GLea directly via script
-              tag:
+              There are several options to embed GLea into your project. You can
+              load GLea directly via script tag:
             </p>
             <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/glea@1.0.1/dist/glea.umd.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
             <p>Inside a JavaScript ES module:</p>
             <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://unpkg.com/glea@1.0.1/dist/glea.min.js'</span>;</code></pre>
             <p>
-              Via NPM, you can install GLea via <code>npm i glea</code> and
+              Or via NPM, you can install GLea via <code>npm i glea</code> and
               import it like this:
             </p>
             <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'glea'</span>;</code></pre>
             <a
-              href="#getting-started"
-              id="getting-started"
+              href="#initialization"
+              id="initialization"
               style="color: inherit; text-decoration: none;"
             >
-              <h2>Getting started</h2>
+              <h3>Initialization</h3>
             </a>
-            <ul>
-              <li>
-                <a href="https://webglfundamentals.org/">WebGL Fundamentals</a>
-              </li>
-            </ul>
+            <p>
+              By default, GLea looks for a canvas element in your HTML and uses
+              that. If there is no canvas element existing, GLea creates one for
+              you.
+            </p>
+            <p>
+              If your HTML document doesn&#39;t include any CSS (neither a
+              <code>style</code> nor a <code>link</code> tag, a minimal
+              stylesheet is provided that sizes the canvas to the browser&#39;s
+              viewport size.
+            </p>
+            <p>
+              The GLea instance expects a shaders property, containing your
+              fragment and vertex shader. Also, a buffers property, which
+              contains the data that is passed as attributes to the vertex
+              shader.
+            </p>
+            <p>
+              If no buffers are provided, GLea provides a default position
+              attribute with a buffer containing 4 vec2 values for a triangle
+              strip, defining a plane filling the screen.
+            </p>
             <a
-              href="#example"
-              id="example"
+              href="#setting-uniforms"
+              id="setting-uniforms"
               style="color: inherit; text-decoration: none;"
             >
-              <h2>Example</h2>
+              <h3>Setting uniforms</h3>
+            </a>
+            <p>
+              GLea provides several helper functions to set uniforms to pass
+              data from JavaScript to GLSL. These are:
+            </p>
+            <pre><code class="language-js"><span class="hljs-comment">// set uniform float</span>
+glea.uni(<span class="hljs-string">'pi'</span>, <span class="hljs-built_in">Math</span>.PI);
+
+<span class="hljs-comment">// set uniform int</span>
+glea.uniI(<span class="hljs-string">'width'</span>, innerWidth);
+
+<span class="hljs-comment">// set uniform float vector (supported types are vec2, vec3, vec4)</span>
+glea.uniV(<span class="hljs-string">'vector'</span>, [<span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">2</span>), <span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">3</span>)]);
+
+<span class="hljs-comment">// set uniform int vector</span>
+glea.uniV(<span class="hljs-string">'resolution'</span>, [innerWidth, innerHeight]);
+
+<span class="hljs-comment">// set uniform matrix</span>
+<span class="hljs-comment">// HEADS UP: it is the other way round as you would write it down on paper</span>
+<span class="hljs-comment">// prettier-ignore</span>
+glea.uniM(<span class="hljs-string">'translateMatrix'</span>, [
+  <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-comment">// column 1</span>
+  <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-comment">// column 2</span>
+  <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-comment">// column 3</span>
+  x, y, z, <span class="hljs-number">1</span>, <span class="hljs-comment">// column 4</span>
+]);</code></pre>
+            <a
+              href="#draw"
+              id="draw"
+              style="color: inherit; text-decoration: none;"
+            >
+              <h3>Draw</h3>
+            </a>
+            <p>
+              Currently, GLea doesn&#39;t provide any wrapper for actually
+              drawing your stuff. Instead, call
+              <code
+                >glea.gl.drawArrays(gl.TRIANGLE_STRIP, 0,
+                numberOfVertices);</code
+              >
+              from the underlying WebGLRenderingContext.
+            </p>
+            <a
+              href="#let39s-get-started"
+              id="let39s-get-started"
+              style="color: inherit; text-decoration: none;"
+            >
+              <h2>Let&#39;s get started</h2>
             </a>
             <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://unpkg.com/glea@1.0.1/dist/glea.min.js'</span>;
 
@@ -168,6 +232,7 @@ void main() {
   <span class="hljs-attr">buffers</span>: {
     <span class="hljs-comment">// create a position attribute bound</span>
     <span class="hljs-comment">// to a buffer with 4 2D coordinates</span>
+    <span class="hljs-comment">// this is what GLea provides by default if you omit buffers in the constructor</span>
     <span class="hljs-attr">position</span>: GLea.buffer(<span class="hljs-number">2</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>, <span class="hljs-number">-1</span>]),
   },
 }).create();
@@ -197,36 +262,6 @@ void main() {
                 >
               </li>
             </ul>
-            <a
-              href="#api-documentation"
-              id="api-documentation"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h2>API Documentation</h2>
-            </a>
-            <ul>
-              <li>
-                <a href="https://terabaud.github.io/glea/docs/"
-                  >API documentation</a
-                >
-              </li>
-            </ul>
-            <a
-              href="#using-in-esm-modules"
-              id="using-in-esm-modules"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h3>using in esm modules</h3>
-            </a>
-            <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://terabaud.github.io/glea/dist/glea.js'</span>;</code></pre>
-            <a
-              href="#via-script-tag"
-              id="via-script-tag"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h3>via script tag</h3>
-            </a>
-            <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://terabaud.github.io/glea/dist/umd/glea.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
             <a
               href="#exampes"
               id="exampes"
@@ -308,6 +343,23 @@ void main() {
                 There is more:
                 <a href="https://terabaud.github.io/hello-webgl/"
                   >https://terabaud.github.io/hello-webgl/</a
+                >
+              </li>
+            </ul>
+            <a
+              href="#additional-webgl-resources"
+              id="additional-webgl-resources"
+              style="color: inherit; text-decoration: none;"
+            >
+              <h2>Additional WebGL resources</h2>
+            </a>
+            <ul>
+              <li>
+                <a href="https://webglfundamentals.org/">WebGL Fundamentals</a>
+              </li>
+              <li>
+                <a href="https://webgl2fundamentals.org/"
+                  >WebGL 2 Fundamentals</a
                 >
               </li>
             </ul>
