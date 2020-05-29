@@ -65,9 +65,14 @@ glea.uniM('translateMatrix', [
 ### Draw
 
 Currently, GLea doesn't provide any wrapper for actually drawing your stuff.
-Instead, call `glea.gl.drawArrays(gl.TRIANGLE_STRIP, 0, numberOfVertices);` from the underlying WebGLRenderingContext.
+Instead, call [drawArrays](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays) from the underlying WebGLRenderingContext:
 
-## Let's get started
+```js
+const numVertices = 4;
+glea.gl.drawArrays(gl.TRIANGLE_STRIP, 0, numVertices);
+```
+
+## A HelloWorld example
 
 ```js
 import GLea from 'https://unpkg.com/glea@1.0.1/dist/glea.min.js';
