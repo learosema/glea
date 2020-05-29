@@ -1,3 +1,6 @@
+/**
+ * @hidden hide internal function from documentation
+ */
 function convertArray(data, type = WebGLRenderingContext.FLOAT) {
     if (type === WebGLRenderingContext.FLOAT) {
         return new Float32Array(data);
@@ -7,6 +10,9 @@ function convertArray(data, type = WebGLRenderingContext.FLOAT) {
     }
     throw Error('type not supported');
 }
+/**
+ * @hidden hide internal function from documentation
+ */
 function shader(code, shaderType) {
     return (gl) => {
         const sh = gl.createShader(/frag/.test(shaderType) ? gl.FRAGMENT_SHADER : gl.VERTEX_SHADER);
@@ -50,7 +56,7 @@ class GLea {
         this.devicePixelRatio = devicePixelRatio;
     }
     /**
-     * Be default, GLea provides a position buffer containing 4 2D coordinates
+     * By default, GLea provides a position buffer containing 4 2D coordinates
      * A triangle strip plane that consists of 2 triangles
      */
     getDefaultBuffers() {
@@ -60,6 +66,11 @@ class GLea {
             position: GLea.buffer(2, [1, 1, -1, 1, 1, -1, -1, -1]),
         };
     }
+    /**
+     * Used to create a WebGLRenderingContext
+     * @param contextType webgl or webgl2. Also detects if webgl is only available via the context `experimental-webgl`
+     * @param glOptions see WebGLContextAttributes
+     */
     getContext(contextType, glOptions) {
         if (contextType === 'webgl') {
             return (this.canvas.getContext('webgl', glOptions) ||

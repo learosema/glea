@@ -1,6 +1,6 @@
 declare module "glea" {
     /**
-     * GLea - GL experience audience Library
+     * GLea - GL experience artistry Library
      * @module glea
      */
     export type GLeaContext = WebGLRenderingContext | WebGL2RenderingContext;
@@ -44,10 +44,15 @@ declare module "glea" {
         devicePixelRatio: number;
         constructor({ canvas, gl, contextType, shaders, buffers, devicePixelRatio, glOptions, }: GLeaConstructorParams);
         /**
-         * Be default, GLea provides a position buffer containing 4 2D coordinates
+         * By default, GLea provides a position buffer containing 4 2D coordinates
          * A triangle strip plane that consists of 2 triangles
          */
         private getDefaultBuffers;
+        /**
+         * Used to create a WebGLRenderingContext
+         * @param contextType webgl or webgl2. Also detects if webgl is only available via the context `experimental-webgl`
+         * @param glOptions see WebGLContextAttributes
+         */
         private getContext;
         /**
          * Create a vertex shader
