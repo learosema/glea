@@ -72,6 +72,47 @@ const numVertices = 4;
 glea.gl.drawArrays(gl.TRIANGLE_STRIP, 0, numVertices);
 ```
 
+### Loading textures
+
+I'm using a loadImage helper function that wraps `img.onload` into a Promise:
+
+```js
+function loadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'Anonymous';
+    img.src = url;
+    img.onload = () => {
+      resolve(img);
+    };
+    img.onerror = () => {
+      reject(img);
+    };
+  });
+}
+
+async function setup() {
+  const img = await loadImage('https://placekitten.com/256/256/');
+  const textureIndex = 0;
+  glea.createTexture(textureIndex);
+  glea.gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+  glea.uniI('texture0', textureIndex);
+}
+
+setup();
+```
+
+In GLSL, you can access the texture like this:
+
+```glsl
+uniform sampler2D texture0;
+
+void main() {
+  vec2 coord = 1.0 - gl_FragCoord.xy / vec2(width, height);
+  gl_FragColor = texture2D(texture1, coord);
+}
+```
+
 ## Example
 
 ```js

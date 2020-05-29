@@ -188,18 +188,61 @@ glea.uniM(<span class="hljs-string">'translateMatrix'</span>, [
             <p>
               Currently, GLea doesn&#39;t provide any wrapper for actually
               drawing your stuff. Instead, call
-              <code
-                >glea.gl.drawArrays(gl.TRIANGLE_STRIP, 0,
-                numberOfVertices);</code
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"
+                >drawArrays</a
               >
-              from the underlying WebGLRenderingContext.
+              from the underlying WebGLRenderingContext:
             </p>
+            <pre><code class="language-js"><span class="hljs-keyword">const</span> numVertices = <span class="hljs-number">4</span>;
+glea.gl.drawArrays(gl.TRIANGLE_STRIP, <span class="hljs-number">0</span>, numVertices);</code></pre>
             <a
-              href="#let39s-get-started"
-              id="let39s-get-started"
+              href="#loading-textures"
+              id="loading-textures"
               style="color: inherit; text-decoration: none;"
             >
-              <h2>Let&#39;s get started</h2>
+              <h3>Loading textures</h3>
+            </a>
+            <p>
+              I&#39;m using a loadImage helper function that wraps
+              <code>img.onload</code> into a Promise:
+            </p>
+            <pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadImage</span>(<span class="hljs-params">url</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> img = <span class="hljs-keyword">new</span> Image();
+    img.crossOrigin = <span class="hljs-string">'Anonymous'</span>;
+    img.src = url;
+    img.onload = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      resolve(img);
+    };
+    img.onerror = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      reject(img);
+    };
+  });
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> img = <span class="hljs-keyword">await</span> loadImage(<span class="hljs-string">'https://placekitten.com/256/256/'</span>);
+  <span class="hljs-keyword">const</span> textureIndex = <span class="hljs-number">0</span>;
+  glea.createTexture(textureIndex);
+  glea.gl.texImage2D(gl.TEXTURE_2D, <span class="hljs-number">0</span>, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+  glea.uniI(<span class="hljs-string">'texture0'</span>, textureIndex);
+}
+
+<span class="hljs-keyword">set</span><span class="hljs-title">up</span>();</code></pre>
+            <p>In GLSL, you can access the texture like this:</p>
+            <pre><code class="language-glsl"><span class="hljs-keyword">uniform</span> <span class="hljs-type">sampler2D</span> texture0;
+
+<span class="hljs-type">void</span> main() {
+  <span class="hljs-type">vec2</span> coord = <span class="hljs-number">1.0</span> - <span class="hljs-built_in">gl_FragCoord</span>.xy / <span class="hljs-type">vec2</span>(width, height);
+  <span class="hljs-built_in">gl_FragColor</span> = <span class="hljs-built_in">texture2D</span>(texture1, coord);
+}</code></pre>
+            <a
+              href="#example"
+              id="example"
+              style="color: inherit; text-decoration: none;"
+            >
+              <h2>Example</h2>
             </a>
             <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://unpkg.com/glea@1.0.1/dist/glea.min.js'</span>;
 
@@ -387,9 +430,6 @@ void main() {
         <h2>Legend</h2>
         <div class="tsd-legend-group">
           <ul class="tsd-legend">
-            <li class="tsd-kind-function">
-              <span class="tsd-kind-icon">Function</span>
-            </li>
             <li class="tsd-kind-type-alias">
               <span class="tsd-kind-icon">Type alias</span>
             </li>

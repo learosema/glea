@@ -1,5 +1,5 @@
 /**
- * GLea - GL experience audience Library
+ * GLea - GL experience artistry Library
  * @module glea
  */
 export type GLeaContext = WebGLRenderingContext | WebGL2RenderingContext;
@@ -40,6 +40,9 @@ export type GLeaConstructorParams = {
   glOptions?: WebGLContextAttributes;
 };
 
+/**
+ * @hidden hide internal function from documentation
+ */
 function convertArray(
   data: number[],
   type = WebGLRenderingContext.FLOAT
@@ -53,6 +56,9 @@ function convertArray(
   throw Error('type not supported');
 }
 
+/**
+ * @hidden hide internal function from documentation
+ */
 function shader(code: string, shaderType: 'frag' | 'vert'): GLeaShaderFactory {
   return (gl: WebGLRenderingContext | WebGL2RenderingContext) => {
     const sh = gl.createShader(
@@ -117,7 +123,7 @@ class GLea {
   }
 
   /**
-   * Be default, GLea provides a position buffer containing 4 2D coordinates
+   * By default, GLea provides a position buffer containing 4 2D coordinates
    * A triangle strip plane that consists of 2 triangles
    */
   private getDefaultBuffers() {
@@ -128,6 +134,11 @@ class GLea {
     };
   }
 
+  /**
+   * Used to create a WebGLRenderingContext
+   * @param contextType webgl or webgl2. Also detects if webgl is only available via the context `experimental-webgl`
+   * @param glOptions see WebGLContextAttributes
+   */
   private getContext(
     contextType: string,
     glOptions?: WebGLContextAttributes
