@@ -4,6 +4,10 @@
  */
 export type GLeaContext = WebGLRenderingContext | WebGL2RenderingContext;
 
+const VERT_DEFAULT =
+  'precision highp float;attribute vec2 position;void main(){gl_Position=vec4(position,0, 1.);}';
+const FRAG_DEFAULT = `precision highp float;void main(){gl_FragColor = vec4(1.,0.,0.,1.);}`;
+
 /**
  * store for an attribute and a buffer
  */
@@ -175,6 +179,22 @@ class GLea {
    */
   static fragmentShader(code: string) {
     return (gl: GLeaContext) => shader(code, 'frag')(gl);
+  }
+
+  static prog({ frag = FRAG_DEFAULT, vert = VERT_DEFAULT }) {
+    return (gl: GLeaContext) => {
+      const p = gl.createProgram() as WebGLProgram;
+      const vs = GLea.vertexShader(vert)(gl);
+      const fs = GLea.fragmentShader(frag)(gl);
+      gl.attachShader(p, vs);
+      gl.attachShader(p, fs);
+      gl.linkProgram(p);
+      gl.validateProgram(p);
+      if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
+        const info = gl.getProgramInfoLog(p);
+        throw 'Could not compile WebGL program. \n\n' + info;
+      }
+    };
   }
 
   /**
