@@ -23,7 +23,10 @@ export type GLeaBuffer = {
 /**
  * function that compiles a shader
  */
-export type GLeaShaderFactory = (gl: GLeaContext) => WebGLShader;
+export type GLeaShaderFactory = {
+  shaderType: string;
+  init: (gl: GLeaContext) => WebGLShader;
+};
 
 /**
  * function that registers an attribute and binds a buffer to it
@@ -64,10 +67,11 @@ function convertArray(
  * @hidden hide internal function from documentation
  */
 function shader(code: string, shaderType: 'frag' | 'vert'): GLeaShaderFactory {
-  return (gl: WebGLRenderingContext | WebGL2RenderingContext) => {
-    const sh = gl.createShader(
-      /frag/.test(shaderType) ? gl.FRAGMENT_SHADER : gl.VERTEX_SHADER
-    );
+  const init = (gl: WebGLRenderingContext | WebGL2RenderingContext) => {
+    const glShaderType = /frag/.test(shaderType)
+      ? WebGLRenderingContext.FRAGMENT_SHADER
+      : WebGLRenderingContext.VERTEX_SHADER;
+    const sh = gl.createShader(glShaderType);
     if (!sh) {
       throw Error('shader type not supported');
     }
@@ -77,6 +81,10 @@ function shader(code: string, shaderType: 'frag' | 'vert'): GLeaShaderFactory {
       throw 'Could not compile Shader.\n\n' + gl.getShaderInfoLog(sh);
     }
     return sh;
+  };
+  return {
+    shaderType,
+    init,
   };
 }
 
@@ -168,8 +176,8 @@ class GLea {
    *
    * @param code shader code
    */
-  static vertexShader(code: string) {
-    return (gl: GLeaContext) => shader(code, 'vert')(gl);
+  static vertexShader(code: string = VERT_DEFAULT) {
+    return shader(code, 'vert');
   }
 
   /**
@@ -177,23 +185,29 @@ class GLea {
    *
    * @param {string} code fragment shader code
    */
-  static fragmentShader(code: string) {
-    return (gl: GLeaContext) => shader(code, 'frag')(gl);
+  static fragmentShader(code: string = FRAG_DEFAULT) {
+    return shader(code, 'frag');
   }
 
-  static prog({ frag = FRAG_DEFAULT, vert = VERT_DEFAULT }) {
+  /**
+   * Create a webgl program from a vertex and fragment shader (no matter which order)
+   * @param shader1 a factory created by GLea.vertexShader or GLea.fragmentShader
+   * @param shader2 a factory created by GLea.vertexShader or GLea.fragmentShader
+   */
+  static prog(shader1: GLeaShaderFactory, shader2: GLeaShaderFactory) {
     return (gl: GLeaContext) => {
       const p = gl.createProgram() as WebGLProgram;
-      const vs = GLea.vertexShader(vert)(gl);
-      const fs = GLea.fragmentShader(frag)(gl);
-      gl.attachShader(p, vs);
-      gl.attachShader(p, fs);
+      const s1 = shader1.init(gl);
+      const s2 = shader2.init(gl);
+      gl.attachShader(p, s1);
+      gl.attachShader(p, s2);
       gl.linkProgram(p);
       gl.validateProgram(p);
       if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
         const info = gl.getProgramInfoLog(p);
         throw 'Could not compile WebGL program. \n\n' + info;
       }
+      return p;
     };
   }
 
@@ -249,17 +263,7 @@ class GLea {
   create() {
     const { gl } = this;
     const { program } = this;
-    this.shaderFactory
-      .map((shaderFunc) => shaderFunc(gl))
-      .map((shader) => {
-        gl.attachShader(program, shader);
-      });
-    gl.linkProgram(program);
-    gl.validateProgram(program);
-    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-      const info = gl.getProgramInfoLog(program);
-      throw 'Could not compile WebGL program. \n\n' + info;
-    }
+    this.program = GLea.prog(this.shaderFactory[0], this.shaderFactory[1]);
     this.use();
     Object.keys(this.bufferFactory).forEach((name) => {
       const bufferFunc = this.bufferFactory[name];
@@ -369,7 +373,10 @@ class GLea {
   /**
    * Use program
    */
-  use(): GLea {
+  use(program?: WebGLProgram): GLea {
+    if (program) {
+      this.program = program;
+    }
     this.gl.useProgram(this.program);
     return this;
   }
