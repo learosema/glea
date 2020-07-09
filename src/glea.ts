@@ -278,6 +278,20 @@ class GLea {
   }
 
   /**
+   * Create a new instance with another program and reuse the rendering context
+   * @param param0 buffers and shaders
+   */
+  add({ shaders, buffers }: GLeaConstructorParams) {
+    const instance = new GLea({
+      canvas: this.canvas,
+      gl: this.gl,
+      shaders,
+      buffers: buffers || this.getDefaultBuffers(),
+    }).create();
+    return instance;
+  }
+
+  /**
    * Set active texture
    * @param {number} textureIndex texture index in the range [0 .. gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1]
    * @param {WebGLTexture} texture webgl texture object
