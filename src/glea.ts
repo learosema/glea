@@ -4,9 +4,13 @@
  */
 export type GLeaContext = WebGLRenderingContext | WebGL2RenderingContext;
 
+const SHADER_HEAD = 'precision highp float;';
 const VERT_DEFAULT =
-  'precision highp float;attribute vec2 position;void main(){gl_Position=vec4(position,0, 1.);}';
-const FRAG_DEFAULT = `precision highp float;void main(){gl_FragColor = vec4(1.,0.,0.,1.);}`;
+  SHADER_HEAD +
+  'attribute vec2 position;void main(){gl_Position=vec4(position,0, 1.);}';
+const FRAG_DEFAULT =
+  SHADER_HEAD +
+  `precision highp float;void main(){gl_FragColor = vec4(1.,0.,0.,1.);}`;
 
 /**
  * store for an attribute and a buffer
