@@ -1,36 +1,7 @@
+///<reference path="vendor/ella.d.ts"/>
+
 import GLea from '../dist/glea.js';
-import * as Ella from 'https://unpkg.com/ella-math@0.2.5/dist/ella.esm.js';
-
-// work in progress...
-
-class App {
-  constructor() {
-    this.setProjectionMatrix();
-    this.loop = this.loop.bind(this);
-  }
-
-  setProjectionMatrix() {
-    const w = document.body.clientWidth;
-    const h = document.body.clientHeight;
-    this.perspectiveMat = Ella.perspective(60, w / h, 0.1, 300);
-  }
-
-  init() {
-    this.program1 = new GLea({
-      shaders: [GLea.vertexShader(), GLea.fragmentShader(frag)],
-    }).create();
-    this.program2 = this.program1.add({
-      shaders: [GLea.vertexShader(), GLea.fragmentShader(frag)],
-      buffers: {
-        // create a position attribute bound
-        // to a buffer with 4 2D coordinates
-        position: GLea.buffer(2, [1, 1, -1, 1, 1, -1, -1, -1]),
-      },
-    });
-  }
-
-  loop() {}
-}
+import * as Ella from './vendor/ella.esm.js';
 
 const frag = `
 precision highp float;
@@ -47,22 +18,51 @@ void main() {
 }
 `;
 
-const glea = new GLea({
-  shaders: [GLea.fragmentShader(frag), GLea.vertexShader(vert)],
-  buffers: {
-    // create a position attribute bound
-    // to a buffer with 4 2D coordinates
-    position: GLea.buffer(2, [1, 1, -1, 1, 1, -1, -1, -1]),
-  },
-}).create();
+const vert2 = `
+precision highp float;
+attribute vec3 position;
 
-function loop(time) {
-  const { gl, width, height } = glea;
-  glea.clear();
-  glea.uniV('resolution', [width, height]);
-  glea.uni('time', time * 1e-3);
-  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-  requestAnimationFrame(loop);
+`;
+
+class App {
+  constructor() {
+    this.projectionMat = Ella.Mat4.identity();
+    this.viewMat = Ella.Mat4.identity();
+    this.cube = Ella.cube();
+    this.loop = this.loop.bind(this);
+  }
+
+  setProjectionMatrix() {
+    const w = document.body.clientWidth;
+    const h = document.body.clientHeight;
+    this.projectionMat = Ella.perspective(60, w / h, 0.1, 300);
+  }
+
+  init() {
+    const cube = Ella.Geometry.cube(1);
+    const cubeTriangles = cube.toTriangles();
+    this.setProjectionMatrix();
+    this.prg1 = new GLea({
+      shaders: [GLea.vertexShader(), GLea.fragmentShader(frag)],
+    }).create();
+    this.prg2 = this.program1.add({
+      shaders: [GLea.vertexShader(vert2), GLea.fragmentShader(frag2)],
+      buffers: {
+        // create a position attribute bound
+        // to a buffer with 4 2D coordinates
+        position: GLea.buffer(3, cubeTriangles),
+      },
+    });
+  }
+
+  loop() {
+    const { gl, width, height } = this.prg1;
+    prg1.clear();
+    prg1.uniV('resolution', [width, height]);
+    prg1.uni('time', time * 1e-3);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(loop);
+  }
 }
 
 function setup() {

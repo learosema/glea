@@ -264,6 +264,23 @@ class GLea {
     };
   }
 
+  disableAttribs() {
+    const { gl, program, buffers } = this;
+    for (let key of Object.keys(buffers)) {
+      const loc = gl.getAttribLocation(program, key);
+      gl.disableVertexAttribArray(loc);
+    }
+  }
+
+  enableAttribs() {
+    const { gl, program, buffers } = this;
+    for (let key of Object.keys(buffers)) {
+      const loc = gl.getAttribLocation(program, key);
+      gl.enableVertexAttribArray(loc);
+      gl.bindBuffer(gl.ARRAY_BUFFER, buffers[key].id);
+    }
+  }
+
   /**
    * init WebGLRenderingContext
    * @returns {GLea} glea instance
