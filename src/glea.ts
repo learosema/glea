@@ -95,6 +95,8 @@ function shader(code: string, shaderType: 'frag' | 'vert'): GLeaShaderFactory {
 /** Class GLea */
 class GLea {
   canvas: HTMLCanvasElement = document.createElement('canvas');
+  contextType: string;
+  glOptions?: WebGLContextAttributes;
   gl: WebGLRenderingContext | WebGL2RenderingContext;
   shaderFactory: GLeaShaderFactory[];
   bufferFactory: Record<string, GLeaBufferFactory>;
@@ -103,6 +105,7 @@ class GLea {
   buffers: Record<string, GLeaBuffer>;
   textures: WebGLTexture[];
   devicePixelRatio: number;
+  parent?: GLea;
 
   constructor({
     canvas,
@@ -125,11 +128,10 @@ class GLea {
         'body{margin:0}canvas{display:block;width:100vw;height:100vh}';
       document.head.appendChild(style);
     }
+    this.contextType = contextType;
+    this.glOptions = glOptions;
     this.gl = gl || this.getContext(contextType, glOptions);
-    const program = this.gl.createProgram();
-    if (!program) {
-      throw Error('gl.createProgram failed');
-    }
+    const program = this.gl.createProgram() as WebGLProgram;
     this.program = program;
     this.buffers = {};
     this.shaderFactory = shaders;
@@ -198,21 +200,23 @@ class GLea {
    * @param shader1 a factory created by GLea.vertexShader or GLea.fragmentShader
    * @param shader2 a factory created by GLea.vertexShader or GLea.fragmentShader
    */
-  static prog(shader1: GLeaShaderFactory, shader2: GLeaShaderFactory) {
-    return (gl: GLeaContext) => {
-      const p = gl.createProgram() as WebGLProgram;
-      const s1 = shader1.init(gl);
-      const s2 = shader2.init(gl);
-      gl.attachShader(p, s1);
-      gl.attachShader(p, s2);
-      gl.linkProgram(p);
-      gl.validateProgram(p);
-      if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
-        const info = gl.getProgramInfoLog(p);
-        throw 'Could not compile WebGL program. \n\n' + info;
-      }
-      return p;
-    };
+  private prog(
+    gl: GLeaContext,
+    shader1: GLeaShaderFactory,
+    shader2: GLeaShaderFactory
+  ) {
+    const p = gl.createProgram() as WebGLProgram;
+    const s1 = shader1.init(gl);
+    const s2 = shader2.init(gl);
+    gl.attachShader(p, s1);
+    gl.attachShader(p, s2);
+    gl.linkProgram(p);
+    gl.validateProgram(p);
+    if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
+      const info = gl.getProgramInfoLog(p);
+      throw 'Could not compile WebGL program. \n\n' + info;
+    }
+    return p;
   }
 
   /**
@@ -266,14 +270,32 @@ class GLea {
    */
   create() {
     const { gl } = this;
-    const { program } = this;
-    this.program = GLea.prog(this.shaderFactory[0], this.shaderFactory[1]);
+    this.program = this.prog(gl, this.shaderFactory[0], this.shaderFactory[1]);
     this.use();
     Object.keys(this.bufferFactory).forEach((name) => {
       const bufferFunc = this.bufferFactory[name];
-      this.buffers[name] = bufferFunc(name, gl, program);
+      this.buffers[name] = bufferFunc(name, gl, this.program);
     });
-    this.resize();
+    if (!this.parent) {
+      this.resize();
+    }
+    return this;
+  }
+
+  private replaceCanvas() {
+    const { canvas } = this;
+    const newCanvas = canvas.cloneNode() as HTMLCanvasElement;
+    if (canvas.parentNode) {
+      canvas.parentNode.insertBefore(newCanvas, canvas);
+      canvas.parentNode.removeChild(canvas);
+    }
+    this.canvas = newCanvas;
+  }
+
+  restart() {
+    this.replaceCanvas();
+    this.gl = this.getContext(this.contextType, this.glOptions);
+    this.create();
     return this;
   }
 
@@ -287,7 +309,9 @@ class GLea {
       gl: this.gl,
       shaders,
       buffers: buffers || this.getDefaultBuffers(),
-    }).create();
+    });
+    instance.parent = this.parent || this;
+    instance.create();
     return instance;
   }
 
@@ -519,7 +543,7 @@ class GLea {
    * Also the canvas element is removed from the DOM and replaced by a new cloned canvas element
    */
   destroy() {
-    const { gl, program, canvas } = this;
+    const { gl, program } = this;
     try {
       gl.deleteProgram(program);
       Object.values(this.buffers).forEach((buffer) => {
@@ -532,13 +556,7 @@ class GLea {
       this.textures = [];
       // @ts-ignore TS doesn't know about getExtension
       gl.getExtension('WEBGL_lose_context').loseContext();
-      const newCanvas = canvas.cloneNode() as HTMLCanvasElement;
-      if (canvas.parentNode) {
-        canvas.parentNode.insertBefore(newCanvas, canvas);
-        canvas.parentNode.removeChild(canvas);
-      }
-
-      this.canvas = newCanvas;
+      this.replaceCanvas();
     } catch (err) {
       console.error(err);
     }

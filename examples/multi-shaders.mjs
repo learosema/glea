@@ -16,20 +16,21 @@ class App {
   }
 
   init() {
-    // too
+    this.program1 = new GLea({
+      shaders: [GLea.vertexShader(), GLea.fragmentShader(frag)],
+    }).create();
+    this.program2 = this.program1.add({
+      shaders: [GLea.vertexShader(), GLea.fragmentShader(frag)],
+      buffers: {
+        // create a position attribute bound
+        // to a buffer with 4 2D coordinates
+        position: GLea.buffer(2, [1, 1, -1, 1, 1, -1, -1, -1]),
+      },
+    });
   }
 
   loop() {}
 }
-
-const vert = `
-precision highp float;
-attribute vec2 position;
-
-void main() {
-  gl_Position = vec4(position, 0, 1.0);
-}
-`;
 
 const frag = `
 precision highp float;

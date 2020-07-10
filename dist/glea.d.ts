@@ -18,7 +18,10 @@ declare module "glea" {
     /**
      * function that compiles a shader
      */
-    export type GLeaShaderFactory = (gl: GLeaContext) => WebGLShader;
+    export type GLeaShaderFactory = {
+        shaderType: string;
+        init: (gl: GLeaContext) => WebGLShader;
+    };
     /**
      * function that registers an attribute and binds a buffer to it
      */
@@ -35,6 +38,8 @@ declare module "glea" {
     /** Class GLea */
     class GLea {
         canvas: HTMLCanvasElement;
+        contextType: string;
+        glOptions?: WebGLContextAttributes;
         gl: WebGLRenderingContext | WebGL2RenderingContext;
         shaderFactory: GLeaShaderFactory[];
         bufferFactory: Record<string, GLeaBufferFactory>;
@@ -42,6 +47,7 @@ declare module "glea" {
         buffers: Record<string, GLeaBuffer>;
         textures: WebGLTexture[];
         devicePixelRatio: number;
+        parent?: GLea;
         constructor({ canvas, gl, contextType, shaders, buffers, devicePixelRatio, glOptions, }: GLeaConstructorParams);
         /**
          * By default, GLea provides a position buffer containing 4 2D coordinates
@@ -59,13 +65,19 @@ declare module "glea" {
          *
          * @param code shader code
          */
-        static vertexShader(code: string): (gl: GLeaContext) => WebGLShader;
+        static vertexShader(code?: string): GLeaShaderFactory;
         /**
          * Create a fragment shader
          *
          * @param {string} code fragment shader code
          */
-        static fragmentShader(code: string): (gl: GLeaContext) => WebGLShader;
+        static fragmentShader(code?: string): GLeaShaderFactory;
+        /**
+         * Create a webgl program from a vertex and fragment shader (no matter which order)
+         * @param shader1 a factory created by GLea.vertexShader or GLea.fragmentShader
+         * @param shader2 a factory created by GLea.vertexShader or GLea.fragmentShader
+         */
+        private prog;
         /**
          * Create Buffer
          *
@@ -83,6 +95,13 @@ declare module "glea" {
          * @returns {GLea} glea instance
          */
         create(): this;
+        private replaceCanvas;
+        restart(): this;
+        /**
+         * Create a new instance with another program and reuse the rendering context
+         * @param param0 buffers and shaders
+         */
+        add({ shaders, buffers }: GLeaConstructorParams): GLea;
         /**
          * Set active texture
          * @param {number} textureIndex texture index in the range [0 .. gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1]
@@ -127,7 +146,7 @@ declare module "glea" {
         /**
          * Use program
          */
-        use(): GLea;
+        use(program?: WebGLProgram): GLea;
         /**
          * set uniform matrix (mat2, mat3, mat4)
          * @param name uniform name
