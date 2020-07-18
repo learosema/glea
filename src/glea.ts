@@ -22,6 +22,9 @@ export type GLeaBuffer = {
   loc: number;
   type: number;
   size: number;
+  normalized: boolean;
+  stride: number;
+  offset: number;
 };
 
 /**
@@ -260,8 +263,23 @@ class GLea {
         loc,
         type,
         size,
+        normalized,
+        stride,
+        offset,
       };
     };
+  }
+
+  drawArrays(drawMode: number, first = 0) {
+    const attributes = Object.keys(this.buffers);
+    if (attributes.length === 0) {
+      return;
+    }
+    const firstAttributeName = attributes[0];
+    const firstBuffer = this.buffers[firstAttributeName];
+    const len = (firstBuffer.data as Float32Array).length;
+    const count = len / firstBuffer.size;
+    this.gl.drawArrays(drawMode, first, count);
   }
 
   disableAttribs() {
@@ -274,10 +292,20 @@ class GLea {
 
   enableAttribs() {
     const { gl, program, buffers } = this;
+    this.use();
     for (let key of Object.keys(buffers)) {
+      const b = buffers[key];
       const loc = gl.getAttribLocation(program, key);
       gl.enableVertexAttribArray(loc);
       gl.bindBuffer(gl.ARRAY_BUFFER, buffers[key].id);
+      gl.vertexAttribPointer(
+        loc,
+        b.size,
+        b.type,
+        b.normalized,
+        b.stride,
+        b.offset
+      );
     }
   }
 

@@ -14,6 +14,9 @@ declare module "glea" {
         loc: number;
         type: number;
         size: number;
+        normalized: boolean;
+        stride: number;
+        offset: number;
     };
     /**
      * function that compiles a shader
@@ -90,6 +93,9 @@ declare module "glea" {
          * @param {number}   offset offset, by default 0
          */
         static buffer(size: number, data: number[] | Uint8Array | Float32Array, usage?: number, type?: number, normalized?: boolean, stride?: number, offset?: number): GLeaBufferFactory;
+        drawArrays(drawMode: number, first?: number): void;
+        disableAttribs(): void;
+        enableAttribs(): void;
         /**
          * init WebGLRenderingContext
          * @returns {GLea} glea instance

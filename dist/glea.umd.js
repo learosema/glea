@@ -161,8 +161,40 @@
                     loc,
                     type,
                     size,
+                    normalized,
+                    stride,
+                    offset,
                 };
             };
+        }
+        drawArrays(drawMode, first = 0) {
+            const attributes = Object.keys(this.buffers);
+            if (attributes.length === 0) {
+                return;
+            }
+            const firstAttributeName = attributes[0];
+            const firstBuffer = this.buffers[firstAttributeName];
+            const len = firstBuffer.data.length;
+            const count = len / firstBuffer.size;
+            this.gl.drawArrays(drawMode, first, count);
+        }
+        disableAttribs() {
+            const { gl, program, buffers } = this;
+            for (let key of Object.keys(buffers)) {
+                const loc = gl.getAttribLocation(program, key);
+                gl.disableVertexAttribArray(loc);
+            }
+        }
+        enableAttribs() {
+            const { gl, program, buffers } = this;
+            this.use();
+            for (let key of Object.keys(buffers)) {
+                const b = buffers[key];
+                const loc = gl.getAttribLocation(program, key);
+                gl.enableVertexAttribArray(loc);
+                gl.bindBuffer(gl.ARRAY_BUFFER, buffers[key].id);
+                gl.vertexAttribPointer(loc, b.size, b.type, b.normalized, b.stride, b.offset);
+            }
         }
         /**
          * init WebGLRenderingContext
