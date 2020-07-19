@@ -120,7 +120,7 @@ prg2.drawArrays(gl.TRIANGLES);
 prg2.disableAttribs();
 ```
 
-[Full example](https://github.com/terabaud/glea/examples/multi-shaders.html)
+[Full example](https://codepen.io/terabaud/pen/wvMQQyr)
 
 ### Loading textures
 
@@ -238,6 +238,7 @@ setup();
 - [Example 10: Hypnotizing Cyclone 3.0](https://codepen.io/terabaud/pen/bGNMGvb)
 - [Example 11: numeric spiral](https://codepen.io/terabaud/pen/poogqxq)
 - [Example 12: Evil virus](https://codepen.io/terabaud/pen/ZgreLo)
+- [Example 13: Halftone Circles](https://codepen.io/terabaud/pen/BajJbgd)
 
 ### More examples
 
