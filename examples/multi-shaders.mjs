@@ -24,21 +24,20 @@ uniform vec2 resolution;
 
 #define PI 3.141592654
 
-vec3 rainbow(in float t) {
-  vec3 a = vec3(0.2);		
-  vec3 b = vec3(1.);	
+vec3 palette(in float t) {
+  vec3 a = vec3(.5);		
+  vec3 b = vec3(.5);	
   vec3 c = vec3(1.0, 1.0, 1.0);	
-  vec3 d = vec3(0.00, 0.33, 0.67);
-  vec3 v0 = vec3(0.);
-  return max(v0, a + b*cos(PI * 2. * (c*t+d) ));
+  vec3 d = vec3(0.3, 0.2, 0.2);
+  return  a + b*cos(PI * 2. * (c*t+d) );
 }
 
 
 void main() {
   float vmin = min(resolution.y, resolution.x);
   vec2 p = (gl_FragCoord.xy - .5 * resolution) / vmin;
-  float t = mod(time * .1 + smoothstep(0., .9, sin(5. * log(length(p)) - time * 1.2) * sin(time * .4 + 12. * p.x) * cos(time * .4 + 12. * p.y)), 1.);
-  gl_FragColor = vec4(rainbow(t), 1.0);
+  float t = mod(time * .1 + smoothstep(-.9, .9, sin(5. * log(length(p)) - time * 1.2) * sin(time * .4 + 12. * p.x) * cos(time * .4 + 12. * p.y)), 1.);
+  gl_FragColor = vec4(palette(t), 1.0);
 }
 `;
 
