@@ -5,9 +5,10 @@ import * as Ella from './vendor/ella.esm.js';
 
 const { Vec } = Ella;
 
+// VSCode: glsl literal extension for code highlighting
 const glsl = (x) => x[0].trim();
 
-const vert = `
+const vert = glsl`
 precision highp float;
 attribute vec2 position;
 
@@ -21,13 +22,23 @@ precision highp float;
 uniform float time;
 uniform vec2 resolution;
 
+#define PI 3.141592654
+
+vec3 rainbow(in float t) {
+  vec3 a = vec3(0.2);		
+  vec3 b = vec3(1.);	
+  vec3 c = vec3(1.0, 1.0, 1.0);	
+  vec3 d = vec3(0.00, 0.33, 0.67);
+  vec3 v0 = vec3(0.);
+  return max(v0, a + b*cos(PI * 2. * (c*t+d) ));
+}
+
+
 void main() {
   float vmin = min(resolution.y, resolution.x);
   vec2 p = (gl_FragCoord.xy - .5 * resolution) / vmin;
-  float r = .5 + .5 * sin(5. * log(length(p)) - time * 1.2);
-  float g = .5 + .5 * sin(5. * log(length(p)) + sin(time + 2. * p.x));  
-  float b = .5 + .5 * sin(.2 + 5. * log(length(p)) + sin(time * .4 + 4. * p.y));
-  gl_FragColor = vec4(.5 * vec3(r, g, b), 1.0);
+  float t = mod(time * .1 + smoothstep(0., .9, sin(5. * log(length(p)) - time * 1.2) * sin(time * .4 + 12. * p.x) * cos(time * .4 + 12. * p.y)), 1.);
+  gl_FragColor = vec4(rainbow(t), 1.0);
 }
 `;
 
@@ -38,10 +49,12 @@ varying vec3 vPosition;
 varying mat4 vM;
 uniform vec2 resolution;
 uniform float time;
+uniform mat4 uVM;
 
 #define PI 3.141592654
 
-mat4 translate(vec3 p) {
+
+mat4 translate(in vec3 p) {
   return mat4(
     vec4(1.0, 0.0, 0.0, 0.0),
     vec4(0.0, 1.0, 0.0, 0.0),
@@ -49,7 +62,9 @@ mat4 translate(vec3 p) {
     vec4(p.x, p.y, p.z, 1.0)
   );
 }
-mat4 rotX(float angle) {
+
+
+mat4 rotX(in float angle) {
   float S = sin(angle);
   float C = cos(angle);
   return mat4(
@@ -59,7 +74,9 @@ mat4 rotX(float angle) {
     vec4(0  , 0, 0, 1.0)
   );
 }
-mat4 rotY(float angle) {
+
+
+mat4 rotY(in float angle) {
   float S = sin(angle);
   float C = cos(angle);
   return mat4(
@@ -69,7 +86,9 @@ mat4 rotY(float angle) {
     vec4(0, 0  , 0, 1.0)
   );
 }
-mat4 rotZ(float angle) {
+
+
+mat4 rotZ(in float angle) {
   float S = sin(angle);
   float C = cos(angle);
   return mat4(
@@ -79,8 +98,9 @@ mat4 rotZ(float angle) {
     vec4( 0, 0, 0  , 1.0)
   );
 }
+
 // glFrustum(left, right, bottom, top, zNear, zFar)
-mat4 frustum(float left, float right, float bottom, float top, float zNear, float zFar) {
+mat4 frustum(in float left, in float right, in float bottom, in float top, in float zNear, in float zFar) {
   float t1 = 2.0 * zNear;
   float t2 = right - left;
   float t3 = top - bottom;
@@ -91,8 +111,9 @@ mat4 frustum(float left, float right, float bottom, float top, float zNear, floa
 	  vec4((right + left) / t2, (top + bottom) / t3, (-zFar - zNear) / t4, -1.0),
 	  vec4(0, 0, (-t1*zFar) / t4, 0));
 }
+
 // gluPerspective(fieldOfView, aspectRatio, zNear, zFar)
-mat4 perspective(float fieldOfView, float aspectRatio, float zNear, float zFar) {
+mat4 perspective(in float fieldOfView, in float aspectRatio, in float zNear, in float zFar) {
   float y = zNear * tan(fieldOfView * PI / 360.0);
   float x = y * aspectRatio;
 	return frustum(-x, x, -y, y, zNear, zFar);
@@ -104,7 +125,8 @@ void main() {
 
   mat4 pM = perspective(45.0, resolution.x / resolution.y, 0.1, 1000.0);
   mat4 tM = translate(vec3(sin(2.0 * time * .1) * 0.2, sin(3.0 * time * .1) * .1, -1.6 + sin(time * .1)));
-  mat4 M = pM * tM * rotX(time * 0.1) * rotY(time * 0.1) * rotZ(time * 0.25);
+  mat4 rM = rotX(time * 0.1) * rotY(time * 0.1) * rotZ(time * 0.25);
+  mat4 M = pM * tM * rM * uVM;
   vM = M;
 
   gl_Position = M * vec4(position, 1.);
@@ -119,18 +141,20 @@ uniform float time;
 varying vec3 vPosition;
 varying mat4 vM;
 
-vec4 palette(float t) {
-  float x = t / (2.0 * PI);
-  return vec4(
-    sin(x * .2), 
-    sin(x * 2. + 1.), 
-    .5 + .5 * sin(x * 6. + 2.), 1.);
+// by IQ
+// https://iquilezles.org/www/articles/palettes/palettes.htm
+vec3 palette(in float t)
+{
+  vec3 a = vec3(.5, .5, .5);
+  vec3 c = vec3(2., 1., 0.);
+  vec3 d = vec3(.5, .2, .25);
+  return a + a*cos(PI * 2. * (c*t+d) );
 }
 
 void main() {
   vec4 v = vM * vec4(vPosition, 1.0);
-  float t = .5 + .5 * cos(v.x * 110. + time * 10.) * sin(v.y * 55. + time * .1);
-  gl_FragColor = palette(t+ time);
+  float t = mod(time * .1 + .8 * step(0., cos(v.x * 33. + time * 10.) * sin(v.y * 33. + time * 10.)), 1.0);
+  gl_FragColor = vec4(palette(t), 1.);
 }
 `;
 
@@ -147,14 +171,14 @@ class App {
     const h = document.body.clientHeight;
     this.projectionMat = Ella.perspective(60, w / h, 0.1, 300);
     this.viewMat = Ella.lookAt(
-      new Vec(10, 0, 0),
+      new Vec(5, 0, 2),
       new Vec(0, 0, 0),
       new Vec(0, 1, 0)
     );
   }
 
   setup() {
-    const sphere = Ella.Geometry.sphere(0.2, 16, 8);
+    const sphere = Ella.Geometry.sphere(0.2, 32, 16);
     const sphereTriangles = sphere.toTriangles();
     window.addEventListener('resize', this.onResize, false);
 
@@ -182,18 +206,21 @@ class App {
     const { prg1, prg2 } = this;
 
     prg1.clear();
+
+    // Shader 1 does the background animation
     gl.disable(gl.DEPTH_TEST);
     prg1.enableAttribs();
     prg1.uniV('resolution', [width, height]);
     prg1.uni('time', time * 1e-3);
-
     prg1.drawArrays(gl.TRIANGLE_STRIP);
     prg1.disableAttribs();
 
+    // Shader 2 renders a sphere
     gl.enable(gl.DEPTH_TEST);
     prg2.enableAttribs();
     prg2.uniV('resolution', [width, height]);
     prg2.uni('time', time * 1e-3);
+    prg2.uniM('uVM', this.viewMat.toArray());
     prg2.drawArrays(gl.TRIANGLES);
     prg2.disableAttribs();
 
