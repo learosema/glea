@@ -140,6 +140,32 @@
                     </li>
                   </ul>
                 </section>
+                <section class="tsd-index-section tsd-is-not-exported">
+                  <h3>Variables</h3>
+                  <ul class="tsd-index-list">
+                    <li
+                      class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"
+                    >
+                      <a href="_glea_.html#frag_default" class="tsd-kind-icon"
+                        >FRAG_<wbr />DEFAULT</a
+                      >
+                    </li>
+                    <li
+                      class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"
+                    >
+                      <a href="_glea_.html#shader_head" class="tsd-kind-icon"
+                        >SHADER_<wbr />HEAD</a
+                      >
+                    </li>
+                    <li
+                      class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"
+                    >
+                      <a href="_glea_.html#vert_default" class="tsd-kind-icon"
+                        >VERT_<wbr />DEFAULT</a
+                      >
+                    </li>
+                  </ul>
+                </section>
               </div>
             </section>
           </section>
@@ -168,7 +194,19 @@
                   class="tsd-signature-symbol"
                   >: </span
                 ><span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">; </span>normalized<span
+                  class="tsd-signature-symbol"
+                  >: </span
+                ><span class="tsd-signature-type">boolean</span
+                ><span class="tsd-signature-symbol">; </span>offset<span
+                  class="tsd-signature-symbol"
+                  >: </span
+                ><span class="tsd-signature-type">number</span
                 ><span class="tsd-signature-symbol">; </span>size<span
+                  class="tsd-signature-symbol"
+                  >: </span
+                ><span class="tsd-signature-type">number</span
+                ><span class="tsd-signature-symbol">; </span>stride<span
                   class="tsd-signature-symbol"
                   >: </span
                 ><span class="tsd-signature-type">number</span
@@ -183,8 +221,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/terabaud/glea/blob/5cf973d/src/glea.ts#L10"
-                      >glea.ts:10</a
+                      href="https://github.com/terabaud/glea/blob/3ee11d5/src/glea.ts#L18"
+                      >glea.ts:18</a
                     >
                   </li>
                 </ul>
@@ -223,7 +261,25 @@
                   </li>
                   <li class="tsd-parameter">
                     <h5>
+                      normalized<span class="tsd-signature-symbol">: </span
+                      ><span class="tsd-signature-type">boolean</span>
+                    </h5>
+                  </li>
+                  <li class="tsd-parameter">
+                    <h5>
+                      offset<span class="tsd-signature-symbol">: </span
+                      ><span class="tsd-signature-type">number</span>
+                    </h5>
+                  </li>
+                  <li class="tsd-parameter">
+                    <h5>
                       size<span class="tsd-signature-symbol">: </span
+                      ><span class="tsd-signature-type">number</span>
+                    </h5>
+                  </li>
+                  <li class="tsd-parameter">
+                    <h5>
+                      stride<span class="tsd-signature-symbol">: </span
                       ><span class="tsd-signature-type">number</span>
                     </h5>
                   </li>
@@ -267,8 +323,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/terabaud/glea/blob/5cf973d/src/glea.ts#L27"
-                      >glea.ts:27</a
+                      href="https://github.com/terabaud/glea/blob/3ee11d5/src/glea.ts#L41"
+                      >glea.ts:41</a
                     >
                   </li>
                 </ul>
@@ -415,8 +471,8 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/terabaud/glea/blob/5cf973d/src/glea.ts#L33"
-                      >glea.ts:33</a
+                      href="https://github.com/terabaud/glea/blob/3ee11d5/src/glea.ts#L47"
+                      >glea.ts:47</a
                     >
                   </li>
                 </ul>
@@ -518,7 +574,7 @@
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/terabaud/glea/blob/5cf973d/src/glea.ts#L5"
+                      href="https://github.com/terabaud/glea/blob/3ee11d5/src/glea.ts#L5"
                       >glea.ts:5</a
                     >
                   </li>
@@ -544,22 +600,30 @@
                   class="tsd-signature-symbol"
                   >:</span
                 >
-                <span class="tsd-signature-symbol">(</span>gl<span
+                <span class="tsd-signature-symbol">{ </span>init<span
+                  class="tsd-signature-symbol"
+                  >: </span
+                ><span class="tsd-signature-symbol">(</span>gl<span
                   class="tsd-signature-symbol"
                   >: </span
                 ><a href="_glea_.html#gleacontext" class="tsd-signature-type"
                   >GLeaContext</a
                 ><span class="tsd-signature-symbol">)</span
                 ><span class="tsd-signature-symbol"> =&gt; </span
-                ><span class="tsd-signature-type">WebGLShader</span>
+                ><span class="tsd-signature-type">WebGLShader</span
+                ><span class="tsd-signature-symbol">; </span>shaderType<span
+                  class="tsd-signature-symbol"
+                  >: </span
+                ><span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol"> }</span>
               </div>
               <aside class="tsd-sources">
                 <ul>
                   <li>
                     Defined in
                     <a
-                      href="https://github.com/terabaud/glea/blob/5cf973d/src/glea.ts#L22"
-                      >glea.ts:22</a
+                      href="https://github.com/terabaud/glea/blob/3ee11d5/src/glea.ts#L33"
+                      >glea.ts:33</a
                     >
                   </li>
                 </ul>
@@ -572,47 +636,159 @@
               <div class="tsd-type-declaration">
                 <h4>Type declaration</h4>
                 <ul class="tsd-parameters">
-                  <li class="tsd-parameter-signature">
-                    <ul
-                      class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias"
-                    >
-                      <li class="tsd-signature tsd-kind-icon">
-                        <span class="tsd-signature-symbol">(</span>gl<span
-                          class="tsd-signature-symbol"
-                          >: </span
-                        ><a
-                          href="_glea_.html#gleacontext"
-                          class="tsd-signature-type"
-                          >GLeaContext</a
-                        ><span class="tsd-signature-symbol">)</span
-                        ><span class="tsd-signature-symbol">: </span
-                        ><span class="tsd-signature-type">WebGLShader</span>
-                      </li>
-                    </ul>
-                    <ul class="tsd-descriptions">
-                      <li class="tsd-description">
-                        <h4 class="tsd-parameters-title">Parameters</h4>
-                        <ul class="tsd-parameters">
-                          <li>
-                            <h5>
-                              gl:
-                              <a
-                                href="_glea_.html#gleacontext"
-                                class="tsd-signature-type"
-                                >GLeaContext</a
-                              >
-                            </h5>
+                  <li class="tsd-parameter">
+                    <h5>
+                      init<span class="tsd-signature-symbol">: </span
+                      ><span class="tsd-signature-symbol">(</span>gl<span
+                        class="tsd-signature-symbol"
+                        >: </span
+                      ><a
+                        href="_glea_.html#gleacontext"
+                        class="tsd-signature-type"
+                        >GLeaContext</a
+                      ><span class="tsd-signature-symbol">)</span
+                      ><span class="tsd-signature-symbol"> =&gt; </span
+                      ><span class="tsd-signature-type">WebGLShader</span>
+                    </h5>
+                    <ul class="tsd-parameters">
+                      <li class="tsd-parameter-signature">
+                        <ul
+                          class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable"
+                        >
+                          <li class="tsd-signature tsd-kind-icon">
+                            <span class="tsd-signature-symbol">(</span>gl<span
+                              class="tsd-signature-symbol"
+                              >: </span
+                            ><a
+                              href="_glea_.html#gleacontext"
+                              class="tsd-signature-type"
+                              >GLeaContext</a
+                            ><span class="tsd-signature-symbol">)</span
+                            ><span class="tsd-signature-symbol">: </span
+                            ><span class="tsd-signature-type">WebGLShader</span>
                           </li>
                         </ul>
-                        <h4 class="tsd-returns-title">
-                          Returns
-                          <span class="tsd-signature-type">WebGLShader</span>
-                        </h4>
+                        <ul class="tsd-descriptions">
+                          <li class="tsd-description">
+                            <h4 class="tsd-parameters-title">Parameters</h4>
+                            <ul class="tsd-parameters">
+                              <li>
+                                <h5>
+                                  gl:
+                                  <a
+                                    href="_glea_.html#gleacontext"
+                                    class="tsd-signature-type"
+                                    >GLeaContext</a
+                                  >
+                                </h5>
+                              </li>
+                            </ul>
+                            <h4 class="tsd-returns-title">
+                              Returns
+                              <span class="tsd-signature-type"
+                                >WebGLShader</span
+                              >
+                            </h4>
+                          </li>
+                        </ul>
                       </li>
                     </ul>
                   </li>
+                  <li class="tsd-parameter">
+                    <h5>
+                      shader<wbr />Type<span class="tsd-signature-symbol"
+                        >: </span
+                      ><span class="tsd-signature-type">string</span>
+                    </h5>
+                  </li>
                 </ul>
               </div>
+            </section>
+          </section>
+          <section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+            <h2>Variables</h2>
+            <section
+              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"
+            >
+              <a name="frag_default" class="tsd-anchor"></a>
+              <h3>
+                <span class="tsd-flag ts-flagConst">Const</span>
+                FRAG_<wbr />DEFAULT
+              </h3>
+              <div class="tsd-signature tsd-kind-icon">
+                FRAG_<wbr />DEFAULT<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">
+                  = SHADER_HEAD +&#x60;precision highp float;void
+                  main(){gl_FragColor &#x3D; vec4(1.,0.,0.,1.);}&#x60;</span
+                >
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/terabaud/glea/blob/3ee11d5/src/glea.ts#L11"
+                      >glea.ts:11</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"
+            >
+              <a name="shader_head" class="tsd-anchor"></a>
+              <h3>
+                <span class="tsd-flag ts-flagConst">Const</span>
+                SHADER_<wbr />HEAD
+              </h3>
+              <div class="tsd-signature tsd-kind-icon">
+                SHADER_<wbr />HEAD<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">"precision highp float;"</span
+                ><span class="tsd-signature-symbol">
+                  = &quot;precision highp float;&quot;</span
+                >
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/terabaud/glea/blob/3ee11d5/src/glea.ts#L7"
+                      >glea.ts:7</a
+                    >
+                  </li>
+                </ul>
+              </aside>
+            </section>
+            <section
+              class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"
+            >
+              <a name="vert_default" class="tsd-anchor"></a>
+              <h3>
+                <span class="tsd-flag ts-flagConst">Const</span>
+                VERT_<wbr />DEFAULT
+              </h3>
+              <div class="tsd-signature tsd-kind-icon">
+                VERT_<wbr />DEFAULT<span class="tsd-signature-symbol">:</span>
+                <span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">
+                  = SHADER_HEAD +&#x27;attribute vec2 position;void
+                  main(){gl_Position&#x3D;vec4(position,0, 1.);}&#x27;</span
+                >
+              </div>
+              <aside class="tsd-sources">
+                <ul>
+                  <li>
+                    Defined in
+                    <a
+                      href="https://github.com/terabaud/glea/blob/3ee11d5/src/glea.ts#L8"
+                      >glea.ts:8</a
+                    >
+                  </li>
+                </ul>
+              </aside>
             </section>
           </section>
         </div>
@@ -661,6 +837,27 @@
                   >GLea<wbr />Shader<wbr />Factory</a
                 >
               </li>
+              <li
+                class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"
+              >
+                <a href="_glea_.html#frag_default" class="tsd-kind-icon"
+                  >FRAG_<wbr />DEFAULT</a
+                >
+              </li>
+              <li
+                class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"
+              >
+                <a href="_glea_.html#shader_head" class="tsd-kind-icon"
+                  >SHADER_<wbr />HEAD</a
+                >
+              </li>
+              <li
+                class="tsd-kind-variable tsd-parent-kind-module tsd-is-not-exported"
+              >
+                <a href="_glea_.html#vert_default" class="tsd-kind-icon"
+                  >VERT_<wbr />DEFAULT</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
@@ -671,6 +868,9 @@
         <h2>Legend</h2>
         <div class="tsd-legend-group">
           <ul class="tsd-legend">
+            <li class="tsd-kind-variable">
+              <span class="tsd-kind-icon">Variable</span>
+            </li>
             <li class="tsd-kind-type-alias">
               <span class="tsd-kind-icon">Type alias</span>
             </li>

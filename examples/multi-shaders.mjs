@@ -188,8 +188,6 @@ class App {
       shaders: [GLea.vertexShader(vert), GLea.fragmentShader(frag)],
     }).create();
 
-    const gl = this.prg1.gl;
-
     this.prg2 = this.prg1.add({
       shaders: [GLea.vertexShader(vert2), GLea.fragmentShader(frag2)],
       buffers: {

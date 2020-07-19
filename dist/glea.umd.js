@@ -167,17 +167,29 @@
                 };
             };
         }
-        drawArrays(drawMode, first = 0) {
-            const attributes = Object.keys(this.buffers);
-            if (attributes.length === 0) {
-                return;
+        /**
+         * Wrapper for gl.drawArrays
+         *
+         * @param {number} drawMode gl.POINTS, gl.TRIANGLES, gl.TRIANGLE_STRIP, ...
+         * @param {number} first offset of first vertex
+         * @param {number} count count of vertices. If not provided, it is determined from the provided buffers
+         */
+        drawArrays(drawMode, first = 0, count) {
+            if (typeof count === 'undefined') {
+                const attributes = Object.keys(this.buffers);
+                if (attributes.length === 0) {
+                    return;
+                }
+                const firstAttributeName = attributes[0];
+                const firstBuffer = this.buffers[firstAttributeName];
+                const len = firstBuffer.data.length;
+                count = len / firstBuffer.size;
             }
-            const firstAttributeName = attributes[0];
-            const firstBuffer = this.buffers[firstAttributeName];
-            const len = firstBuffer.data.length;
-            const count = len / firstBuffer.size;
             this.gl.drawArrays(drawMode, first, count);
         }
+        /**
+         * Disable attribs (useful for switching between GLea instances)
+         */
         disableAttribs() {
             const { gl, program, buffers } = this;
             for (let key of Object.keys(buffers)) {
@@ -185,6 +197,9 @@
                 gl.disableVertexAttribArray(loc);
             }
         }
+        /**
+         * Enable attribs
+         */
         enableAttribs() {
             const { gl, program, buffers } = this;
             this.use();
@@ -222,6 +237,9 @@
             }
             this.canvas = newCanvas;
         }
+        /**
+         * Deletes the canvas element and replaces it with a cloned node and calls create() again
+         */
         restart() {
             this.replaceCanvas();
             this.gl = this.getContext(this.contextType, this.glOptions);
@@ -332,10 +350,7 @@
         /**
          * Use program
          */
-        use(program) {
-            if (program) {
-                this.program = program;
-            }
+        use() {
             this.gl.useProgram(this.program);
             return this;
         }

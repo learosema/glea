@@ -93,8 +93,21 @@ declare module "glea" {
          * @param {number}   offset offset, by default 0
          */
         static buffer(size: number, data: number[] | Uint8Array | Float32Array, usage?: number, type?: number, normalized?: boolean, stride?: number, offset?: number): GLeaBufferFactory;
-        drawArrays(drawMode: number, first?: number): void;
+        /**
+         * Wrapper for gl.drawArrays
+         *
+         * @param {number} drawMode gl.POINTS, gl.TRIANGLES, gl.TRIANGLE_STRIP, ...
+         * @param {number} first offset of first vertex
+         * @param {number} count count of vertices. If not provided, it is determined from the provided buffers
+         */
+        drawArrays(drawMode: number, first?: number, count?: number): void;
+        /**
+         * Disable attribs (useful for switching between GLea instances)
+         */
         disableAttribs(): void;
+        /**
+         * Enable attribs
+         */
         enableAttribs(): void;
         /**
          * init WebGLRenderingContext
@@ -102,6 +115,9 @@ declare module "glea" {
          */
         create(): this;
         private replaceCanvas;
+        /**
+         * Deletes the canvas element and replaces it with a cloned node and calls create() again
+         */
         restart(): this;
         /**
          * Create a new instance with another program and reuse the rendering context
@@ -152,7 +168,7 @@ declare module "glea" {
         /**
          * Use program
          */
-        use(program?: WebGLProgram): GLea;
+        use(): GLea;
         /**
          * set uniform matrix (mat2, mat3, mat4)
          * @param name uniform name

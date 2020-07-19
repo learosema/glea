@@ -186,16 +186,76 @@ glea.uniM(<span class="hljs-string">'translateMatrix'</span>, [
               <h3>Draw</h3>
             </a>
             <p>
-              Currently, GLea doesn&#39;t provide any wrapper for actually
-              drawing your stuff. Instead, call
+              GLea provides a wrapper to
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"
                 >drawArrays</a
               >
-              from the underlying WebGLRenderingContext:
+              from the underlying WebGLRenderingContext. It works exactly like
+              the original drawArrays function, but if you don&#39;t provide any
+              vertex count, it is determined automatically from the buffers.
             </p>
-            <pre><code class="language-js"><span class="hljs-keyword">const</span> numVertices = <span class="hljs-number">4</span>;
+            <pre><code class="language-js"><span class="hljs-keyword">const</span> { gl } = glea;
+
+glea.drawArrays(gl.TRIANGLE_STRIP);
+
+<span class="hljs-comment">// The same as:</span>
+<span class="hljs-keyword">const</span> numVertices = <span class="hljs-number">4</span>;
 glea.gl.drawArrays(gl.TRIANGLE_STRIP, <span class="hljs-number">0</span>, numVertices);</code></pre>
+            <a
+              href="#multiple-programs-and-switching"
+              id="multiple-programs-and-switching"
+              style="color: inherit; text-decoration: none;"
+            >
+              <h3>Multiple programs and switching</h3>
+            </a>
+            <p>GLea supports multiple programs.</p>
+            <pre><code class="language-js"><span class="hljs-keyword">const</span> prg1 = <span class="hljs-keyword">new</span> GLea({
+  <span class="hljs-attr">shaders</span>: [GLea.vertexShader(vert), GLea.fragmentShader(frag)],
+}).create();
+
+<span class="hljs-keyword">const</span> prg2 = prg1.add({
+  <span class="hljs-attr">shaders</span>: [GLea.vertexShader(vert2), GLea.fragmentShader(frag2)],
+  <span class="hljs-attr">buffers</span>: {
+    <span class="hljs-attr">position</span>: GLea.buffer(<span class="hljs-number">3</span>, Ella.Geometry.sphere(<span class="hljs-number">0.25</span>, <span class="hljs-number">32</span>, <span class="hljs-number">16</span>).toTriangles()),
+  },
+});</code></pre>
+            <p>
+              The the main instance <code>prg1</code> and its child
+              <code>prg2</code> use the same underlying WebGLRenderingContext.
+              In the example <code>prg1</code> renders a plane geometry (GLea
+              provides a <code>position</code> attribute with a plane geometry
+              by default), and <code>prg2</code> provides a sphere geometry. The
+              sphere geometry is provided by
+              <a href="https://github.com/terabaud/ella-math">ella-math</a>.
+            </p>
+            <p>
+              In the draw loop, the switching between programs is done via
+              <code>enableAttribs</code> and <code>disableAttribs</code>:
+            </p>
+            <pre><code class="language-js"><span class="hljs-comment">// Shader 1 does the background animation</span>
+prg1.gl.disable(gl.DEPTH_TEST);
+prg1.enableAttribs();
+prg1.uniV(<span class="hljs-string">'resolution'</span>, [width, height]);
+prg1.uni(<span class="hljs-string">'time'</span>, time * <span class="hljs-number">1e-3</span>);
+prg1.drawArrays(gl.TRIANGLE_STRIP);
+prg1.disableAttribs();
+
+<span class="hljs-comment">// Shader 2 renders a sphere</span>
+gl.enable(gl.DEPTH_TEST);
+prg2.enableAttribs();
+prg2.uniV(<span class="hljs-string">'resolution'</span>, [width, height]);
+prg2.uni(<span class="hljs-string">'time'</span>, time * <span class="hljs-number">1e-3</span>);
+prg2.uniM(<span class="hljs-string">'uPM'</span>, <span class="hljs-keyword">this</span>.projectionMat.toArray());
+prg2.uniM(<span class="hljs-string">'uVM'</span>, <span class="hljs-keyword">this</span>.viewMat.toArray());
+prg2.drawArrays(gl.TRIANGLES);
+prg2.disableAttribs();</code></pre>
+            <p>
+              <a
+                href="https://github.com/terabaud/glea/examples/multi-shaders.html"
+                >Full example</a
+              >
+            </p>
             <a
               href="#loading-textures"
               id="loading-textures"
@@ -430,6 +490,9 @@ void main() {
         <h2>Legend</h2>
         <div class="tsd-legend-group">
           <ul class="tsd-legend">
+            <li class="tsd-kind-variable">
+              <span class="tsd-kind-icon">Variable</span>
+            </li>
             <li class="tsd-kind-type-alias">
               <span class="tsd-kind-icon">Type alias</span>
             </li>
