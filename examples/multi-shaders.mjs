@@ -156,7 +156,7 @@ vec3 palette(in float t)
 
 void main() {
   vec4 v = vM * vec4(vPosition, 1.0);
-  float t = mod(time * .1 + .8 * step(0., cos(v.x * 33. + time * 10.) * sin(v.y * 33. + time * 10.)), 1.0);
+  float t = mod(time * .1 + .8 * smoothstep(-.5,.5, cos(v.x * 33. + time * 10.) * sin(v.y * 33. + time * 10.)), 1.0);
   gl_FragColor = vec4(palette(t), 1.);
 }
 `;
