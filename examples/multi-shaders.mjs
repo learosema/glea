@@ -49,6 +49,7 @@ varying mat4 vM;
 uniform vec2 resolution;
 uniform float time;
 uniform mat4 uVM;
+uniform mat4 uPM;
 
 #define PI 3.141592654
 
@@ -122,7 +123,10 @@ mat4 perspective(in float fieldOfView, in float aspectRatio, in float zNear, in 
 void main() {
   vPosition = position;
 
-  mat4 pM = perspective(45.0, resolution.x / resolution.y, 0.1, 1000.0);
+  mat4 pM = uPM;
+  // alternatively:
+  // mat4 pM = perspective(45.0, resolution.x / resolution.y, 0.1, 1000.0);
+  
   mat4 tM = translate(vec3(sin(2.0 * time * .1) * 0.2, sin(3.0 * time * .1) * .1, -1.6 + sin(time * .1)));
   mat4 rM = rotX(time * 0.1) * rotY(time * 0.1) * rotZ(time * 0.25);
   mat4 M = pM * tM * rM * uVM;
@@ -168,7 +172,7 @@ class App {
   setProjectionMatrix() {
     const w = document.body.clientWidth;
     const h = document.body.clientHeight;
-    this.projectionMat = Ella.perspective(60, w / h, 0.1, 300);
+    this.projectionMat = Ella.perspective(60, w / h, 0.1, 1000);
     this.viewMat = Ella.lookAt(
       new Vec(5, 0, 2),
       new Vec(0, 0, 0),
@@ -177,11 +181,9 @@ class App {
   }
 
   setup() {
-    const sphere = Ella.Geometry.sphere(0.2, 32, 16);
+    const sphere = Ella.Geometry.sphere(0.25, 32, 16);
     const sphereTriangles = sphere.toTriangles();
-    window.addEventListener('resize', this.onResize, false);
 
-    this.setProjectionMatrix();
     this.prg1 = new GLea({
       shaders: [GLea.vertexShader(vert), GLea.fragmentShader(frag)],
     }).create();
@@ -194,6 +196,9 @@ class App {
         position: GLea.buffer(3, sphereTriangles),
       },
     });
+
+    window.addEventListener('resize', this.onResize, false);
+    this.onResize();
   }
 
   destroy() {
@@ -219,6 +224,7 @@ class App {
     prg2.enableAttribs();
     prg2.uniV('resolution', [width, height]);
     prg2.uni('time', time * 1e-3);
+    prg2.uniM('uPM', this.projectionMat.toArray());
     prg2.uniM('uVM', this.viewMat.toArray());
     prg2.drawArrays(gl.TRIANGLES);
     prg2.disableAttribs();
@@ -228,6 +234,7 @@ class App {
 
   onResize() {
     this.prg1.resize();
+    this.setProjectionMatrix();
   }
 }
 
