@@ -14,11 +14,17 @@ declare module "glea" {
         loc: number;
         type: number;
         size: number;
+        normalized: boolean;
+        stride: number;
+        offset: number;
     };
     /**
      * function that compiles a shader
      */
-    export type GLeaShaderFactory = (gl: GLeaContext) => WebGLShader;
+    export type GLeaShaderFactory = {
+        shaderType: string;
+        init: (gl: GLeaContext) => WebGLShader;
+    };
     /**
      * function that registers an attribute and binds a buffer to it
      */
@@ -35,6 +41,8 @@ declare module "glea" {
     /** Class GLea */
     class GLea {
         canvas: HTMLCanvasElement;
+        contextType: string;
+        glOptions?: WebGLContextAttributes;
         gl: WebGLRenderingContext | WebGL2RenderingContext;
         shaderFactory: GLeaShaderFactory[];
         bufferFactory: Record<string, GLeaBufferFactory>;
@@ -42,6 +50,7 @@ declare module "glea" {
         buffers: Record<string, GLeaBuffer>;
         textures: WebGLTexture[];
         devicePixelRatio: number;
+        parent?: GLea;
         constructor({ canvas, gl, contextType, shaders, buffers, devicePixelRatio, glOptions, }: GLeaConstructorParams);
         /**
          * By default, GLea provides a position buffer containing 4 2D coordinates
@@ -59,13 +68,19 @@ declare module "glea" {
          *
          * @param code shader code
          */
-        static vertexShader(code: string): (gl: GLeaContext) => WebGLShader;
+        static vertexShader(code?: string): GLeaShaderFactory;
         /**
          * Create a fragment shader
          *
          * @param {string} code fragment shader code
          */
-        static fragmentShader(code: string): (gl: GLeaContext) => WebGLShader;
+        static fragmentShader(code?: string): GLeaShaderFactory;
+        /**
+         * Create a webgl program from a vertex and fragment shader (no matter which order)
+         * @param shader1 a factory created by GLea.vertexShader or GLea.fragmentShader
+         * @param shader2 a factory created by GLea.vertexShader or GLea.fragmentShader
+         */
+        private prog;
         /**
          * Create Buffer
          *
@@ -79,10 +94,36 @@ declare module "glea" {
          */
         static buffer(size: number, data: number[] | Uint8Array | Float32Array, usage?: number, type?: number, normalized?: boolean, stride?: number, offset?: number): GLeaBufferFactory;
         /**
+         * Wrapper for gl.drawArrays
+         *
+         * @param {number} drawMode gl.POINTS, gl.TRIANGLES, gl.TRIANGLE_STRIP, ...
+         * @param {number} first offset of first vertex
+         * @param {number} count count of vertices. If not provided, it is determined from the provided buffers
+         */
+        drawArrays(drawMode: number, first?: number, count?: number): void;
+        /**
+         * Disable attribs (useful for switching between GLea instances)
+         */
+        disableAttribs(): void;
+        /**
+         * Enable attribs
+         */
+        enableAttribs(): void;
+        /**
          * init WebGLRenderingContext
          * @returns {GLea} glea instance
          */
         create(): this;
+        private replaceCanvas;
+        /**
+         * Deletes the canvas element and replaces it with a cloned node and calls create() again
+         */
+        restart(): this;
+        /**
+         * Create a new instance with another program and reuse the rendering context
+         * @param param0 buffers and shaders
+         */
+        add({ shaders, buffers }: GLeaConstructorParams): GLea;
         /**
          * Set active texture
          * @param {number} textureIndex texture index in the range [0 .. gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1]

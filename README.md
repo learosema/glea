@@ -64,13 +64,63 @@ glea.uniM('translateMatrix', [
 
 ### Draw
 
-Currently, GLea doesn't provide any wrapper for actually drawing your stuff.
-Instead, call [drawArrays](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays) from the underlying WebGLRenderingContext:
+GLea provides a wrapper to [drawArrays](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays) from the underlying WebGLRenderingContext. It works exactly like the original drawArrays function, but if you don't provide any vertex count, it is determined
+automatically from the buffers.
 
 ```js
+const { gl } = glea;
+
+glea.drawArrays(gl.TRIANGLE_STRIP);
+
+// The same as:
 const numVertices = 4;
 glea.gl.drawArrays(gl.TRIANGLE_STRIP, 0, numVertices);
 ```
+
+### Multiple programs and switching
+
+GLea supports multiple programs.
+
+```js
+const prg1 = new GLea({
+  shaders: [GLea.vertexShader(vert), GLea.fragmentShader(frag)],
+}).create();
+
+const prg2 = prg1.add({
+  shaders: [GLea.vertexShader(vert2), GLea.fragmentShader(frag2)],
+  buffers: {
+    position: GLea.buffer(3, Ella.Geometry.sphere(0.25, 32, 16).toTriangles()),
+  },
+});
+```
+
+The the main instance `prg1` and its child `prg2` use the same underlying WebGLRenderingContext.
+In the example `prg1` renders a plane geometry (GLea provides a `position` attribute with a plane geometry by default),
+and `prg2` provides a sphere geometry. The sphere geometry is provided by [ella-math](https://github.com/terabaud/ella-math).
+
+In the draw loop, the switching between programs is done via `enableAttribs` and `disableAttribs`:
+
+```js
+// Shader 1 does the background animation
+prg1.gl.disable(gl.DEPTH_TEST);
+prg1.enableAttribs();
+prg1.uniV('resolution', [width, height]);
+prg1.uni('time', time * 1e-3);
+prg1.drawArrays(gl.TRIANGLE_STRIP);
+prg1.disableAttribs();
+
+// Shader 2 renders a sphere
+gl.enable(gl.DEPTH_TEST);
+prg2.enableAttribs();
+prg2.uniV('resolution', [width, height]);
+prg2.uni('time', time * 1e-3);
+prg2.uniM('uPM', this.projectionMat.toArray());
+prg2.uniM('uVM', this.viewMat.toArray());
+prg2.drawArrays(gl.TRIANGLES);
+prg2.disableAttribs();
+```
+
+[Full example](https://github.com/terabaud/glea/examples/multi-shaders.html)
 
 ### Loading textures
 

@@ -1,3 +1,8 @@
+const SHADER_HEAD = 'precision highp float;';
+const VERT_DEFAULT = SHADER_HEAD +
+    'attribute vec2 position;void main(){gl_Position=vec4(position,0, 1.);}';
+const FRAG_DEFAULT = SHADER_HEAD +
+    `precision highp float;void main(){gl_FragColor = vec4(1.,0.,0.,1.);}`;
 /**
  * @hidden hide internal function from documentation
  */
@@ -14,8 +19,11 @@ function convertArray(data, type = WebGLRenderingContext.FLOAT) {
  * @hidden hide internal function from documentation
  */
 function shader(code, shaderType) {
-    return (gl) => {
-        const sh = gl.createShader(/frag/.test(shaderType) ? gl.FRAGMENT_SHADER : gl.VERTEX_SHADER);
+    const init = (gl) => {
+        const glShaderType = /frag/.test(shaderType)
+            ? WebGLRenderingContext.FRAGMENT_SHADER
+            : WebGLRenderingContext.VERTEX_SHADER;
+        const sh = gl.createShader(glShaderType);
         if (!sh) {
             throw Error('shader type not supported');
         }
@@ -25,6 +33,10 @@ function shader(code, shaderType) {
             throw 'Could not compile Shader.\n\n' + gl.getShaderInfoLog(sh);
         }
         return sh;
+    };
+    return {
+        shaderType,
+        init,
     };
 }
 /** Class GLea */
@@ -43,11 +55,10 @@ class GLea {
                 'body{margin:0}canvas{display:block;width:100vw;height:100vh}';
             document.head.appendChild(style);
         }
+        this.contextType = contextType;
+        this.glOptions = glOptions;
         this.gl = gl || this.getContext(contextType, glOptions);
         const program = this.gl.createProgram();
-        if (!program) {
-            throw Error('gl.createProgram failed');
-        }
         this.program = program;
         this.buffers = {};
         this.shaderFactory = shaders;
@@ -86,16 +97,35 @@ class GLea {
      *
      * @param code shader code
      */
-    static vertexShader(code) {
-        return (gl) => shader(code, 'vert')(gl);
+    static vertexShader(code = VERT_DEFAULT) {
+        return shader(code, 'vert');
     }
     /**
      * Create a fragment shader
      *
      * @param {string} code fragment shader code
      */
-    static fragmentShader(code) {
-        return (gl) => shader(code, 'frag')(gl);
+    static fragmentShader(code = FRAG_DEFAULT) {
+        return shader(code, 'frag');
+    }
+    /**
+     * Create a webgl program from a vertex and fragment shader (no matter which order)
+     * @param shader1 a factory created by GLea.vertexShader or GLea.fragmentShader
+     * @param shader2 a factory created by GLea.vertexShader or GLea.fragmentShader
+     */
+    prog(gl, shader1, shader2) {
+        const p = gl.createProgram();
+        const s1 = shader1.init(gl);
+        const s2 = shader2.init(gl);
+        gl.attachShader(p, s1);
+        gl.attachShader(p, s2);
+        gl.linkProgram(p);
+        gl.validateProgram(p);
+        if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
+            const info = gl.getProgramInfoLog(p);
+            throw 'Could not compile WebGL program. \n\n' + info;
+        }
+        return p;
     }
     /**
      * Create Buffer
@@ -125,8 +155,55 @@ class GLea {
                 loc,
                 type,
                 size,
+                normalized,
+                stride,
+                offset,
             };
         };
+    }
+    /**
+     * Wrapper for gl.drawArrays
+     *
+     * @param {number} drawMode gl.POINTS, gl.TRIANGLES, gl.TRIANGLE_STRIP, ...
+     * @param {number} first offset of first vertex
+     * @param {number} count count of vertices. If not provided, it is determined from the provided buffers
+     */
+    drawArrays(drawMode, first = 0, count) {
+        if (typeof count === 'undefined') {
+            const attributes = Object.keys(this.buffers);
+            if (attributes.length === 0) {
+                return;
+            }
+            const firstAttributeName = attributes[0];
+            const firstBuffer = this.buffers[firstAttributeName];
+            const len = firstBuffer.data.length;
+            count = len / firstBuffer.size;
+        }
+        this.gl.drawArrays(drawMode, first, count);
+    }
+    /**
+     * Disable attribs (useful for switching between GLea instances)
+     */
+    disableAttribs() {
+        const { gl, program, buffers } = this;
+        for (let key of Object.keys(buffers)) {
+            const loc = gl.getAttribLocation(program, key);
+            gl.disableVertexAttribArray(loc);
+        }
+    }
+    /**
+     * Enable attribs
+     */
+    enableAttribs() {
+        const { gl, program, buffers } = this;
+        this.use();
+        for (let key of Object.keys(buffers)) {
+            const b = buffers[key];
+            const loc = gl.getAttribLocation(program, key);
+            gl.enableVertexAttribArray(loc);
+            gl.bindBuffer(gl.ARRAY_BUFFER, buffers[key].id);
+            gl.vertexAttribPointer(loc, b.size, b.type, b.normalized, b.stride, b.offset);
+        }
     }
     /**
      * init WebGLRenderingContext
@@ -134,25 +211,49 @@ class GLea {
      */
     create() {
         const { gl } = this;
-        const { program } = this;
-        this.shaderFactory
-            .map((shaderFunc) => shaderFunc(gl))
-            .map((shader) => {
-            gl.attachShader(program, shader);
-        });
-        gl.linkProgram(program);
-        gl.validateProgram(program);
-        if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-            const info = gl.getProgramInfoLog(program);
-            throw 'Could not compile WebGL program. \n\n' + info;
-        }
+        this.program = this.prog(gl, this.shaderFactory[0], this.shaderFactory[1]);
         this.use();
         Object.keys(this.bufferFactory).forEach((name) => {
             const bufferFunc = this.bufferFactory[name];
-            this.buffers[name] = bufferFunc(name, gl, program);
+            this.buffers[name] = bufferFunc(name, gl, this.program);
         });
-        this.resize();
+        if (!this.parent) {
+            this.resize();
+        }
         return this;
+    }
+    replaceCanvas() {
+        const { canvas } = this;
+        const newCanvas = canvas.cloneNode();
+        if (canvas.parentNode) {
+            canvas.parentNode.insertBefore(newCanvas, canvas);
+            canvas.parentNode.removeChild(canvas);
+        }
+        this.canvas = newCanvas;
+    }
+    /**
+     * Deletes the canvas element and replaces it with a cloned node and calls create() again
+     */
+    restart() {
+        this.replaceCanvas();
+        this.gl = this.getContext(this.contextType, this.glOptions);
+        this.create();
+        return this;
+    }
+    /**
+     * Create a new instance with another program and reuse the rendering context
+     * @param param0 buffers and shaders
+     */
+    add({ shaders, buffers }) {
+        const instance = new GLea({
+            canvas: this.canvas,
+            gl: this.gl,
+            shaders,
+            buffers: buffers || this.getDefaultBuffers(),
+        });
+        instance.parent = this.parent || this;
+        instance.create();
+        return instance;
     }
     /**
      * Set active texture
@@ -361,7 +462,7 @@ class GLea {
      * Also the canvas element is removed from the DOM and replaced by a new cloned canvas element
      */
     destroy() {
-        const { gl, program, canvas } = this;
+        const { gl, program } = this;
         try {
             gl.deleteProgram(program);
             Object.values(this.buffers).forEach((buffer) => {
@@ -374,12 +475,7 @@ class GLea {
             this.textures = [];
             // @ts-ignore TS doesn't know about getExtension
             gl.getExtension('WEBGL_lose_context').loseContext();
-            const newCanvas = canvas.cloneNode();
-            if (canvas.parentNode) {
-                canvas.parentNode.insertBefore(newCanvas, canvas);
-                canvas.parentNode.removeChild(canvas);
-            }
-            this.canvas = newCanvas;
+            this.replaceCanvas();
         }
         catch (err) {
             console.error(err);
