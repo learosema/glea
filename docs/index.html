@@ -1,216 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="default no-js">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>glea</title>
-    <meta name="description" content="Documentation for glea" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <header>
-      <div class="tsd-page-toolbar">
-        <div class="container">
-          <div class="table-wrap">
-            <div
-              class="table-cell"
-              id="tsd-search"
-              data-index="assets/js/search.json"
-              data-base="."
-            >
-              <div class="field">
-                <label
-                  for="tsd-search-field"
-                  class="tsd-widget search no-caption"
-                  >Search</label
-                >
-                <input id="tsd-search-field" type="text" />
-              </div>
-              <ul class="results">
-                <li class="state loading">Preparing search index...</li>
-                <li class="state failure">The search index is not available</li>
-              </ul>
-              <a href="index.html" class="title">glea</a>
-            </div>
-            <div class="table-cell" id="tsd-widgets">
-              <div id="tsd-filter">
-                <a
-                  href="#"
-                  class="tsd-widget options no-caption"
-                  data-toggle="options"
-                  >Options</a
-                >
-                <div class="tsd-filter-group">
-                  <div class="tsd-select" id="tsd-filter-visibility">
-                    <span class="tsd-select-label">All</span>
-                    <ul class="tsd-select-list">
-                      <li data-value="public">Public</li>
-                      <li data-value="protected">Public/Protected</li>
-                      <li data-value="private" class="selected">All</li>
-                    </ul>
-                  </div>
-                  <input type="checkbox" id="tsd-filter-inherited" checked />
-                  <label class="tsd-widget" for="tsd-filter-inherited"
-                    >Inherited</label
-                  >
-                  <input type="checkbox" id="tsd-filter-externals" checked />
-                  <label class="tsd-widget" for="tsd-filter-externals"
-                    >Externals</label
-                  >
-                  <input type="checkbox" id="tsd-filter-only-exported" />
-                  <label class="tsd-widget" for="tsd-filter-only-exported"
-                    >Only exported</label
-                  >
-                </div>
-              </div>
-              <a href="#" class="tsd-widget menu no-caption" data-toggle="menu"
-                >Menu</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tsd-page-title">
-        <div class="container">
-          <ul class="tsd-breadcrumb">
-            <li>
-              <a href="globals.html">Globals</a>
-            </li>
-          </ul>
-          <h1>glea</h1>
-        </div>
-      </div>
-    </header>
-    <div class="container container-main">
-      <div class="row">
-        <div class="col-8 col-content">
-          <div class="tsd-panel tsd-typography">
-            <a
-              href="#glea---gl-experience-artistry"
-              id="glea---gl-experience-artistry"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h1>GLea - GL experience artistry</h1>
-            </a>
-            <p>
-              GLea is a low-level WebGL library with a minimal footprint. It
-              provides helper functions for creating a WebGL program, compiling
-              shaders and passing data from JavaScript to the shader language.
-            </p>
-            <a
-              href="#introduction"
-              id="introduction"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h2>Introduction</h2>
-            </a>
-            <p>
-              There are several options to embed GLea into your project. You can
-              load GLea directly via script tag:
-            </p>
-            <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/glea@1.0.1/dist/glea.umd.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-            <p>Inside a JavaScript ES module:</p>
-            <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://unpkg.com/glea@1.0.1/dist/glea.min.js'</span>;</code></pre>
-            <p>
-              Or via NPM, you can install GLea via <code>npm i glea</code> and
-              import it like this:
-            </p>
-            <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'glea'</span>;</code></pre>
-            <a
-              href="#initialization"
-              id="initialization"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h3>Initialization</h3>
-            </a>
-            <p>
-              By default, GLea looks for a canvas element in your HTML and uses
-              that. If there is no canvas element existing, GLea creates one for
-              you.
-            </p>
-            <p>
-              If your HTML document doesn&#39;t include any CSS (neither a
-              <code>style</code> nor a <code>link</code> tag, a minimal
-              stylesheet is provided that sizes the canvas to the browser&#39;s
-              viewport size.
-            </p>
-            <p>
-              The GLea instance expects a shaders property, containing your
-              fragment and vertex shader. Also, a buffers property, which
-              contains the data that is passed as attributes to the vertex
-              shader.
-            </p>
-            <p>
-              If no buffers are provided, GLea provides a default position
-              attribute with a buffer containing 4 vec2 values for a triangle
-              strip, defining a plane filling the screen.
-            </p>
-            <a
-              href="#setting-uniforms"
-              id="setting-uniforms"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h3>Setting uniforms</h3>
-            </a>
-            <p>
-              GLea provides several helper functions to set uniforms to pass
-              data from JavaScript to GLSL. These are:
-            </p>
-            <pre><code class="language-js"><span class="hljs-comment">// set uniform float</span>
-glea.uni(<span class="hljs-string">'pi'</span>, <span class="hljs-built_in">Math</span>.PI);
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>glea</title>
+	<meta name="description" content="Documentation for glea">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">glea</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>glea</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#glea---gl-experience-artistry" id="glea---gl-experience-artistry" style="color: inherit; text-decoration: none;">
+					<h1>GLea - GL experience artistry</h1>
+				</a>
+				<p>GLea is a low-level WebGL library with a minimal footprint.
+				It provides helper functions for creating a WebGL program, compiling shaders and passing data from JavaScript to the shader language.</p>
+				<a href="#introduction" id="introduction" style="color: inherit; text-decoration: none;">
+					<h2>Introduction</h2>
+				</a>
+				<p>There are several options to embed GLea into your project. You can load GLea directly via script tag:</p>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/glea@1.0.1/dist/glea.umd.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<p>Inside a JavaScript ES module:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;https://unpkg.com/glea@1.0.1/dist/glea.min.js&#x27;</span>;</code></pre>
+				<p>Or via NPM, you can install GLea via <code>npm i glea</code> and import it like this:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;glea&#x27;</span>;</code></pre>
+				<a href="#initialization" id="initialization" style="color: inherit; text-decoration: none;">
+					<h3>Initialization</h3>
+				</a>
+				<p>By default, GLea looks for a canvas element in your HTML and uses that. If there is no canvas element existing, GLea creates one for you.</p>
+				<p>If your HTML document doesn&#39;t include any CSS (neither a <code>style</code> nor a <code>link</code> tag, a minimal stylesheet is provided that sizes the canvas to the browser&#39;s viewport size.</p>
+				<p>The GLea instance expects a shaders property, containing your fragment and vertex shader.
+				Also, a buffers property, which contains the data that is passed as attributes to the vertex shader.</p>
+				<p>If no buffers are provided, GLea provides a default position attribute with a buffer containing 4 vec2 values for a triangle strip, defining a plane filling the screen.</p>
+				<a href="#setting-uniforms" id="setting-uniforms" style="color: inherit; text-decoration: none;">
+					<h3>Setting uniforms</h3>
+				</a>
+				<p>GLea provides several helper functions to set uniforms to pass data from JavaScript to GLSL. These are:</p>
+				<pre><code class="language-js"><span class="hljs-comment">// set uniform float</span>
+glea.uni(<span class="hljs-string">&#x27;pi&#x27;</span>, <span class="hljs-built_in">Math</span>.PI);
 
 <span class="hljs-comment">// set uniform int</span>
-glea.uniI(<span class="hljs-string">'width'</span>, innerWidth);
+glea.uniI(<span class="hljs-string">&#x27;width&#x27;</span>, innerWidth);
 
 <span class="hljs-comment">// set uniform float vector (supported types are vec2, vec3, vec4)</span>
-glea.uniV(<span class="hljs-string">'vector'</span>, [<span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">2</span>), <span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">3</span>)]);
+glea.uniV(<span class="hljs-string">&#x27;vector&#x27;</span>, [<span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">2</span>), <span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">3</span>)]);
 
 <span class="hljs-comment">// set uniform int vector</span>
-glea.uniV(<span class="hljs-string">'resolution'</span>, [innerWidth, innerHeight]);
+glea.uniV(<span class="hljs-string">&#x27;resolution&#x27;</span>, [innerWidth, innerHeight]);
 
 <span class="hljs-comment">// set uniform matrix</span>
 <span class="hljs-comment">// HEADS UP: it is the other way round as you would write it down on paper</span>
 <span class="hljs-comment">// prettier-ignore</span>
-glea.uniM(<span class="hljs-string">'translateMatrix'</span>, [
+glea.uniM(<span class="hljs-string">&#x27;translateMatrix&#x27;</span>, [
   <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-comment">// column 1</span>
   <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-comment">// column 2</span>
   <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-comment">// column 3</span>
   x, y, z, <span class="hljs-number">1</span>, <span class="hljs-comment">// column 4</span>
 ]);</code></pre>
-            <a
-              href="#draw"
-              id="draw"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h3>Draw</h3>
-            </a>
-            <p>
-              GLea provides a wrapper to
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"
-                >drawArrays</a
-              >
-              from the underlying WebGLRenderingContext. It works exactly like
-              the original drawArrays function, but if you don&#39;t provide any
-              vertex count, it is determined automatically from the buffers.
-            </p>
-            <pre><code class="language-js"><span class="hljs-keyword">const</span> { gl } = glea;
+				<a href="#draw" id="draw" style="color: inherit; text-decoration: none;">
+					<h3>Draw</h3>
+				</a>
+				<p>GLea provides a wrapper to <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawArrays">drawArrays</a> from the underlying WebGLRenderingContext. It works exactly like the original drawArrays function, but if you don&#39;t provide any vertex count, it is determined
+				automatically from the buffers.</p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { gl } = glea;
 
 glea.drawArrays(gl.TRIANGLE_STRIP);
 
 <span class="hljs-comment">// The same as:</span>
 <span class="hljs-keyword">const</span> numVertices = <span class="hljs-number">4</span>;
 glea.gl.drawArrays(gl.TRIANGLE_STRIP, <span class="hljs-number">0</span>, numVertices);</code></pre>
-            <a
-              href="#multiple-programs-and-switching"
-              id="multiple-programs-and-switching"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h3>Multiple programs and switching</h3>
-            </a>
-            <p>GLea supports multiple programs.</p>
-            <pre><code class="language-js"><span class="hljs-keyword">const</span> prg1 = <span class="hljs-keyword">new</span> GLea({
+				<a href="#multiple-programs-and-switching" id="multiple-programs-and-switching" style="color: inherit; text-decoration: none;">
+					<h3>Multiple programs and switching</h3>
+				</a>
+				<p>GLea supports multiple programs.</p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> prg1 = <span class="hljs-keyword">new</span> GLea({
   <span class="hljs-attr">shaders</span>: [GLea.vertexShader(vert), GLea.fragmentShader(frag)],
 }).create();
 
@@ -220,91 +137,66 @@ glea.gl.drawArrays(gl.TRIANGLE_STRIP, <span class="hljs-number">0</span>, numVer
     <span class="hljs-attr">position</span>: GLea.buffer(<span class="hljs-number">3</span>, Ella.Geometry.sphere(<span class="hljs-number">0.25</span>, <span class="hljs-number">32</span>, <span class="hljs-number">16</span>).toTriangles()),
   },
 });</code></pre>
-            <p>
-              The the main instance <code>prg1</code> and its child
-              <code>prg2</code> use the same underlying WebGLRenderingContext.
-              In the example <code>prg1</code> renders a plane geometry (GLea
-              provides a <code>position</code> attribute with a plane geometry
-              by default), and <code>prg2</code> provides a sphere geometry. The
-              sphere geometry is provided by
-              <a href="https://github.com/terabaud/ella-math">ella-math</a>.
-            </p>
-            <p>
-              In the draw loop, the switching between programs is done via
-              <code>enableAttribs</code> and <code>disableAttribs</code>:
-            </p>
-            <pre><code class="language-js"><span class="hljs-comment">// Shader 1 does the background animation</span>
+				<p>The the main instance <code>prg1</code> and its child <code>prg2</code> use the same underlying WebGLRenderingContext.
+					In the example <code>prg1</code> renders a plane geometry (GLea provides a <code>position</code> attribute with a plane geometry by default),
+				and <code>prg2</code> provides a sphere geometry. The sphere geometry is provided by <a href="https://github.com/terabaud/ella-math">ella-math</a>.</p>
+				<p>In the draw loop, the switching between programs is done via <code>enableAttribs</code> and <code>disableAttribs</code>:</p>
+				<pre><code class="language-js"><span class="hljs-comment">// Shader 1 does the background animation</span>
 prg1.gl.disable(gl.DEPTH_TEST);
 prg1.enableAttribs();
-prg1.uniV(<span class="hljs-string">'resolution'</span>, [width, height]);
-prg1.uni(<span class="hljs-string">'time'</span>, time * <span class="hljs-number">1e-3</span>);
+prg1.uniV(<span class="hljs-string">&#x27;resolution&#x27;</span>, [width, height]);
+prg1.uni(<span class="hljs-string">&#x27;time&#x27;</span>, time * <span class="hljs-number">1e-3</span>);
 prg1.drawArrays(gl.TRIANGLE_STRIP);
 prg1.disableAttribs();
 
 <span class="hljs-comment">// Shader 2 renders a sphere</span>
 gl.enable(gl.DEPTH_TEST);
 prg2.enableAttribs();
-prg2.uniV(<span class="hljs-string">'resolution'</span>, [width, height]);
-prg2.uni(<span class="hljs-string">'time'</span>, time * <span class="hljs-number">1e-3</span>);
-prg2.uniM(<span class="hljs-string">'uPM'</span>, <span class="hljs-keyword">this</span>.projectionMat.toArray());
-prg2.uniM(<span class="hljs-string">'uVM'</span>, <span class="hljs-keyword">this</span>.viewMat.toArray());
+prg2.uniV(<span class="hljs-string">&#x27;resolution&#x27;</span>, [width, height]);
+prg2.uni(<span class="hljs-string">&#x27;time&#x27;</span>, time * <span class="hljs-number">1e-3</span>);
+prg2.uniM(<span class="hljs-string">&#x27;uPM&#x27;</span>, <span class="hljs-built_in">this</span>.projectionMat.toArray());
+prg2.uniM(<span class="hljs-string">&#x27;uVM&#x27;</span>, <span class="hljs-built_in">this</span>.viewMat.toArray());
 prg2.drawArrays(gl.TRIANGLES);
 prg2.disableAttribs();</code></pre>
-            <p>
-              <a
-                href="https://github.com/terabaud/glea/examples/multi-shaders.html"
-                >Full example</a
-              >
-            </p>
-            <a
-              href="#loading-textures"
-              id="loading-textures"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h3>Loading textures</h3>
-            </a>
-            <p>
-              I&#39;m using a loadImage helper function that wraps
-              <code>img.onload</code> into a Promise:
-            </p>
-            <pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadImage</span>(<span class="hljs-params">url</span>) </span>{
+				<p><a href="https://codepen.io/terabaud/pen/wvMQQyr">Full example</a></p>
+				<a href="#loading-textures" id="loading-textures" style="color: inherit; text-decoration: none;">
+					<h3>Loading textures</h3>
+				</a>
+				<p>I&#39;m using a loadImage helper function that wraps <code>img.onload</code> into a Promise:</p>
+				<pre><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadImage</span>(<span class="hljs-params">url</span>) </span>{
   <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
     <span class="hljs-keyword">const</span> img = <span class="hljs-keyword">new</span> Image();
-    img.crossOrigin = <span class="hljs-string">'Anonymous'</span>;
+    img.crossOrigin = <span class="hljs-string">&#x27;Anonymous&#x27;</span>;
     img.src = url;
-    img.onload = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    img.onload = <span class="hljs-function">() =&gt;</span> {
       resolve(img);
     };
-    img.onerror = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    img.onerror = <span class="hljs-function">() =&gt;</span> {
       reject(img);
     };
   });
 }
 
 <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">const</span> img = <span class="hljs-keyword">await</span> loadImage(<span class="hljs-string">'https://placekitten.com/256/256/'</span>);
+  <span class="hljs-keyword">const</span> img = <span class="hljs-keyword">await</span> loadImage(<span class="hljs-string">&#x27;https://placekitten.com/256/256/&#x27;</span>);
   <span class="hljs-keyword">const</span> textureIndex = <span class="hljs-number">0</span>;
   glea.createTexture(textureIndex);
   glea.gl.texImage2D(gl.TEXTURE_2D, <span class="hljs-number">0</span>, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
-  glea.uniI(<span class="hljs-string">'texture0'</span>, textureIndex);
+  glea.uniI(<span class="hljs-string">&#x27;texture0&#x27;</span>, textureIndex);
 }
 
-<span class="hljs-keyword">set</span><span class="hljs-title">up</span>();</code></pre>
-            <p>In GLSL, you can access the texture like this:</p>
-            <pre><code class="language-glsl"><span class="hljs-keyword">uniform</span> <span class="hljs-type">sampler2D</span> texture0;
+setup();</code></pre>
+				<p>In GLSL, you can access the texture like this:</p>
+				<pre><code class="language-glsl"><span class="hljs-keyword">uniform</span> <span class="hljs-type">sampler2D</span> texture0;
 
 <span class="hljs-type">void</span> main() {
   <span class="hljs-type">vec2</span> coord = <span class="hljs-number">1.0</span> - <span class="hljs-built_in">gl_FragCoord</span>.xy / <span class="hljs-type">vec2</span>(width, height);
   <span class="hljs-built_in">gl_FragColor</span> = <span class="hljs-built_in">texture2D</span>(texture1, coord);
 }</code></pre>
-            <a
-              href="#example"
-              id="example"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h2>Example</h2>
-            </a>
-            <pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">'https://unpkg.com/glea@1.0.1/dist/glea.min.js'</span>;
+				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+					<h2>Example</h2>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> GLea <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;https://unpkg.com/glea@1.0.1/dist/glea.min.js&#x27;</span>;
 
 <span class="hljs-keyword">const</span> vert = <span class="hljs-string">`
 precision highp float;
@@ -343,179 +235,93 @@ void main() {
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loop</span>(<span class="hljs-params">time</span>) </span>{
   <span class="hljs-keyword">const</span> { gl, width, height } = glea;
   glea.clear();
-  glea.uniV(<span class="hljs-string">'resolution'</span>, [width, height]);
-  glea.uni(<span class="hljs-string">'time'</span>, time * <span class="hljs-number">1e-3</span>);
+  glea.uniV(<span class="hljs-string">&#x27;resolution&#x27;</span>, [width, height]);
+  glea.uni(<span class="hljs-string">&#x27;time&#x27;</span>, time * <span class="hljs-number">1e-3</span>);
   gl.drawArrays(gl.TRIANGLE_STRIP, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>);
   requestAnimationFrame(loop);
 }
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setup</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">const</span> { gl } = glea;
-  <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'resize'</span>, () =&gt; {
+  <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&#x27;resize&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
     glea.resize();
   });
   loop(<span class="hljs-number">0</span>);
 }
 
-<span class="hljs-keyword">set</span><span class="hljs-title">up</span>();</code></pre>
-            <ul>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/PoPJqvM"
-                  >Try this on Codepen</a
-                >
-              </li>
-            </ul>
-            <a
-              href="#exampes"
-              id="exampes"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h2>Exampes</h2>
-            </a>
-            <ul>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/OKVpYV"
-                  >Example 01: Triangle</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/eqNjjY"
-                  >Example 02: Full screen plane</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/EqgpbQ"
-                  >Example 03: Cube</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/BaNRbXL"
-                  >Example 04: Circle Heart Morph</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/VwLbVjE"
-                  >Example 05: Rotating heart yin yang morph pattern</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/xxGdeEe"
-                  >Example 06: Fun with circles</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/WNvoOgK"
-                  >Example 07: Retro Style Dither Cam</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/dyoXjVv"
-                  >Example 08: Signed Distance Field Symmetric Diff</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/PowKxNp"
-                  >Example 09: Hypnotizing Cyclone 2.0</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/bGNMGvb"
-                  >Example 10: Hypnotizing Cyclone 3.0</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/poogqxq"
-                  >Example 11: numeric spiral</a
-                >
-              </li>
-              <li>
-                <a href="https://codepen.io/terabaud/pen/ZgreLo"
-                  >Example 12: Evil virus</a
-                >
-              </li>
-            </ul>
-            <a
-              href="#more-examples"
-              id="more-examples"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h3>More examples</h3>
-            </a>
-            <ul>
-              <li>
-                There is more:
-                <a href="https://terabaud.github.io/hello-webgl/"
-                  >https://terabaud.github.io/hello-webgl/</a
-                >
-              </li>
-            </ul>
-            <a
-              href="#additional-webgl-resources"
-              id="additional-webgl-resources"
-              style="color: inherit; text-decoration: none;"
-            >
-              <h2>Additional WebGL resources</h2>
-            </a>
-            <ul>
-              <li>
-                <a href="https://webglfundamentals.org/">WebGL Fundamentals</a>
-              </li>
-              <li>
-                <a href="https://webgl2fundamentals.org/"
-                  >WebGL 2 Fundamentals</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-          <nav class="tsd-navigation primary">
-            <ul>
-              <li class="globals">
-                <a href="globals.html"><em>Globals</em></a>
-              </li>
-              <li class="tsd-kind-module">
-                <a href="modules/_glea_.html">&quot;glea&quot;</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="tsd-navigation secondary menu-sticky">
-            <ul class="before-current"></ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <footer class="with-border-bottom">
-      <div class="container">
-        <h2>Legend</h2>
-        <div class="tsd-legend-group">
-          <ul class="tsd-legend">
-            <li class="tsd-kind-variable">
-              <span class="tsd-kind-icon">Variable</span>
-            </li>
-            <li class="tsd-kind-type-alias">
-              <span class="tsd-kind-icon">Type alias</span>
-            </li>
-          </ul>
-          <ul class="tsd-legend">
-            <li class="tsd-kind-class">
-              <span class="tsd-kind-icon">Class</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <div class="container tsd-generator">
-      <p>
-        Generated using
-        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
-      </p>
-    </div>
-    <div class="overlay"></div>
-    <script src="assets/js/main.js"></script>
-    <script>
-      if (location.protocol == 'file:')
-        document.write('<script src="assets/js/search.js"><' + '/script>');
-    </script>
-  </body>
+setup();</code></pre>
+				<ul>
+					<li><a href="https://codepen.io/terabaud/pen/PoPJqvM">Try this on Codepen</a></li>
+				</ul>
+				<a href="#exampes" id="exampes" style="color: inherit; text-decoration: none;">
+					<h2>Exampes</h2>
+				</a>
+				<ul>
+					<li><a href="https://codepen.io/terabaud/pen/OKVpYV">Example 01: Triangle</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/eqNjjY">Example 02: Full screen plane</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/EqgpbQ">Example 03: Cube</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/BaNRbXL">Example 04: Circle Heart Morph</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/VwLbVjE">Example 05: Rotating heart yin yang morph pattern</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/xxGdeEe">Example 06: Fun with circles</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/WNvoOgK">Example 07: Retro Style Dither Cam</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/dyoXjVv">Example 08: Signed Distance Field Symmetric Diff</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/PowKxNp">Example 09: Hypnotizing Cyclone 2.0</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/bGNMGvb">Example 10: Hypnotizing Cyclone 3.0</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/poogqxq">Example 11: numeric spiral</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/ZgreLo">Example 12: Evil virus</a></li>
+					<li><a href="https://codepen.io/terabaud/pen/BajJbgd">Example 13: Halftone Circles</a></li>
+				</ul>
+				<a href="#more-examples" id="more-examples" style="color: inherit; text-decoration: none;">
+					<h3>More examples</h3>
+				</a>
+				<ul>
+					<li>There is more: <a href="https://terabaud.github.io/hello-webgl/">https://terabaud.github.io/hello-webgl/</a></li>
+				</ul>
+				<a href="#additional-webgl-resources" id="additional-webgl-resources" style="color: inherit; text-decoration: none;">
+					<h2>Additional WebGL resources</h2>
+				</a>
+				<ul>
+					<li><a href="https://webglfundamentals.org/">WebGL Fundamentals</a></li>
+					<li><a href="https://webgl2fundamentals.org/">WebGL 2 Fundamentals</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_glea_.html">&quot;glea&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
 </html>
