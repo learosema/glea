@@ -8,13 +8,13 @@ It provides helper functions for creating a WebGL program, compiling shaders and
 There are several options to embed GLea into your project. You can load GLea directly via script tag:
 
 ```html
-<script src="https://unpkg.com/glea@1.0.1/dist/glea.umd.min.js"></script>
+<script src="https://unpkg.com/glea@latest/dist/glea.umd.min.js"></script>
 ```
 
 Inside a JavaScript ES module:
 
 ```js
-import GLea from 'https://unpkg.com/glea@1.0.1/dist/glea.min.js';
+import GLea from 'https://cdn.skypack.dev/glea';
 ```
 
 Or via NPM, you can install GLea via `npm i glea` and import it like this:
@@ -166,7 +166,7 @@ void main() {
 ## Example
 
 ```js
-import GLea from 'https://unpkg.com/glea@1.0.1/dist/glea.min.js';
+import GLea from 'https://cdn.skypack.dev/glea';
 
 const vert = `
 precision highp float;
