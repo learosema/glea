@@ -49,7 +49,7 @@ glea.uniI('width', innerWidth);
 glea.uniV('vector', [Math.sqrt(2), Math.sqrt(3)]);
 
 // set uniform int vector
-glea.uniV('resolution', [innerWidth, innerHeight]);
+glea.uniIV('resolution', [innerWidth, innerHeight]);
 
 // set uniform matrix
 // HEADS UP: it is the other way round as you would write it down on paper
