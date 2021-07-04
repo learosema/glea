@@ -614,8 +614,10 @@ class GLea {
         gl.deleteTexture(texture);
       });
       this.textures = [];
-      // @ts-ignore TS doesn't know about getExtension
-      gl.getExtension('WEBGL_lose_context').loseContext();
+      const extLC = gl.getExtension('WEBGL_lose_context');
+      if (extLC && typeof extLC.loseContext === "function") {
+        extLC.loseContext();
+      }
       this.replaceCanvas();
     } catch (err) {
       console.error(err);
