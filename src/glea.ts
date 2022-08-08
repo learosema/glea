@@ -583,6 +583,19 @@ class GLea {
       gl.uniform1i(loc, data);
     }
   }
+  
+  /**
+   * Set uniform bool
+   * @param {string} name uniform variable name
+   * @param {boolean} data data
+   */
+  uniB(name, data) {
+    const { gl, program } = this;
+    const loc = gl.getUniformLocation(program, name);
+    if (typeof data === 'boolean') {
+      gl.uniform1f(loc, data);
+    }
+  }
 
   /**
    * Clear screen
